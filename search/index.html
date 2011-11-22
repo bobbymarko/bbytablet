@@ -32,14 +32,21 @@
     </div>
     
     <footer id="footer">
-        2 items - $300.00 Cart
+        <div id="the_cart">
+            2 items - $300.00 Cart
+        </div><div id="the_list">
+            list
+        </div><div id="the_compare">
+            compare
+        </div>
     </footer>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
     <script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
     <script src="../js/jquery.jsonp-2.1.4.min.js"></script>
     <!--<script src="../js/jquery-ui-1.8.16.custom.min.js"></script>-->
     <!--<script src="../js/jquery.ui.ipad.altfix.js"></script>-->
-    <script src="../js/iscroll.js"></script>
+    <!--<script src="../js/iscroll.js"></script>-->
+    <script src="../js/fixed.position.js"></script>
     <script src="../js/jquery.touchdraggable.js"></script>
 
     <script id="productTemplate" type="text/x-jquery-tmpl">
@@ -62,7 +69,7 @@
     //document.addEventListener('DOMContentLoaded', loaded, false);
     
     $(function(){
-        
+        $('#masthead, #footer').fixedPosition();
         loadProducts();
         
         $('#load-more').click(function(e){
@@ -88,8 +95,6 @@
                 $('#productTemplate').tmpl(skus).appendTo('#products').touchDraggable()/*.draggable({ appendTo: 'body', revert: "invalid", helper: 'clone' }).addTouch();*/;
                 currentPage++;
                 
-                if (index == data.products.length - 1)
-                    myScroll.refresh();
                 
             });
           }
