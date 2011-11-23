@@ -48,13 +48,15 @@
     <script id="productTemplate" type="text/x-jquery-tmpl">
         <article class="product-tile">
           <div>
-            <a href="product image link" class="product-image"><img src="${image}" ></a>
+            <a href="#productimagelink" class="product-image">
+                <img src="${image}" >
+            </a>
             <a href="#productmask" class="product-mask"></a>
             <label class="product-checkbox">
               <input type="checkbox" value="${sku}" name="compare-${sku}" />
             </label>
             <h2 class="product-title"><a href="product tile link">${name}</a></h2>
-            <ul>{{html shortDescription}}</ul>
+            <ul class="product-short-description">{{html shortDescription}}</ul>
             <ul class="product-priceblock">
                 <li>Sale: <strong>$${salePrice}</strong></li>
             </ul>
