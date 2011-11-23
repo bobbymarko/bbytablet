@@ -161,18 +161,20 @@ input[type=submit]{cursor:pointer;}
     top:0;
     left:0;
     right:1px;
-    bottom:1px;
+    height:180px;
     display: block;
+    border-bottom:1px solid #f4f4f5;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
 }
 
 .product-tile>div{
   height:350px;
   padding:20px;
-  border:1px solid #fff;
+  border:1px solid #f4f5f5;
   border-width:0 1px 1px 0;
 }
 
-.product-tile ul{
+.product-tile .product-short-description{
   margin:0;
   padding:0 0 0 20px;
   font-size: 12px;
@@ -214,6 +216,7 @@ input[type=submit]{cursor:pointer;}
 
 .product-tile .product-title{
     font-size:14px;
+    margin-top:30px;
     height:50px;
     overflow:hidden;
 }
@@ -221,13 +224,6 @@ input[type=submit]{cursor:pointer;}
 .product-tile .product-title a{
     color:#004691;
     text-decoration:none;
-}
-
-.product-tile .product-image{
-    height:150px;
-    text-align:center;
-    display:block;
-    margin:0 0 20px;
 }
 
 .product-tile .product-priceblock{
@@ -241,6 +237,15 @@ input[type=submit]{cursor:pointer;}
 
 .product-tile .product-priceblock li strong{
     color:#ae1231;
+}
+
+.product-tile .product-image{
+    height:150px;
+    width:1000px; /*make it fill the space of the tile 100% doesn't work*/
+    text-align:center;
+    margin:0;
+    display:table-cell;
+    vertical-align:middle;
 }
 
 .product-tile .product-image img{

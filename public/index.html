@@ -95,7 +95,11 @@
                 console.log(skus);
                 skus.shortDescription = skus.shortDescription.split(';');
                 skus.shortDescription = $.map(skus.shortDescription, function(n,i){
-                    return "<li>"+n+"</li>";
+                    if (i<4){
+                        return "<li>"+n.trim()+"</li>";
+                    }else{
+                        return false;
+                    }
                 });
                 $('#productTemplate').tmpl(skus).appendTo('#products');
                 currentPage++;
