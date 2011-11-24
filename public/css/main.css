@@ -1,7 +1,8 @@
-*{
+/**{
         -webkit-user-select:none;
         -webkit-touch-callout:none;
-}
+}*/
+
 html{
     font-size:100%;
 }
@@ -20,7 +21,7 @@ p{}
 h1,h2,h3,h4,h5,h6{margin:0 0 10px;}
 
 input{-webkit-border-radius:0;}
-input[type=search], input[type=text], input[type=number], input[type=tel], input[type=email], input[type=submit]{-webkit-appearance:none;}
+/*input[type=search], input[type=text], input[type=number], input[type=tel], input[type=email], input[type=submit]{-webkit-appearance:none;}*/
 input[type=submit]{cursor:pointer;}
 
 /* layout */
@@ -149,7 +150,7 @@ input[type=submit]{cursor:pointer;}
 .product-tile{
     float:left;
     background:#fff;
-    width:33%;
+    width:33.3333333%;
     position:relative;
     overflow: hidden;
 }
@@ -161,16 +162,17 @@ input[type=submit]{cursor:pointer;}
     top:0;
     left:0;
     right:1px;
-    height:180px;
+    height:190px;
     display: block;
-    border-bottom:1px solid #f4f4f5;
+    border:1px solid #fff;
+    border-bottom:1px solid #e7e7e7;
     box-shadow:0 0 10px rgba(0,0,0,0.2);
 }
 
 .product-tile>div{
   height:350px;
   padding:20px;
-  border:1px solid #f4f5f5;
+  border:1px solid #e7e7e7;
   border-width:0 1px 1px 0;
 }
 
@@ -178,6 +180,8 @@ input[type=submit]{cursor:pointer;}
   margin:0;
   padding:0 0 0 20px;
   font-size: 12px;
+  height:60px;
+  overflow: hidden;
 }
 
 .product-checkbox{
@@ -187,7 +191,7 @@ input[type=submit]{cursor:pointer;}
   width:60px;
   height:60px;
   border-radius:30px;
-  background: #fff;
+  background: transparent;
 }
 
 .product-checkbox input{
@@ -216,8 +220,8 @@ input[type=submit]{cursor:pointer;}
 
 .product-tile .product-title{
     font-size:14px;
-    margin-top:30px;
-    height:50px;
+    margin-top:40px;
+    height:55px;
     overflow:hidden;
 }
 

@@ -11,7 +11,7 @@
         <a href="#" id="branding"><img src="../images/bby_logo.png" alt="Best Buy Logo" height="40px"/></a>
         <nav id="nav" role="navigation">
             <form class="search-form">
-                <input type="text" placeholder="Search BestBuy.com" role="search" class="search-field" /><input type="submit" class="search-submit" value="Search"/>
+                <input type="text" placeholder="Search BestBuy.com" role="search" class="search-field" name="search" /><input type="submit" class="search-submit" value="Search"/>
             </form>
             <ul>
                 <li><a href="#">Products</a></li>
@@ -27,9 +27,9 @@
     </header>
     
     <section id="products"></section>
-    <div style="text-align:center; margin-bottom:20px;">
+    <!--<div style="text-align:center; margin-bottom:20px;">
         <a href="#load-more" id="load-more" class="button secondary">Load More Products</a>
-    </div>
+    </div>-->
     
     <footer id="footer">
         <div id="the_cart">
@@ -46,7 +46,7 @@
     <script src="../js/fixed.position.js"></script>
 
     <script id="productTemplate" type="text/x-jquery-tmpl">
-        <article class="product-tile">
+        <article class="product-tile" data-large-image="${largeFrontImage}">
           <div>
             <a href="#productimagelink" class="product-image">
                 <img src="${image}" >
@@ -58,16 +58,22 @@
             <h2 class="product-title"><a href="product tile link">${name}</a></h2>
             <ul class="product-short-description">{{html shortDescription}}</ul>
             <ul class="product-priceblock">
-                <li>Sale: <strong>$${salePrice}</strong></li>
+                {{if onSale}}
+                <li>Reg. Price: $${regularPrice}</li>
+                <li>Sale Price: <strong>$${salePrice}</strong></li>
+                {{else}}
+                <li>Our Price: <strong>$${salePrice}</strong></li>
+                {{/if}}
             </ul>
             <img src="http://images.bestbuy.com/BestBuy_US/images/global/misc/ratings_star_3_0.gif" class="product-rating">
           </div>
         </article>
     </script>
     
-    <script>
+    <script type=text/javascript>
     var myScroll;
     var currentPage = 1;
+    var loading = false;
     
     $(function(){
         //$('#masthead, #footer').fixedPosition();
@@ -79,10 +85,29 @@
             e.preventDefault();
         });
         
+        $(window).scroll(function(){
+          if ($(window).scrollTop() > $(document).height() - $(window).height() - 200){
+            loadProducts();
+          }
+        });
+        
+        var pinchCallback = new GestureCallback( $('.product-mask'), function( scale, rotation ){
+          console.log('done: '+scale+','+rotation);
+          if( scale < 1 ) {
+            // leave the section, since we've pinched it closed
+          }
+        }, function( scale, rotation ){
+          console.log('changing: '+scale+','+rotation);
+        });
+        
     });
     
     function loadProducts(){
-        var url = "http://api.remix.bestbuy.com/v1/products(search=tablet)?page="+currentPage+"&apiKey=amfnpjxnz6c9wzfu4h663z6w&format=json";
+      if (!loading && currentPage){
+        loading = true;
+        $('#products').append('<article class="product-tile" id="loading-tile"><div><a class="product-mask"></a><a class="product-image"><img src="../images/loading_16x16.gif" /></a></div></div>');
+        var query = getParameterByName('search') || "tablet";
+        var url = "http://api.remix.bestbuy.com/v1/products(search="+query+")?page="+currentPage+"&apiKey=amfnpjxnz6c9wzfu4h663z6w&format=json";
         $.jsonp({
           url: url,
           cache: true,
@@ -90,7 +115,12 @@
           callback: "work",
           callbackParameter: "callback",
           success: function(data) {
-            $('.loading').removeClass('loading');
+            loading = false;
+            $('#loading-tile').remove();
+            if (data.products.length == 0){
+              currentPage = false;
+              return;
+            }
             $.each(data.products, function(index, skus){
                 console.log(skus);
                 skus.shortDescription = skus.shortDescription.split(';');
@@ -108,9 +138,77 @@
             });
           }
         });
+      }
+    }
+    
+    function getParameterByName(name)
+    {
+      name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+      var regexS = "[\\?&]" + name + "=([^&#]*)";
+      var regex = new RegExp(regexS);
+      var results = regex.exec(window.location.href);
+      if(results == null)
+        return "";
+      else
+        return decodeURIComponent(results[1].replace(/\+/g, " "));
     }
         
         
+        
+        
+    function GestureCallback( element, endCallback, changeCallback ) {
+      this.element = element;
+      this.end_callback = endCallback;
+      this.change_callback = changeCallback;
+      this.scale = 1;
+      this.rotation = 0;
+      this.init();
+    }
+    
+    GestureCallback.prototype.init = function() {
+      // scope functions for listener removal
+      var self = this;
+      this.gestureStart = function(e){ self.onGestureStart(e) };
+      this.gestureChange = function(e){ self.onGestureChange(e) };
+      this.gestureEnd = function(e){ self.onGestureEnd(e) };
+      
+      // really no need to check for IE stupidness, but maybe they'll support gestures someday? oy.
+      if( this.element.attachEvent ) this.element.attachEvent( "touchstart", this.gestureStart ); else this.element.addEventListener( "touchstart", this.gestureStart, false );
+      if( this.element.attachEvent ) this.element.attachEvent( "gesturestart", this.gestureStart ); else this.element.addEventListener( "gesturestart", this.gestureStart, false );
+    };
+    
+    GestureCallback.prototype.onGestureStart = function ( e ) {
+      if( this.element.attachEvent ) this.element.attachEvent( "gesturechange", this.gestureChange ); else this.element.addEventListener( "gesturechange", this.gestureChange, false );
+      if( this.element.attachEvent ) this.element.attachEvent( "gestureend", this.gestureEnd ); else this.element.addEventListener( "gestureend", this.gestureEnd, false );
+    };
+    
+    GestureCallback.prototype.onGestureChange = function ( e ) {
+      this.scale = e.scale;
+      this.rotation = e.rotation;
+      if( this.change_callback ) this.change_callback( this.scale, this.rotation );
+    };
+    
+    GestureCallback.prototype.onGestureEnd = function ( e ) {
+      if( this.element.detachEvent ) this.element.detachEvent( "gesturechange", this.gestureChange ); else this.element.removeEventListener( "gesturechange", this.gestureChange, false );
+      if( this.element.detachEvent ) this.element.detachEvent( "gestureend", this.gestureEnd ); else this.element.removeEventListener( "gestureend", this.gestureEnd, false );
+    
+      this.scale = e.scale;
+      this.rotation = e.rotation;
+      if( this.end_callback ) this.end_callback( this.scale, this.rotation );
+    };
+    
+    GestureCallback.prototype.dispose = function() {
+      if( this.element.attachEvent ) this.element.detachEvent( "touchstart", this.gestureStart ); else this.element.removeEventListener( "touchstart", this.gestureStart, false );
+      if( this.element.attachEvent ) this.element.detachEvent( "gesturestart", this.gestureStart ); else this.element.removeEventListener( "gesturestart", this.gestureStart, false );
+      
+      this.element = null;
+      this.end_callback = null;
+      this.change_callback = null;
+      
+      this.gestureStart = null;
+      this.gestureChange = null;
+      this.gestureEnd = null;
+    };
     </script>
 </body>
 </html>
