@@ -21,7 +21,7 @@ p{}
 h1,h2,h3,h4,h5,h6{margin:0 0 10px;}
 
 input{-webkit-border-radius:0;}
-/*input[type=search], input[type=text], input[type=number], input[type=tel], input[type=email], input[type=submit]{-webkit-appearance:none;}*/
+input[type=search], input[type=text], input[type=number], input[type=tel], input[type=email], input[type=submit]{-webkit-appearance:none;}
 input[type=submit]{cursor:pointer;}
 
 /* layout */
@@ -167,6 +167,7 @@ input[type=submit]{cursor:pointer;}
     border:1px solid #fff;
     border-bottom:1px solid #e7e7e7;
     box-shadow:0 0 10px rgba(0,0,0,0.2);
+    pointer-events:none;
 }
 
 .product-tile>div{
@@ -237,22 +238,34 @@ input[type=submit]{cursor:pointer;}
     padding:0;
     margin:0;
     list-style:none;
+    font-size:12px;
 }
 
 .product-tile .product-priceblock li strong{
     color:#ae1231;
+    font-size:14px;
 }
 
-.product-tile .product-image{
+.product-gallery ul{
+  margin:0;
+  padding:0;
+}
+
+.product-tile .product-gallery li{
     height:150px;
     width:1000px; /*make it fill the space of the tile 100% doesn't work*/
     text-align:center;
     margin:0;
-    display:table-cell;
     vertical-align:middle;
+    padding:0;
+    display: none;
 }
 
-.product-tile .product-image img{
+.product-gallery li:first-child{
+  display:table-cell;
+}
+
+.product-tile .product-gallery img{
     max-width:100%;
     max-height:100%;
 }

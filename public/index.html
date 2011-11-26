@@ -44,13 +44,65 @@
     <script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
     <script src="../js/jquery.jsonp-2.1.4.min.js"></script>
     <script src="../js/fixed.position.js"></script>
+    <script src="../js/swipe.js"></script>
 
     <script id="productTemplate" type="text/x-jquery-tmpl">
         <article class="product-tile" data-large-image="${largeFrontImage}">
           <div>
-            <a href="#productimagelink" class="product-image">
-                <img src="${image}" >
-            </a>
+            <div class="product-gallery">
+              <ul>
+                {{if image}}
+                  <li>
+                    <img src="${largeFrontImage}" alt="large front image" >
+                  </li>
+                {{/if}}
+                {{if angleImage}}
+                  <li>
+                    <img src="${angleImage}" alt="angle image" >
+                  </li>
+                {{/if}}
+                {{if alternateViewsImage}}
+                  <li>
+                    <img src="${alternateViewsImage}" alt="alternate views image" >
+                  </li>
+                {{/if}}
+                {{if leftViewImage}}
+                  <li>
+                    <img src="${leftViewImage}" alt="left view image" >
+                  </li>
+                {{/if}}
+                {{if rightViewImage}}
+                  <li>
+                    <img src="${rightViewImage}" alt="right view image" >
+                  </li>
+                {{/if}}
+                {{if backViewImage}}
+                  <li>
+                    <img src="${backViewImage}" alt="back view image" >
+                  </li>
+                {{/if}}
+                {{if remoteControlImage}}
+                  <li>
+                    <img src="${remoteControlImage}" alt="remote control image" >
+                  </li>
+                {{/if}}
+                {{if largeFrontImage}}
+                  <li>
+                    <img src="${largeFrontImage}" alt="large front image" >
+                  </li>
+                {{/if}}
+                {{if topViewImage}}
+                  <li>
+                    <img src="${topViewImage}" alt="top view image" >
+                  </li>
+                {{/if}}
+                {{if accessoriesImage}}
+                  <li>
+                    <img src="${accessoriesImage}" alt="accessories image" >
+                  </li>
+                {{/if}}
+              </ul>
+            </div><!-- end .product-gallery -->
             <a href="#productmask" class="product-mask"></a>
             <label class="product-checkbox">
               <input type="checkbox" value="${sku}" name="compare-${sku}" />
@@ -90,16 +142,6 @@
             loadProducts();
           }
         });
-        
-        var pinchCallback = new GestureCallback( $('.product-mask'), function( scale, rotation ){
-          console.log('done: '+scale+','+rotation);
-          if( scale < 1 ) {
-            // leave the section, since we've pinched it closed
-          }
-        }, function( scale, rotation ){
-          console.log('changing: '+scale+','+rotation);
-        });
-        
     });
     
     function loadProducts(){
@@ -123,18 +165,25 @@
             }
             $.each(data.products, function(index, skus){
                 console.log(skus);
-                skus.shortDescription = skus.shortDescription.split(';');
-                skus.shortDescription = $.map(skus.shortDescription, function(n,i){
-                    if (i<4){
-                        return "<li>"+n.trim()+"</li>";
-                    }else{
-                        return false;
-                    }
-                });
+                if (skus.shortDescription){
+                  skus.shortDescription = skus.shortDescription.split(';');
+                  skus.shortDescription = $.map(skus.shortDescription, function(n,i){
+                      if (i<4){
+                          return "<li>"+n.trim()+"</li>";
+                      }else{
+                          return false;
+                      }
+                  });
+                }
                 $('#productTemplate').tmpl(skus).appendTo('#products');
                 currentPage++;
-                
-                
+            });
+            
+            $('.product-gallery').each(function(){
+              // need to handle orientation change
+              var width = $(this).width();
+              var slider = new Swipe(this);
+              $(this).css('width',width + 'px');
             });
           }
         });
@@ -153,62 +202,9 @@
         return decodeURIComponent(results[1].replace(/\+/g, " "));
     }
         
+    
         
         
-        
-    function GestureCallback( element, endCallback, changeCallback ) {
-      this.element = element;
-      this.end_callback = endCallback;
-      this.change_callback = changeCallback;
-      this.scale = 1;
-      this.rotation = 0;
-      this.init();
-    }
-    
-    GestureCallback.prototype.init = function() {
-      // scope functions for listener removal
-      var self = this;
-      this.gestureStart = function(e){ self.onGestureStart(e) };
-      this.gestureChange = function(e){ self.onGestureChange(e) };
-      this.gestureEnd = function(e){ self.onGestureEnd(e) };
-      
-      // really no need to check for IE stupidness, but maybe they'll support gestures someday? oy.
-      if( this.element.attachEvent ) this.element.attachEvent( "touchstart", this.gestureStart ); else this.element.addEventListener( "touchstart", this.gestureStart, false );
-      if( this.element.attachEvent ) this.element.attachEvent( "gesturestart", this.gestureStart ); else this.element.addEventListener( "gesturestart", this.gestureStart, false );
-    };
-    
-    GestureCallback.prototype.onGestureStart = function ( e ) {
-      if( this.element.attachEvent ) this.element.attachEvent( "gesturechange", this.gestureChange ); else this.element.addEventListener( "gesturechange", this.gestureChange, false );
-      if( this.element.attachEvent ) this.element.attachEvent( "gestureend", this.gestureEnd ); else this.element.addEventListener( "gestureend", this.gestureEnd, false );
-    };
-    
-    GestureCallback.prototype.onGestureChange = function ( e ) {
-      this.scale = e.scale;
-      this.rotation = e.rotation;
-      if( this.change_callback ) this.change_callback( this.scale, this.rotation );
-    };
-    
-    GestureCallback.prototype.onGestureEnd = function ( e ) {
-      if( this.element.detachEvent ) this.element.detachEvent( "gesturechange", this.gestureChange ); else this.element.removeEventListener( "gesturechange", this.gestureChange, false );
-      if( this.element.detachEvent ) this.element.detachEvent( "gestureend", this.gestureEnd ); else this.element.removeEventListener( "gestureend", this.gestureEnd, false );
-    
-      this.scale = e.scale;
-      this.rotation = e.rotation;
-      if( this.end_callback ) this.end_callback( this.scale, this.rotation );
-    };
-    
-    GestureCallback.prototype.dispose = function() {
-      if( this.element.attachEvent ) this.element.detachEvent( "touchstart", this.gestureStart ); else this.element.removeEventListener( "touchstart", this.gestureStart, false );
-      if( this.element.attachEvent ) this.element.detachEvent( "gesturestart", this.gestureStart ); else this.element.removeEventListener( "gesturestart", this.gestureStart, false );
-      
-      this.element = null;
-      this.end_callback = null;
-      this.change_callback = null;
-      
-      this.gestureStart = null;
-      this.gestureChange = null;
-      this.gestureEnd = null;
-    };
     </script>
 </body>
 </html>
