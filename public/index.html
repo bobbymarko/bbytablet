@@ -3,12 +3,12 @@
 <head>
 	<meta charset=utf-8 />
 	<title>Tablet Search</title>
-	<link rel="stylesheet" type="text/css" media="screen" href="../css/main.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
 	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
 </head>
 <body>
     <header id="masthead">
-        <a href="#" id="branding"><img src="../images/bby_logo.png" alt="Best Buy Logo" height="40px"/></a>
+        <a href="#" id="branding"><img src="images/bby_logo.png" alt="Best Buy Logo" height="40px"/></a>
         <nav id="nav" role="navigation">
             <form class="search-form">
                 <input type="text" placeholder="Search BestBuy.com" role="search" class="search-field" name="search" /><input type="submit" class="search-submit" value="Search"/>
@@ -42,9 +42,9 @@
     </footer>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
     <script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
-    <script src="../js/jquery.jsonp-2.1.4.min.js"></script>
-    <script src="../js/fixed.position.js"></script>
-    <script src="../js/swipe.js"></script>
+    <script src="js/jquery.jsonp-2.1.4.min.js"></script>
+    <script src="js/fixed.position.js"></script>
+    <script src="js/swipe.js"></script>
 
     <script id="productTemplate" type="text/x-jquery-tmpl">
         <article class="product-tile" data-large-image="${largeFrontImage}">
@@ -52,6 +52,11 @@
             <div class="product-gallery">
               <ul>
                 {{if image}}
+                  <li>
+                    <img src="${image}" alt="image" >
+                  </li>
+                {{/if}}
+                {{if largeFrontImage}}
                   <li>
                     <img src="${largeFrontImage}" alt="large front image" >
                   </li>
@@ -147,7 +152,7 @@
     function loadProducts(){
       if (!loading && currentPage){
         loading = true;
-        $('#products').append('<article class="product-tile" id="loading-tile"><div><a class="product-mask"></a><a class="product-image"><img src="../images/loading_16x16.gif" /></a></div></div>');
+        $('#products').append('<article class="product-tile" id="loading-tile"><div><a class="product-mask"></a><a class="product-image"><img src="images/loading_16x16.gif" /></a></div></div>');
         var query = getParameterByName('search') || "tablet";
         var url = "http://api.remix.bestbuy.com/v1/products(search="+query+")?page="+currentPage+"&apiKey=amfnpjxnz6c9wzfu4h663z6w&format=json";
         $.jsonp({

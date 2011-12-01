@@ -70,7 +70,7 @@ Swipe.prototype = {
       var el = this.slides[index];
       el.style.width = this.width + 'px';
       el.style.display = 'table-cell';
-      el.style.verticalAlign = 'top';
+      el.style.verticalAlign = 'middle';
     }
 
     // set start position and force translate to remove initial flickering
