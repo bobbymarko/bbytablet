@@ -518,7 +518,7 @@ a.dropdown-back:before{
 .search-form input{
 }
 .search-field{
-    padding:10px 10px 9px;
+    padding:10px;
     border:1px solid #dbdcdc;
     width:200px;
     margin:0;
@@ -532,7 +532,7 @@ a.dropdown-back:before{
 
 .search-submit{
     border:none;
-    padding:10px 10px 9px;
+    padding:10px;
     margin:0;
     color:#003b64;
     text-indent:-9999px;
