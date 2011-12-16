@@ -43,6 +43,11 @@
     -webkit-perspective: 0;
 }
 
+.from-right *, .from-left *, .to-left *, .to-right *{
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate3d(0,0,0);
+}
+
 .from-right {
     -webkit-animation-name: from-right;
 }
