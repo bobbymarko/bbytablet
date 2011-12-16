@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	$("input[type=text]").addClear({top:1,right:10});
-	new NoClickDelay('masthead'); // triggers click event on touch of element to eleminate 300ms delay of click event in iOS
+	//new NoClickDelay('masthead'); // triggers click event on touch of element to eleminate 300ms delay of click event in iOS
 	
 	$('.icon-link a').click(function(e){
 	    e.preventDefault();
