@@ -74,7 +74,7 @@ body{
 
 body, input, textarea{
     color:#49494a;
-    font:14px sans-serif;
+    font:.875em sans-serif;
 }
 
 a{color:#004691; text-decoration:none;}
@@ -515,8 +515,7 @@ a.dropdown-back:before{
 
 
 /* components */
-.search-form{
-
+.search-form input{
 }
 .search-field{
     padding:10px 10px 9px;
