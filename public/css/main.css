@@ -74,7 +74,7 @@ body{
 
 body, input, textarea{
     color:#49494a;
-    font:.875em /* 14px/16px */ sans-serif;
+    font:14px sans-serif;
 }
 
 a{color:#004691; text-decoration:none;}
@@ -273,7 +273,7 @@ input[type=submit]{cursor:pointer;}
 }
 
 #account-links{
-  font-size:13px;
+  font-size:14px;
   position: absolute;
   top:10px;
   right:20px;  
@@ -658,7 +658,7 @@ a.dropdown-back:before{
 .breadcrumb{
   text-align:center;
   background:#fff;
-  font-size:13px;
+  font-size:14px;
   color:#737474;
   border-top:1px solid #fff;
   border-bottom:1px solid #c3c4c4;
