@@ -290,7 +290,7 @@ input[type=submit]{cursor:pointer;}
     display:none;
     position:absolute;
     top:0;
-    left:1px;
+    left:0;
     text-indent:0;
     z-index:100;
     background:#fff;
