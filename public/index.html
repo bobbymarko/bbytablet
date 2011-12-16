@@ -9,7 +9,38 @@
 <body>
     <header id="masthead">
         <a href="#" id="branding"><img src="images/bby_logo.png" alt="Best Buy Logo" height="40px"/></a>
-        <nav id="nav" role="navigation">
+        
+        <ul class="menu">
+          <li class="icon-link" id="menu-link">
+            <a href="#header-nav">Menu</a>
+            <ul id="header-nav">
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Weekly Deals</a></li>
+                <li><a href="#">Gifts</a></li>
+                <li><a href="#">Store Locator</a></li>
+                <!-- less important links -->
+                <li><a href="#">Feedback</a></li>
+                <li><a href="#">Legal</a></li>
+                <li><a href="#">Desktop Site</a></li>
+            </ul>
+          </li>
+          <li class="search-form-wrapper">
+            <form class="search-form">
+              <input type="text" placeholder="Search BestBuy.com" role="search" class="search-field" name="search" /><input type="submit" class="search-submit" value="Search"/>
+            </form>
+          </li>
+        </ul>
+        
+        <div id="account-links">
+          <a href="">Sign in</a> or <a href="">Create an Account</a></li>
+        </div>
+        
+        <ul class="menu" id="cart-menu">
+          <li class="cart-link"><a href="">3 items<!--<span class="cart-counter">3</span>--></a></li>
+      	</ul>
+        
+        <!--<nav id="nav" role="navigation">
             <form class="search-form">
                 <input type="text" placeholder="Search BestBuy.com" role="search" class="search-field" name="search" /><input type="submit" class="search-submit" value="Search"/>
             </form>
@@ -23,7 +54,7 @@
         </nav>
         <ul id="commerce-tools">
             <li class="cart"><a href="#">Cart</a></li>
-        </ul>
+        </ul>-->
     </header>
     
     <section id="products"></section>
@@ -32,18 +63,14 @@
     </div>-->
     
     <footer id="footer">
-        <div id="the_cart">
-            2 items - $300.00 Cart
-        </div><div id="the_list">
-            list
-        </div><div id="the_compare">
-            compare
-        </div>
+        
     </footer>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
     <script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
     <script src="js/jquery.jsonp-2.1.4.min.js"></script>
-    <script src="js/fixed.position.js"></script>
+    <!--<script src="js/fixed.position.js"></script>-->
+    <script src="js/addclear.js"></script>
+    <script src="js/app.js"></script>
     <script src="js/swipe.js"></script>
 
     <script id="productTemplate" type="text/x-jquery-tmpl">
@@ -127,7 +154,7 @@
         </article>
     </script>
     
-    <script type=text/javascript>
+    <script type="text/javascript">
     var myScroll;
     var currentPage = 1;
     var loading = false;
