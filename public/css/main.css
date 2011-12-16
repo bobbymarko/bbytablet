@@ -1,36 +1,44 @@
 @-webkit-keyframes from-right {
   0% {
-      -webkit-transform: translate3d(250px,0,0);
+      /*-webkit-transform: translate3d(250px,0,0);*/
+      margin-left:250px;
   }
   100% {
-      -webkit-transform: translate3d(0,0,0);
+      /*-webkit-transform: translate3d(0,0,0);*/
+      margin-left:0;
   }
 }
 
 @-webkit-keyframes from-left {
   0% {
-      -webkit-transform: translate3d(-250px,0,0);
+      /* -webkit-transform: translate3d(-250px,0,0); */
+      margin-left:-250px;
   }
   100% {
-      -webkit-transform: translate3d(0,0,0);
+      /* -webkit-transform: translate3d(0,0,0); */
+      margin-left:0;
   }
 }
 
 @-webkit-keyframes to-right {
   0% {
-      -webkit-transform: translate3d(0,0,0);
+      /* -webkit-transform: translate3d(0,0,0); */
+      margin-left:0;
   }
   100% {
-      -webkit-transform: translate3d(250px,0,0);
+      /* -webkit-transform: translate3d(250px,0,0); */
+      margin-left:250px;
   }
 }
 
 @-webkit-keyframes to-left {
   0% {
-      -webkit-transform: translate3d(0,0,0);
+      /* -webkit-transform: translate3d(0,0,0); */
+      margin-left:0;
   }
   100% {
-      -webkit-transform: translate3d(-250px,0,0);
+      /* -webkit-transform: translate3d(-250px,0,0); */
+      margin-left:-250px;
   }
 }
 
@@ -360,7 +368,7 @@ input[type=submit]{cursor:pointer;}
 a.dropdown-back{
   font-weight:normal;
   background:#fff;
-  padding:5px 10px 5px 22px;
+  padding-left:22px;
   position: relative;
 }
 
