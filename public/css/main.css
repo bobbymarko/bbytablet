@@ -323,7 +323,7 @@ input[type=submit]{cursor:pointer;}
   padding:10px;
 }
 
-.secondary-links{
+.menu .secondary-links{
   padding:10px;
   background:#fff;
   font-size:12px;
