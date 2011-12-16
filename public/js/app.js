@@ -54,5 +54,10 @@ $(document).ready(function(){
       },200);
     } 
   });
+  
+  $('.close-btn').click(function(e){
+    e.preventDefault();
+    $(this).closest('div').remove();
+  });
 
 });
