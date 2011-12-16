@@ -298,6 +298,7 @@ input[type=submit]{cursor:pointer;}
     overflow: hidden;
     position: relative;
     border:3px solid #1646A8;
+    background:#f4f4f5;
     font-weight:bold;
     -webkit-box-shadow:0 5px 10px rgba(0,0,0,0.3);
     box-shadow:0 3px 20px rgba(0,0,0,0.4);
