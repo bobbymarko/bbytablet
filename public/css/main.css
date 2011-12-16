@@ -519,7 +519,7 @@ a.dropdown-back:before{
 }
 .search-field{
     padding:10px;
-    border:1px solid black;
+    border:1px solid #dbdcdc;
     width:200px;
     margin:0;
     -webkit-border-top-left-radius: 4px;
