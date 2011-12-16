@@ -654,6 +654,45 @@ a.dropdown-back:before{
 	padding: 2px 7px;
 }
 
+/* for checkout */
+.breadcrumb{
+  text-align:center;
+  background:#fff;
+  font-size:13px;
+  color:#737474;
+  border-top:1px solid #fff;
+  border-bottom:1px solid #c3c4c4;
+  padding:0 5px;
+  overflow:hidden;
+}
+
+.breadcrumb li{
+    display:inline-block;
+    padding: 7px 15px;
+    margin:0 0px;
+    position:relative;
+    overflow:hidden;
+}
+
+.breadcrumb .current-page{
+    font-weight:bold;
+    color:#49494a;
+}
+
+.current-page:after{
+    content:'';
+    display:block;
+    position:absolute;
+    bottom:-8px;
+    right:50%;
+    width:10px;
+    height:10px;
+    background:#c3c4c4;
+    -webkit-transform:translate(5px,0) rotate(45deg);
+    -moz-transform:translate(5px,0) rotate(45deg);
+    transform:translate(5px,0) rotate(45deg);
+}
+
 
 @media (min-width:1024px){
   .product-tile{
