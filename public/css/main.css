@@ -38,7 +38,7 @@ input[type=submit]{cursor:pointer;}
 
 #branding{
     float:left;
-    padding:12px 0 10px 15px;
+    padding:12px 0 10px 12px;
 }
 
 #nav{
@@ -48,7 +48,7 @@ input[type=submit]{cursor:pointer;}
 
 #cart-menu{
     float:right;
-    margin-right:20px;
+    margin-right:15px;
 }
 
 #masthead ul{
@@ -275,6 +275,11 @@ input[type=submit]{cursor:pointer;}
 
 .menu .secondary-links a:first-child{
   padding-right:0;
+}
+
+
+.dropdown-secondary-menu{
+  display:none;
 }
 
 #profile-nav{
