@@ -8,12 +8,12 @@
 </head>
 <body>
     <header id="masthead">
-        <a href="#" id="branding"><img src="images/bby_logo.png" alt="Best Buy Logo" height="40px"/></a>
+        <a href="#" id="branding"><img src="images/bby_logo.png" alt="Best Buy Logo" height="40px" width="59px"/></a>
         
         <ul class="menu">
           <li class="icon-link" id="menu-link">
             <a href="#header-nav">Menu</a>
-            <ul id="header-nav">
+            <ul id="header-nav" class="dropdown-menu">
                 <li><a href="#">Products</a></li>
                 <li><a href="#">Services</a></li>
                 <li><a href="#">Weekly Deals</a></li>
@@ -37,6 +37,13 @@
         </div>-->
         
         <ul class="menu" id="cart-menu">
+          <li class="icon-link" id="profile-link">
+            <a href="#profile-nav">Profile</a>
+            <ul id="profile-nav" class="dropdown-menu">
+                <li><a href="#">Sign In</a></li>
+                <li><a href="#">Create an Account</a></li>
+            </ul>
+          </li>
           <li class="cart-link"><a href="">3 items</a></li>
       	</ul>
         
@@ -63,7 +70,16 @@
     </div>-->
     
     <footer id="footer">
-        
+        <div class="footer-meta">
+          <p>Prices on this site are the same as those on BestBuy.com. Prices may vary in store. All prices and offers are subject to change. In store availability subject to change. Orders placed for store pickup may take up to 45 minutes to process.</p> 
+          <p>&copy;2003-2011 BBY Solutions, Inc.</p>
+        </div><!--footer-meta-->
+        <div class="footer-links">
+          <a href="#">Terms</a>
+          <a href="#">Privacy</a>
+          <a href="#">Feedback</a>
+          <a href="#">Desktop Site</a>
+        </div><!-- footer-links -->
     </footer>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
     <script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
