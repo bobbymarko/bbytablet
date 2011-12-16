@@ -40,12 +40,6 @@
     -webkit-animation-duration: 200ms;
     -webkit-animation-timing-function: cubic-bezier(0.250, 0.460, 0.450, 0.940);
     -webkit-animation-iteration-count: 1;
-    -webkit-perspective: 0;
-}
-
-.from-right *, .from-left *, .to-left *, .to-right *{
-  -webkit-backface-visibility: hidden;
-  -webkit-transform: translate3d(0,0,0);
 }
 
 .from-right {
