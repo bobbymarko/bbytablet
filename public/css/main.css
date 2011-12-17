@@ -328,16 +328,6 @@ input[type=submit]{cursor:pointer;}
   position: relative;
 }
 
-/*.dropdown-menu a:before{
-  content:'\276d';
-	color: #004691; 
-	font: 48px sans-serif;
-	position: absolute;
-	top:50%;
-	right:10px;
-	margin-top:-32px;
-}*/
-
 .dropdown-menu a:before, .dropdown-menu a:after{
   content:'';
   background:#004691;
@@ -363,6 +353,7 @@ input[type=submit]{cursor:pointer;}
   background:#fff;
   font-size:12px;
   font-weight:normal;
+  border-top:none;
 }
 
 .menu .secondary-links a:before, .menu .secondary-links a:after{
