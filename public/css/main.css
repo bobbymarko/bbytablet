@@ -307,6 +307,7 @@ input[type=submit]{cursor:pointer;}
 
 .dropdown-menu>ul{
   -webkit-transform: translate3d(0,0,0);
+  width:100%;
 }
 
 .dropdown-menu li{
@@ -373,7 +374,6 @@ input[type=submit]{cursor:pointer;}
   padding-right:0;
 }
 
-
 .dropdown-secondary-menu{
   display:none;
 }
@@ -404,6 +404,17 @@ a.dropdown-back:before{
 
 a.dropdown-back:after{
   display: none;
+}
+
+.secondary-links .truncated-text{
+  width:115px;
+}
+
+.truncated-text{
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: inline-block;
 }
 
 #profile-nav{
@@ -755,8 +766,8 @@ a.dropdown-back:after{
 .b52 .close-btn{
     text-shadow:none;
     position:absolute;
-    right:10px;
-    top:7px;
+    right:5px;
+    top:8px;
     background:#c3c4c4;
     font-weight:bold;
     color:#49494a;
