@@ -36,8 +36,8 @@ $(document).ready(function(){
 	}
 	
 	function tapToClose(e){
-	   // only close dropdown if we're not tapping within it
-	   if ($(e.target).closest('.dropdown-menu').length == 0 && !touchMove){
+	   // only close dropdown if we're not tapping within it, or hitting the toggle button and ensure we're not tapping to scrol.
+	   if ($(e.target).closest('.dropdown-menu').length == 0 && $(e.target).closest('.icon-link').length == 0 && !touchMove){
 	     closeOpenDropdowns();
 	     document.removeEventListener('touchmove', didScroll, false);
 	     document.removeEventListener('touchend', tapToClose, false);
