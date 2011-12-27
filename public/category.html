@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8 />
+	<title>Tablet Search</title>
+	<link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+</head>
+<body>
+    <div class="b52">
+        <p>Welcome to BestBuy.com on your tablet. <a href="" class="switch-link">Switch to Desktop Site</a></p>
+        <a href="#" class="close-btn">&times;</a>
+    </div>
+    <header id="masthead">
+        <a href="#" id="branding"><img src="images/bby_logo.png" alt="Best Buy Logo" height="40px" width="59px"/></a>
+        
+        <ul class="menu">
+          <li class="icon-link" id="menu-link">
+            <a href="#header-nav">Menu</a>
+            <div id="header-nav" class="dropdown-menu">
+              <ul class="dropdown-primary-menu">
+                <li><a href="#products-menu">Products</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="http://bestbuy.shoplocal.com">Weekly Ad</a></li>
+                <li><a href="">Gifts</a></li>
+                <li><a href="">Store Locator</a></li>
+                <!-- less important links -->
+                <li class="secondary-links"><a href="">Feedback</a> <a href="">Legal</a> <a href="">Desktop Site</a></li>
+              </ul>
+              <ul id="products-menu" class="dropdown-secondary-menu">
+                <li><a href="#back" class="dropdown-back">Back</a></li>
+                <li><a href="">Computers &amp; Tablets</a></li>
+                <li><a href="">TV &amp; Video</a></li>
+                <li><a href="">Music, Movies &amp; Instruments</a></li>
+                <li><a href="">Video Games &amp; Gadgets</a></li>
+                <li><a href="">Cameras &amp; Camcorders</a></li>
+                <li><a href="">Mobile Phones</a></li>
+                <li><a href="">Health &amp; Fitness</a></li>
+                <li><a href="">GPS, Car &amp; Marine</a></li>
+                <li><a href="">Audio &amp; MP3</a></li>
+                <li><a href="">Office</a></li>
+                <li><a href="">Home</a></li>
+                <li><a href="">Appliances</a></li>
+                <li><a href="">Gift Cards</a></li>
+              </ul>
+            </div>
+            
+          </li>
+          
+          <li class="search-form-wrapper">
+            <form class="search-form">
+              <input type="text" placeholder="Search BestBuy.com" role="search" class="search-field" name="search" /><input type="submit" class="search-submit" value="Search"/>
+            </form>
+          </li>
+        </ul>
+        
+        <ul class="menu" id="cart-menu">
+          <li class="icon-link" id="profile-link">
+            <a href="#profile-nav">Profile</a>
+            <ul id="profile-nav" class="dropdown-menu">
+              <li class="secondary-links"><a href="#">Sign In</a> <a href="#">Create an Account</a></li>
+              <!--<li class="secondary-links"><span class="truncated-text">Hi, Reallylongnamethatgoesonandon</span> <a href="#">Sign Out</a></li>-->
+              <li><a href="">My Account</a></li>
+              <li><a href="">Wish Lists</a></li>
+              <li><a href="">View Order Status</a></li>
+            </ul>
+          </li>
+          <li class="cart-link"><a href="">3 items</a></li>
+      	</ul>
+    </header>
+    
+    <section id="products"></section>
+    <!--<div style="text-align:center; margin-bottom:20px;">
+        <a href="#load-more" id="load-more" class="button secondary">Load More Products</a>
+    </div>-->
+    
+    <footer id="footer">
+        <div class="footer-meta">
+          <p>Prices on this site are the same as those on BestBuy.com. Prices may vary in store. All prices and offers are subject to change. In store availability subject to change. Orders placed for store pickup may take up to 45 minutes to process.</p> 
+          <p>&copy;2003-2011 BBY Solutions, Inc.</p>
+        </div><!--footer-meta-->
+        <div class="footer-links">
+          <a href="#">Terms</a>
+          <a href="#">Privacy</a>
+          <a href="#">Feedback</a>
+          <a href="#">Desktop Site</a>
+        </div><!-- footer-links -->
+    </footer>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+    <script src="js/jquery.jsonp-2.1.4.min.js"></script>
+    <!--<script src="js/fixed.position.js"></script>-->
+    <script src="js/addclear.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/swipe.js"></script>
+
+    <script id="productTemplate" type="text/x-jquery-tmpl">
+        <article class="product-tile" data-large-image="${largeFrontImage}">
+          <div>
+            <div class="product-gallery">
+              <ul>
+                {{if image}}
+                  <li>
+                    <img src="${image}" alt="image" >
+                  </li>
+                {{/if}}
+                {{if largeFrontImage}}
+                  <li>
+                    <img src="${largeFrontImage}" alt="large front image" >
+                  </li>
+                {{/if}}
+                {{if angleImage}}
+                  <li>
+                    <img src="${angleImage}" alt="angle image" >
+                  </li>
+                {{/if}}
+                {{if alternateViewsImage}}
+                  <li>
+                    <img src="${alternateViewsImage}" alt="alternate views image" >
+                  </li>
+                {{/if}}
+                {{if leftViewImage}}
+                  <li>
+                    <img src="${leftViewImage}" alt="left view image" >
+                  </li>
+                {{/if}}
+                {{if rightViewImage}}
+                  <li>
+                    <img src="${rightViewImage}" alt="right view image" >
+                  </li>
+                {{/if}}
+                {{if backViewImage}}
+                  <li>
+                    <img src="${backViewImage}" alt="back view image" >
+                  </li>
+                {{/if}}
+                {{if remoteControlImage}}
+                  <li>
+                    <img src="${remoteControlImage}" alt="remote control image" >
+                  </li>
+                {{/if}}
+                {{if largeFrontImage}}
+                  <li>
+                    <img src="${largeFrontImage}" alt="large front image" >
+                  </li>
+                {{/if}}
+                {{if topViewImage}}
+                  <li>
+                    <img src="${topViewImage}" alt="top view image" >
+                  </li>
+                {{/if}}
+                {{if accessoriesImage}}
+                  <li>
+                    <img src="${accessoriesImage}" alt="accessories image" >
+                  </li>
+                {{/if}}
+              </ul>
+            </div><!-- end .product-gallery -->
+            <a href="#productmask" class="product-mask"></a>
+            <label class="product-checkbox">
+              <input type="checkbox" value="${sku}" name="compare-${sku}" />
+            </label>
+            <h2 class="product-title"><a href="product tile link">${name}</a></h2>
+            <ul class="product-short-description">{{html shortDescription}}</ul>
+            <ul class="product-priceblock">
+                {{if onSale}}
+                <li>Reg. Price: $${regularPrice}</li>
+                <li>Sale Price: <strong>$${salePrice}</strong></li>
+                {{else}}
+                <li>Our Price: <strong>$${salePrice}</strong></li>
+                {{/if}}
+            </ul>
+            <img src="http://images.bestbuy.com/BestBuy_US/images/global/misc/ratings_star_3_0.gif" class="product-rating">
+          </div>
+        </article>
+    </script>
+    
+    <script type="text/javascript">
+    var myScroll;
+    var currentPage = 1;
+    var loading = false;
+    
+    $(function(){
+        //$('#masthead, #footer').fixedPosition();
+        loadProducts();
+        
+        $('#load-more').click(function(e){
+            loadProducts();
+            $(this).addClass('loading');
+            e.preventDefault();
+        });
+        
+        $(window).scroll(function(){
+          if ($(window).scrollTop() > $(document).height() - $(window).height() - 200){
+            loadProducts();
+          }
+        });
+    });
+    
+    function loadProducts(){
+      if (!loading && currentPage){
+        loading = true;
+        $('#products').append('<article class="product-tile" id="loading-tile"><div><a class="product-mask"></a><a class="product-image"><img src="images/loading_16x16.gif" /></a></div></div>');
+        var query = getParameterByName('search') || "tablet";
+        var url = "http://api.remix.bestbuy.com/v1/products(search="+query+")?page="+currentPage+"&apiKey=amfnpjxnz6c9wzfu4h663z6w&format=json";
+        $.jsonp({
+          url: url,
+          cache: true,
+          pageCache: true,
+          callback: "work",
+          callbackParameter: "callback",
+          success: function(data) {
+            loading = false;
+            $('#loading-tile').remove();
+            if (data.products.length == 0){
+              currentPage = false;
+              return;
+            }
+            $.each(data.products, function(index, skus){
+                console.log(skus);
+                if (skus.shortDescription){
+                  skus.shortDescription = skus.shortDescription.split(';');
+                  skus.shortDescription = $.map(skus.shortDescription, function(n,i){
+                      if (i<4){
+                          return "<li>"+n.trim()+"</li>";
+                      }else{
+                          return false;
+                      }
+                  });
+                }
+                $('#productTemplate').tmpl(skus).appendTo('#products');
+                currentPage++;
+            });
+            
+            $('.product-gallery').each(function(){
+              // need to handle orientation change
+              var width = $(this).width();
+              var slider = new Swipe(this);
+              $(this).css('width',width + 'px');
+            });
+          }
+        });
+      }
+    }
+    
+    function getParameterByName(name)
+    {
+      name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+      var regexS = "[\\?&]" + name + "=([^&#]*)";
+      var regex = new RegExp(regexS);
+      var results = regex.exec(window.location.href);
+      if(results == null)
+        return "";
+      else
+        return decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+        
+    
+        
+        
+    </script>
+</body>
+</html>
