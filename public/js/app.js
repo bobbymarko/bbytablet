@@ -49,34 +49,42 @@ $(document).ready(function(){
     e.preventDefault();
     var parent = $(this).closest('.dropdown-menu');
     var primary = $(this).closest('.dropdown-primary-menu');
+    var secondary = $(this).closest('.dropdown-secondary-menu');
+    var tertiary = $(this).closest('.dropdown-tertiary-menu');
     
     if ($(this).hasClass('dropdown-back')){
       // we are moving back one level
-      primary = parent.children('.dropdown-primary-menu').first();
-      var secondary = $(this).closest('.dropdown-secondary-menu');
-      secondary.addClass('to-right');
-      primary.show().addClass('from-left');
-      parent.css({height:primary.height()});
-      
-      setTimeout(function(){ //timeout set to duration of animation
-        secondary.hide();
-        parent.css({height:'auto'});
-        removeAnimationClasses();
-      },200);
+      if (tertiary.length > 0){
+      	transitionMenu(parent.children('.dropdown-secondary-menu').first(), secondary, parent, 'backward');
+      }else if (secondary.length > 0){
+				transitionMenu(parent.children('.dropdown-primary-menu').first(), secondary, parent, 'backward');
+      }
     }else if (primary.length > 0) { 
       // we are in the initial dropdown
-      var target = $($(this).attr('href'));
-      primary.addClass('to-left');
-      parent.css({height:target.height()});
-      $($(this).attr('href')).show().addClass('from-right');
-      
-      setTimeout(function(){ //timeout set to duration of animation
-        primary.hide();
-        parent.css({height:'auto'});
-        removeAnimationClasses();
-      },200);
-    } 
+      transitionMenu($($(this).attr('href')), primary, parent, 'forward')
+    }else if (secondary.length > 0){
+    	// we are in a secondary dropdown
+    	transitionMenu($($(this).attr('href')), secondary, parent, 'forward')
+    }
   });
+  
+  function transitionMenu(target, previousMenu, parent, direction){
+  	if (direction == "forward"){
+			previousMenu.addClass('to-left');
+			parent.css({height:target.height()});
+			target.show().addClass('from-right');
+		} else if (direction == "backward"){
+			previousMenu.addClass('to-right');
+			target.show().addClass('from-left');
+			parent.css({height:target.height()});
+		}
+		
+		setTimeout(function(){ //timeout set to duration of animation
+			previousMenu.hide();
+			parent.css({height:'auto'});
+			removeAnimationClasses();
+		},200);
+  }
   
   $('.close-btn').click(function(e){
     e.preventDefault();
