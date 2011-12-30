@@ -269,7 +269,7 @@
 }
 
 .two-column .skus-x-4 .item-image{
-	height:130px;
+	height:80px;
 }
 
 .two-column .skus-x-4 ul+ul{
@@ -357,6 +357,10 @@
 	.two-column .featured-offers li{
 		width:46%;
 		min-height:90px;
+	}
+	
+	.two-column .skus-x-4 .item-image{
+		height:130px;
 	}
 }
 
