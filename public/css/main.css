@@ -324,23 +324,26 @@ input[type=submit]{cursor:pointer;}
 	font-weight:normal;
 }
 
+.two-column{
+	clear:both;
+	overflow:hidden;
+	position:relative;
+	background:#f4f5f5;
+}
+
 .sidebar{
-	width:220px;
+	width:219px;
 	float:left;
-	margin:5px 20px 0;
 }
 
 .side-menu{
 	list-style:none;
 	padding:0;
-	margin:0 0 20px;
-	border:1px solid #c3c4c4;
-	/*-webkit-border-radius:4px;*/
+	margin:0;
 }
 
 .sidebar .side-menu-title{
-	background:#fff;
-	padding:10px;
+	padding:49px 10px 10px;
 }
 
 .sidebar h2{
@@ -361,30 +364,22 @@ input[type=submit]{cursor:pointer;}
   border-bottom: 1px solid #E7E7E7;
   border-top:1px solid #fff;
 }
-/*
-.side-menu li:first-child{
-	  -webkit-border-top-left-radius: 3px;
-    -webkit-border-top-right-radius: 3px;
-    -moz-border-radius-topleft: 3px;
-    -moz-border-radius-topright: 3px;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-}
 
-.side-menu li:last-child{
-	  -webkit-border-bottom-left-radius: 3px;
-    -webkit-border-bottom-right-radius: 3px;
-    -moz-border-radius-bottomleft: 3px;
-    -moz-border-radius-bottomright: 3px;
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
+/*.side-menu li{
+	background: #f4f4f5;
+	background: -moz-linear-gradient(top, #f4f4f5 0%, #e7e7e7 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f4f4f5), color-stop(100%,#e7e7e7));
+	background: -webkit-linear-gradient(top, #f4f4f5 0%,#e7e7e7 100%);
+	background: -o-linear-gradient(top, #f4f4f5 0%,#e7e7e7 100%);
+	background: -ms-linear-gradient(top, #f4f4f5 0%,#e7e7e7 100%);
+	background: linear-gradient(top, #f4f4f5 0%,#e7e7e7 100%);
 }*/
 
-.dropdown-menu li:first-child, .side-menu li:first-child{
+.dropdown-menu li:first-child{
   border-top:none;
 }
 
-.dropdown-menu li:last-child, .side-menu li:last-child{
+.dropdown-menu li:last-child{
   border-bottom:none;
 }
 
@@ -866,22 +861,22 @@ a.dropdown-back:after{
 .ratings {
 	position:relative;
 	overflow:hidden;
+	clear:both;
 }
 
 .ratings a {
-    display:block;
-    padding:0 0 0 101px;
     position:relative;
-    z-index:1;
-    line-height:1.5;
+    line-height:1.8;
+    float:left;
 }
 
 .rating-stars{
-    position:absolute;
     width:96px;
     height:18px;
-    top:0;
-    left:0;
+    position:relative;
+		overflow:hidden;
+		float:left;
+		margin:0 5px 0 0;
 }
 
 .rating-stars div{
@@ -897,7 +892,7 @@ a.dropdown-back:after{
 }
 
 .rating-mask{
-    background:url(../images/ratings_stars.png);
+    background:url(../images/ratings_stars.png) no-repeat;
 }
 
 

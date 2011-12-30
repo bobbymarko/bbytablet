@@ -1,11 +1,27 @@
+/* ---------- Module Generic Styles ----------------*/
+
 .module-group{
 	clear:both;
 	position:relative;
 	overflow:hidden;
 }
 
+.two-column .module-group{
+	clear:none;
+	border-left:1px solid #c3c4c4;
+	background:#fff;
+	box-shadow:-5px 0 10px rgba(0,0,0,0.1);
+}
+
 .module{
-	margin:20px;
+	margin:40px 20px;
+	border-top:1px solid #c3c4c4;
+	padding:40px 0 0 0;
+}
+
+.module:first-child{
+	border-top:none;
+	margin-top:0;
 }
 
 .module ul{
@@ -17,7 +33,7 @@
 }
 
 .module h2{
-	font-size:20px;
+	font-size:24px;
 	font-weight:normal;
 	margin:0 0 20px;
 }
@@ -25,7 +41,10 @@
 .module-see-all-link{
 	font-size:14px;
 	float:right;
+	margin: 9px 0 0;
 }
+
+/* ---------- Best Buy On ----------------*/
 
 .on-content{
   background:#f4f5f5;
@@ -35,8 +54,17 @@
   margin:0;
 }
 
+.on-content h3{
+  font-size:14px;
+  margin-bottom:5px;
+}
+
 .on-content ul{
 
+}
+
+.on-content p{
+	font-size:12px;
 }
 
 .on-content li{
@@ -49,7 +77,15 @@
 .on-content img{
 	max-width:100%;
 	height:auto;
+	margin-bottom:5px;
 }
+
+.on-content+.module{
+	border-top:none;
+	padding:0;
+}
+
+/* ---------- Main Banner Content Slots ----------------*/
 
 .vb-content-area{
 	overflow:hidden;
@@ -58,6 +94,13 @@
 
 .vb-primary-area{
 	height:305px;
+	background:url(../images/content/home-promo.jpg) left center no-repeat;
+	background-size: 60%;
+}
+
+.two-column .vb-primary-area{
+	float:none;
+	width:auto;
 }
 
 .vb-primary-message{
@@ -67,7 +110,7 @@
 }
 
 .vb-primary-headline{
-	font-size:26px;
+	font-size:30px;
 	margin:0 0 8px;
 }
 
@@ -98,21 +141,37 @@
 
 .vb-secondary-image img{
 	max-width:100%;
+	max-height:100%;
 }
 
 .vb-secondary-title{
 	text-transform:uppercase;
 	font-weight:bold;
+	font-size:16px;
+	margin:0 0 5px;
 }
+
+.vb-secondary-desc{
+	color:#737474;
+	margin:0 0 5px;
+}
+
+/* ---------- Stealth Bomber ----------------*/
 
 .stealth-bomber{
 	background:#f4f5f5;
 	border:1px solid #c3c4c4;
 	text-align:center;
+	padding:0;
 }
 
 .vb-content-area+.stealth-bomber{
-	margin-top:-20px;
+	margin-top:-40px;
+}
+
+.stealth-bomber+.module{
+	border-top:none;
+	padding-top:0;
 }
 
 .stealth-bomber a{
@@ -132,29 +191,81 @@
 	font-weight:bold;
 }
 
+/* ---------- SKU Modules ----------------*/
+
 .sku-list-module ul{
 }
 
 .sku-list-module li{
 	float:left;
-	width:20%;
-	margin:0 2.5%;
+}
+
+.skus-x-3 li{
+	width:29.3333333%;
+	margin:0 2%;
+}
+
+.skus-x-4 li{
+	width:21%;
+	margin:0 2%;
+}
+
+.skus-x-5 li{
+	width:17%;
+	margin:0 1.5%;
+	font-size:12px;
 }
 
 .sku-list-module li img{
 	max-width:100%;
+	max-height:100%;
 }
 
 .sku-list-module li li{
 	float:none;
 	width:auto;
 	margin:0;
+	font-size:12px;
 }
 
-.item-name{
+.sku-list-module .price-paid{
+	font-size:20px;
+	color:#ae1231;
+}
+
+.sku-list-module .note{
+	font-size:10px;
+}
+
+.sku-list-module .item-name{
 	font-size:16px;
 	font-weight:bold;
+	display:block;
+	margin:0 0 5px;
 }
+
+.skus-x-5 .item-name{
+	font-size:14px;
+}
+
+.sku-list-module .item-image{
+	display:table-cell;
+	text-align:center;
+	width:400px;
+	height:100px;
+	overflow:hidden;
+	vertical-align:bottom;
+}
+
+.sku-list-module.skus-x-5 .item-image{
+	height:80px;
+}
+
+.module .ratings{
+	margin:0 0 5px;
+}
+
+/* ---------- Featured Offers ----------------*/
 
 .featured-offers ul{
 	margin:0 0 -20px;
@@ -162,14 +273,14 @@
 
 .featured-offers li{
 	float:left;
-	width:50%;
-	margin:0 0 20px;
+	width:46%;
+	margin:0 2% 20px;
 }
 
 .featured-offers .item-image{
 	float:left;
 	width:30%;
-	margin:0 20px 0;
+	margin:0;
 	text-align:center;
 }
 
@@ -179,12 +290,18 @@
 
 .featured-offers .item-name{
 	font-size:14px;
+	margin:10px 0 0;
+	display:block;
+	margin-left:34%;
 }
+
+/* ---------- Media Queries ----------------*/
 
 @media (min-width:770px){
 	.vb-primary-area{
 		width:66%;
 		float:left;
+		background-size: contain;
 	}
 	
 	.vb-secondary-area{
@@ -198,9 +315,9 @@
 	}
 	
 	.vb-secondary-module{
-		height:140px;
+		height:110px;
 		float:none;
-		padding:0 20px 0 0;
+		padding:20px 20px 20px 0;
 		width:auto;
 	}
 	
@@ -210,6 +327,16 @@
 	}
 	
 	.vb-secondary-module:last-child{
-		margin-top:20px;
+	}
+	
+	.sku-list-module .item-image{
+		height:130px;
+	}
+	
+}
+
+@media (min-width:960px){
+	.sku-list-module .item-image{
+		height:160px;
 	}
 }

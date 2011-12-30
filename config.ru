@@ -9,6 +9,6 @@ use Rack::Static, :urls => ['/videos'], :root => "public"
 use Rack::ETag
 use Rack::Rewrite do
   rewrite '/', '/index.html'
-  rewrite %r{/(\?.*)?}, '/listing.html$1'
+  rewrite %r{/listing(\?.*)?}, '/listing.html$1'
 end
 run Rack::Directory.new('public')
