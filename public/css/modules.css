@@ -4,6 +4,7 @@
 	clear:both;
 	position:relative;
 	overflow:hidden;
+	min-height:270px;
 }
 
 .two-column .module-group{

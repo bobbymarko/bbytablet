@@ -359,10 +359,31 @@ input[type=submit]{cursor:pointer;}
 	display:block;
 }
 
+.my-account .sidebar .side-menu-title{
+	padding-top:29px;
+}
+
+.my-account .module{
+	padding-top:20px;
+}
+
 .dropdown-menu li, .side-menu li{
   background:#f4f5f5;
   border-bottom: 1px solid #E7E7E7;
   border-top:1px solid #fff;
+}
+
+.side-menu li.current-item{
+	z-index:1;
+	position:relative;
+	background:#fff;
+	width:100.5%;
+	border-bottom:1px solid #c3c4c4;
+	border-top:1px solid #c3c4c4;
+}
+
+.side-menu li.current-item a:before, .side-menu li.current-item a:after{
+	display:none;
 }
 
 /*.side-menu li{
