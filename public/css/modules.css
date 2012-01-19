@@ -11,14 +11,16 @@
 	clear:none;
 	border-left:1px solid #c3c4c4;
 	background:#fff;
-	-webkit-box-shadow:-5px 0 10px rgba(0,0,0,0.1);
-	box-shadow:-5px 0 10px rgba(0,0,0,0.1);
 }
 
 .module{
 	margin:40px 20px;
 	border-top:1px solid #c3c4c4;
 	padding:40px 0 0 0;
+}
+
+.two-column .module:first-child {
+	padding-top:20px;
 }
 
 .module:first-child{
@@ -150,12 +152,12 @@
 	text-transform:uppercase;
 	font-weight:bold;
 	font-size:16px;
-	margin:0 0 5px;
+	margin:0 0 5px 30%;
 }
 
 .vb-secondary-desc{
 	color:#737474;
-	margin:0 0 5px;
+	margin:0 0 5px 30%;
 }
 
 /* ---------- Stealth Bomber ----------------*/
@@ -238,8 +240,20 @@
 }
 
 .sku-list-module .price-paid{
-	font-size:20px;
-	color:#ae1231;
+	font-size:36px;
+	font-size:24px;
+	letter-spacing:-.04em;
+	line-height:.8;
+}
+
+.sku-list-module .you-save{
+	color:#bb0628;
+	font-weight:bold;
+}
+
+.sku-list-module .dollar{
+	font-size:24px;
+	font-size:16px;
 }
 
 .sku-list-module .note{
@@ -282,6 +296,11 @@
 	height:80px;
 }
 
+.two-column .skus-x-4 .rating-stars{
+    width:80px;
+    height:15px;
+}
+
 .two-column .skus-x-4 ul+ul{
 	margin-top:20px;
 }
@@ -297,15 +316,17 @@
 }
 
 .featured-offers li{
-	float:left;
-	width:46%;
+	display:inline-block;
+	vertical-align:top;
+	width:45.5%;
 	margin:0 2% 20px;
-	min-height:75px;
+	position:relative;
+	overflow:hidden;
 }
 
 .two-column .featured-offers li{
+	display:block;
 	width:auto;
-	min-height:0;
 }
 
 .featured-offers .item-image{
@@ -319,11 +340,19 @@
 	max-width:100%;
 }
 
-.featured-offers .item-name{
+.featured-offers .item-description, .featured-offers .item-title{
 	font-size:14px;
 	margin:10px 0 0;
 	display:block;
 	margin-left:34%;
+	font-weight:bold;
+}
+
+.featured-offers .item-description{
+	font-size:12px;
+	color:#49494a;
+	margin-top:5px;
+	font-weight:normal;
 }
 
 /* ---------- Media Queries ----------------*/
@@ -332,7 +361,7 @@
 	.vb-primary-area{
 		width:66%;
 		float:left;
-		background-size: contain;
+		background-size: 55%;
 	}
 	
 	.vb-secondary-area{
@@ -365,12 +394,17 @@
 	}
 	
 	.two-column .featured-offers li{
-		width:46%;
-		min-height:90px;
+		display:inline-block;
+		width:45.5%;
 	}
 	
 	.two-column .skus-x-4 .item-image{
-		height:130px;
+		height:100px;
+	}
+	
+	.two-column .skus-x-4 .rating-stars{
+			width:96px;
+			height:18px;
 	}
 	
 	.skus-x-2 li{
@@ -380,6 +414,10 @@
 }
 
 @media (min-width:960px){
+	.vb-primary-area{
+		background-size: contain;
+	}
+	
 	.sku-list-module .item-image{
 		height:160px;
 	}
@@ -388,5 +426,9 @@
 		height:250px;
 		width:300px;
 		float:left;
+	}
+	
+	.two-column .skus-x-4 .item-image {
+		height: 130px;
 	}
 }

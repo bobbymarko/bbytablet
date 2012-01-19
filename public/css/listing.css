@@ -1,0 +1,143 @@
+/* ---------- List Page ----------------*/
+
+#products{
+    z-index:0;
+    position:relative;
+    border:1px solid #c3c4c4;
+    border-width:1px 0 0 1px;
+    margin:20px;
+    position:relative;
+    overflow:hidden;
+    -webkit-border-radius:4px;
+    border-radius:4px;
+}
+
+#wrapper{
+}
+
+.product-tile{
+    float:left;
+    width:33.3333333%;
+    position:relative;
+    overflow: hidden;
+}
+
+.product-mask{
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,.08) 100%);
+    position:absolute;
+    top:0;
+    left:0;
+    right:1px;
+    height:100%;
+    display: block;
+    pointer-events:none;
+}
+
+.product-tile>div{
+  height:350px;
+  padding:0;
+  border:1px solid #c3c4c4;
+  border-width:0 1px 1px 0;
+}
+
+.product-tile .product-short-description{
+  margin:0 20px;
+  padding:0 0 0 20px;
+  font-size: 12px;
+  height:60px;
+  overflow: hidden;
+  display:none;
+}
+
+.product-checkbox{
+  display:block;
+}
+
+.product-checkbox input{
+  position: absolute;
+  top:10px;
+  left:10px;
+  border-radius:4px;
+}
+
+.product-tile a{
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+.product-tile-helper{
+    position:absolute;
+    z-index:9999;
+    -webkit-box-shadow:0 20px 10px rgba(0,0,0,0.4);
+    box-shadow:0 20px 15px rgba(0,0,0,0.6);
+    -webkit-transition: all 10ms ease-in;
+    border-color:#fff200;
+    -webkit-transform:scale(.5);
+}
+
+.product-tile-helper:before{
+    display:none;
+}
+
+.product-tile .product-title{
+    font-size:14px;
+    margin:20px 20px 0;
+    height:55px;
+    overflow:hidden;
+}
+
+.product-tile .product-title a{
+    color:#004691;
+    text-decoration:none;
+}
+
+.product-tile .product-priceblock{
+    position:absolute;
+    bottom:20px;
+    left:20px;
+    padding:0;
+    margin:0;
+    list-style:none;
+    font-size:12px;
+}
+
+.product-tile .product-priceblock li strong{
+    color:#ae1231;
+    font-size:14px;
+}
+
+.product-gallery ul{
+  margin:0;
+  padding:0;
+}
+
+.product-tile .product-gallery li{
+    height:150px;
+    width:1000px; /*make it fill the space of the tile 100% doesn't work*/
+    text-align:center;
+    margin:0;
+    vertical-align:middle;
+    padding:20px;
+    display: none;
+}
+
+.product-gallery li:first-child{
+  display:table-cell;
+}
+
+.product-tile .product-gallery img{
+    max-width:100%;
+    max-height:100%;
+}
+
+.product-tile .product-rating{
+    position:absolute;
+    bottom:20px;
+    right:20px;
+}
+
+
+@media (min-width:960px){
+  .product-tile{
+    width:25%; 
+  }
+}

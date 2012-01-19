@@ -4,14 +4,11 @@
 	<meta charset=utf-8 />
 	<title>Tablet Search</title>
 	<link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="css/listing.css" />
 	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
 </head>
 <body>
-    <div class="b52">
-        <p>Welcome to BestBuy.com on your tablet. <a href="" class="switch-link">Switch to Desktop Site</a></p>
-        <a href="#" class="close-btn">&times;</a>
-    </div>
-    <header id="masthead">
+      <header id="masthead">
         <a href="/" id="branding"><img src="images/bby_logo.png" alt="Best Buy Logo" height="40px" width="59px"/></a>
         
         <ul class="menu">
@@ -29,26 +26,43 @@
               </ul>
               <ul id="products-menu" class="dropdown-secondary-menu">
                 <li><a href="#back" class="dropdown-back">Back</a></li>
-                <li><a href="">Computers &amp; Tablets</a></li>
-                <li><a href="">TV &amp; Video</a></li>
-                <li><a href="">Music, Movies &amp; Instruments</a></li>
-                <li><a href="">Video Games &amp; Gadgets</a></li>
-                <li><a href="">Cameras &amp; Camcorders</a></li>
-                <li><a href="">Mobile Phones</a></li>
-                <li><a href="">Health &amp; Fitness</a></li>
-                <li><a href="">GPS, Car &amp; Marine</a></li>
-                <li><a href="">Audio &amp; MP3</a></li>
-                <li><a href="">Office</a></li>
-                <li><a href="">Home</a></li>
-                <li><a href="">Appliances</a></li>
-                <li><a href="">Gift Cards</a></li>
+                <li><a href="#computers-tablets">Computers &amp; Tablets</a></li>
+                <li><a href="#computers-tablets">TV &amp; Video</a></li>
+                <li><a href="#computers-tablets">Music, Movies &amp; Instruments</a></li>
+                <li><a href="#computers-tablets">Video Games &amp; Gadgets</a></li>
+                <li><a href="#computers-tablets">Cameras &amp; Camcorders</a></li>
+                <li><a href="#computers-tablets">Mobile Phones</a></li>
+                <li><a href="#computers-tablets">Health &amp; Fitness</a></li>
+                <li><a href="#computers-tablets">GPS, Car &amp; Marine</a></li>
+                <li><a href="#computers-tablets">Audio &amp; MP3</a></li>
+                <li><a href="#computers-tablets">Office</a></li>
+                <li><a href="#computers-tablets">Home</a></li>
+                <li><a href="#computers-tablets">Appliances</a></li>
+                <li><a href="#computers-tablets">Gift Cards</a></li>
+              </ul>
+              <ul id="computers-tablets" class="dropdown-secondary-menu dropdown-tertiary-menu">
+                <li><a href="#back" class="dropdown-back">Back</a></li>
+                <li><a href="category.html">Laptops &amp; Netbook Computers</a></li>
+                <li><a href="category.html">Tablets &amp; iPad</a></li>
+                <li><a href="category.html">E-Readers</a></li>
+                <li><a href="category.html">Desktop &amp; All-in-One Computers</a></li>
+                <li><a href="category.html">Monitors</a></li>
+                <li><a href="category.html">Mice &amp; Keyboards</a></li>
+                <li><a href="category.html">Printers</a></li>
+                <li><a href="category.html">Hard Drives &amp; Storage</a></li>
+                <li><a href="category.html">Computer Memory</a></li>
+                <li><a href="category.html">Video Cards &amp; PC Components</a></li>
+                <li><a href="category.html">Networking &amp; Wireless</a></li>
+                <li><a href="category.html">Software</a></li>
+                <li><a href="category.html">Accessories</a></li>
+                <li><a href="category.html">Computer Setup &amp; Services</a></li>
               </ul>
             </div>
             
           </li>
           
           <li class="search-form-wrapper">
-            <form class="search-form">
+            <form class="search-form" action="/listing">
               <input type="text" placeholder="Search BestBuy.com" role="search" class="search-field" name="search" /><input type="submit" class="search-submit" value="Search"/>
             </form>
           </li>
@@ -58,8 +72,8 @@
           <li class="icon-link" id="profile-link">
             <a href="#profile-nav">Profile</a>
             <ul id="profile-nav" class="dropdown-menu">
-              <li class="secondary-links"><a href="#">Sign In</a> <a href="#">Create an Account</a></li>
-              <!--<li class="secondary-links"><span class="truncated-text">Hi, Reallylongnamethatgoesonandon</span> <a href="#">Sign Out</a></li>-->
+              <!--<li class="secondary-links"><a href="#">Sign In</a> <a href="#">Create an Account</a></li>-->
+              <li class="secondary-links"><span class="truncated-text">Hi, Reallylongnamethatgoesonandon</span> <a href="#">Sign Out</a></li>
               <li><a href="">My Account</a></li>
               <li><a href="">Wish Lists</a></li>
               <li><a href="">View Order Status</a></li>
@@ -67,6 +81,11 @@
           </li>
           <li class="cart-link"><a href="">3 items</a></li>
       	</ul>
+    </header>
+    
+    <header class="title-bar">
+			<a href="/category.html" class="back-btn">TV &amp; Video</a>
+    	<h1>10,275 results for "Omega"</h1>
     </header>
     
     <section id="products"></section>
@@ -86,27 +105,27 @@
           <a href="#">Desktop Site</a>
         </div><!-- footer-links -->
     </footer>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
     <script src="js/jquery.jsonp-2.1.4.min.js"></script>
     <!--<script src="js/fixed.position.js"></script>-->
     <script src="js/addclear.js"></script>
     <script src="js/app.js"></script>
     <script src="js/swipe.js"></script>
-
+		<script src="js/listing-logic.js"></script>
+		
     <script id="productTemplate" type="text/x-jquery-tmpl">
         <article class="product-tile" data-large-image="${largeFrontImage}">
           <div>
             <div class="product-gallery">
               <ul>
-                {{if image}}
-                  <li>
-                    <img src="${image}" alt="image" >
-                  </li>
-                {{/if}}
                 {{if largeFrontImage}}
                   <li>
                     <img src="${largeFrontImage}" alt="large front image" >
+                  </li>
+                {{else}}
+                  <li>
+                    <img src="${image}" alt="image" >
                   </li>
                 {{/if}}
                 {{if angleImage}}
@@ -159,6 +178,7 @@
             <a href="#productmask" class="product-mask"></a>
             <label class="product-checkbox">
               <input type="checkbox" value="${sku}" name="compare-${sku}" />
+              <!--Compare-->
             </label>
             <h2 class="product-title"><a href="product tile link">${name}</a></h2>
             <ul class="product-short-description">{{html shortDescription}}</ul>
@@ -173,91 +193,6 @@
             <img src="http://images.bestbuy.com/BestBuy_US/images/global/misc/ratings_star_3_0.gif" class="product-rating">
           </div>
         </article>
-    </script>
-    
-    <script type="text/javascript">
-    var myScroll;
-    var currentPage = 1;
-    var loading = false;
-    
-    $(function(){
-        //$('#masthead, #footer').fixedPosition();
-        loadProducts();
-        
-        $('#load-more').click(function(e){
-            loadProducts();
-            $(this).addClass('loading');
-            e.preventDefault();
-        });
-        
-        $(window).scroll(function(){
-          if ($(window).scrollTop() > $(document).height() - $(window).height() - 200){
-            loadProducts();
-          }
-        });
-    });
-    
-    function loadProducts(){
-      if (!loading && currentPage){
-        loading = true;
-        $('#products').append('<article class="product-tile" id="loading-tile"><div><a class="product-mask"></a><a class="product-image"><img src="images/loading_16x16.gif" /></a></div></div>');
-        var query = getParameterByName('search') || "tablet";
-        var url = "http://api.remix.bestbuy.com/v1/products(search="+query+")?page="+currentPage+"&apiKey=amfnpjxnz6c9wzfu4h663z6w&format=json";
-        $.jsonp({
-          url: url,
-          cache: true,
-          pageCache: true,
-          callback: "work",
-          callbackParameter: "callback",
-          success: function(data) {
-            loading = false;
-            $('#loading-tile').remove();
-            if (data.products.length == 0){
-              currentPage = false;
-              return;
-            }
-            $.each(data.products, function(index, skus){
-                console.log(skus);
-                if (skus.shortDescription){
-                  skus.shortDescription = skus.shortDescription.split(';');
-                  skus.shortDescription = $.map(skus.shortDescription, function(n,i){
-                      if (i<4){
-                          return "<li>"+n.trim()+"</li>";
-                      }else{
-                          return false;
-                      }
-                  });
-                }
-                $('#productTemplate').tmpl(skus).appendTo('#products');
-                currentPage++;
-            });
-            
-            $('.product-gallery').each(function(){
-              // need to handle orientation change
-              var width = $(this).width();
-              var slider = new Swipe(this);
-              $(this).css('width',width + 'px');
-            });
-          }
-        });
-      }
-    }
-    
-    function getParameterByName(name)
-    {
-      name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
-      var regexS = "[\\?&]" + name + "=([^&#]*)";
-      var regex = new RegExp(regexS);
-      var results = regex.exec(window.location.href);
-      if(results == null)
-        return "";
-      else
-        return decodeURIComponent(results[1].replace(/\+/g, " "));
-    }
-        
-    
-        
-        
     </script>
 </body>
 </html>
