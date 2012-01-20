@@ -490,24 +490,23 @@
 				<h2>Best Buy Video</h2>
 				<ul>
 					<li>
-						<!--<video poster="http://www.bestbuyon.com/sites/default/files/TestDriveHPEprint_Thumbnail160.jpg" src="http://videos-content.bestbuyon.com/content/r70v1/entry/data/80/9/0_23cp8rls_0_59z123yt_1.mp4" controls width="160" height="90"></video>-->
-						<a href="#"><img class="video-poster" src="http://www.bestbuyon.com/sites/default/files/TestDriveHPEprint_Thumbnail160.jpg" data-video="videos/onvideo.m4v" width="160" height="90" /></a>
-						<h3><a href="#">Blue Shirt Test Drive: HP ePrint</a></h3>
+						<a href="videos/onvideo.m4v"><img class="video-poster" src="http://www.bestbuyon.com/sites/default/files/TestDriveHPEprint_Thumbnail160.jpg" data-video="videos/onvideo.m4v" width="160" height="90" /></a>
+						<h3><a href="/videos/onvideo.m4v">Blue Shirt Test Drive: HP ePrint</a></h3>
 						<p>Want to do more with your tablet? Like print? From anywhere? Thought so.</p>
 					</li>
 					<li>
-						<a href="#"><img class="video-poster" src="http://www.bestbuyon.com/sites/default/files/DOTW-DEC18-24_Thumbnail160_0.jpg" data-video="http://videos-content.bestbuyon.com/content/r70v1/entry/data/80/9/0_23cp8rls_0_59z123yt_1.mp4" width="160" height="90" /></a>
-						<h3><a href="#">Deals of the Week</a></h3>
+						<a href="videos/onvideo.m4v"><img class="video-poster" src="http://www.bestbuyon.com/sites/default/files/DOTW-DEC18-24_Thumbnail160_0.jpg" data-video="http://videos-content.bestbuyon.com/content/r70v1/entry/data/80/9/0_23cp8rls_0_59z123yt_1.mp4" width="160" height="90" /></a>
+						<h3><a href="videos/onvideo.m4v">Deals of the Week</a></h3>
 						<p>Don't tell Santa, but the deals are already here! This two-minute video proves it.</p>
 					</li>
 					<li>
-						<a href="#"><img class="video-poster" src="http://www.bestbuyon.com/sites/default/files/Warrior_Thumbnail160.jpg" data-video="http://videos-content.bestbuyon.com/content/r70v1/entry/data/80/9/0_23cp8rls_0_59z123yt_1.mp4" width="160" height="90" /></a>
-						<h3><a href="#">Warrior EXCLUSIVE</a></h3>
+						<a href="videos/onvideo.m4v"><img class="video-poster" src="http://www.bestbuyon.com/sites/default/files/Warrior_Thumbnail160.jpg" data-video="http://videos-content.bestbuyon.com/content/r70v1/entry/data/80/9/0_23cp8rls_0_59z123yt_1.mp4" width="160" height="90" /></a>
+						<h3><a href="videos/onvideo.m4v">Warrior EXCLUSIVE</a></h3>
 						<p>Estranged brothers battle for MMA glory. (How's that for a family reunion?)</p>
 					</li>
 					<li>
-						<a href="#"><img class="video-poster" src="http://www.bestbuyon.com/sites/default/files/Top5Under25_Thumbnail160.jpg" data-video="http://videos-content.bestbuyon.com/content/r70v1/entry/data/80/9/0_23cp8rls_0_59z123yt_1.mp4" width="160" height="90" /></a>
-						<h3><a href="#">Top 5 Gifts Under $25</a></h3>
+						<a href="videos/onvideo.m4v"><img class="video-poster" src="http://www.bestbuyon.com/sites/default/files/Top5Under25_Thumbnail160.jpg" data-video="http://videos-content.bestbuyon.com/content/r70v1/entry/data/80/9/0_23cp8rls_0_59z123yt_1.mp4" width="160" height="90" /></a>
+						<h3><a href="videos/onvideo.m4v">Top 5 Gifts Under $25</a></h3>
 						<p>Looking for the perfect stocking stuffer? How about five? (Collect them all!)</p>
 					</li>
 				</ul>
@@ -618,11 +617,6 @@
     <script type="text/javascript">
     
     $(function(){
-			$('.video-poster').click(function(e){
-				e.preventDefault();
-				$('body').append('<video id="best-buy-on-video" src="'+$(this).attr('data-video')+'" autoplay controls></video>');
-				document.getElementsByID('video')[0].webkitEnterFullscreen();
-			});
 
     });
     

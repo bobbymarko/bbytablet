@@ -334,41 +334,7 @@
         </div><!-- footer-links -->
     </footer>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-    <script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
-    <script src="js/jquery.jsonp-2.1.4.min.js"></script>
-    <!--<script src="js/fixed.position.js"></script>-->
     <script src="js/addclear.js"></script>
     <script src="js/app.js"></script>
-    <script src="js/swipe.js"></script>
-    
-    <script type="text/javascript">
-    
-    $(function(){
-			$('.video-poster').click(function(e){
-				e.preventDefault();
-				$('body').append('<video id="best-buy-on-video" src="'+$(this).attr('data-video')+'" autoplay controls></video>');
-				document.getElementsByID('video')[0].webkitEnterFullscreen();
-			});
-
-    });
-    
-    
-    
-    function getParameterByName(name)
-    {
-      name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
-      var regexS = "[\\?&]" + name + "=([^&#]*)";
-      var regex = new RegExp(regexS);
-      var results = regex.exec(window.location.href);
-      if(results == null)
-        return "";
-      else
-        return decodeURIComponent(results[1].replace(/\+/g, " "));
-    }
-        
-    
-        
-        
-    </script>
 </body>
 </html>
