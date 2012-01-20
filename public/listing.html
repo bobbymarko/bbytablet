@@ -85,6 +85,10 @@
     
     <header class="title-bar">
 			<a href="/category.html" class="back-btn">TV &amp; Video</a>
+    	<div class="sort-filter-container">
+    		<a href="" class="button tertiary dropdown-button">Best Match</a>
+    		<a href="" class="button tertiary dropdown-button">Narrow Results</a>
+    	</div>
     	<h1>All Flat-Panel TVs</h1>
     </header>
     
@@ -92,9 +96,6 @@
 			<section id="products">
 			</section>
 		</div>
-    <!--<div style="text-align:center; margin-bottom:20px;">
-        <a href="#load-more" id="load-more" class="button secondary">Load More Products</a>
-    </div>-->
     
     <footer id="footer">
         <div class="footer-meta">
@@ -118,7 +119,7 @@
 		<script src="js/listing-logic.js"></script>
 		
     <script id="productTemplate" type="text/x-jquery-tmpl">
-        <article class="product-tile" data-large-image="${largeFrontImage}">
+        <article class="product-tile">
           <div>
             <div class="product-gallery">
               <ul>
@@ -161,11 +162,6 @@
                     <img src="${remoteControlImage}" alt="remote control image" >
                   </li>
                 {{/if}}
-                {{if largeFrontImage}}
-                  <li>
-                    <img src="${largeFrontImage}" alt="large front image" >
-                  </li>
-                {{/if}}
                 {{if topViewImage}}
                   <li>
                     <img src="${topViewImage}" alt="top view image" >
@@ -178,29 +174,32 @@
                 {{/if}}
               </ul>
             </div><!-- end .product-gallery -->
+            <div class='gallery-position'></div>
             <a href="#productmask" class="product-mask"></a>
-            <div class="product-compare">
+            <div class="product-meta">
               <input type="checkbox" value="${sku}" name="compare-${sku}" id="compare-${sku}" />
               <label for="compare-${sku}">Compare</label>
+              {{if freeShipping}}
+              <p class="product-message">Free Shipping</p>
+              {{/if}}
               <!--Compare-->
             </div>
             <h3 class="product-title"><a href="product tile link">${name}</a></h3>
-            <ul class="product-short-description">{{html shortDescription}}</ul>
             <ul class="price-block">
-                {{if onSale}}
-                <li class="you-save">You Save: $${Math.round((regularPrice-salePrice)*100)/100}</li>
-								<li>Reg. Price: $${regularPrice}</li>
 								<li class="price-paid"><span class="dollar">$</span>${salePrice}</li>
-                {{else}}
-                <li class="price-paid"><span class="dollar">$</span>${salePrice}</li>
-                {{/if}}
             </ul>
+            {{if onSale}}
+            	<ul class="price-block price-block-savings">
+                <li>Reg. Price: $${regularPrice}</li>
+								<li class="you-save">You Save: $${Math.round((regularPrice-salePrice)*100)/100}</li>
+							</ul>
+						{{/if}}
             <div class="ratings">
-							<a href="#">${customerReviewCount} Reviews</a>
 							<div class="rating-stars">
 									<div class="rating-filler" style="width: ${(customerReviewAverage/5)*100}%;"></div>
 									<div class="rating-mask"></div>
 							</div>
+							<a href="#">${customerReviewCount} Reviews</a>
 						</div><!-- ratings -->
           </div>
         </article>

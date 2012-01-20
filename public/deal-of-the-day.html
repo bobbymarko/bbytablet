@@ -89,8 +89,8 @@
       	</ul>
     </header>
     
-    <div class="module-group">
-    	<section class="module landing-page-title">
+    <div class="module-group"> 
+    	<section class="module landing-page-title called-out-block">
     		<img src="/images/dotd-logo-large.png" />
     		<h1>A new deal every day, up to 70% off retail</h1>
     		<p>Time left on today’s deal <span>7:17:20</span></p>
@@ -98,45 +98,59 @@
     	
     	<section class="module sku-list-module skus-x-1">
     		<a href="" class="item-image"><img src="http://images.bestbuy.com/BestBuy_US/images/products/1648/1648213_ra.jpg" /></a>
-    		<a href="" class="item-name">Dell - Inspiron Laptop Intel&reg; Core&trade; i3 Processor / 14" Display / 4GB Memory / 500 GB Hard Drive - Peacock Blue</a>
-    		<ul class="price-block">
-    			<li class="primary-callout">On Sale</li>
-					<li class="price-paid"><span class="dollar">$</span>1,099.99</li>
-					<li>Regular Price: $1,299.99</li>
-					<li class="you-save">You Save: $200.00</li>
-					<li class="secondary-callout">Free Shipping</li>
-				</ul>
-				<a href="" class="button primary">Add to Cart</a>
+    		<div class="item-postcard">
+					<a href="" class="item-name">Dell - Inspiron Laptop Intel&reg; Core&trade; i3 Processor / 14" Display / 4GB Memory / 500 GB Hard Drive - Peacock Blue</a>
+					<ul class="price-block">
+						<li class="primary-callout">On Sale</li>
+						<li class="price-paid"><span class="dollar">$</span>1,099.99</li>
+						<li>Regular Price: $1,299.99</li>
+						<li class="you-save">You Save: $200.00</li>
+						<li class="secondary-callout">Free Shipping</li>
+					</ul>
+					<a href="" class="button primary cart-button">Add to Cart</a>
+				</div>
     	</section>
     	
     	<section class="module sku-list-module skus-x-1">
     		<a href="" class="item-image"><img src="/images/content/ipad-cases.jpg" /></a>
-    		<a href="" class="item-name">35% Off Select iPad&reg; 2 Cases from M-Edge Accessories</a>
-    		<ul class="price-block">
-    			<li class="primary-callout">On Sale</li>
-					<li class="price-paid"><span class="dollar">$</span>12.99 - <span class="dollar">$</span>32.49</li>
-					<li>Regular Price: $24.99 - $69.99</li>
-					<li class="you-save">You Save: $12.00 - $37.50</li>
-					<li class="secondary-callout">Free Shipping</li>
-				</ul>
-				<a href="" class="button primary">Shop Now</a>
+    		<div class="item-postcard">
+					<a href="" class="item-name">35% Off Select iPad&reg; 2 Cases from M-Edge Accessories</a>
+					<ul class="price-block">
+						<li class="primary-callout">On Sale</li>
+						<li class="price-paid"><span class="dollar">$</span>12.99 - <span class="dollar">$</span>32.49</li>
+						<li>Regular Price: $24.99 - $69.99</li>
+						<li class="you-save">You Save: $12.00 - $37.50</li>
+						<li class="secondary-callout">Free Shipping</li>
+					</ul>
+					<a href="" class="button primary">Shop Now</a>
+				</div>
     	</section>
     	
-    	<section class="module alert-form">
+    	<section class="module sign-up-module called-out-block">
     		<h2>Get Our Deal of the Day Alerts</h2>
     		
-    		<form>
+    		<form class="alert-form">
     		<label>Text Alerts</label>
-    		<input type="tel" />
-    		<input type="submit" value="Sign Up" class="button secondary" />
-    		<p class="legal">Standard text message rates may apply. Available on participating carriers only.</p>
+    		<div class="field-group">
+    			<input type="tel" />
+    			<p class="legal">Standard text message rates may apply. Available on participating carriers only.</p>
+    		</div>
+    		<input type="submit" value="Sign Up" class="button secondary small-button" />
     		</form>
     		
-    		<form>
+    		<form class="alert-form">
     		<label>Email Alerts</label>
     		<input type="email" />
-    		<input type="submit" value="Sign Up" class="button secondary" />
+    		<input type="submit" value="Sign Up" class="button secondary small-button" />
     		</form>
+    		
+    		<!-- AddThis Button BEGIN -->
+				<div class="addthis_toolbox addthis_default_style">
+					<a class="addthis_button_facebook_like" fb:like:layout="box_count"></a>
+					<a class="addthis_button_google_plusone" g:plusone:size="tall"></a>
+					<a class="addthis_button_tweet" tw:count="vertical"></a>
+				</div>
+				<!-- AddThis Button END -->
     	</section>
     
 			<section class="module featured-offers">
@@ -193,5 +207,6 @@
     });
    
     </script>
+    <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4e8e27955052ca11"></script>
 </body>
 </html>

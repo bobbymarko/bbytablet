@@ -153,7 +153,7 @@
     	function loadOffers(){
     		if (!loading && cursor){
 					loading = true;
-					$('#offers').append('<li id="loading-tile"><a href="${url}" class="item-image"><img src="/images/loading_24x24.gif" alt="" /></a><a href="#" class="item-description">Loading</a></li>');
+					$('#offers').append('<li id="loading-tile" class="loading"><img src="/images/loading_24x24.gif"/> Loading More Offers</li>');
 					if (cursor) cursor = "&cursor="+cursor;
 					if (department_key) department_key = '&department_key='+department_key;
 					$.jsonp({

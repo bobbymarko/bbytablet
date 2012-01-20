@@ -77,14 +77,13 @@ function loadProducts(){
 						// TODO: need to handle orientation change
 						var width = $(this).width();
 						//var slider = new Swipe(this);
-						var positionMarker = "<div class='gallery-position'>";
 						var images = $('img',this);
 						if (images.length > 1){
+							var positionMarker = "";
 							$.each(images, function(){
 								positionMarker += "<em>&bull;</em>"
 							});
-							positionMarker += "</div>";
-							$(this).after(positionMarker);
+							$(this).next('.gallery-position').html(positionMarker);
 							$(this).next('.gallery-position').children('em').first().addClass('on');
 							var slider = new Swipe(this, {
 								callback: function(e, pos) {
