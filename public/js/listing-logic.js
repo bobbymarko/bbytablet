@@ -4,9 +4,14 @@ var loading = false;
 
 $(function(){
 		//$('#masthead, #footer').fixedPosition();
+		var searchTerm = getParameterByName('search');
 		loadProducts();
 		
+		if (searchTerm){
 		$('.search-field', '#masthead').val(getParameterByName('search'));
+		$('h1','.title-bar').text('10,275 results for "'+searchTerm+'"');
+		$('.back-btn', '.title-bar').text('Home').attr('href','/');
+		}
 		
 		$('#load-more').click(function(e){
 				loadProducts();
@@ -25,7 +30,7 @@ function loadProducts(){
 	if (!loading && currentPage){
 		loading = true;
 		$('#products').append('<article class="product-tile" id="loading-tile"><div><a class="product-mask"></a><a class="product-image"><img src="images/loading_16x16.gif" /></a></div></div>');
-		var query = getParameterByName('search') || "tablet";
+		var query = getParameterByName('search') || "hdtv";
 		var url = "http://api.remix.bestbuy.com/v1/products(search="+query+")?page="+currentPage+"&apiKey=amfnpjxnz6c9wzfu4h663z6w&format=json";
 		$.jsonp({
 			url: url,
@@ -52,6 +57,11 @@ function loadProducts(){
 									}
 							});
 						}
+						
+						if(!skus.customerReviewCount){
+							skus.customerReviewCount = 0;
+						}
+						
 						$('#productTemplate').tmpl(skus).appendTo('#products');
 						currentPage++;
 				});

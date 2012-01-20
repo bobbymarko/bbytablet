@@ -204,6 +204,7 @@
 
 .sku-list-module li{
 	float:left;
+	font-size:12px;
 }
 
 .skus-x-2 li{
@@ -236,28 +237,6 @@
 	float:none;
 	width:auto;
 	margin:0;
-	font-size:12px;
-}
-
-.sku-list-module .price-paid{
-	font-size:36px;
-	font-size:24px;
-	letter-spacing:-.04em;
-	line-height:.8;
-}
-
-.sku-list-module .you-save{
-	color:#bb0628;
-	font-weight:bold;
-}
-
-.sku-list-module .dollar{
-	font-size:24px;
-	font-size:16px;
-}
-
-.sku-list-module .note{
-	font-size:10px;
 }
 
 .sku-list-module .item-name{
@@ -342,7 +321,7 @@
 
 .featured-offers .item-description, .featured-offers .item-title{
 	font-size:14px;
-	margin:10px 0 0;
+	margin:10px 0 2px;
 	display:block;
 	margin-left:34%;
 	font-weight:bold;
@@ -351,8 +330,8 @@
 .featured-offers .item-description{
 	font-size:12px;
 	color:#49494a;
-	margin-top:5px;
 	font-weight:normal;
+	margin-top:0;
 }
 
 /* ---------- Media Queries ----------------*/
@@ -430,5 +409,11 @@
 	
 	.two-column .skus-x-4 .item-image {
 		height: 130px;
+	}
+}
+
+@media (min-width:1200px){
+	.vb-primary-message {
+		margin-right:10%;
 	}
 }

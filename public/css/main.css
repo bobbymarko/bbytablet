@@ -796,7 +796,6 @@ a.dropdown-back:after{
 .ratings {
 	position:relative;
 	overflow:hidden;
-	clear:both;
 }
 
 .ratings a {
@@ -829,6 +828,35 @@ a.dropdown-back:after{
 .rating-mask{
     background:url(../images/ratings_stars.png) no-repeat;
     background-size: contain;
+}
+
+/* ---------- Price Blocks ----------------*/
+
+.price-block{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+.price-block .price-paid{
+	font-size:36px;
+	font-size:24px;
+	letter-spacing:-.04em;
+	line-height:.8;
+}
+
+.price-block .you-save{
+	color:#bb0628;
+	font-weight:bold;
+}
+
+.price-block .dollar{
+	font-size:24px;
+	font-size:16px;
+}
+
+.price-block .note{
+	font-size:10px;
 }
 
 /* ---------- Media Queries ----------------*/

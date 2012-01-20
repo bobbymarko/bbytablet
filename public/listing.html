@@ -85,10 +85,13 @@
     
     <header class="title-bar">
 			<a href="/category.html" class="back-btn">TV &amp; Video</a>
-    	<h1>10,275 results for "Omega"</h1>
+    	<h1>All Flat-Panel TVs</h1>
     </header>
     
-    <section id="products"></section>
+    <div id="product-wrapper">
+			<section id="products">
+			</section>
+		</div>
     <!--<div style="text-align:center; margin-bottom:20px;">
         <a href="#load-more" id="load-more" class="button secondary">Load More Products</a>
     </div>-->
@@ -176,21 +179,29 @@
               </ul>
             </div><!-- end .product-gallery -->
             <a href="#productmask" class="product-mask"></a>
-            <label class="product-checkbox">
-              <input type="checkbox" value="${sku}" name="compare-${sku}" />
+            <div class="product-compare">
+              <input type="checkbox" value="${sku}" name="compare-${sku}" id="compare-${sku}" />
+              <label for="compare-${sku}">Compare</label>
               <!--Compare-->
-            </label>
-            <h2 class="product-title"><a href="product tile link">${name}</a></h2>
+            </div>
+            <h3 class="product-title"><a href="product tile link">${name}</a></h3>
             <ul class="product-short-description">{{html shortDescription}}</ul>
-            <ul class="product-priceblock">
+            <ul class="price-block">
                 {{if onSale}}
-                <li>Reg. Price: $${regularPrice}</li>
-                <li>Sale Price: <strong>$${salePrice}</strong></li>
+								<li class="price-paid"><span class="dollar">$</span>${salePrice}</li>
+								<li>Reg. Price: $${regularPrice}</li>
+								<li class="you-save">You Save: $${Math.round((regularPrice-salePrice)*100)/100}</li>
                 {{else}}
-                <li>Our Price: <strong>$${salePrice}</strong></li>
+                <li class="price-paid"><span class="dollar">$</span>${salePrice}</li>
                 {{/if}}
             </ul>
-            <img src="http://images.bestbuy.com/BestBuy_US/images/global/misc/ratings_star_3_0.gif" class="product-rating">
+            <div class="ratings">
+							<a href="#">${customerReviewCount} Reviews</a>
+							<div class="rating-stars">
+									<div class="rating-filler" style="width: ${(customerReviewAverage/5)*100}%;"></div>
+									<div class="rating-mask"></div>
+							</div>
+						</div><!-- ratings -->
           </div>
         </article>
     </script>
