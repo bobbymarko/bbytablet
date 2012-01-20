@@ -188,9 +188,9 @@
             <ul class="product-short-description">{{html shortDescription}}</ul>
             <ul class="price-block">
                 {{if onSale}}
-								<li class="price-paid"><span class="dollar">$</span>${salePrice}</li>
+                <li class="you-save">You Save: $${Math.round((regularPrice-salePrice)*100)/100}</li>
 								<li>Reg. Price: $${regularPrice}</li>
-								<li class="you-save">You Save: $${Math.round((regularPrice-salePrice)*100)/100}</li>
+								<li class="price-paid"><span class="dollar">$</span>${salePrice}</li>
                 {{else}}
                 <li class="price-paid"><span class="dollar">$</span>${salePrice}</li>
                 {{/if}}

@@ -139,6 +139,7 @@
 .vb-secondary-image{
 	float:left;
 	width:30%;
+	margin:0 10px 0 0;
 	height:100%;
 	text-align:center;
 }
@@ -207,6 +208,11 @@
 	font-size:12px;
 }
 
+.skus-x-1{
+	position:relative;
+	overflow:hidden;
+}
+
 .skus-x-2 li{
 	width:46%;
 	margin:0 2%;
@@ -246,6 +252,10 @@
 	margin:5px 0;
 }
 
+.skus-x-1 .item-name{
+	font-size:24px;
+}
+
 .skus-x-5 .item-name{
 	font-size:14px;
 }
@@ -261,6 +271,11 @@
 	height:100px;
 	overflow:hidden;
 	vertical-align:bottom;
+}
+
+.sku-list-module.skus-x-1 .item-image{
+	width:auto;
+	height:auto;
 }
 
 .sku-list-module.skus-x-5 .item-image{
@@ -286,6 +301,14 @@
 
 .module .ratings{
 	margin:0 0 5px;
+}
+
+.skus-x-1 .price-paid{
+	font-size:36px;
+}
+
+.skus-x-1 .dollar{
+	font-size:24px;
 }
 
 /* ---------- Featured Offers ----------------*/
@@ -334,6 +357,67 @@
 	margin-top:0;
 }
 
+/* ---------- Promo Block ----------------*/
+
+.featured-offers .vb-secondary-area{
+	height:auto;
+	margin-left:0;
+	border-top:none;
+	padding-top:0;
+	padding-left:0;
+	overflow:visible;
+}
+
+.featured-offers .vb-secondary-module{
+	float:none;
+	padding-top:0;
+	overflow:visible;
+}
+
+.featured-offers .button{
+	margin-top:5px;
+}
+
+.landing-page-title{
+	background:#f4f5f5;
+	border:1px solid #c3c4c4;
+	padding:20px;
+	position:relative;
+}
+
+/* clear fixing */
+.landing-page-title:before,
+.landing-page-title:after {
+    content:"";
+    display:table;
+}
+
+.landing-page-title:after {
+    clear:both;
+}
+/* end clear fixing */
+
+.landing-page-title:first-child{
+	margin-top:60px;
+	border-top:1px solid #c3c4c4;
+}
+
+.landing-page-title img{
+	position:absolute;
+	top:-40px;
+}
+
+.landing-page-title h1{
+	font-weight:bold;
+	float:left;
+	margin:0 0 0 160px;
+}
+
+.landing-page-title p{
+	font-size:18px;
+	float:right;
+}
+
 /* ---------- Media Queries ----------------*/
 
 @media (min-width:770px){
@@ -346,7 +430,7 @@
 	.vb-secondary-area{
 		width:33%;
 		height:305px;
-		float:left;
+		float:right;
 		border-left:1px solid #c3c4c4;
 		border-top:none;
 		margin-left:-21px;
@@ -365,7 +449,15 @@
 		margin-bottom:-1px;
 	}
 	
-	.vb-secondary-module:last-child{
+	.vb-secondary-module:first-child.vb-secondary-module:last-child{
+		border-bottom:none;
+		margin-bottom:0;
+	}
+	
+	.featured-offers .vb-secondary-area{
+		float:right;
+		margin-left:20px;
+		padding-left:21px;
 	}
 	
 	.sku-list-module .item-image{
@@ -375,6 +467,10 @@
 	.two-column .featured-offers li{
 		display:inline-block;
 		width:45.5%;
+	}
+	
+	.skus-x-1 .item-image{
+		float:left;
 	}
 	
 	.two-column .skus-x-4 .item-image{

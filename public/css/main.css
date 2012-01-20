@@ -95,6 +95,7 @@ h1{
 	margin:0 0 20px;
 }
 
+label{cursor: pointer;}
 input{-webkit-border-radius:0;}
 input[type=search], input[type=text], input[type=number], input[type=tel], input[type=email], input[type=submit]{-webkit-appearance:none;}
 input[type=submit]{cursor:pointer;}
@@ -134,7 +135,7 @@ input[type=submit]{cursor:pointer;}
 
 #branding{
     float:left;
-    padding:12px 0 10px 12px;
+    padding:12px 0 10px 10px;
 }
 
 #nav{
@@ -144,7 +145,7 @@ input[type=submit]{cursor:pointer;}
 
 #cart-menu{
     float:right;
-    margin-right:15px;
+    margin-right:10px;
 }
 
 .menu{
@@ -836,6 +837,10 @@ a.dropdown-back:after{
 	margin:0;
 	padding:0;
 	list-style:none;
+}
+
+ul.price-block li{ /* need to refactor sku-list-module to fix specificity issue */
+	float:none;
 }
 
 .price-block .price-paid{

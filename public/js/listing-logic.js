@@ -24,12 +24,18 @@ $(function(){
 				loadProducts();
 			}
 		});
+		
+		if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/iPad/i)) {
+			$('label[for]').live('click',function() {
+				e.stopPropagation();
+			});
+		}
 });
 
 function loadProducts(){
 	if (!loading && currentPage){
 		loading = true;
-		$('#products').append('<article class="product-tile" id="loading-tile"><div><a class="product-mask"></a><a class="product-image"><img src="images/loading_16x16.gif" /></a></div></div>');
+		$('#products').append('<article class="product-tile" id="loading-tile"><div><a class="product-mask"></a><a class="product-gallery"><ul><li><img src="images/loading_48x48.gif" /></li></ul></a></div></div>');
 		var query = getParameterByName('search') || "hdtv";
 		var url = "http://api.remix.bestbuy.com/v1/products(search="+query+")?page="+currentPage+"&apiKey=amfnpjxnz6c9wzfu4h663z6w&format=json";
 		$.jsonp({
@@ -67,10 +73,33 @@ function loadProducts(){
 				});
 				
 				$('.product-gallery').each(function(){
-					// need to handle orientation change
-					var width = $(this).width();
-					var slider = new Swipe(this);
-					$(this).css('width',width + 'px');
+					if (!$(this).attr('style')){ // ignore gallery if already swipified
+						// TODO: need to handle orientation change
+						var width = $(this).width();
+						//var slider = new Swipe(this);
+						var positionMarker = "<div class='gallery-position'>";
+						var images = $('img',this);
+						if (images.length > 1){
+							$.each(images, function(){
+								positionMarker += "<em>&bull;</em>"
+							});
+							positionMarker += "</div>";
+							$(this).after(positionMarker);
+							$(this).next('.gallery-position').children('em').first().addClass('on');
+							var slider = new Swipe(this, {
+								callback: function(e, pos) {
+												var i = bullets.length;
+												while (i--) {
+														bullets[i].className = ' ';
+												}
+												bullets[pos].className = 'on';
+										}
+								}),
+								bullets = $(this).next('.gallery-position').children('em');
+							
+							$(this).css('width',width + 'px');
+						}
+					}
 				});
 			}
 		});
