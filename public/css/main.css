@@ -614,7 +614,6 @@ input.search-field{
 }
 
 .back-btn{
-	position:absolute;
 	float:left;
 	padding-left:22px;
 }
@@ -906,7 +905,7 @@ ul.price-block li{ /* need to refactor sku-list-module to fix specificity issue 
 	font-weight:bold;
 }
 
-.price-block:first-letter{
+.price-block .price-paid:first-letter, .price-block .dollar{
 	font-size:66%;
 	margin-top:-2%;
 }
@@ -950,4 +949,10 @@ ul.price-block li{ /* need to refactor sku-list-module to fix specificity issue 
   	width:219px;
   }
   
+}
+
+@media (min-width:760px){
+	.back-btn{ /* center title horizontally when room permits */
+		position:absolute;
+	}
 }

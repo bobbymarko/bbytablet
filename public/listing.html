@@ -191,7 +191,7 @@
             {{if onSale}}
             	<ul class="price-block price-block-savings">
                 <li>Reg. Price: $${regularPrice}</li>
-								<li class="you-save">You Save: $${Math.round((regularPrice-salePrice)*100)/100}</li>
+								<li class="you-save">You Save: $${parseFloat(Math.round((regularPrice-salePrice) * 100) / 100).toFixed(2)}</li>
 							</ul>
 						{{/if}}
             <div class="ratings">

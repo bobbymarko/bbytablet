@@ -314,6 +314,11 @@
 	font-size:36px;
 }
 
+.recommendation-link{
+	margin-top:5px;
+	display:block;
+}
+
 /* ---------- Featured Offers ----------------*/
 
 .featured-offers ul{
@@ -389,7 +394,8 @@
 	border-top:none;
 	padding-top:0;
 	padding-left:0;
-	overflow:visible;
+	overflow:hidden;
+	position:relative;
 }
 
 .featured-offers .vb-secondary-module{
@@ -491,6 +497,18 @@
 }
 
 /* ---------- Media Queries ----------------*/
+@media (min-width:740px){
+	.alert-form{
+		float:left;
+		width:303px;
+	}
+	
+	.alert-form+.alert-form{
+		padding-left:20px;
+		margin-left:20px;
+		border-left:1px solid #c3c4c4;
+	}
+}
 
 @media (min-width:770px){
 	.vb-primary-area{
@@ -557,17 +575,6 @@
 	.skus-x-2 li{
 		width:48%;
 		margin:0 1%;
-	}
-	
-	.alert-form{
-		float:left;
-		width:303px;
-	}
-	
-	.alert-form+.alert-form{
-		padding-left:20px;
-		margin-left:20px;
-		border-left:1px solid #c3c4c4;
 	}
 
 }

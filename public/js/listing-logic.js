@@ -9,7 +9,7 @@ $(function(){
 		
 		if (searchTerm){
 		$('.search-field', '#masthead').val(getParameterByName('search'));
-		$('h1','.title-bar').text('10,275 results for "'+searchTerm+'"');
+		$('h1','.title-bar').html('<span id="total-search-results"></span> results for "'+searchTerm+'"');
 		$('.back-btn', '.title-bar').text('Home').attr('href','/');
 		}
 		
@@ -45,6 +45,8 @@ function loadProducts(){
 			callback: "work",
 			callbackParameter: "callback",
 			success: function(data) {
+			$('#total-search-results').text(data.total);
+			console.log(data);
 				loading = false;
 				$('#loading-tile').remove();
 				if (data.products.length == 0){
