@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8 />
+	<title>Featured Offers - BestBuy.com</title>
+	<link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="css/modules.css" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+</head>
+<body>
+    <header id="masthead">
+        <a href="/" id="branding"><img src="images/bby_logo.png" alt="Best Buy Logo" height="40px" width="59px"/></a>
+        
+        <ul class="menu">
+          <li class="icon-link" id="menu-link">
+            <a href="#header-nav">Menu</a>
+            <div id="header-nav" class="dropdown-menu">
+              <ul class="dropdown-primary-menu">
+                <li><a href="#products-menu">Products</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="#deals-menu">Deals</a></li>
+                <li><a href="">Gifts</a></li>
+                <li><a href="">Store Locator</a></li>
+                <!-- less important links -->
+                <li class="secondary-links"><a href="">Feedback</a> <a href="">Legal</a> <a href="">Desktop Site</a></li>
+              </ul>
+              <ul id="products-menu" class="dropdown-secondary-menu">
+                <li><a href="#back" class="dropdown-back">Back</a></li>
+                <li><a href="#computers-tablets">Computers &amp; Tablets</a></li>
+                <li><a href="#computers-tablets">TV &amp; Video</a></li>
+                <li><a href="#computers-tablets">Music, Movies &amp; Instruments</a></li>
+                <li><a href="#computers-tablets">Video Games &amp; Gadgets</a></li>
+                <li><a href="#computers-tablets">Cameras &amp; Camcorders</a></li>
+                <li><a href="#computers-tablets">Mobile Phones</a></li>
+                <li><a href="#computers-tablets">Health &amp; Fitness</a></li>
+                <li><a href="#computers-tablets">GPS, Car &amp; Marine</a></li>
+                <li><a href="#computers-tablets">Audio &amp; MP3</a></li>
+                <li><a href="#computers-tablets">Office</a></li>
+                <li><a href="#computers-tablets">Home</a></li>
+                <li><a href="#computers-tablets">Appliances</a></li>
+                <li><a href="#computers-tablets">Gift Cards</a></li>
+              </ul>
+              <ul id="computers-tablets" class="dropdown-secondary-menu dropdown-tertiary-menu">
+                <li><a href="#back" class="dropdown-back">Back</a></li>
+                <li><a href="category.html">Laptops &amp; Netbook Computers</a></li>
+                <li><a href="category.html">Tablets &amp; iPad</a></li>
+                <li><a href="category.html">E-Readers</a></li>
+                <li><a href="category.html">Desktop &amp; All-in-One Computers</a></li>
+                <li><a href="category.html">Monitors</a></li>
+                <li><a href="category.html">Mice &amp; Keyboards</a></li>
+                <li><a href="category.html">Printers</a></li>
+                <li><a href="category.html">Hard Drives &amp; Storage</a></li>
+                <li><a href="category.html">Computer Memory</a></li>
+                <li><a href="category.html">Video Cards &amp; PC Components</a></li>
+                <li><a href="category.html">Networking &amp; Wireless</a></li>
+                <li><a href="category.html">Software</a></li>
+                <li><a href="category.html">Accessories</a></li>
+                <li><a href="category.html">Computer Setup &amp; Services</a></li>
+              </ul>
+              <ul id="deals-menu" class="dropdown-secondary-menu">
+                <li><a href="#back" class="dropdown-back">Back</a></li>
+                <li><a href="http://bestbuy.shoplocal.com">Weekly Deals</a></li>
+                <li><a href="deal-of-the-day.html">Deal of the Day</a></li>
+                <li><a href="special-offers-listing.html">Featured Offers</a></li>
+              </ul>
+            </div>
+            
+          </li>
+          
+          <li class="search-form-wrapper">
+            <form class="search-form" action="/listing">
+              <input type="text" placeholder="Search BestBuy.com" role="search" class="search-field" name="search" /><input type="submit" class="search-submit" value="Search"/>
+            </form>
+          </li>
+        </ul>
+        
+        <ul class="menu" id="cart-menu">
+          <li class="icon-link" id="profile-link">
+            <a href="#profile-nav">Profile</a>
+            <ul id="profile-nav" class="dropdown-menu">
+              <!--<li class="secondary-links"><a href="#">Sign In</a> <a href="#">Create an Account</a></li>-->
+              <li class="secondary-links"><span class="truncated-text">Hi, Reallylongnamethatgoesonandon</span> <a href="#">Sign Out</a></li>
+              <li><a href="">My Account</a></li>
+              <li><a href="">Wish Lists</a></li>
+              <li><a href="">View Order Status</a></li>
+            </ul>
+          </li>
+          <li class="cart-link"><a href="">3 items</a></li>
+      	</ul>
+    </header>
+    
+    <div class="two-column">
+			<div class="sidebar-navigation sidebar">
+				<h2 class="side-menu-title">Featured Offers</h2>
+				<ul class="side-menu" id="departments">
+					<li><a href="?">All Offers <span class="count"></span></a></li>
+				</ul>
+			</div>
+			
+			<div class="module-group">
+				
+				<section class="module featured-offers">
+					<h2><span id="current-department">All</span> Featured Offers</h2>
+					<ul id="offers">
+					</ul>
+				</section>
+				
+				
+			</div><!-- end .module-group -->
+			
+    </div><!-- end .two-column -->
+    
+    <footer id="footer">
+        <div class="footer-meta">
+          <p>Prices on this site are the same as those on BestBuy.com. Prices may vary in store. All prices and offers are subject to change. In store availability subject to change. Orders placed for store pickup may take up to 45 minutes to process.</p> 
+          <p>&copy;2003-2011 BBY Solutions, Inc.</p>
+        </div><!--footer-meta-->
+        <div class="footer-links">
+          <a href="#">Terms</a>
+          <a href="#">Privacy</a>
+          <a href="#">Feedback</a>
+          <a href="#">Desktop Site</a>
+        </div><!-- footer-links -->
+    </footer>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+    <script src="js/jquery.jsonp-2.1.4.min.js"></script>
+    <!--<script src="js/fixed.position.js"></script>-->
+    <script src="js/addclear.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/swipe.js"></script>
+    
+    <script type="text/javascript">
+    $(function(){
+    	var offer_url = 'https://bbyoffer.appspot.com/api/v1/offer?api_key=EofuApPM7RXgyE8&channel_key=bby-mdot-special-offers&page_size=20';
+    	var cursor = true;
+    	var loading = false;
+    	var department_key = getParameterByName('department_key');
+    	var current_department = getParameterByName('department_key');
+    	var department_name = decodeURIComponent(getParameterByName('department_name'));
+    	
+    	if (department_name) {
+    		$('#current-department').text(department_name);
+    	}
+    	
+    	loadOffers();
+    	$(window).scroll(function(){
+				if ($(window).scrollTop() > $(document).height() - $(window).height() - 200){
+					loadOffers();
+				}
+			});
+    	
+    	function loadOffers(){
+    		if (!loading && cursor){
+					loading = true;
+					$('#offers').append('<li id="loading-tile" class="loading"><img src="/images/loading_24x24.gif"/> Loading More Offers</li>');
+					if (cursor) cursor = "&cursor="+cursor;
+					if (department_key) department_key = '&department_key='+department_key;
+					$.jsonp({
+						url: 'http://jsonpify.heroku.com/?resource='+offer_url + department_key + cursor,
+						cache: true,
+						pageCache: true,
+						callback: "callback",
+						callbackParameter: "callback",
+						success: function(returned) {
+							loading = false;
+							$('#loading-tile').remove();
+							console.log(returned);
+							$.each(returned.data.offers, function(index, offer){
+								offer.name = (offer.title.indexOf('. ') !== -1) ? offer.title.substr(0,offer.title.indexOf('. ')) : offer.title;
+								offer.title = (offer.title.indexOf('. ') !== -1) ? offer.title.substr(offer.title.indexOf('. ') + 2) : '';
+								$('#offerTemplate').tmpl(offer).appendTo('#offers');
+							});
+							if (returned.data.cursor){
+								cursor = returned.data.cursor;
+							} else {
+								cursor = false;
+							}
+						}
+					});
+				}
+			}
+			
+			var department_url = 'https://bbyoffer.appspot.com/api/v1/department?api_key=EofuApPM7RXgyE8&channel_key=bby-mdot-special-offers';
+			var in_a_department = false;
+			$.jsonp({
+				url: 'http://jsonpify.heroku.com/?resource='+department_url,
+				cache: true,
+				pageCache: true,
+				callback: "callback",
+				callbackParameter: "callback",
+				success: function(returned) {
+					console.log(returned);
+					$.each(returned.data.departments, function(index, department){
+						if (department.offer_count > 0){
+							if (department.key == current_department){
+								department.current = 'current-item'
+								in_a_department = true;
+							} else{
+								department.current = '';
+							}
+							console.log(department.key, department_key)
+							$('#departmentTemplate').tmpl(department).appendTo('#departments');
+						}
+					});
+					if (!in_a_department) $('#departments li:first-child').addClass('current-item');
+				}
+			});
+    });
+
+    String.prototype.pluralize = function(count, plural){
+			if (plural == null)
+				plural = this + 's';
+			return (count == 1 ? this : plural)
+		}
+		
+		function getParameterByName(name){
+			name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+			var regexS = "[\\?&]" + name + "=([^&#]*)";
+			var regex = new RegExp(regexS);
+			var results = regex.exec(window.location.href);
+			if(results == null)
+				return "";
+			else
+				return decodeURIComponent(results[1].replace(/\+/g, " "));
+		}
+        
+    </script>
+    
+    <script id="offerTemplate" type="text/x-jquery-tmpl">
+				<li>
+					<a href="${url}" class="item-image"><img src="${image_url}" alt="" /></a>
+					<a href="${url}" class="item-title">${name}</a>
+					<a href="${url}" class="item-description">${title}</a>
+				</li>
+    </script>
+    
+    <script id="departmentTemplate" type="text/x-jquery-tmpl">
+				<li class="${current}"><a href="?department_key=${key}&department_name=${encodeURIComponent(name)}">${name} <span class="count">${offer_count} ${'offer'.pluralize(offer_count)}</span></a></li>
+    </script>
+</body>
+</html>

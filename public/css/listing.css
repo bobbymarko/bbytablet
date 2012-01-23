@@ -1,0 +1,240 @@
+/* ---------- List Page ----------------*/
+
+#product-wrapper{
+	background:#737474;
+	position:relative;
+	padding:10px;
+}
+
+#products{
+	z-index:0;
+	background:#fff;
+	position:relative;
+	overflow:hidden;
+	-webkit-border-radius:4px;
+	border-radius:4px;   
+	-webkit-box-shadow:0 0 10px rgba(0,0,0,.8);
+	box-shadow:0 0 10px rgba(0,0,0,.8);
+}
+
+#wrapper{
+}
+
+.product-tile{
+	float:left;
+	width:33.3333333%;
+	position:relative;
+	overflow: hidden;
+	border-bottom:2px solid #9a9b9b;
+}
+
+.product-mask{
+	background:    -moz-linear-gradient(top, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0) 100%);
+	background:        -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.08)), color-stop(100%,rgba(0,0,0,0)));
+	background: -webkit-linear-gradient(top, rgba(0,0,0,0.08) 0%,rgba(0,0,0,0) 100%);
+	background:      -o-linear-gradient(top, rgba(0,0,0,0.08) 0%,rgba(0,0,0,0) 100%);
+	background:     -ms-linear-gradient(top, rgba(0,0,0,0.08) 0%,rgba(0,0,0,0) 100%);
+	background: 	   		linear-gradient(top, rgba(0,0,0,0.08) 0%,rgba(0,0,0,0) 100%);
+	position:absolute;
+	top:0;
+	left:0;
+	right:1px;
+	height:100%;
+	display: block;
+	pointer-events:none;
+}
+
+.product-tile>div{
+  height:380px;
+  padding:0;
+  border:1px solid #9a9b9b;
+  border-width:0 1px 1px 0;
+}
+
+.product-tile:nth-child(3n+3)>div{
+	border-right:none;
+}
+
+.product-tile .product-short-description{
+  margin:0 20px;
+  padding:0 0 0 20px;
+  font-size: 12px;
+  height:60px;
+  overflow: hidden;
+  display:none;
+}
+
+.product-meta{
+	position:absolute;
+	bottom:0px;
+	left:0;
+	right:1px;
+  display:block;
+  z-index:3;
+  background:#fff;
+  border-top:1px solid #f4f5f5;
+  font-size:12px;
+}
+
+.product-meta .product-message{
+	position:absolute;
+	right:15px;
+	top: 8px;
+	font-size:14px;
+	font-weight:bold;
+	text-transform:uppercase;
+}
+
+.product-meta label{
+	display:block;
+	height:100%;
+	padding:10px 10px 10px 38px;
+}
+
+.product-meta input{
+  -webkit-border-radius:4px;
+  border-radius:4px;
+	position:absolute;
+	top:6px;
+	left:15px;
+}
+
+.product-tile a{
+/*    -webkit-tap-highlight-color:rgba(0,0,0,0);*/
+}
+
+.product-tile-helper{
+    position:absolute;
+    z-index:9999;
+    -webkit-box-shadow:0 20px 10px rgba(0,0,0,0.4);
+    box-shadow:0 20px 15px rgba(0,0,0,0.6);
+    -webkit-transition: all 10ms ease-in;
+    border-color:#fff200;
+    -webkit-transform:scale(.5);
+}
+
+.product-tile-helper:before{
+    display:none;
+}
+
+.product-tile .product-title{
+    font-size:14px;
+    margin:15px 15px 0;
+    height:65px;
+    overflow:hidden;
+}
+
+.product-tile .product-title a{
+    color:#004691;
+    text-decoration:none;
+}
+
+.product-tile .price-block{
+	position:absolute;
+	bottom:45px;
+	left:15px;
+	font-size:12px;
+}
+
+.product-tile .price-block .price-paid{
+	margin-bottom:0;
+}
+
+.product-tile .price-block-savings{
+	bottom:43px;
+	right:15px;
+	left:auto;
+	text-align:right;
+}
+
+.product-tile .ratings{
+	font-size:12px;
+	margin:5px 15px 0;
+	/*position:absolute;
+	bottom:45px;
+	right:15px;
+	width:96px;*/
+}
+
+.product-tile .ratings a{
+	/*float:right;
+	line-height:1.4;*/
+}
+
+.product-gallery{
+	height:190px;
+}
+
+.product-gallery ul{
+  margin:0;
+  padding:0;
+}
+
+.product-tile .product-gallery li{
+    height:150px;
+    width:1000px; /*make it fill the space of the tile 100% doesn't work*/
+    text-align:center;
+    margin:0;
+    vertical-align:middle;
+    padding:20px;
+    display: none;
+}
+
+.product-gallery li:first-child{
+  display:table-cell;
+}
+
+.product-tile .product-gallery img{
+    max-width:100%;
+    max-height:100%;
+}
+
+.gallery-position {
+	text-align:center;
+	margin: 0 auto;
+	font-size:27px;
+	line-height:.2;
+	color:#49494A;
+	height:12px;
+}
+
+.gallery-position em {
+	display:inline-block;
+	padding:0 3px;
+	font-style:normal;
+	text-shadow: 0 -1px 0 rgba(0,0,0,.35);
+	font-family:sans-serif;
+	color:#c3c4c4;
+}
+
+.gallery-position .on {
+	color: #3a67ad;
+}
+
+.product-tile .product-rating{
+    position:absolute;
+    bottom:20px;
+    right:20px;
+}
+
+.sort-filter-container{
+	position:absolute;
+	right:10px;
+	top:3px;
+}
+
+.sort-filter-container .button{
+	margin-left:4px;
+}
+
+@media (min-width:960px){
+  .product-tile{
+    width:25%; 
+  }
+  .product-tile:nth-child(3n+3)>div{
+		border-right:1px solid #c3c4c4;
+	}
+  .product-tile:nth-child(4n+4)>div{
+		border-right:none;
+	}
+}
