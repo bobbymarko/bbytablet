@@ -325,13 +325,23 @@ input[type=submit]{cursor:pointer;}
 	overflow:hidden;
 	position:relative;
 	background:#f4f5f5;
+}
+
+.two-column:before{
+	content:'';
+	display:block;
+	width:140px;
+	position:absolute;
+	top:0;
+	left:0;
+	bottom:0;
 	background: #f4f5f5;
-	background: -moz-linear-gradient(left, #f4f5f5 0%, #f4f5f5 129px, #e7e7e7 139px, #c3c4c4 139px, #c3c4c4 140px, #ffffff 140px, #ffffff 100%);
-	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#f4f5f5), color-stop(129px,#f4f5f5), color-stop(139px,#e7e7e7), color-stop(139px,#c3c4c4), color-stop(140px,#c3c4c4), color-stop(140px,#ffffff), color-stop(100%,#ffffff));
-	background: -webkit-linear-gradient(left, #f4f5f5 0%,#f4f5f5 129px,#e7e7e7 139px,#c3c4c4 139px,#c3c4c4 140px,#ffffff 140px,#ffffff 100%);
-	background: -o-linear-gradient(left, #f4f5f5 0%,#f4f5f5 129px,#e7e7e7 139px,#c3c4c4 139px,#c3c4c4 140px,#ffffff 140px,#ffffff 100%);
-	background: -ms-linear-gradient(left, #f4f5f5 0%,#f4f5f5 129px,#e7e7e7 139px,#c3c4c4 139px,#c3c4c4 140px,#ffffff 140px,#ffffff 100%);
-	background: linear-gradient(left, #f4f5f5 0%,#f4f5f5 129px,#e7e7e7 139px,#c3c4c4 139px,#c3c4c4 140px,#ffffff 140px,#ffffff 100%);
+	background: -moz-linear-gradient(left, #f4f5f5 0%, #f4f5f5 92%, #e7e7e7 99%, #c3c4c4 100%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#f4f5f5), color-stop(92%,#f4f5f5), color-stop(99%,#e7e7e7), color-stop(100%,#c3c4c4));
+	background: -webkit-linear-gradient(left, #f4f5f5 0%,#f4f5f5 92%,#e7e7e7 99%,#c3c4c4 100%);
+	background: -o-linear-gradient(left, #f4f5f5 0%,#f4f5f5 92%,#e7e7e7 99%,#c3c4c4 100%);
+	background: -ms-linear-gradient(left, #f4f5f5 0%,#f4f5f5 92%,#e7e7e7 99%,#c3c4c4 100%);
+	background: linear-gradient(left, #f4f5f5 0%,#f4f5f5 92%,#e7e7e7 99%,#c3c4c4 100%);
 }
 
 .sidebar{
@@ -931,14 +941,8 @@ ul.price-block li{ /* need to refactor sku-list-module to fix specificity issue 
 /* ---------- Media Queries ----------------*/
 
 @media (min-width:620px){
-	.two-column{
-		background: #f4f5f5;
-		background: -moz-linear-gradient(left, #f4f5f5 0%, #f4f5f5 209px, #e7e7e7 219px, #c3c4c4 219px, #c3c4c4 220px, #ffffff 220px, #ffffff 100%);
-		background: -webkit-gradient(linear, left top, right top, color-stop(0%,#f4f5f5), color-stop(209px,#f4f5f5), color-stop(219px,#e7e7e7), color-stop(219px,#c3c4c4), color-stop(220px,#c3c4c4), color-stop(220px,#ffffff), color-stop(100%,#ffffff));
-		background: -webkit-linear-gradient(left, #f4f5f5 0%,#f4f5f5 209px,#e7e7e7 219px,#c3c4c4 219px,#c3c4c4 220px,#ffffff 220px,#ffffff 100%);
-		background: -o-linear-gradient(left, #f4f5f5 0%,#f4f5f5 209px,#e7e7e7 219px,#c3c4c4 219px,#c3c4c4 220px,#ffffff 220px,#ffffff 100%);
-		background: -ms-linear-gradient(left, #f4f5f5 0%,#f4f5f5 209px,#e7e7e7 219px,#c3c4c4 219px,#c3c4c4 220px,#ffffff 220px,#ffffff 100%);
-		background: linear-gradient(left, #f4f5f5 0%,#f4f5f5 209px,#e7e7e7 219px,#c3c4c4 219px,#c3c4c4 220px,#ffffff 220px,#ffffff 100%);
+	.two-column:before{
+		width:220px;
 	}
 	
   input.search-field{
