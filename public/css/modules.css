@@ -210,8 +210,6 @@
 .skus-x-1{
 	position:relative;
 	overflow:hidden;
-	padding-left:40px;
-	padding-right:40px;
 }
 
 .skus-x-2 li{
@@ -508,6 +506,11 @@
 		padding-left:20px;
 		margin-left:20px;
 		border-left:1px solid #c3c4c4;
+	}
+	
+	.skus-x-1{
+		padding-left:40px;
+		padding-right:40px;
 	}
 }
 

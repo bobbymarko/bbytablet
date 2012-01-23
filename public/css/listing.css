@@ -74,7 +74,7 @@
 
 .product-meta .product-message{
 	position:absolute;
-	right:15px;
+	right:0;
 	top: 8px;
 	font-size:14px;
 	font-weight:bold;
@@ -84,7 +84,7 @@
 .product-meta label{
 	display:block;
 	height:100%;
-	padding:10px 10px 10px 18px;
+	padding:10px 10px 10px 22px;
 }
 
 .product-meta input{
