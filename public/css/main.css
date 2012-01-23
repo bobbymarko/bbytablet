@@ -393,7 +393,7 @@ input[type=submit]{cursor:pointer;}
 	z-index:1;
 	position:relative;
 	background:#fff;
-	width:100.5%;
+	width:101%;
 	border-bottom:1px solid #c3c4c4;
 	border-top:1px solid #c3c4c4;
 }
