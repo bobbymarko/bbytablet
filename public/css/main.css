@@ -324,7 +324,7 @@ input[type=submit]{cursor:pointer;}
 	clear:both;
 	overflow:hidden;
 	position:relative;
-	background:#f4f5f5;
+	background:#fff;
 }
 
 .two-column:before{

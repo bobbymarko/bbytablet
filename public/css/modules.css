@@ -367,18 +367,19 @@
 
 .two-column .featured-offers li.loading{
 	background:#f4f5f5;
-	padding:15px;
+	padding:10px 15px 15px;
 	border-radius:4px;
 	text-align:center;
 	float:none;
 	width:auto;
 	display:block;
 	line-height:2;
+	vertical-align:middle;
 }
 
 .featured-offers .loading img{
 	position:relative;
-	top:2px;
+	top:8px;
 	margin-right:5px;
 }
 
