@@ -906,7 +906,7 @@ ul.price-block li{ /* need to refactor sku-list-module to fix specificity issue 
 	font-weight:bold;
 }
 
-.price-block .dollar{
+.price-block:first-letter{
 	font-size:66%;
 	margin-top:-2%;
 }
