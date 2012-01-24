@@ -85,10 +85,64 @@
     
     <header class="title-bar">
 			<a href="/category.html" class="back-btn">TV &amp; Video</a>
-    	<div class="sort-filter-container">
-    		<a href="" class="button tertiary dropdown-button">Best Match</a>
-    		<a href="" class="button tertiary dropdown-button">Narrow Results</a>
-    	</div>
+    	<ul class="sort-filter-container">
+    		<li class="dropdown-link">
+  	  		<a href="#sort-dropdown" class="button tertiary dropdown-button">Best Match</a>
+  	  		<div class="dropdown-menu" id="sort-dropdown">
+  	  			<ul class="dropdown-primary-menu">
+  	  				<li class="current"><a href="#">Best Match</a></li>
+  	  				<li><a href="#">Price Low to High</a></li>
+  	  				<li><a href="#">Price High to Low</a></li>
+  	  				<li><a href="#">Best Selling</a></li>
+  	  			</ul>
+  	  		</div>
+    		</li>
+    		<li class="dropdown-link">
+	    		<a href="#filter-dropdown" class="button tertiary dropdown-button">Narrow Results</a>
+	    		<div class="dropdown-menu" id="filter-dropdown">
+  	  			<ul class="dropdown-primary-menu">
+  	  				<li class="secondary-links applied-filters">
+  	  					<span>You've Selected</span>
+  	  					<a href="#" class="clear-all">Clear All</a>
+  	  					<ul>
+  	  						<li>
+  	  							<a href="#">
+  	  								Category: TV &amp; Video <span class="remove">&times;</span>
+  	  							</a>
+  	  						</li>
+  	  						<li>
+  	  							<a href="#">
+  	  								Price: $50 - $99.99 <span class="remove">&times;</span>
+  	  							</a>
+  	  						</li>
+  	  						<li>
+  	  							<a href="#">
+  	  								Brand: JVC <span class="remove">&times;</span>
+  	  							</a>
+  	  						</li>
+  	  					</ul>
+  	  				</li>
+  	  				<li class="accordian accordian-open">
+  	  					<a href="#">Category</a>
+  	  					<ul>
+  	  						<li><a href="#">TV &amp; Video <span class="count">1122 products</span></a></li>
+  	  						<li><a href="#">Magnolia Home Theater <span class="count">176 products</span></a></li>
+  	  						<li><a href="#">Computers &amp; Tablets <span class="count">25 products</span></a></li>
+  	  						<li><a href="#">Audio &amp; MP3 <span class="count">23 products</span></a></li>
+  	  						<li><a href="#">Outlet Center <span class="count">9 products</span></a></li>
+  	  						<li><a href="#">Mobile Phones <span class="count">1 product</span></a></li>
+  	  					</ul>
+  	  				</li>
+  	  				<li class="accordian"><a href="#">Customer Reviews</a></li>
+  	  				<li class="accordian"><a href="#">Current Offers</a></li>
+  	  				<li class="accordian"><a href="#">Brand</a></li>
+  	  				<li class="accordian"><a href="#">Price</a></li>
+  	  				<li class="accordian"><a href="#">Platform</a></li>
+  	  				<li class="accordian"><a href="#">Collection</a></li>
+  	  			</ul>
+  	  		</div>
+    		</li>
+    	</ul>
     	<h1>All Flat-Panel TVs</h1>
     </header>
     

@@ -212,16 +212,6 @@
     right:20px;
 }
 
-.sort-filter-container{
-	float:right;
-	position:relative;
-	top:-8px;
-}
-
-.sort-filter-container .button{
-	margin-left:4px;
-}
-
 @media (max-width:759px){
 	.product-tile:nth-child(2n+2)>div{
 		border-right:none;
