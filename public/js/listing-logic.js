@@ -50,7 +50,7 @@ function loadProducts(){
 				loading = false;
 				$('#loading-tile').remove();
 				if (data.products.length == 0){
-					currentPage = false;
+					currentPage = 0;
 					return;
 				}
 				$.each(data.products, function(index, skus){
@@ -71,8 +71,8 @@ function loadProducts(){
 						}
 						
 						$('#productTemplate').tmpl(skus).appendTo('#products');
-						currentPage++;
 				});
+				currentPage++;
 				
 				$('.product-gallery').each(function(){
 					if (!$(this).attr('style')){ // ignore gallery if already swipified
