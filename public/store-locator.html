@@ -91,20 +91,15 @@
     </header>
     
     <header class="title-bar">
-				<h1 class="page-title">Store Locator</h1>
-			</header>
+			<h1 class="page-title">Store Locator</h1>
+		</header>
+    <form class="search-form" action="#" id="location-search" style="float:left;">
+			<input type="text" placeholder="Place, Address or ZIP" role="search" class="search-field" name="search"><input type="submit" class="search-submit" value="Search">
+		</form>
     
     <div class="two-column">
 			<div class="sidebar-navigation sidebar">
 				<h2 class="side-menu-title">Stores</h2>
-				<div class="box" style="position:relative;z-index:1;">
-					<form id="location_search">
-					<label>ZIP Code</label>
-					<input type="text" size="9" />
-					<input type="submit" value="search" class="button"/>
-					<form>
-				</div>
-				<h3>Stores Near you</h3>
 				<div class="box" id="stores">
 					<ul class="side-menu">
 						<li><a><img src="images/loading_16x16.gif" /></a></li>
@@ -115,7 +110,9 @@
 			<div class="module-group">
 				<section class="module">
 					<h2>Store Locator</h2>
-					<div id="map-canvas"></div>
+					<div id="map-wrapper">
+						<div id="map-canvas"></div>
+					</div>
 				</section>
 			</div><!-- end .module-group -->
 			

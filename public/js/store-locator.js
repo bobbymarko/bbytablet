@@ -6,22 +6,17 @@ var pins = [];
 var pinInfobox;
 $(document).ready(function(){
 	initialize_map();
-	
-	$('#location_search').submit(function(e){
-		var location = $('input[type="text"]').val();
+	$('#map-wrapper').sap({
+			distanceFromTheTop: 0
+	});
+	$('#location-search').submit(function(e){
+		var location = $('input[type="text"]', '#location-search').val();
 		console.log(location);
 		
 		var geocodeRequest = "http://dev.virtualearth.net/REST/v1/Locations?q="+location+"&output=json&jsonp=GeocodeCallback&key=Aqr6275wM4y6fWWci0PTYC4FXKFTBx1XoGsAlUUZP0zW2Dbhw8KENIGKVwnNyD7D";
 		
 		CallRestService(geocodeRequest);
-		 
-	/*	$.ajax({
-				url: "",
-				dataType: "jsonp",
-				success: function( data ) {
-					console.log(data.resourceSets[0].resources[0].point.coordinates);
-				}
-			});*/
+
 		e.preventDefault();
 	});
 	
@@ -29,37 +24,9 @@ $(document).ready(function(){
 	$('#stores').delegate('li', 'hover',function(){
 		console.log(map.entities);
 		index = $(this).index('li');
-	//	console.log(index);
-//		pins[index].trigger('click');
 		Microsoft.Maps.Events.invoke(pins[index],'mouseup');
 	});
 	
-	/*$( "#game" ).autocomplete({
-		source: function( request, response ) {
-			$.ajax({
-				url: "http://api.remix.bestbuy.com/v1/products(search=" + request.term + "&type=game)?format=json&apiKey=amfnpjxnz6c9wzfu4h663z6w",
-				dataType: "jsonp",
-				success: function( data ) {
-					response( $.map( data.products, function( item ) {
-						return {
-							label: item.name,
-							value: item.name,
-							icon: item.thumbnailImage,
-							value: item.tradeInValue
-						}
-					}));
-				}
-			});
-		},
-		minLength: 2,
-		position:{offset:"0 5"}
-	}).data( "autocomplete" )._renderItem = function( ul, item ) {
-		if (item.value)
-		return $( "<li></li>" )
-			.data( "item.autocomplete", item )
-			.append( "<a><span class='thumbnail'><img src='" + item.icon + "'/></span>" + item.label + "</a>" + "<div class='tradein_value'>Trade-In Value: <span>" + item.value +"</span></div>" )
-			.appendTo( ul );
-	};*/
 	
 });
 
@@ -96,9 +63,6 @@ function initialize_map() {
 	} else {
 		get_stores();
 	}
-//	get_stores();
-//var pin = new Microsoft.Maps.Pushpin(center, {draggable: true}); 
-//new Microsoft.Maps.Location(latVal, longVal)
 }
 
 function get_coords(args){
@@ -157,12 +121,4 @@ function urldecode(str){
 	return decodeURIComponent((str+'').replace(/\+/g, '%20'));
 }
 
-/**
-* hoverIntent r6 // 2011.02.26 // jQuery 1.5.1+
-* <http://cherne.net/brian/resources/jquery.hoverIntent.html>
-* 
-* @param  f  onMouseOver function || An object with configuration options
-* @param  g  onMouseOut function  || Nothing (use configuration options object)
-* @author    Brian Cherne brian(at)cherne(dot)net
-*/
-(function($){$.fn.hoverIntent=function(f,g){var cfg={sensitivity:7,interval:100,timeout:0};cfg=$.extend(cfg,g?{over:f,out:g}:f);var cX,cY,pX,pY;var track=function(ev){cX=ev.pageX;cY=ev.pageY};var compare=function(ev,ob){ob.hoverIntent_t=clearTimeout(ob.hoverIntent_t);if((Math.abs(pX-cX)+Math.abs(pY-cY))<cfg.sensitivity){$(ob).unbind("mousemove",track);ob.hoverIntent_s=1;return cfg.over.apply(ob,[ev])}else{pX=cX;pY=cY;ob.hoverIntent_t=setTimeout(function(){compare(ev,ob)},cfg.interval)}};var delay=function(ev,ob){ob.hoverIntent_t=clearTimeout(ob.hoverIntent_t);ob.hoverIntent_s=0;return cfg.out.apply(ob,[ev])};var handleHover=function(e){var ev=jQuery.extend({},e);var ob=this;if(ob.hoverIntent_t){ob.hoverIntent_t=clearTimeout(ob.hoverIntent_t)}if(e.type=="mouseenter"){pX=ev.pageX;pY=ev.pageY;$(ob).bind("mousemove",track);if(ob.hoverIntent_s!=1){ob.hoverIntent_t=setTimeout(function(){compare(ev,ob)},cfg.interval)}}else{$(ob).unbind("mousemove",track);if(ob.hoverIntent_s==1){ob.hoverIntent_t=setTimeout(function(){delay(ev,ob)},cfg.timeout)}}};return this.bind('mouseenter',handleHover).bind('mouseleave',handleHover)}})(jQuery);
+(function($){$.fn.sap=function(options){var defaults={distanceFromTheTop:0};options=$.extend(defaults,options);var $objizzle=$(this);if(!$objizzle.length)return;var oldTop=$objizzle.offset().top;var width=$objizzle.width()+'px';var $shim=$('<div class="sap-shimy-shim"></div>');var theWindow=$(window);var theDoc=$(document);theWindow.scroll(function(){var top=theWindow.scrollTop();if((top+options.distanceFromTheTop+$objizzle.height())<(theDoc.height()-theWindow.height())&&(top+options.distanceFromTheTop)>$objizzle.offset().top){$objizzle.css({position:'fixed',width:width,top:options.distanceFromTheTop+'px'});$shim.css({width:width,height:$objizzle.height()});$objizzle.before($shim)}else if(top+options.distanceFromTheTop<oldTop){$shim.remove();$objizzle.css({position:'static',width:width,top:''})}})}}(jQuery));
