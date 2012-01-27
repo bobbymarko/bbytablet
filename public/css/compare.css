@@ -81,12 +81,13 @@ tr:nth-child(2n+1) {
 
 .remove-row th{
 text-align:right;
-padding:0 10px;
+padding:0;
 }
 .remove-row a{
 	font-weight:bold;
 	color:#737374;
 	font-size:20px;
+	padding:0 10px;
 }
 
 .highlight-differences{

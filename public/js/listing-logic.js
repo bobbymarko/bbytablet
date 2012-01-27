@@ -58,7 +58,11 @@ $(function(){
 		$('.remove','#compare-bar').live('click', function(e){
 			var sku = $(this).closest('li').attr('data-sku');
 			removeFromCompare(inCompare, sku);
+			//$(this).closest('li').children('.image-wrapper').children('img').remove();
+			//$(this).remove();
 			$(this).closest('li').remove();
+			$('ul','#compare-bar').append('<li><div class="image-wrapper"></div></li>');
+			// need to fix ordering of items
 			console.log('#compare-'+sku);
 			$('#compare-'+sku).prop('checked',false);
 			e.preventDefault();
