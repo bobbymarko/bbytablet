@@ -6,9 +6,15 @@ var pins = [];
 var pinInfobox;
 $(document).ready(function(){
 	initialize_map();
-	$('#map-wrapper').sap({
-			distanceFromTheTop: 0
+	resizeMap();
+	$(window).resize(function(){
+		resizeMap();
 	});
+	
+	function resizeMap(){
+		$('#map-canvas').css('height',$(window).height());
+	}
+	
 	$('#location-search').submit(function(e){
 		var location = $('input[type="text"]', '#location-search').val();
 		console.log(location);
@@ -120,5 +126,3 @@ function gup( name ){
 function urldecode(str){
 	return decodeURIComponent((str+'').replace(/\+/g, '%20'));
 }
-
-(function($){$.fn.sap=function(options){var defaults={distanceFromTheTop:0};options=$.extend(defaults,options);var $objizzle=$(this);if(!$objizzle.length)return;var oldTop=$objizzle.offset().top;var width=$objizzle.width()+'px';var $shim=$('<div class="sap-shimy-shim"></div>');var theWindow=$(window);var theDoc=$(document);theWindow.scroll(function(){var top=theWindow.scrollTop();if((top+options.distanceFromTheTop+$objizzle.height())<(theDoc.height()-theWindow.height())&&(top+options.distanceFromTheTop)>$objizzle.offset().top){$objizzle.css({position:'fixed',width:width,top:options.distanceFromTheTop+'px'});$shim.css({width:width,height:$objizzle.height()});$objizzle.before($shim)}else if(top+options.distanceFromTheTop<oldTop){$shim.remove();$objizzle.css({position:'static',width:width,top:''})}})}}(jQuery));

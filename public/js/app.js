@@ -4,7 +4,7 @@ $(document).ready(function(){
 	
 	var touchMove = false;
 	
-	$('.icon-link>a, .dropdown-link>a').click(function(e){
+	$('#masthead .icon-link>a, .dropdown-link>a').click(function(e){
 	    e.preventDefault();
 	    
 	    target = $(this).attr('href');

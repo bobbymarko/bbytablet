@@ -25,12 +25,79 @@ $(function(){
 			}
 		});
 		
-		if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/iPad/i)) {
-			$('label[for]').live('click',function() {
+		if (Modernizr.appleios) {
+			$('label[for]').live('click',function(e) { //making clicking the label check the checkbox on ios.
 				e.stopPropagation();
 			});
 		}
+		
+		//fixed positioning needs to be implemented like this http://jquerymobile.com/demos/1.0.1/docs/toolbars/index.html#/demos/1.0.1/docs/toolbars/bars-fixed.html
+		if (!Modernizr.positionfixed){
+			$(window).scroll(function(){
+				$('#compare-bar').css({'top':$(window).scrollTop()+$(window).height()-$('#compare-bar').height()});
+			});	
+		}
+		
+		var inCompare = [];
+		$('input[type="checkbox"]','.product-meta').live('click',function(){
+			var $this = $(this);
+			var productTile = $this.closest('.product-tile');
+			if ($this.is(':checked')){
+				if (inCompare.length < 4){
+					inCompare.push(productTile);
+				}else{
+					alert('You can only compare 4 items at a time.');
+					$(this).prop('checked',false);
+				}
+			} else{ // remove from compare when unchecked
+				inCompare = removeFromCompare(inCompare, productTile.attr('data-sku'))
+			}
+			showCompare(inCompare);
+		});
+		
+		$('.remove','#compare-bar').live('click', function(e){
+			var sku = $(this).closest('li').attr('data-sku');
+			removeFromCompare(inCompare, sku);
+			$(this).closest('li').remove();
+			console.log('#compare-'+sku);
+			$('#compare-'+sku).prop('checked',false);
+			e.preventDefault();
+		});
+		
+		$('.compare-btn').live('click', function(e){
+			var toCompare = [];
+			$.each(inCompare, function(index, item){
+				toCompare.push($(item).attr('data-sku'));
+			});
+			window.location = $(this).attr('href') + '?skus=' + toCompare.join(',');
+			e.preventDefault();
+		});
+		
 });
+
+function showCompare(products){
+	if ($('#compare-bar').length == 0 && products.length > 0){
+		$("<div id='compare-bar'><ul></ul><a href='/compare.html' class='button secondary compare-btn'>Compare</a></div>").appendTo('body');
+	}else{
+		$('ul','#compare-bar').empty();
+	}
+	$.each(products, function(index, item){
+		$('ul','#compare-bar').append('<li data-sku="'+$(item).attr('data-sku')+'"><div class="image-wrapper"><img src="' + $('.product-gallery li:first-child img', item).attr('src') + '" alt=""/></div><a href="#" class="remove">&times;</a></li>');
+	});
+}
+
+function removeFromCompare(inCompare, sku){
+	var removeMe = false;
+	$.each( inCompare, function(i, v) {
+		if( $(v).attr('data-sku') == sku ) {
+			removeMe = i;
+		}
+	});
+	inCompare.splice(removeMe,1);
+	console.log(inCompare.length);
+	if (inCompare.length == 0) $('#compare-bar').remove();
+	return inCompare;
+}
 
 function loadProducts(){
 	if (!loading && currentPage){
@@ -46,7 +113,7 @@ function loadProducts(){
 			callbackParameter: "callback",
 			success: function(data) {
 			$('#total-search-results').text(data.total);
-			console.log(data);
+			console.log('search results', data);
 				loading = false;
 				$('#loading-tile').remove();
 				if (data.products.length == 0){
@@ -54,18 +121,6 @@ function loadProducts(){
 					return;
 				}
 				$.each(data.products, function(index, skus){
-						console.log(skus);
-						if (skus.shortDescription){
-							skus.shortDescription = skus.shortDescription.split(';');
-							skus.shortDescription = $.map(skus.shortDescription, function(n,i){
-									if (i<4){
-											return "<li>"+n.trim()+"</li>";
-									}else{
-											return false;
-									}
-							});
-						}
-						
 						if(!skus.customerReviewCount){
 							skus.customerReviewCount = 0;
 						}

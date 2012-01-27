@@ -3,6 +3,7 @@
 <head>
 	<meta charset=utf-8 />
 	<title>Tablet Search</title>
+	<script src="js/modernizr.js"></script>
 	<link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
 	<link rel="stylesheet" type="text/css" media="screen" href="css/listing.css" />
 	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
@@ -173,7 +174,7 @@
 		<script src="js/listing-logic.js"></script>
 		
     <script id="productTemplate" type="text/x-jquery-tmpl">
-        <article class="product-tile">
+        <article class="product-tile" data-sku="${sku}">
           <div>
             <div class="product-gallery">
               <ul>

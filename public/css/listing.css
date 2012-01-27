@@ -207,9 +207,76 @@
 }
 
 .product-tile .product-rating{
-    position:absolute;
-    bottom:20px;
-    right:20px;
+	position:absolute;
+	bottom:20px;
+	right:20px;
+}
+
+#compare-bar{
+	position:fixed;
+	bottom:0;
+	left:0;
+	right:0;
+	padding:10px;
+	background:#f4f5f5;
+	border-top:1px solid #c3c4c4;
+	-webkit-box-shadow:0 -2px 10px rgba(0,0,0,0.3);
+	box-shadow:0 -2px 10px rgba(0,0,0,0.3);
+}
+
+.no-positionfixed #compare-bar{ /*modernizr.js adds feature detected class to html*/
+	position:absolute;
+	bottom:auto;
+}
+
+#compare-bar li{
+	float:left;
+	border:1px solid #c3c4c4;
+	padding:3px;
+	background:#fff;
+	margin-right:10px;
+	width:50px;
+	height:50px;
+	text-align:center;
+	position:relative;
+}
+#compare-bar li img{
+	max-width:100%;
+	max-height:100%;
+}
+
+#compare-bar .image-wrapper{
+	display:table-cell;
+	width:50px;
+	height:50px;
+	vertical-align:middle;
+}
+
+#compare-bar .remove{
+	width:20px;
+	height:20px;
+	font-size:14px;
+	line-height:18px;
+	font-weight:bold;
+	background:#BB0628;
+	color:#fff;
+	border:2px solid #fff;
+	-webkit-box-shadow:0 3px 5px rgba(0,0,0,0.4);
+	box-shadow:0 3px 5px rgba(0,0,0,0.4);
+	position:absolute;
+	top:-10px;
+	right:-10px;
+	-webkit-border-radius:20px;
+	border-radius:20px;
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding-box;
+	-ms-background-clip: padding-box;
+	background-clip: padding-box;
+}
+
+#compare-bar .compare-btn{
+	float:right;
+	margin:10px;
 }
 
 @media (max-width:759px){

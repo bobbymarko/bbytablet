@@ -124,11 +124,6 @@ input[type=submit]{cursor:pointer;}
 }
 /* end clear fixing */
 
-#masthead ul{
-    list-style:none;
-    padding:0;
-}
-
 #masthead nav ul{
     float:left;
     position:relative;
@@ -146,12 +141,12 @@ input[type=submit]{cursor:pointer;}
     font-weight:bold;
 }
 
-#cart-menu{
+#masthead #cart-menu{
     float:right;
     margin-right:10px;
 }
 
-.menu{
+#masthead .menu{
     float:left;
     margin:15px 0;
 }
@@ -1077,6 +1072,10 @@ ul.price-block li{ /* need to refactor sku-list-module to fix specificity issue 
   .sidebar{
   	width:219px;
   }
+  
+  .side-menu li.current-item{
+		width:100.5%;
+	}
   
 }
 
