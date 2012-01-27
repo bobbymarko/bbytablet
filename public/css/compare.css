@@ -14,6 +14,11 @@ thead th{
 	background:#fff;
 	font-weight:normal;
 	border-right: 1px solid #e7e7e7;
+	padding-bottom:0;
+}
+
+thead tr:last-child th{
+	padding-top:0;
 }
 
 thead th:last-child{
@@ -71,4 +76,22 @@ th[scope="row"]{
 
 tr:nth-child(2n+1) {
 	background:#f4f5f5;
+}
+
+.highlight-differences{
+	font-size:12px;
+	font-weight:normal;
+	margin-left:10px;
+}
+
+.highlights-on .highlighted{
+	background:#e5f6f9; /* 30% BBY Highlight Blue */
+}
+
+.highlights-on .highlighted th, .highlights-on .highlighted td{
+	border-bottom:1px solid #bae6ee;
+}
+
+.highlights-on .highlighted:nth-child(2n+1){
+	background:#ddf3f7;
 }

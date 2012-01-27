@@ -3,6 +3,62 @@
 	height:500px;
 }
 
+#location-search{
+	padding:10px 10px 12px;
+	background:#f4f5f5;
+	-webkit-box-shadow:inset 0 -3px 4px rgba(0,0,0,0.1);
+	box-shadow:inset 0 -3px 4px rgba(0,0,0,0.1);
+	position:relative;
+	overflow:hidden;
+}
+
 #location-search .search-field{
 	width:300px;
+}
+
+#location-search .locate-me{
+	font-weight:normal;
+	margin-left:129px;
+}
+
+#location-search label[for=store-search]{
+	font-weight:bold;
+	display:block;
+	margin:0 0 3px;
+}
+
+#location-search #show-bby-mobile{
+	margin-left:10px;
+}
+
+#location-search .search-submit, #location-search .search-field{
+	border:1px solid #EBC400;
+}
+#location-search .search-submit{
+	border-left:none;
+}
+
+#location-search .search-field{
+	border-right:none;
+}
+
+.Infobox .column{float:left; width:50%; margin-right:2%;}
+.Infobox .column:nth-child(2n+2){float:left; margin-right:0; width:47%;}
+.Infobox .store-hours{clear:both;}
+.Infobox table{width:100%; text-align:center;	border-collapse: collapse; border-spacing: 0;}
+.Infobox td{border:1px solid #c3c4c4;}
+.Infobox thead td{font-weight:bold;  }
+
+#map-wrapper .MicrosoftMap .Infobox .infobox-body .infobox-title, #map-wrapper .MicrosoftMap .Infobox .infobox-body .infobox-info{
+	font-size:12px;
+	color:#49494a;
+	font-family:sans-serif;
+}
+
+#map-wrapper .MicrosoftMap .Infobox .infobox-body .infobox-title {
+	font-size:14px;
+}
+
+#map-wrapper .MicrosoftMap .Infobox .infobox-body .infobox-info{
+	padding-top:0;
 }

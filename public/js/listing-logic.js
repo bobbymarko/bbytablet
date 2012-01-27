@@ -65,11 +65,15 @@ $(function(){
 		});
 		
 		$('.compare-btn').live('click', function(e){
-			var toCompare = [];
-			$.each(inCompare, function(index, item){
-				toCompare.push($(item).attr('data-sku'));
-			});
-			window.location = $(this).attr('href') + '?skus=' + toCompare.join(',');
+			if (inCompare.length < 2){
+				alert('You need at least 2 items to compare. Please add another.');
+			}else{
+				var toCompare = [];
+				$.each(inCompare, function(index, item){
+					toCompare.push($(item).attr('data-sku'));
+				});
+				window.location = $(this).attr('href') + '?skus=' + toCompare.join(',');
+			}
 			e.preventDefault();
 		});
 		
@@ -77,13 +81,23 @@ $(function(){
 
 function showCompare(products){
 	if ($('#compare-bar').length == 0 && products.length > 0){
-		$("<div id='compare-bar'><ul></ul><a href='/compare.html' class='button secondary compare-btn'>Compare</a></div>").appendTo('body');
+		$("<div id='compare-bar'><ul></ul><a href='/compare.html' class='button secondary compare-btn inactive'>Compare</a></div>").appendTo('body');
+		console.log(products.length);
 	}else{
 		$('ul','#compare-bar').empty();
+	}
+	if (products.length !== 1) {
+			$('.compare-btn').removeClass('inactive');
 	}
 	$.each(products, function(index, item){
 		$('ul','#compare-bar').append('<li data-sku="'+$(item).attr('data-sku')+'"><div class="image-wrapper"><img src="' + $('.product-gallery li:first-child img', item).attr('src') + '" alt=""/></div><a href="#" class="remove">&times;</a></li>');
 	});
+	var placeholderCount = 4-products.length;
+	while(placeholderCount > 0){
+		$('ul','#compare-bar').append('<li><div class="image-wrapper"></div></li>');
+		placeholderCount--;
+	};
+	
 }
 
 function removeFromCompare(inCompare, sku){

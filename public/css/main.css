@@ -102,6 +102,10 @@ input{-webkit-border-radius:0;}
 input[type=search], input[type=text], input[type=number], input[type=tel], input[type=email], input[type=submit]{-webkit-appearance:none;}
 input[type=search], input[type=text], input[type=number], input[type=tel], input[type=email]{border:1px solid #9a9b9b; border-radius:4px; padding:10px;}
 input[type=submit]{cursor:pointer;}
+input[type=checkbox]{
+	-webkit-border-radius:4px;
+  border-radius:4px;
+}
 
 /* layout */
 #masthead{
@@ -798,6 +802,10 @@ input.search-field{
   background: transparent;
   -webkit-transform: none;
   transform: none;
+}
+
+.inactive{
+	opacity:.5;
 }
 
 .primary{

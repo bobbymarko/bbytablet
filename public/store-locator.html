@@ -60,7 +60,7 @@
               </ul>
               <ul id="deals-menu" class="dropdown-secondary-menu">
                 <li><a href="#back" class="dropdown-back">Back</a></li>
-                <li><a href="http://bestbuy.shoplocal.com">Weekly Deals</a></li>
+                <li><a href="http://deals.bestbuy.com">Weekly Deals</a></li>
                 <li><a href="deal-of-the-day.html">Deal of the Day</a></li>
                 <li><a href="special-offers-listing.html">Featured Offers</a></li>
               </ul>
@@ -94,17 +94,17 @@
 			<h1 class="page-title">Store Locator</h1>
 		</header>
     <form class="search-form" action="#" id="location-search">
-    	<ul class="menu">
-    		<li class="icon-link">
-    			<a href="">Menu</a>
-    		</li>
-    	</ul>
-			<input type="text" autocorrect="off" autocapitalize="off" placeholder="Place, Address or ZIP" role="search" class="search-field" name="search"><input type="submit" class="search-submit" value="Search">
+    	<div class="column">
+				<label for="store-search">Find Stores Near: <a class="locate-me" href="/store-locator.html">Find My Location</a></label>
+				<input type="text" autocorrect="off" autocapitalize="off" placeholder="Landmark, Address or ZIP Code" role="search" class="search-field" name="store-search" id="store-search"><input type="submit" class="search-submit" value="Search">
+				<input type="checkbox" checked="checked" name="show-bby-mobile" id="show-bby-mobile" />
+				<label for="show-bby-mobile">Show Best Buy Mobile Stores</label>
+			</div>
 		</form>
     
     <div class="two-column">
 			<div class="sidebar-navigation sidebar">
-				<h2 class="side-menu-title">Stores</h2>
+				<h2 class="side-menu-title">Stores Nearby</h2>
 				<div class="box" id="stores">
 					<ul class="side-menu">
 						<li><a><img src="images/loading_16x16.gif" /></a></li>
@@ -113,12 +113,9 @@
 			</div>
 			
 			<div class="module-group">
-				<section class="module">
-					<h2>Store Locator</h2>
-					<div id="map-wrapper">
-						<div id="map-canvas"></div>
-					</div>
-				</section>
+				<div id="map-wrapper">
+					<div id="map-canvas"></div>
+				</div>
 			</div><!-- end .module-group -->
 			
     </div><!-- end .two-column -->
@@ -135,6 +132,7 @@
           <a href="#">Desktop Site</a>
         </div><!-- footer-links -->
     </footer>
+    <script src="js/modernizr.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
     <script type="text/javascript" src="http://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0"></script>
@@ -142,12 +140,20 @@
     <script src="js/addclear.js"></script>
     <script src="js/app.js"></script>
     <script src="js/store-locator.js"></script>
+    <script>
+			if (Modernizr.appleios) {
+				$('label[for]').live('click',function(e) { //making clicking the label check the checkbox on ios.
+					e.stopPropagation();
+				});
+			}
+    </script>
     <script id="storeTemplate" type="text/x-jquery-tmpl">
     	<li>
 				<a href="http://stores.bestbuy.com/${storeId}/">
-				${name}, ${region}
-				<span class="count">${address}<br/>
-				${city}, ${region} ${postalCode}</span>
+					${name}, ${region} <span class="count">${distance} miles away</span>
+					<!--<span class="count">${address}<br/>
+					${city}, ${region} ${postalCode}<br/>
+					</span>-->
 				</a>
     	</li>
 	</script>
