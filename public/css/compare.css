@@ -8,6 +8,7 @@ th,td{
 	padding:8px;
 	border-bottom:1px solid #e7e7e7;
 	vertical-align:top;
+	position:relative;
 }
 
 thead th{
@@ -76,6 +77,16 @@ th[scope="row"]{
 
 tr:nth-child(2n+1) {
 	background:#f4f5f5;
+}
+
+.remove-row th{
+text-align:right;
+padding:0 10px;
+}
+.remove-row a{
+	font-weight:bold;
+	color:#737374;
+	font-size:20px;
 }
 
 .highlight-differences{
