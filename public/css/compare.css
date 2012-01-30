@@ -14,16 +14,11 @@ th,td{
 thead th{
 	background:#fff;
 	font-weight:normal;
-	border-right: 1px solid #e7e7e7;
 	padding-bottom:0;
 }
 
 thead tr:last-child th{
 	padding-top:0;
-}
-
-thead th:last-child{
-	border-right:none;
 }
 
 tr{
@@ -68,7 +63,7 @@ th[scope="rowgroup"]{
 	border-bottom:2px solid #c3c4c4;
 	background:#fff;
 	font-size:16px;
-	padding: 20px 5px 5px;
+	padding: 20px 8px 5px;
 }
 
 th[scope="row"]{
@@ -91,10 +86,19 @@ padding:0;
 	padding:0 10px;
 }
 
+.empty-column{
+	vertical-align:middle;
+	text-align:center;
+}
+
 .highlight-differences{
 	font-size:12px;
 	font-weight:normal;
 	margin-left:10px;
+}
+
+.highlights-on tr{ /* disable normal zebra striping */
+	background:#fff;
 }
 
 .highlights-on .highlighted{

@@ -622,6 +622,8 @@
 			
 			$('.remove').click(function(e){
 				e.preventDefault();
+				$('tr td:nth-child(4n+1), thead th:nth-child(4n+1)','#compare-table').text('');
+				$('#col4').html('<a href="#">Tap to compare another item.</a>').addClass('empty-column');
 			});
 			
     </script>

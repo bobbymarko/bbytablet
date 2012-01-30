@@ -63,3 +63,7 @@
 #map-wrapper .MicrosoftMap .Infobox .infobox-body .infobox-info{
 	padding-top:0;
 }
+
+#map-wrapper .MicrosoftMap .Infobox .infobox-close{
+	color:#737474;
+}

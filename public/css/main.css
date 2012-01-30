@@ -779,8 +779,9 @@ input.search-field{
 	background: url(../images/icon-cart-large.png) no-repeat;
 	display:block;
 	position:absolute;
-	top:8px;
+	top:50%;
 	left:8px;
+	margin-top:-10px;
 }
 
 .dropdown-button{
