@@ -107,6 +107,23 @@ input[type=checkbox]{
   border-radius:4px;
 }
 
+.error-messages{
+	color:#BB0628;
+	padding:0 0 10px 18px;
+}
+
+input.error-input{
+	color:#BB0628;
+	border:1px solid #BB0628;
+	-webkit-box-shadow:0 0 13px rgba(174,18,49,.2);
+	box-shadow:0 0 13px rgba(174,18,49,.2);
+}
+
+.error-messages li{
+	list-style-type:disc;
+	list-style-position:outside;
+}
+
 /* layout */
 #masthead{
     background:#003b64;
