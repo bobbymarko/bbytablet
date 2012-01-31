@@ -277,6 +277,23 @@
 	margin:10px 0;
 }
 
+#compare-bar .clear-compare{
+	margin:15px 5px;
+	padding:5px;
+	display:inline-block;
+}
+
+#compare-bar .compare-instructions{
+	float:left;
+	margin:15px 10px 0 0;
+	width:150px;
+	font-size:12px;
+	position:relative;
+	overflow:hidden;
+	text-overflow: ellipsis;
+	white-space:nowrap;
+}
+
 @media (max-width:759px){
 	.product-tile:nth-child(2n+2)>div{
 		border-right:none;
@@ -296,6 +313,11 @@
 		position:absolute;
 		right:10px;
 		top:4px;
+	}
+	
+	#compare-bar .compare-instructions{
+		width:auto;
+		font-size:14px
 	}
 }
 

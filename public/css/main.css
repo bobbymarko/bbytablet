@@ -704,7 +704,7 @@ input.search-field{
 }
 
 .title-bar{
-	padding:12px 0;
+	padding:12px 10px;
 	background:#fff;
 	border-bottom:1px solid #c3c4c4;
 	position:relative;
