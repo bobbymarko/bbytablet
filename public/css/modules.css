@@ -17,6 +17,7 @@
 	margin:40px 20px;
 	border-top:1px solid #c3c4c4;
 	padding:40px 0 0 0;
+	clear:both;
 }
 
 .two-column .module:first-child {

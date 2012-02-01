@@ -1,0 +1,121 @@
+.col-wrapper{
+	clear:both;
+	margin-left:10px;
+	margin-right:10px;
+}
+
+.section-title{
+	border-top:1px solid #c3c4c4;
+	padding-top:20px;
+}
+
+.sub-section-title{
+	margin-bottom:5px;
+}
+
+.col-wrapper ul, .col-wrapper li{
+	list-style-type:disc;
+}
+.col-wrapper ul{
+	padding:0 0 0 20px;
+}
+.col-wrapper li{
+	padding:0 0 10px 0;
+}
+
+.col-small, .col-medium, .col-large{
+	margin:0 0 30px;
+	padding-left:10px;
+	padding-right:10px;
+}
+
+.col-large{
+	clear:both;
+}
+
+.pdp-product-title .item-image{
+	float:left;
+	width:140px;
+	text-align:center;
+	margin-right:20px;
+}
+
+.tab-bar{
+	font-weight:bold;
+	position:static; /* these disable clearfixing */
+	overflow:visible; /* these disable clearfixing */
+	border-bottom:3px solid #737474;
+}
+
+.tab-bar ul{	
+	position:relative;
+	overflow:hidden;
+	z-index:0;
+	top:3px;
+	margin:0 20px;
+}
+
+.tab-bar li{
+	color:#49494a;
+	float:left;
+	position:relative;
+	border:1px solid #737474;
+	border-width:1px 1px 0 0;
+}
+
+.tab-bar li:first-child{
+	border-left-width:1px;
+}
+
+.tab-bar a{
+	display:block;
+	color:#003b64;
+	text-shadow:0 1px 0 #fff;
+	padding:15px;
+	background: #dddede;
+	background: -moz-linear-gradient(top, #ffffff 0%, #dddede 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#dddede));
+	background: -webkit-linear-gradient(top, #ffffff 0%,#dddede 100%);
+	background: -o-linear-gradient(top, #ffffff 0%,#dddede 100%);
+	background: -ms-linear-gradient(top, #ffffff 0%,#dddede 100%);
+	background: linear-gradient(top, #ffffff 0%,#dddede 100%);
+}
+
+.tab-bar .current{
+	color:#fff;
+}
+
+.tab-bar .current a{
+	background:#fff;
+	color:#49494a;
+	border-bottom:3px solid #fff;
+}
+
+
+
+@media (min-width:760px){
+		.col-small, .col-medium, .col-large{
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			-o-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+	
+	.col-small, .col-medium{
+		width:50%;
+		float:left;
+	}
+	
+
+}
+
+@media (min-width:960px){
+	.col-small{
+		width:33.3333333%;
+	}
+	
+	.col-medium{
+		width:66.6666666%;
+	}
+}

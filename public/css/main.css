@@ -66,6 +66,8 @@
 html{
     font-size:100%;
     -webkit-tap-highlight-color: rgba(0, 57, 167, 0.25);
+    -webkit-text-size-adjust: 100%;
+	  -ms-text-size-adjust: 100%;
 }
 body{
     background:#fff;
@@ -91,7 +93,7 @@ audio, canvas, video { display: inline-block; }
 
 h1,h2,h3,h4,h5,h6{margin:0 0 10px;}
 
-h1{
+h1,h2{
 	font-size:24px;
 	font-weight:normal;
 	margin:0 0 20px;
@@ -1082,6 +1084,52 @@ ul.price-block li{ /* need to refactor sku-list-module to fix specificity issue 
 
 .price-block .secondary-callout{
 	padding:12px 0;
+}
+
+/* ---------- Shared Product Gallery Styles ----------------*/
+
+.product-gallery ul{
+  margin:0;
+  padding:0;
+}
+
+.product-gallery li{
+    width:1000px; /*make it fill the space of the tile 100% doesn't work*/
+    text-align:center;
+    margin:0;
+    vertical-align:middle;
+    padding:20px;
+    display: none;
+}
+
+.product-gallery li:first-child{
+  display:table-cell;
+}
+
+.product-gallery img{
+    max-width:100%;
+    max-height:100%;
+}
+
+.gallery-position {
+	text-align:center;
+	margin: 0 auto;
+	font-size:27px;
+	line-height:.2;
+	color:#49494A;
+	height:12px;
+}
+
+.gallery-position em {
+	display:inline-block;
+	padding:0 3px;
+	font-style:normal;
+	text-shadow: 0 -1px 0 rgba(0,0,0,.35);
+	color:#c3c4c4;
+}
+
+.gallery-position .on {
+	color: #3a67ad;
 }
 
 /* ---------- Media Queries ----------------*/
