@@ -725,7 +725,11 @@ input.search-field{
 
 .back-btn{
 	float:left;
-	padding-left:22px;
+	padding-left:12px;
+}
+
+.back-btn::before{
+	left:-2px;
 }
 
 .dropdown-link{
