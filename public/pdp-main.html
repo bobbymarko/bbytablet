@@ -89,37 +89,91 @@
           <li class="cart-link"><a href="">3 items</a></li>
       	</ul>
     </header>
+		
+		<!-- content inserted via javascript for prototyping purposes. markup found at end of this html -->
     
+    <footer id="footer">
+        <div class="footer-meta">
+          <p>Prices on this site are the same as those on BestBuy.com. Prices may vary in store. All prices and offers are subject to change. In store availability subject to change. Orders placed for store pickup may take up to 45 minutes to process.</p> 
+          <p>&copy;2003-2011 BBY Solutions, Inc.</p>
+        </div><!--footer-meta-->
+        <div class="footer-links">
+          <a href="#">Terms</a>
+          <a href="#">Privacy</a>
+          <a href="#">Feedback</a>
+          <a href="#">Desktop Site</a>
+        </div><!-- footer-links -->
+    </footer>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+    <script src="js/jquery.jsonp-2.1.4.min.js"></script>
+    <script src="js/addclear.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/swipe.js"></script>
+    <script>
+    	var pdpNumber = getParameterByName('pdp') || 0;
+    	var pdps = ['appliance-pdp', 'bundle-pdp', 'dsku-pdp', 'in-store-only-pdp', 'marketplace-pdp', 'mobile-plan-pdp', 'mobile-w-contract-pdp', 'mobile-wo-contract-pdp', 'video-game-pdp']
+    	var url = "data/"+pdps[pdpNumber]+".json"
+    	$.jsonp({
+				url: url,
+				callback: 'pdpData',
+				success: function(data) {
+					console.log(data);
+					$('#productTemplate').tmpl(data).insertAfter('#masthead');
+					
+					var slider = new Swipe($('.product-gallery')[0], {
+					callback: function(e, pos) {
+									var i = bullets.length;
+									while (i--) {
+											bullets[i].className = ' ';
+									}
+									bullets[pos].className = 'on';
+							}
+					}),
+					bullets = $(this).next('.gallery-position').children('em');
+				}
+			});
+			
+    
+    
+    	
+    </script>
+    
+  <script id="productTemplate" type="text/x-jquery-tmpl">
     <header class="title-bar">
 			<a href="/category.html" class="back-btn">Search Results</a>
     	<h1>Overview</h1>
     </header>
-    
     <div class="module-group">
     	<header class="module pdp-product-title">
     		<div class="col-medium">
 					<div class="item-image">
-						<img src="http://images.bestbuy.com/BestBuy_US/images/products/9747/9747183_sc.jpg" alt="" />
+						<img src="${thumbnailImage}" alt="" />
 					</div>
 					<hgroup>
-						<h1>Samsung - 28.0 Cu. Ft. French Door Refrigerator - Stainless-Steel</h1>
-						<p>Model: RS261MDRS/XAA &#149; SKU: 9747183</p>
+						<h1>${shortLabel}</h1>
+						<p>
+							{{each metaData}}
+								${key}: ${value} 
+								{{if $index < metaData.length - 1}} &#149; {{/if}}
+							{{/each}}
+						</p>
 						<div class="ratings">
 							<div class="rating-stars">
-									<div class="rating-filler" style="width: 60%;"></div>
+									<div class="rating-filler" style="width:${(customerReviewAverage/5)*100}%;"></div>
 									<div class="rating-mask"></div>
 							</div>
-							<a href="#">124 Reviews</a>
+							<a href="#">${ratingsCount} Reviews</a>
 						</div><!-- ratings -->
 					</hgroup>
 				</div>
 				<div class="col-small">
 					<ul class="price-block">
-						<li class="primary-callout">On Sale</li>
-						<li class="price-paid">$1,099.99</li>
-						<li>Reg. Price: $1,299.99</li>
-						<li class="you-save">You Save: $200.00</li>
-						<li class="secondary-callout">Free Shipping</li>
+						{{if onSale}}<li class="primary-callout">On Sale</li>{{/if}}
+						<li class="price-paid">$${salePrice}</li>
+						{{if onSale}}<li>Reg. Price: $${regularPrice}</li>
+						<li class="you-save">You Save: $${youSave}</li>{{/if}}
+						{{if freeShipping}}<li class="secondary-callout">Free Shipping</li>{{/if}}
 					</ul>
 					<a href="" class="button primary cart-button">Add to Cart</a>
 				</div>
@@ -127,10 +181,13 @@
 			
 			<nav class="tab-bar col-large">
 				<ul>
-					<li class="current"><a href="#">Overview</a></li>
-					<li><a href="#">Specifications</a></li>
-					<li><a href="#">Customer Reviews (16)</a></li>
-					<li><a href="#">Accessories</a></li>
+					{{each tabs}}
+						{{if $index == 0 }}
+							<li class="current"><a href="#">${$value}</a></li>
+						{{else}}
+							<li><a href="#">${$value}</a></li>
+						{{/if}}
+					{{/each}}
 				</ul>
 			</nav>
 			
@@ -138,15 +195,11 @@
 				<div class="col-medium">
 					<div class="product-gallery">
 						<ul>
+							{{each imageGallery}}
 							<li>
-								<img src="http://images.bestbuy.com/BestBuy_US/images/products/9747/9747183_sa.jpg" alt="large front image" >
+								<img src="${url}" alt="" >
 							</li>
-							<li>
-								<img src="http://images.bestbuy.com/BestBuy_US/images/products/9747/9747183cv1a.jpg" alt="large front image" >
-							</li>
-							<li>
-								<img src="http://images.bestbuy.com/BestBuy_US/images/products/9747/9747183cv2a.jpg" alt="large front image" >
-							</li>
+							{{/each}}
 						</ul>
 					</div>
 					<div class="gallery-position"><em class="on">&bull;</em><em>&bull;</em><em>&bull;</em></div>
@@ -155,36 +208,43 @@
 				<div class="sub-module col-small">
 					<h2 class="sub-section-title">Product Availability</h2>
 					<ul>
-						<li>
-							Delivery: Most Areas 
-							Check Dates
-						</li>
-						<li>
-							Store Pickup: Available
-							Check Stores
-						</li>
+						{{each availability}}
+							<li>
+								${method}: ${description}
+								${linkText}
+							</li>
+						{{/each}}
 					</ul>
 					
 					<h2 class="sub-section-title">Special Offers</h2>
 					<ul>
-						<li>
-							Offers
-						</li>
+						{{each specialOffers}}
+							<li>
+								${description}
+							</li>
+						{{/each}}
 					</ul>
 					
 					<h2 class="sub-section-title">Financing Offers</h2>
 					<ul>
-						<li>
-							Offers
-						</li>
+						{{each financingOffers}}
+							<li>
+								${title}
+								${description}
+							</li>
+						{{/each}}
 					</ul>
 					
+					{{if rebates.length > 0}}
 					<h2 class="sub-section-title">Local Rebates</h2>
 					<ul>
-						<li>
-							Rebates
-						</li>
+						{{each rebates}}
+							<li>
+								${description}
+							</li>
+						{{/each}}
 					</ul>
+					{{/if}}
 				</div>
 			</div><!-- end col-wrapper -->
 			
@@ -192,26 +252,9 @@
 				<div class="sub-module col-medium">
 					<h2 class="section-title">Features</h2>
 					<ul>
-						<li><b>Digital controls</b><br>Provide quick and easy adjustment of the temperature to keep food cool and fresh.
-						</li>
-						<li><b>Power Freeze and Power Cooling options</b><br>Adjust the temperature quickly when the fresh-food or freezer compartments need to be cooled because of repeated door openings. Also features 6 temperature settings.
-						</li>
-						<li><b>Thru-the-door ice and water dispenser</b><br>Offers filtered water and clear, crisp ice at the touch of a button.
-						</li>
-						<li><b>Water filtration</b><br>Removes impurities for a cleaner, more refreshing taste. Filter indicator light shows you when the filter needs changing.
-						</li>
-						<li><b>Spill-proof tempered-glass fresh-food shelves</b><br>Contain small spills for easy cleanup.
-						</li>
-						<li><b>Humidity-controlled crisper</b><br>Helps keep fruits and vegetables cool and fresh.
-						</li>
-						<li><b>Gallon door bins</b><br>Provide storage space for milk jugs or other large containers to free up shelf space.
-						</li>
-						<li><b>Icemaker</b><br>Delivers ice quickly. Removable ice caddies help ensure you have a ready supply of ice on hand.
-						</li>
-						<li><b>Door alarm</b><br>Alerts you when the refrigerator door is accidentally left open to save energy.
-						</li>
-						<li><b>LED lighting</b><br>Illuminates the interior of the refrigerator so you can easily find what you're looking for.
-						</li>
+						{{each features}}
+							<li>{{html description}}</li>
+						{{/each}}
 					</ul>
 					<a href="#" class="button secondary small-button">View Full Features</a>
 				</div>
@@ -244,6 +287,13 @@
 					<a href="#" class="button secondary small-button">See All Specs</a>
 				</div>
 			</div><!-- end col-wrapper -->
+			
+			<section class="module">
+				<h2>Ratings &amp; Reviews</h2>
+				<ul>
+					<li>Reviews</li>
+				</ul>
+			</section>
 			
 			<section class="module sku-list-module skus-x-5">
 				<h2>Recommended Parts &amp; Accessories</h2>
@@ -329,45 +379,8 @@
 					</li>
 				</ul>
 			</section>
-			
-			<section class="module">
-				<h2>Ratings &amp; Reviews</h2>
-				<ul>
-					<li>Reviews</li>
-				</ul>
-			</section>
-			
+
     </div><!-- end .module-group -->
-    
-    <footer id="footer">
-        <div class="footer-meta">
-          <p>Prices on this site are the same as those on BestBuy.com. Prices may vary in store. All prices and offers are subject to change. In store availability subject to change. Orders placed for store pickup may take up to 45 minutes to process.</p> 
-          <p>&copy;2003-2011 BBY Solutions, Inc.</p>
-        </div><!--footer-meta-->
-        <div class="footer-links">
-          <a href="#">Terms</a>
-          <a href="#">Privacy</a>
-          <a href="#">Feedback</a>
-          <a href="#">Desktop Site</a>
-        </div><!-- footer-links -->
-    </footer>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
-    <script src="js/jquery.jsonp-2.1.4.min.js"></script>
-    <script src="js/addclear.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/swipe.js"></script>
-    <script>
-    	var slider = new Swipe($('.product-gallery')[0], {
-				callback: function(e, pos) {
-								var i = bullets.length;
-								while (i--) {
-										bullets[i].className = ' ';
-								}
-								bullets[pos].className = 'on';
-						}
-				}),
-				bullets = $(this).next('.gallery-position').children('em');
-    </script>
+  </script>
 </body>
 </html>

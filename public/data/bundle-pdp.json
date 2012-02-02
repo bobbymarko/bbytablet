@@ -1,0 +1,131 @@
+pdpData({
+  "shortLabel": "Samsung - 28.0 Cu. Ft. French Door Refrigerator - Stainless-Steel",
+  "metaData": [
+  	{
+  		"key":"Model",
+  		"value":"RS261MDRS/XAA"
+  	},
+  	{
+  		"key":"SKU",
+  		"value":"9747183"
+  	}
+  ],
+  "ratingsCount":"124",
+  "customerReviewAverage":"2.5",
+  "reviews":"",
+  "regularPrice":"1,299.99",
+  "salePrice":"1,099.99",
+  "youSave":"200.00",
+  "listPrice":false,
+  "withContract":false,
+  "monthlyPrice":false,
+  "freeShipping":true,
+  "inStoreOnly":false,
+  "onSale":true,
+  "tabs":[
+  	"Overview",
+  	"Specifications",
+  	"Customer Reviews (16)",
+  	"Accessories"
+  ],
+  "moreBuyingOptions":"",
+  "compareAvailable":true,
+  "availability": [
+  	{
+  		"method":"Delivery",
+  		"description":"Most Areas",
+  		"linkText":"Check Dates"
+  	},
+  	{
+  		"method":"Store Pickup",
+  		"description":"Available",
+  		"linkText":"Check Stores"
+  	}
+  ],
+  "specialOffers":[
+  	{
+  		"description":"15% Off Kitchen Appliances: See How"
+  	}
+  ],
+  "financingOffers":[
+  	{
+  		"title":"Best Buy Cardholder Discount",
+  		"description":"15% Off Game Guide: Find Out How"
+  	},
+  	{
+  		"title":"Financing Available",
+  		"description":"18 Month Financing"
+  	},
+  	{
+  		"title":"Reward Zone Offer",
+  		"description":"Get Reward Certificates Faster: See How"
+  	}
+  ],
+  "rebates":[
+  	{
+  		"description":"Click here to learn about how you could get up to $70.00 from 1 rebate(s) in Minneapolis, MN. Rebate info provided by EcoRebates. Terms"
+  	}
+  ],
+  "energyGuide":true,
+  "whatsIncluded":[
+  	{
+  		"description": "Samsung 25.6 Cu. Ft. Side-by-Side Refrigerator with Thru-the-Door Ice and Water",
+  	},
+  	{
+  		"description": "Shelves, bins"
+  	},
+  	{
+  		"description": "Water filter"
+  	},
+  	{
+  		"description": "Owner's manual"
+  	}
+  ],
+  "features":[
+
+  	{
+  		"description":"<b>Digital controls</b><br>Provide quick and easy adjustment of the temperature to keep food cool and fresh."
+  	},
+  	{
+  		"description":"<b>Power Freeze and Power Cooling options</b><br>Adjust the temperature quickly when the fresh-food or freezer compartments need to be cooled because of repeated door openings. Also features 6 temperature settings."
+  	},
+  	{
+  		"description":"<b>Thru-the-door ice and water dispenser</b><br>Offers filtered water and clear, crisp ice at the touch of a button.",
+  	},
+  	{
+  		"description":"<b>Water filtration</b><br>Removes impurities for a cleaner, more refreshing taste. Filter indicator light shows you when the filter needs changing.",
+  	},
+  	{
+  		"description":"<b>Spill-proof tempered-glass fresh-food shelves</b><br>Contain small spills for easy cleanup."
+  	},
+  	{
+  		"description":"<b>Humidity-controlled crisper</b><br>Helps keep fruits and vegetables cool and fresh."
+  	},
+  	{
+  		"description":"<b>Gallon door bins</b><br>Provide storage space for milk jugs or other large containers to free up shelf space."
+  	},
+  	{
+  		"description":"<b>Icemaker</b><br>Delivers ice quickly. Removable ice caddies help ensure you have a ready supply of ice on hand."
+  	},
+  	{
+  		"description":"<b>Door alarm</b><br>Alerts you when the refrigerator door is accidentally left open to save energy."
+  	},
+  	{
+  		"description":"<b>LED lighting</b><br>Illuminates the interior of the refrigerator so you can easily find what you're looking for."
+  	}
+  ],
+  "thumbnailImage": "http://images.bestbuy.com/BestBuy_US/images/products/9747/9747183_sc.jpg",
+  "imageGallery": [
+    {
+    	"url":"http://images.bestbuy.com/BestBuy_US/images/products/9747/9747183_sa.jpg"
+    },
+    {
+    	"url":"http://images.bestbuy.com/BestBuy_US/images/products/9747/9747183_sa.jpg"
+    },
+    {
+    	"url":"http://images.bestbuy.com/BestBuy_US/images/products/9747/9747183_sa.jpg"
+    }
+  ],
+  "customersAlsoViewed":"",
+  "accessories":""
+})

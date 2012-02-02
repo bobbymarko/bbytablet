@@ -104,10 +104,17 @@
 	width:auto;
 }
 
+.vb-primary-area.solo{
+	float:none;
+	margin-left:auto;
+	margin-right:auto;
+}
+
 .vb-primary-message{
 	float:right;
 	padding:20px 40px 20px 20px;
 	margin:60px 0 0;
+	width:35%;
 }
 
 .vb-primary-headline{
@@ -257,6 +264,10 @@
 	font-size:14px;
 }
 
+.skus-x-5 ul+ul, .skus-x-4 ul+ul, .skus-x-3 ul+ul, .skus-x-2 ul+ul{
+	margin-top:30px;
+}
+
 .two-column .skus-x-4 .item-name{
 	font-size:14px;
 }
@@ -298,10 +309,6 @@
     height:15px;
 }
 
-.two-column .skus-x-4 ul+ul{
-	margin-top:20px;
-}
-
 .module .ratings{
 	margin:0 0 5px;
 }
@@ -313,6 +320,10 @@
 .recommendation-link{
 	margin-top:5px;
 	display:block;
+}
+
+.simple-block{
+	text-align:center;
 }
 
 /* ---------- Featured Offers ----------------*/
@@ -430,17 +441,18 @@
 }
 
 .called-out-block+.module{
-	padding-top:0;
+	padding-top:10px;
 }
 
 .landing-page-title:first-child{
-	margin-top:60px;
+	margin-top:40px;
 	border-top:1px solid #c3c4c4;
 }
 
 .landing-page-title img{
 	position:absolute;
 	top:50%;
+	left:20px;
 	margin-top:-74px;
 }
 
@@ -492,6 +504,28 @@
 .addthis_button_google_plusone{
 	position:relative;
 	left:-5px;
+}
+
+/* ---------- Media Queries ----------------*/
+.text-module{
+}
+
+.text-module ul{
+	padding-left:20px;
+}
+
+.text-module li{
+	list-style-type:disc;
+	list-style-position:outside;
+	margin-bottom:5px;
+}
+
+.text-module h3{
+	margin-top:15px;
+}
+
+.text-module h4{
+	margin:13px 0 10px;
 }
 
 /* ---------- Media Queries ----------------*/
@@ -585,6 +619,10 @@
 @media (min-width:960px){
 	.vb-primary-area{
 		background-size: contain;
+	}
+	
+	.two-column .vb-primary-area{
+		width:90%;
 	}
 	
 	.sku-list-module .item-image{

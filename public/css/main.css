@@ -726,6 +726,7 @@ input.search-field{
 .back-btn{
 	float:left;
 	padding-left:12px;
+	position:relative;
 }
 
 .back-btn::before{
