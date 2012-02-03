@@ -25,7 +25,7 @@ pdpData({
   "tabs":[
   	"Overview",
   	"Specifications",
-  	"Customer Reviews (16)",
+  	"Customer Reviews <span class='count'>(16)</span>",
   	"Accessories"
   ],
   "moreBuyingOptions":"",
@@ -114,16 +114,62 @@ pdpData({
   		"description":"<b>LED lighting</b><br>Illuminates the interior of the refrigerator so you can easily find what you're looking for."
   	}
   ],
+  "specifications":[
+  	{
+  		"attribute":"Warranty Terms",
+  		"value":"Parts: 1 year"
+  	},
+  	{
+  		"attribute":"Warranty Terms",
+  		"value":"Labor: 1 year"
+  	},
+  	{
+  		"attribute":"Product Width",
+  		"value":"35-3/8\""
+  	},
+  	{
+  		"attribute":"Product Weight",
+  		"value":"295 lbs"
+  	},
+  	{
+  		"attribute":"Product Depth",
+  		"value":"36-1/2\""
+  	},
+  	{
+  		"attribute":"Height to Top of Refrigerator (in.)",
+  		"value":"68-5/8"
+  	},
+  	{
+  		"attribute":"Height to Top of Door Hinge (in.)",
+  		"value":"69-7/8"
+  	},
+  	{
+  		"attribute":"Counter Depth",
+  		"value":"No"
+  	},
+  	{
+  		"attribute":"Product Depth",
+  		"value":"36-1/2\""
+  	},
+  	{
+  		"attribute":"Height to Top of Refrigerator (in.)",
+  		"value":"68-5/8"
+  	},
+  	{
+  		"attribute":"Height to Top of Door Hinge (in.)",
+  		"value":"69-7/8"
+  	}
+  ],
   "thumbnailImage": "http://images.bestbuy.com/BestBuy_US/images/products/9747/9747183_sc.jpg",
   "imageGallery": [
     {
     	"url":"http://images.bestbuy.com/BestBuy_US/images/products/9747/9747183_sa.jpg"
     },
     {
-    	"url":"http://images.bestbuy.com/BestBuy_US/images/products/9747/9747183_sa.jpg"
+    	"url":"http://images.bestbuy.com/BestBuy_US/images/products/9747/9747183cv1a.jpg"
     },
     {
-    	"url":"http://images.bestbuy.com/BestBuy_US/images/products/9747/9747183_sa.jpg"
+    	"url":"http://images.bestbuy.com/BestBuy_US/images/products/9747/9747183cv2a.jpg"
     }
   ],
   "customersAlsoViewed":"",
