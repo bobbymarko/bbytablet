@@ -80,10 +80,11 @@ body, input, textarea{
     font:.875em sans-serif;
 }
 
-a{color:#004691; text-decoration:none;}
+a{color:#1646a8; text-decoration:none;}
 
 p{
   margin:0 0 8px;
+  line-height:1.4;
 }
 
 ul,li{list-style:none; padding:0; margin:0;}
@@ -1008,11 +1009,12 @@ input.search-field{
 .ratings {
 	position:relative;
 	overflow:hidden;
+	font-size:12px;
+	line-height:1.8;
 }
 
 .ratings a {
     position:relative;
-    line-height:1.8;
     float:left;
 }
 

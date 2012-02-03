@@ -131,8 +131,9 @@
 							}
 					}),
 					bullets = $('.gallery-position').children('li');
-					bullets.click(function(){
+					bullets.click(function(e){
 						slider.slide($(this).index(),400);
+						e.preventDefault();
 					});
 				}
 			});
@@ -154,8 +155,8 @@
 						<img src="${thumbnailImage}" alt="" />
 					</div>
 					<hgroup>
-						<h1>${shortLabel}</h1>
-						<p>
+						<h1 class="item-name">${shortLabel}</h1>
+						<p class="item-metadata">
 							{{each metaData}}
 								${key}: ${value} 
 								{{if $index < metaData.length - 1}} &#149; {{/if}}
@@ -208,9 +209,9 @@
 					<ul class="gallery-position">
 						{{each imageGallery}}
 							{{if $index == 0 }}
-								<li class="on"><div><img src="${url}" alt=""></div></li>
+								<li class="on"><a href="#"><img src="${url}" alt=""></a></li>
 							{{else}}
-								<li><div><img src="${url}" alt=""></div></li>
+								<li><a href="#"><img src="${url}" alt=""></a></li>
 							{{/if}}
 						{{/each}}
 					</ul>
@@ -221,8 +222,11 @@
 					<ul>
 						{{each availability}}
 							<li>
-								${method}: ${description}
-								${linkText}
+								<img class="availability-image" src="images/avail_shipping_yes.gif" alt="" />
+								<p class="availability-message">
+									<strong>${method}:</strong> ${description}<br/>
+									<a href="#">${linkText}</a>
+								</p>
 							</li>
 						{{/each}}
 					</ul>
@@ -296,18 +300,89 @@
 				<h2>Ratings &amp; Reviews</h2>
 				<div class="col-small">
 					<h3>Ratings Overview:</h3>
-					<a href="#" class="button secondary small-button">See All Reviews</a>
+					<h4>Overall Rating: </h4>
+					<div class="ratings">
+							<div class="rating-stars">
+									<div class="rating-filler" style="width: 92%;"></div>
+									<div class="rating-mask"></div>
+							</div>
+							<strong>4.5</strong>
+					</div><!-- ratings -->
+					<p>
+						<strong>61%</strong> (11 of 18) of customers would recommend this product to a friend.
+					</p>
+					<div class="ratings-breakdown">
+						<div class="ratings-star-group">
+							<strong>5 stars</strong>
+							<div class="ratings-star-count-wrapper">
+								<div class="ratings-star-count" style="width:10%"></div> 7 reviews
+							</div>
+						</div><!-- end .ratings-star-group -->
+						<div class="ratings-star-group">
+							<strong>5 stars</strong>
+							<div class="ratings-star-count-wrapper">
+								<div class="ratings-star-count" style="width:10%"></div> 4 reviews
+							</div>
+						</div><!-- end .ratings-star-group -->
+						<div class="ratings-star-group">
+							<strong>5 stars</strong>
+							<div class="ratings-star-count-wrapper">
+								<div class="ratings-star-count" style="width:10%"></div> 3 reviews
+							</div>
+						</div><!-- end .ratings-star-group -->
+						<div class="ratings-star-group">
+							<strong>5 stars</strong>
+							<div class="ratings-star-count-wrapper">
+								<div class="ratings-star-count" style="width:10%"></div> 2 reviews
+							</div>
+						</div><!-- end .ratings-star-group -->
+						<div class="ratings-star-group">
+							<strong>5 stars</strong>
+							<div class="ratings-star-count-wrapper">
+								<div class="ratings-star-count" style="width:10%"></div> 4 reviews
+							</div>
+						</div><!-- end .ratings-star-group -->
+					</div>
+					<a href="#" class="button secondary small-button">Read All 16 Reviews</a>&nbsp; &nbsp;<a href="#">Write a Review</a>
 				</div>
 				<div class="col-small">
 					<h3>Most Helpful Positive Review:</h3>
-				</div>
+					<div class="ratings">
+							<div class="rating-stars">
+									<div class="rating-filler" style="width: 92%;"></div>
+									<div class="rating-mask"></div>
+							</div>
+							<h4>Great Fridge, stylish</h4>
+					</div><!-- ratings -->
+					<p>
+						&#8220;We bought this fridge and after 2 weeks the ice maker broke. Luckily it was under 30 days and we still had the receipt, so BestBuy swapped it out for another one. We have had no problems at all with this one. My wife and I love this fridge! It's beautiful, the inner LED lighting We have had no problems at all with this one. My wife and I love this fridge! It's beautiful, the inner...&#8221;
+					</p>
+					<p>
+						Posted by: TechSupportDad from Near Seattle, WA on 12/16/2010
+					</p>
+					<a href="#">Read Full Review</a>
+				</div><!-- end .col-small -->
 				<div class="col-small">
 					<h3>Most Helpful Critical Review:</h3>
-				</div>
+					<div class="ratings">
+							<div class="rating-stars">
+									<div class="rating-filler" style="width: 10%;"></div>
+									<div class="rating-mask"></div>
+							</div>
+							<h4>Really wanted to like this</h4>
+					</div><!-- ratings -->
+					<p>
+						&#8220;Chose this frig after a lot of online research and several trips to various outlets- Sears, Lowes etc. BB had the, well, 'best buy' so we got it here. Loved the LED lighting (the slow turn on, the clear white light and the fact that they don't heat up the food you're trying Loved the LED lighting (the slow turn on, the clear white light and the fact that they don't heat up the for...&#8221;
+					</p>
+					<p>
+						Posted by: CriticalCarol from Minneapolis, MN on 6/4/2009
+					</p>
+					<a href="#">Read Full Review</a>
+				</div><!-- end .col-small -->
 			</section>
 			
 			<section class="module sku-list-module skus-x-5">
-				<h2>Recommended Parts &amp; Accessories</h2>
+				<h2>Accessories</h2>
 				<ul>
 					<li>
 						<a href="" class="item-image"><img src="http://images.bestbuy.com/BestBuy_US/images/products/9745/9745916_sc.jpg" alt="" /></a>
