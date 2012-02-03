@@ -464,7 +464,7 @@ input.error-input{
 
 .dropdown-menu a:before, .dropdown-menu a:after, .side-menu a:before, .side-menu a:after{
   content:'';
-  background:#004691;
+  background:#1646a8;
   width:2px;
   height:8px;
   display: block;
@@ -601,7 +601,7 @@ a.dropdown-back:before, .back-btn:before{
   width:0;
   height:0;
   border-width:5px;
-  border-color:transparent #004691 transparent transparent;
+  border-color:transparent #1646a8 transparent transparent;
   border-style: solid;
   background: transparent;
   -webkit-transform: none;

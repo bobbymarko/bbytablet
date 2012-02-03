@@ -131,8 +131,8 @@
 							}
 					}),
 					bullets = $('.gallery-position').children('li');
-					bullets.click(function(e){
-						slider.slide($(this).index(),400);
+					$('a', bullets).click(function(e){
+						slider.slide($(this).closest('li').index(),400);
 						e.preventDefault();
 					});
 				}
@@ -209,58 +209,59 @@
 					<ul class="gallery-position">
 						{{each imageGallery}}
 							{{if $index == 0 }}
-								<li class="on"><a href="#"><img src="${url}" alt=""></a></li>
+								<li class="on"><a href="#"><span><img src="${url}" alt=""></span></a></li>
 							{{else}}
-								<li><a href="#"><img src="${url}" alt=""></a></li>
+								<li><a href="#"><span><img src="${url}" alt=""></span></a></li>
 							{{/if}}
 						{{/each}}
 					</ul>
 				</div>
 				
-				<div class="sub-module col-small">
-					<h2 class="sub-section-title">Product Availability</h2>
-					<ul>
-						{{each availability}}
-							<li>
-								<img class="availability-image" src="images/avail_shipping_yes.gif" alt="" />
-								<p class="availability-message">
-									<strong>${method}:</strong> ${description}<br/>
-									<a href="#">${linkText}</a>
-								</p>
-							</li>
-						{{/each}}
-					</ul>
+				<div class="col-small">
+					<div class="sub-module">
+						<h2 class="sub-section-title">Product Availability</h2>
+						<ul>
+							{{each availability}}
+								<li>
+									<img class="sub-module-icon" src="images/avail_shipping_yes.gif" alt="" />
+									<p class="availability-message">
+										<strong>${method}:</strong> ${description}<br/>
+										<a href="#">${linkText}</a>
+									</p>
+								</li>
+							{{/each}}
+						</ul>
+					</div><!-- end .sub-module -->
 					
-					<h2 class="sub-section-title">Special Offers</h2>
-					<ul>
-						{{each specialOffers}}
-							<li>
-								${description}
-							</li>
-						{{/each}}
-					</ul>
-					
-					<h2 class="sub-section-title">Financing Offers</h2>
-					<ul>
-						{{each financingOffers}}
-							<li>
-								${title}
-								${description}
-							</li>
-						{{/each}}
-					</ul>
-					
-					{{if rebates.length > 0 && false}}
-					<h2 class="sub-section-title">Local Rebates</h2>
-					<ul>
-						{{each rebates}}
-							<li>
-								${description}
-							</li>
-						{{/each}}
-					</ul>
+					{{if specialOffers}}
+					<div class="sub-module">
+						<h2 class="sub-section-title">Special Offers</h2>
+						<img class="sub-module-icon" src="images/icon-special-offers.gif" alt="" />
+						<ul>
+							{{each specialOffers}}
+								<li>
+									<a href="#">${description}</a>
+								</li>
+							{{/each}}
+						</ul>
+					</div><!-- end .sub-module -->
 					{{/if}}
-				</div>
+					
+					{{if financingOffers}}
+					<div class="sub-module">
+						<h2 class="sub-section-title">Financing Offers</h2>
+						<img class="sub-module-icon" src="images/icon-financing.gif" alt="" />
+						<ul>
+							{{each financingOffers}}
+								<li>
+									<strong>${title}</strong><br/>
+									<a href="#">${description}</a>
+								</li>
+							{{/each}}
+						</ul>
+					</div><!-- end .sub-module -->
+					{{/if}}
+				</div><!-- end .col-small -->
 			</div><!-- end col-wrapper -->
 			
 			<div class="col-wrapper">
@@ -308,41 +309,46 @@
 							</div>
 							<strong>4.5</strong>
 					</div><!-- ratings -->
-					<p>
-						<strong>61%</strong> (11 of 18) of customers would recommend this product to a friend.
-					</p>
 					<div class="ratings-breakdown">
 						<div class="ratings-star-group">
 							<strong>5 stars</strong>
 							<div class="ratings-star-count-wrapper">
-								<div class="ratings-star-count" style="width:10%"></div> 7 reviews
+								<div class="ratings-star-count" style="width:62%"></div>
 							</div>
+							22 reviews
 						</div><!-- end .ratings-star-group -->
 						<div class="ratings-star-group">
-							<strong>5 stars</strong>
+							<strong>4 stars</strong>
 							<div class="ratings-star-count-wrapper">
-								<div class="ratings-star-count" style="width:10%"></div> 4 reviews
+								<div class="ratings-star-count" style="width:11%"></div>
 							</div>
+							4 reviews
 						</div><!-- end .ratings-star-group -->
 						<div class="ratings-star-group">
-							<strong>5 stars</strong>
+							<strong>3 stars</strong>
 							<div class="ratings-star-count-wrapper">
-								<div class="ratings-star-count" style="width:10%"></div> 3 reviews
+								<div class="ratings-star-count" style="width:8%"></div>
 							</div>
+							 3 reviews
 						</div><!-- end .ratings-star-group -->
 						<div class="ratings-star-group">
-							<strong>5 stars</strong>
+							<strong>2 stars</strong>
 							<div class="ratings-star-count-wrapper">
-								<div class="ratings-star-count" style="width:10%"></div> 2 reviews
+								<div class="ratings-star-count" style="width:5%"></div>
 							</div>
+							2 reviews
 						</div><!-- end .ratings-star-group -->
 						<div class="ratings-star-group">
-							<strong>5 stars</strong>
+							<strong>1 stars</strong>
 							<div class="ratings-star-count-wrapper">
-								<div class="ratings-star-count" style="width:10%"></div> 4 reviews
+								<div class="ratings-star-count" style="width:11%"></div>
 							</div>
+							4 reviews
 						</div><!-- end .ratings-star-group -->
 					</div>
+					<p>
+						<strong>61%</strong> (11 of 18) of customers would recommend this product to a friend.
+					</p>
 					<a href="#" class="button secondary small-button">Read All 16 Reviews</a>&nbsp; &nbsp;<a href="#">Write a Review</a>
 				</div>
 				<div class="col-small">
