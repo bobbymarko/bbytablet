@@ -127,6 +127,12 @@ input.error-input{
 	list-style-position:outside;
 }
 
+.emphasis{
+	font-size: 150%;
+	font-weight: bold;
+	line-height: 0;
+}	
+
 /* layout */
 #masthead{
     background:#003b64;
@@ -1057,7 +1063,7 @@ ul.price-block li{ /* need to refactor sku-list-module to fix specificity issue 
 }
 
 .price-block .price-paid{
-	font-size:24px;
+	font-size:36px;
 	font-weight:bold;
 	letter-spacing:-.03em;
 	line-height:.8;

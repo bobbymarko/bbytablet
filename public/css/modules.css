@@ -17,6 +17,8 @@
 	margin:40px 20px;
 	border-top:1px solid #c3c4c4;
 	padding:40px 0 0 0;
+	overflow:hidden;
+	position:relative;
 	clear:both;
 }
 
@@ -281,6 +283,10 @@
 	vertical-align:bottom;
 }
 
+.sku-list-module .price-block+.button{
+	margin-top:10px;
+}
+
 .skus-x-1 .item-postcard{
 	margin-left:50%;
 	padding-left:40px;
@@ -311,6 +317,10 @@
 
 .module .ratings{
 	margin:0 0 5px;
+}
+
+.sku-list-module .price-paid{
+	font-size:24px;
 }
 
 .skus-x-1 .price-paid{
@@ -421,7 +431,7 @@
 	background:#f4f5f5;
 	border:1px solid #c3c4c4;
 	padding:20px;
-	position:relative;
+	overflow:visible;
 }
 
 /* clear fixing */
@@ -643,7 +653,7 @@
 		margin-bottom:0;
 	}
 	
-	.addthis_toolbox{
+	.called-out-block .addthis_toolbox{
 		float:left;
 		padding-left:20px;
 		margin-left:20px;
@@ -652,7 +662,7 @@
 	
 	.landing-page-title h1{
 		float:left;
-		line-height:1.8;
+		line-height:2;
 	}
 	
 	.landing-page-title p{
