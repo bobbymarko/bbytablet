@@ -652,6 +652,22 @@
 }
 
 /* ---------- Media Queries ----------------*/
+@media (max-width:769px){
+	.selectable-items.skus-x-4 li{
+		width: 45%;
+		margin: 0 2%;
+		display: inline-block;
+		vertical-align: top;
+		margin-bottom: 20px;
+		float: none;
+	}
+	
+	.selectable-items.skus-x-4 li:last-child, .selectable-items.skus-x-4 li:nth-last-child(2){
+		margin-bottom:0;
+	}
+	
+}
+
 @media (min-width:740px){
 	.alert-form{
 		float:left;
