@@ -2,6 +2,7 @@ table{
 	text-align:left;
 	border-collapse: collapse;
 	border-spacing: 0;
+	width:100%;
 }
 
 th,td{
@@ -66,7 +67,7 @@ th[scope="rowgroup"]{
 	padding: 20px 8px 5px;
 }
 
-th[scope="row"]{
+#compare-table th[scope="row"]{
 	border-right:1px solid #c3c4c4;
 }
 

@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$("input[type=text]").addClear({top:1,right:10});
+	$("input[type=text], input[type=search], input[type=tel], input[type=number], input[type=email]").addClear({top:1,right:10});
 	
 	
 	var touchMove = false;

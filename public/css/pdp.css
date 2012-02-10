@@ -3,6 +3,24 @@
 	margin-right:10px;
 }
 
+.col-wrapper:last-child{ /* if a col-wrapper butts up against the footer we need to add this space */
+	margin-bottom:20px;
+}
+
+.module+.col-wrapper{margin-top:-40px;}
+
+.tab-bar+.col-wrapper .section-title{ /* if we don't have the image gallery then we need to adjust the spacing above features */
+	border-top:0;
+	padding-top:0;
+	margin-top:0;
+}
+
+.tab-bar+.module{
+	margin-top:0;
+	padding-top:0;
+	border-top:none;
+}
+
 /* clear fixing */
 .col-wrapper:before,
 .col-wrapper:after {
@@ -53,7 +71,10 @@
 }
 
 .sub-module{
-	margin-bottom:30px;
+	margin:0 3% 30px 0;
+	width:46%;
+	display:inline-block;
+	vertical-align:top;
 }
 
 .sub-module ul{
@@ -73,7 +94,11 @@
 
 .pdp-title{
 	float:left;
-	width:72%;
+	width:70%;
+}
+
+.pdp-title hgroup{
+	margin-left:17%;
 }
 
 .pdp-title .item-name{
@@ -85,10 +110,15 @@
 	width:15%;
 	max-width:140px;
 	text-align:center;
-	margin-right:20px;
+	margin-right:2%;
 }
 
-.pdp-title .item-metadata{
+.pdp-title .item-image img{
+	max-width:100%;
+	max-height:120px;
+}
+
+.item-metadata{
 	font-size:12px;
 }
 
@@ -108,7 +138,7 @@
 	position:static; /* these disable clearfixing */
 	overflow:visible; /* these disable clearfixing */
 	border-bottom:3px solid #737474;
-	margin-bottom:30px;
+	margin-bottom:40px;
 }
 
 .tab-bar ul{	
@@ -136,6 +166,7 @@
 	color:#003b64;
 	text-shadow:0 1px 0 #fff;
 	padding:15px;
+	border-bottom:3px solid #737474;
 	background: #dddede;
 	background: -moz-linear-gradient(top, #ffffff 0%, #dddede 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#dddede));
@@ -214,6 +245,9 @@
 .ratings-star-group{
 	font-size:12px;
 	line-height:1;
+	overflow:hidden;
+	position:relative;
+	margin-bottom:8px;
 }
 
 .ratings-star-count-wrapper{
@@ -244,6 +278,115 @@
 	box-shadow:0 0 5px rgba(0,0,0,0.2);
 }
 
+.short-review .item-metadata{
+	margin-bottom:3px;
+}
+
+.short-review .ratings{
+	margin-bottom:10px;
+}
+
+.review-options{
+	text-align:right;
+	padding:0 0 10px 10px;
+	margin-top:-20px;
+}
+
+#rating-selector{ /* prevent stars from wrapping */
+	width:202px;
+}
+
+#rating-selector a{
+	font-size:36px;
+	color:#ffd500;
+	letter-spacing:1px;
+	line-height:1.1;
+}
+
+#itemcolumn{
+	width:40%;	
+}
+
+.table-column{
+	width:60%;
+}
+
+.highlighted-box{
+	background:#f4f5f5;
+	border:1px solid #c3c4c4;
+	padding:20px;
+	margin:0 0 20px;
+}
+
+.word-divider{
+	text-align:center;
+	border-bottom:1px solid #e7e7e7;
+	position:relative;
+	margin:20px 0 15px;
+	top:-10px;
+}	
+
+.word-divider span{
+	background:#fff;
+	position:relative;
+	padding:10px;
+	top:10px;
+}
+
+.highlighted-box .word-divider span{
+	background:#f4f5f5;
+}
+
+.state-available{
+	color:#82b800;
+	font-weight:bold;
+}
+
+.state-unavailable{
+	font-weight:bold;
+}
+
+.item-list li{
+	border:1px solid #c3c4c4;
+	border-width:0 0 1px;
+	padding:20px 0;
+	overflow:hidden;
+	position:relative;
+}
+
+.item-list li:first-child{
+	border-top-width:1px;
+}
+
+.item-list li:last-child{
+	border-bottom-width:0;
+}
+
+.item-list .item-description{
+	float:left;
+	margin-right:20px;
+}
+
+.item-list .button{
+	float:right;
+}
+
+.item-list .loading{
+	margin-top:20px;
+}
+
+.ratings-overview, .short-review{
+	margin-bottom:30px;
+}
+
+.short-review:last-child{
+	margin-bottom:0;
+}
+
+.with-icon{
+	margin-top:20px;
+}
+
 @media (min-width:760px){
 	.col-small, .col-medium, .col-large{
 		-webkit-box-sizing: border-box;
@@ -262,7 +405,16 @@
 		padding-right:20px;
 	}
 	
-
+	.sub-module{
+		width:auto;
+		display:block;
+		margin-right:0;
+	}
+	
+	.review-options{
+		margin-top:-46px;
+	}
+	
 }
 
 @media (min-width:960px){
@@ -272,5 +424,22 @@
 	
 	.col-medium{
 		width:66.6666666%;
+	}
+	
+	.review-summary{
+		float:right;
+		width:30%;
+		padding-left:20px;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-o-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	.review-summary .ratings-star-count-wrapper{
+		width:100%;
+	}
+	.ratings-overview, .short-review{
+		margin-bottom:0;
 	}
 }

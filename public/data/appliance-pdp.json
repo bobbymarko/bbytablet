@@ -25,8 +25,7 @@ pdpData({
   "tabs":[
   	"Overview",
   	"Specifications",
-  	"Customer Reviews <span class='count'>(16)</span>",
-  	"Accessories"
+  	"Reviews",
   ],
   "moreBuyingOptions":"",
   "compareAvailable":true,
@@ -173,5 +172,5 @@ pdpData({
     }
   ],
   "customersAlsoViewed":"",
-  "accessories":""
+  "accessories":true
 })

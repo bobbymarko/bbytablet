@@ -1,50 +1,46 @@
 pdpData({
-  "shortLabel": "Samsung - 28.0 Cu. Ft. French Door Refrigerator - Stainless-Steel",
+  "shortLabel": "Nintendo - Nintendo Wii Console (Black) with New Super Mario Bros. Wii Game and Music CD",
   "metaData": [
   	{
-  		"key":"Model",
-  		"value":"RS261MDRS/XAA"
-  	},
-  	{
   		"key":"SKU",
-  		"value":"9747183"
+  		"value":"99990000"
   	}
   ],
-  "ratingsCount":"124",
-  "customerReviewAverage":"2.5",
+  "ratingsCount":"74",
+  "customerReviewAverage":"4.2",
   "reviews":"",
-  "regularPrice":"1,299.99",
-  "salePrice":"1,099.99",
-  "youSave":"200.00",
+  "regularPrice":"199.96",
+  "salePrice":"239.96",
+  "youSave":"40.00",
   "listPrice":false,
   "withContract":false,
   "monthlyPrice":false,
-  "freeShipping":true,
+  "freeShipping":false,
   "inStoreOnly":false,
   "onSale":true,
+  "bundle":true,
   "tabs":[
   	"Overview",
   	"Specifications",
-  	"Customer Reviews (16)",
-  	"Accessories"
+  	"Reviews",
   ],
   "moreBuyingOptions":"",
   "compareAvailable":true,
   "availability": [
   	{
-  		"method":"Delivery",
-  		"description":"Most Areas",
-  		"linkText":"Check Dates"
+  		"method":"Shipping",
+  		"description":"Usually leaves our warehouse in 1 business day",
+  		"linkText":""
   	},
   	{
   		"method":"Store Pickup",
-  		"description":"Available",
+  		"description":"",
   		"linkText":"Check Stores"
   	}
   ],
   "specialOffers":[
   	{
-  		"description":"15% Off Kitchen Appliances: See How"
+  		"description":"Save $100: Find Out How"
   	}
   ],
   "financingOffers":[
@@ -66,7 +62,7 @@ pdpData({
   		"description":"Click here to learn about how you could get up to $70.00 from 1 rebate(s) in Minneapolis, MN. Rebate info provided by EcoRebates. Terms"
   	}
   ],
-  "energyGuide":true,
+  "energyGuide":false,
   "whatsIncluded":[
   	{
   		"description": "Samsung 25.6 Cu. Ft. Side-by-Side Refrigerator with Thru-the-Door Ice and Water",
@@ -84,48 +80,36 @@ pdpData({
   "features":[
 
   	{
-  		"description":"<b>Digital controls</b><br>Provide quick and easy adjustment of the temperature to keep food cool and fresh."
+  		"description":"<b>Includes</b><br>Black Nintendo Wii console, black Wii Remote Plus, black Nunchuk, 2 AA batteries, AC adapter, New Super Mario Bros. Wii game and music CD."
   	},
   	{
-  		"description":"<b>Power Freeze and Power Cooling options</b><br>Adjust the temperature quickly when the fresh-food or freezer compartments need to be cooled because of repeated door openings. Also features 6 temperature settings."
+  		"description":"<b>Intuitive motion controls</b><br>Let you flick, swing, plunge and slash the included Wii Remote Plus and Nunchuk to intuitively control your games with sharp accuracy and modern style."
   	},
   	{
-  		"description":"<b>Thru-the-door ice and water dispenser</b><br>Offers filtered water and clear, crisp ice at the touch of a button.",
+  		"description":"<b>Get into the game</b><br>Hop off the couch and get involved with innovative gameplay controls that allow you to feel like you're actually in the game.",
   	},
   	{
-  		"description":"<b>Water filtration</b><br>Removes impurities for a cleaner, more refreshing taste. Filter indicator light shows you when the filter needs changing.",
+  		"description":"<b>Sleek black design</b><br>Expresses your gaming style.",
   	},
   	{
-  		"description":"<b>Spill-proof tempered-glass fresh-food shelves</b><br>Contain small spills for easy cleanup."
+  		"description":"<b>New Super Mario Bros. Wii</b><br>Take on a classic side-scrolling Mario adventure as Mario, Luigi or any of two Toads as you roam through fun, fast-paced worlds."
   	},
   	{
-  		"description":"<b>Humidity-controlled crisper</b><br>Helps keep fruits and vegetables cool and fresh."
+  		"description":"<b>Explore the Mushroom Kingdom with up to three friends</b><br>For hilarious multiplayer action that combines competition and cooperation."
   	},
   	{
-  		"description":"<b>Gallon door bins</b><br>Provide storage space for milk jugs or other large containers to free up shelf space."
-  	},
-  	{
-  		"description":"<b>Icemaker</b><br>Delivers ice quickly. Removable ice caddies help ensure you have a ready supply of ice on hand."
-  	},
-  	{
-  		"description":"<b>Door alarm</b><br>Alerts you when the refrigerator door is accidentally left open to save energy."
-  	},
-  	{
-  		"description":"<b>LED lighting</b><br>Illuminates the interior of the refrigerator so you can easily find what you're looking for."
+  		"description":"<b>Immerse yourself in the music of Mario</b><br>With the included music CD that creates a galaxy of music that fills your ears with the sounds of Mario's worlds."
   	}
   ],
-  "thumbnailImage": "http://images.bestbuy.com/BestBuy_US/images/products/9747/9747183_sc.jpg",
+  "thumbnailImage": "http://images.bestbuy.com/BestBuy_US/images/products/3668/3668575_rb.jpg",
   "imageGallery": [
     {
-    	"url":"http://images.bestbuy.com/BestBuy_US/images/products/9747/9747183_sa.jpg"
+    	"url":"http://images.bestbuy.com/BestBuy_US/images/products/3668/3668575_ra.jpg"
     },
     {
-    	"url":"http://images.bestbuy.com/BestBuy_US/images/products/9747/9747183_sa.jpg"
-    },
-    {
-    	"url":"http://images.bestbuy.com/BestBuy_US/images/products/9747/9747183_sa.jpg"
+    	"url":"http://images.bestbuy.com/BestBuy_US/images/products/3668/3668575cv1a.jpg"
     }
   ],
   "customersAlsoViewed":"",
-  "accessories":""
+  "accessories":true
 })

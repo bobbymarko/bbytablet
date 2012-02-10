@@ -1,50 +1,59 @@
 pdpData({
-  "shortLabel": "Samsung - 28.0 Cu. Ft. French Door Refrigerator - Stainless-Steel",
+  "shortLabel": "Battlefield 3 Limited Edition - Xbox 360",
   "metaData": [
   	{
-  		"key":"Model",
-  		"value":"RS261MDRS/XAA"
+  		"key": "Publisher",
+  		"value": "Electronic Arts"
   	},
   	{
   		"key":"SKU",
-  		"value":"9747183"
+  		"value":"3668336"
+  	},
+  	{
+  		"key":"Release Date",
+  		"value":"10/25/2011"
+  	},
+  	{
+  		"key":"ESRB Rating",
+  		"value":"M=Mature"
   	}
   ],
-  "ratingsCount":"124",
-  "customerReviewAverage":"2.5",
+  "ratingsCount":"46",
+  "customerReviewAverage":"4.1",
   "reviews":"",
-  "regularPrice":"1,299.99",
-  "salePrice":"1,099.99",
-  "youSave":"200.00",
-  "listPrice":false,
+  "regularPrice":"59.99",
+  "salePrice":"59.99",
+  "youSave":"00.00",
+  "listPrice":true,
   "withContract":false,
   "monthlyPrice":false,
   "freeShipping":true,
   "inStoreOnly":false,
-  "onSale":true,
+  "preorder":true,
+  "onSale":false,
   "tabs":[
   	"Overview",
   	"Specifications",
-  	"Customer Reviews (16)",
-  	"Accessories"
+  	"Reviews",
+  	"Game Add-Ons"
   ],
   "moreBuyingOptions":"",
   "compareAvailable":true,
   "availability": [
   	{
-  		"method":"Delivery",
-  		"description":"Most Areas",
-  		"linkText":"Check Dates"
+  		"method":"Shipping",
+  		"description":"Usually leaves our warehouse in 1 business day",
+  		"linkText":""
   	},
   	{
   		"method":"Store Pickup",
-  		"description":"Available",
+  		"description":"",
   		"linkText":"Check Stores"
   	}
   ],
   "specialOffers":[
   	{
-  		"description":"15% Off Kitchen Appliances: See How"
+  		"description":"15% Off Game Guide: Find Out How"
   	}
   ],
   "financingOffers":[
@@ -66,66 +75,60 @@ pdpData({
   		"description":"Click here to learn about how you could get up to $70.00 from 1 rebate(s) in Minneapolis, MN. Rebate info provided by EcoRebates. Terms"
   	}
   ],
-  "energyGuide":true,
-  "whatsIncluded":[
-  	{
-  		"description": "Samsung 25.6 Cu. Ft. Side-by-Side Refrigerator with Thru-the-Door Ice and Water",
-  	},
-  	{
-  		"description": "Shelves, bins"
-  	},
-  	{
-  		"description": "Water filter"
-  	},
-  	{
-  		"description": "Owner's manual"
-  	}
-  ],
+  "energyGuide":false,
+  "synopsis":"The ground shakes with rumbles from an explosion down the street. You hear disembodied shouts from your teammates. Bullets whiz by your helmet and explode on the wall behind you, sending chunks of concrete and rubble flying through the air. You're focused on your mission, but time seems to stop for a moment as you feel your weapon in your hand. Another bullet bursts against the wall, this time closer — and louder. That got your attention. There's no time for zoning out in the red zone. Meet back up with your team and make it off the <b>Battlefield</b> alive.<br><br>Featuring the powerful Frostbite 2 engine, <b>Battlefield 3</b> utilizes every ounce of power to provide the most immersive shooter experience you've ever known. Get ready to hold your ground on the front lines of a global conflict, and keep your finger on the trigger as the missions take you from city streets in New York and Paris to the relentless desert sands of Tehran. Take on the enemy by yourself in single player, or team up with a friend for intense co-op missions. Featuring the all-new Battlelog system, you can track every hard-earned kill and achievement. When your skills are battle-tested, load up for a 24-player online multiplayer mode, where you'll bring the fight right to your enemy in 20 battle-ready vehicles. Strap on your boots and fall in, Soldier. You're being deployed to the <b>Battlefield</b>.",
   "features":[
 
   	{
-  		"description":"<b>Digital controls</b><br>Provide quick and easy adjustment of the temperature to keep food cool and fresh."
+  		"description":"Take destruction to new heights and bring the action of the <strong>Battlefield</strong> to life thanks to incredible Frostbite 2 technology and advancements in five key areas: audio, rendering, destruction, scale and animation"
   	},
   	{
-  		"description":"<b>Power Freeze and Power Cooling options</b><br>Adjust the temperature quickly when the fresh-food or freezer compartments need to be cooled because of repeated door openings. Also features 6 temperature settings."
+  		"description":"Complete suspenseful missions on the front lines of a global conflict, from the streets of Paris and New York to the desert sands of Tehran and beyond"
   	},
   	{
-  		"description":"<b>Thru-the-door ice and water dispenser</b><br>Offers filtered water and clear, crisp ice at the touch of a button.",
+  		"description":"Boot up for a courageous single-player campaign, or take on the enemy with a friend in co-op mode",
   	},
   	{
-  		"description":"<b>Water filtration</b><br>Removes impurities for a cleaner, more refreshing taste. Filter indicator light shows you when the filter needs changing.",
+  		"description":"Track every kill, achievement and victory you accomplish with the all-new Battlelog system",
   	},
   	{
-  		"description":"<b>Spill-proof tempered-glass fresh-food shelves</b><br>Contain small spills for easy cleanup."
+  		"description":"Suit up and join the fight as a soldiers from the U.S. Marines, Russian Spetsnaz and other fighting forces to avert a global catastrophe"
   	},
   	{
-  		"description":"<b>Humidity-controlled crisper</b><br>Helps keep fruits and vegetables cool and fresh."
+  		"description":"Load up with an arsenal of powerful weapons and take the fight to your enemy in more than 20 drivable vehicles in 24-player matches over Xbox LIVE (Xbox LIVE subscription required, not included)"
   	},
   	{
-  		"description":"<b>Gallon door bins</b><br>Provide storage space for milk jugs or other large containers to free up shelf space."
-  	},
-  	{
-  		"description":"<b>Icemaker</b><br>Delivers ice quickly. Removable ice caddies help ensure you have a ready supply of ice on hand."
-  	},
-  	{
-  		"description":"<b>Door alarm</b><br>Alerts you when the refrigerator door is accidentally left open to save energy."
-  	},
-  	{
-  		"description":"<b>LED lighting</b><br>Illuminates the interior of the refrigerator so you can easily find what you're looking for."
+  		"description":"For 1 player locally, 2 to 24 players online (broadband connection required)"
   	}
   ],
-  "thumbnailImage": "http://images.bestbuy.com/BestBuy_US/images/products/9747/9747183_sc.jpg",
+  "specifications":[
+  	{
+  		"attribute":"Publisher",
+  		"value":"Electronic Arts"
+  	},
+  	{
+  		"attribute":"Platform",
+  		"value":"Xbox 360"
+  	},
+  	{
+  		"attribute":"Genre",
+  		"value":"Shooters"
+  	},
+  	{
+  		"attribute":"Release Date",
+  		"value":"10/25/2011"
+  	},
+  	{
+  		"attribute":"Number of Players",
+  		"value":"1"
+  	}
+  ],
+  "thumbnailImage": "http://images.bestbuy.com/BestBuy_US/images/products/3668/3668336.jpg",
   "imageGallery": [
     {
-    	"url":"http://images.bestbuy.com/BestBuy_US/images/products/9747/9747183_sa.jpg"
-    },
-    {
-    	"url":"http://images.bestbuy.com/BestBuy_US/images/products/9747/9747183_sa.jpg"
-    },
-    {
-    	"url":"http://images.bestbuy.com/BestBuy_US/images/products/9747/9747183_sa.jpg"
+    	"url":"http://images.bestbuy.com/BestBuy_US/images/products/3668/3668336.jpg"
     }
   ],
   "customersAlsoViewed":"",
-  "accessories":""
+  "accessories":true
 })

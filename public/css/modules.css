@@ -42,9 +42,111 @@
 	margin:0 0 20px;
 }
 
+.module>h3:first-child{ /* lower in heirarchy module title example on conditional page */
+	margin:0 0 20px;
+}
+
+.sku-list-module ul+h3{
+	margin-top:40px;
+}
+
 .module-see-all-link{
 	font-size:14px;
 	margin: 9px 0 0 8px;
+}
+
+.selectable-items li{
+
+}
+
+.selectable-items>ul>li{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	padding-right:40px;
+	padding-top:10px;
+}
+
+.selectable-items>ul>li:before{
+	content:'';
+	height:1px;
+	width:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	background: #c3c4c4;
+	background: -moz-linear-gradient(left, #ffffff 0%, #c3c4c4 100%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ffffff), color-stop(100%,#c3c4c4));
+	background: -webkit-linear-gradient(left, #ffffff 0%,#c3c4c4 100%);
+	background: -o-linear-gradient(left, #ffffff 0%,#c3c4c4 100%);
+	background: -ms-linear-gradient(left, #ffffff 0%,#c3c4c4 100%);
+	background: linear-gradient(left, #ffffff 0%,#c3c4c4 100%);
+}
+
+.selectable-items>ul>li.selected:before{
+	content:'';
+	height:1px;
+	width:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	background: #ffd500;
+	background: -moz-linear-gradient(left, #ffffff 0%, #ffd500 100%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ffffff), color-stop(100%,#ffd500));
+	background: -webkit-linear-gradient(left, #ffffff 0%,#ffd500 100%);
+	background: -o-linear-gradient(left, #ffffff 0%,#ffd500 100%);
+	background: -ms-linear-gradient(left, #ffffff 0%,#ffd500 100%);
+	background: linear-gradient(left, #ffffff 0%,#ffd500 100%);
+}
+
+.selectable-items .selector{
+	text-align:center;
+	cursor:pointer;
+	width:33px;
+	position:absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	background: #e7e7e7;
+	background: -moz-linear-gradient(top, #e7e7e7 0%, #ffffff 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e7e7e7), color-stop(100%,#ffffff));
+	background: -webkit-linear-gradient(top, #e7e7e7 0%,#ffffff 100%);
+	background: -o-linear-gradient(top, #e7e7e7 0%,#ffffff 100%);
+	background: -ms-linear-gradient(top, #e7e7e7 0%,#ffffff 100%);
+	background: linear-gradient(top, #e7e7e7 0%,#ffffff 100%);
+	border:1px solid #c3c4c4;
+	border-width:1px 1px 0 0;
+	-moz-border-image: -moz-linear-gradient(top, #c3c4c4 0%, #ffffff 100%) 20 20 20 20 stretch stretch;
+	-webkit-border-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c3c4c4), color-stop(100%,#ffffff)) 20 20 20 20 stretch stretch;
+	-webkit-border-image: -webkit-linear-gradient(top, #c3c4c4 0%,#ffffff 100%) 20 20 20 20 stretch stretch;
+	-o-border-image: -o-linear-gradient(top, #c3c4c4 0%,#ffffff 100%) 20 20 20 20 stretch stretch;
+	-ms-border-image: -ms-linear-gradient(top, #c3c4c4 0%,#ffffff 100%) 20 20 20 20 stretch stretch;
+	border-image: linear-gradient(top, #c3c4c4 0%,#ffffff 100%) 20 20 20 20 stretch stretch;
+}
+
+.selectable-items .selector input{
+	margin-top:8px;
+}
+
+.selectable-items .selected .selector{
+	background:-webkit-gradient(linear, left top, left bottom, from(#fff200), to(#fff));
+	-webkit-border-image: -webkit-gradient(linear, left top, left bottom, from(#ffd500), to(#fff)) 20 20 20 20 stretch stretch;
+}
+
+.selectable-items .selector label{
+	font-weight:bold;
+	display:block;
+	margin-top:10px;
+	font-size:16px;
+	-webkit-transform:rotate(90deg);
+	-moz-transform:rotate(90deg);
+	-o-transform:rotate(90deg);
+	-ms-transform:rotate(90deg);
+	transform:rotate(90deg);
 }
 
 /* ---------- Best Buy On ----------------*/
@@ -212,6 +314,7 @@
 .sku-list-module li{
 	float:left;
 	font-size:12px;
+	position:relative;
 }
 
 .skus-x-1{
@@ -283,10 +386,6 @@
 	vertical-align:bottom;
 }
 
-.sku-list-module .price-block+.button{
-	margin-top:10px;
-}
-
 .skus-x-1 .item-postcard{
 	margin-left:50%;
 	padding-left:40px;
@@ -336,6 +435,10 @@
 	text-align:center;
 }
 
+.simple-block .item-image{
+	vertical-align:middle;
+}
+
 /* ---------- Featured Offers ----------------*/
 
 .featured-offers ul{
@@ -382,7 +485,7 @@
 	margin-top:0;
 }
 
-.two-column .featured-offers li.loading{
+.module-group .module li.loading{
 	background:#f4f5f5;
 	padding:10px 15px 15px;
 	border-radius:4px;
@@ -394,13 +497,13 @@
 	vertical-align:middle;
 }
 
-.featured-offers .loading img{
+.module .loading img{
 	position:relative;
 	top:8px;
 	margin-right:5px;
 }
 
-.featured-offers .loading:before{
+.module .loading:before{
 	display:none;
 }
 
@@ -480,6 +583,15 @@
 .landing-page-title p span{
 	display:block;
 	font-weight:bold;
+}
+
+.promo-description .promo-image{
+	float:right;
+	margin-left:20px;
+}
+
+.promo-description .note{
+	font-size:12px;
 }
 
 .alert-form{
