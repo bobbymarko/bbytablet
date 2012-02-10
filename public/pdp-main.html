@@ -162,6 +162,13 @@
 					}
 					//this is a hack to make this work with ajax loaded content. get real code from http://pinterest.com/about/goodies/
 					async_load();
+					
+					$('a','.toggle-visible').live('click', function(e){
+						e.preventDefault();
+						$('.toggle-visible').hide();
+						$('.toggle-hidden').show();
+					});
+					
 				}
 			});
     </script>
@@ -333,8 +340,17 @@
 									<a href="#">${specialOffers[0].description}</a>
 								</li>
 								{{if specialOffers.length > 1}}
-								<li>
+								<li class="toggle-visible">
 									<a href="#">See All ${specialOffers.length} Special Offers</a>
+								</li>
+								<li class="toggle-hidden">
+									<a href="#">${specialOffers[1].description}</a>
+								</li>
+								<li class="toggle-hidden">
+									<a href="#">${specialOffers[2].description}</a>
+								</li>
+								<li class="toggle-hidden">
+									<a href="#">${specialOffers[3].description}</a>
 								</li>
 								{{/if}}
 						</ul>
