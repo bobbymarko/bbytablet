@@ -109,7 +109,7 @@ h2 p{
 label{cursor: pointer;}
 input{-webkit-border-radius:0;}
 input[type=search], input[type=text], input[type=number], input[type=tel], input[type=email], input[type=submit], textarea{-webkit-appearance:none;}
-input[type=search], input[type=text], input[type=number], input[type=tel], input[type=email], textarea{border:1px solid #9a9b9b; border-radius:4px; padding:10px;}
+input[type=search], input[type=text], input[type=number], input[type=tel], input[type=email], textarea{border:1px solid #9a9b9b; border-radius:4px; padding:10px; margin:3px 0;}
 input[type=submit]{cursor:pointer;}
 input[type=checkbox]{
 	-webkit-border-radius:4px;

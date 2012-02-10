@@ -103,11 +103,13 @@
     <div class="module-group">
     	<header class="module pdp-postcard">
     			<div class="pdp-title">
-					<div class="item-image">
-						<img src="http://images.bestbuy.com/BestBuy_US/images/products/9747/9747183_sc.jpg" alt="" />
+					<div class="item-image">	
+						<a href="pdp-main.html">
+							<img src="http://images.bestbuy.com/BestBuy_US/images/products/9747/9747183_sc.jpg" alt="" />
+						</a>
 					</div>
 					<hgroup>
-						<h1 class="item-name">Samsung - 28.0 Cu. Ft. French Door Refrigerator - Stainless-Steel</h1>
+						<h1 class="item-name"><a href="pdp-main.html">Samsung - 28.0 Cu. Ft. French Door Refrigerator - Stainless-Steel</a></h1>
 						<p class="item-metadata">
 							Model: RS261MDRS/XAA &#149; SKU: 9747183
 						</p>
@@ -147,7 +149,7 @@
 						<p>Save on shipping by purchasing products online and picking them up at your favorite Best Buy location.</p>
 					</h2>
 				</div>
-				<form class="col-small">
+				<form class="col-small hide-lt-760px">
 					<div class="highlighted-box">
 						<!--<p>Enter your ZIP code or city and state to see where you can pick up this item.</p>-->
 						<div class="field-row">
@@ -227,7 +229,7 @@
 					</div><!-- end .highlighted-box -->
 				</form>
 				<div class="col-medium">
-					<h3>10 Stores Near &#8220;55423&#8221;</h3>
+					<h3>10 Stores Near &#8220;55423&#8221; <a class="module-see-all-link location-toggle show-lt-760px" href="#">Change Location</a></h3>
 					<ul class="item-list">
 						<li>
 							<h4><a href="#">Northtown MN</a></h4>
@@ -333,6 +335,13 @@
     <script src="js/addclear.js"></script>
     <script src="js/app.js"></script>
     <script src="js/swipe.js"></script>
-    
+    <script>
+    	$(document).ready(function(){
+    		$('.location-toggle').click(function(e){
+    			$('.hide-lt-760px').show();
+    			e.preventDefault();
+    		});
+    	});
+    </script>
 </body>
 </html>

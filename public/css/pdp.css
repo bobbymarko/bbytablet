@@ -105,6 +105,10 @@
 	margin-bottom:5px;
 }
 
+.pdp-title .item-name a{
+	color:#49494a;
+}
+
 .pdp-title .item-image{
 	float:left;
 	width:15%;
@@ -385,6 +389,19 @@
 
 .with-icon{
 	margin-top:20px;
+}
+
+.show-lt-760px{
+	display:none;
+}
+
+@media (max-width:759px){
+	.show-lt-760px{
+		display:inline;
+	}
+	.hide-lt-760px{
+		display:none;
+	}
 }
 
 @media (min-width:760px){

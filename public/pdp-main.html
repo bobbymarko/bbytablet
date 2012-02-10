@@ -186,10 +186,12 @@
     	<header class="module pdp-postcard">
     			<div class="pdp-title">
 					<div class="item-image">
-						<img src="${thumbnailImage}" alt="" />
+						<a href="pdp-main.html">
+							<img src="${thumbnailImage}" alt="" />
+						</a>
 					</div>
 					<hgroup>
-						<h1 class="item-name">${shortLabel}</h1>
+						<h1 class="item-name"><a href="pdp-main.html">${shortLabel}</a></h1>
 						<p class="item-metadata">
 							{{each metaData}}
 								${key}: ${value} 
@@ -306,7 +308,15 @@
 									{{/if}}
 									<p class="availability-message">
 										<strong>${method}:</strong> ${description}<br/>
-										<a href="#">${linkText}</a>
+										{{if linkText}} 
+										<a href="
+											{{if method == "Store Pickup"}}
+												pdp-stores.html
+											{{else method == "Delivery"}}
+												pdp-delivery.html
+											{{/if}}
+										">${linkText}</a>
+										{{/if}}
 									</p>
 								</li>
 							{{/each}}
@@ -553,10 +563,10 @@
 					<p>
 						&#8220;Chose this frig after a lot of online research and several trips to various outlets- Sears, Lowes etc. BB had the, well, 'best buy' so we got it here. Loved the LED lighting (the slow turn on, the clear white light and the fact that they don't heat up the food you're trying Loved the LED lighting (the slow turn on, the clear white light and the fact that they don't heat up the for...&#8221;
 					</p>
-					<a href="#">Read Full Review</a>
+					<a href="pdp-reviews.html">Read Full Review</a>
 				</div><!-- end .col-small -->
 				{{else}}
-				<a href="#">Be the first to write a review</a>
+				<a href="pdp-write-review.html">Be the first to write a review</a>
 				{{/if}}<!-- end customer reviews -->
 			</section>
 			{{if accessories}}
