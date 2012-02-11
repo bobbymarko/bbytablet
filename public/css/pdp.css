@@ -395,6 +395,22 @@
 	display:none;
 }
 
+.toggle-visible a{
+	position:relative;
+	padding-left:14px;
+}
+
+.toggle-visible a:before{
+	content:'';
+	border:2px solid #1646A8;
+	border-style:solid;
+	border-width: 5px;
+	border-color:#1646A8 transparent transparent transparent;
+	top:6px;
+	left:0;
+	position:absolute;
+}
+
 .toggle-hidden{
 	display:none;
 }
