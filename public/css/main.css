@@ -1113,10 +1113,11 @@ input.search-field{
 
 /* ---------- Price Blocks ----------------*/
 
-.price-block{
+.price-block, .module .price-block{
 	margin:0;
 	padding:0;
 	list-style:none;
+	overflow:visible;
 }
 
 ul.price-block li{ /* need to refactor sku-list-module to fix specificity issue */
