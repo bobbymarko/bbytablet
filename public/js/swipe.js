@@ -31,18 +31,20 @@ window.Swipe = function(element, options) {
   // trigger slider initialization
   this.setup();
 
-  // setup auto slideshow
-  this.start();
+  // begin auto slideshow
+  this.begin();
 
   // add event listeners
-  this.element.addEventListener('touchstart', this, false);
-  this.element.addEventListener('touchmove', this, false);
-  this.element.addEventListener('touchend', this, false);
-  this.element.addEventListener('webkitTransitionEnd', this, false);
-  this.element.addEventListener('msTransitionEnd', this, false);
-  this.element.addEventListener('oTransitionEnd', this, false);
-  this.element.addEventListener('transitionend', this, false);
-  window.addEventListener('resize', this, false);
+  if (this.element.addEventListener) {
+    this.element.addEventListener('touchstart', this, false);
+    this.element.addEventListener('touchmove', this, false);
+    this.element.addEventListener('touchend', this, false);
+    this.element.addEventListener('webkitTransitionEnd', this, false);
+    this.element.addEventListener('msTransitionEnd', this, false);
+    this.element.addEventListener('oTransitionEnd', this, false);
+    this.element.addEventListener('transitionend', this, false);
+    window.addEventListener('resize', this, false);
+  }
 
 };
 
@@ -57,11 +59,14 @@ Swipe.prototype = {
     // return immediately if their are less than two slides
     if (this.length < 2) return null;
 
-    // hide slider element but keep positioning during setup
-    this.container.style.visibility = 'hidden';
-
     // determine width of each slide
     this.width = this.container.getBoundingClientRect().width;
+
+    // return immediately if measurement fails
+    if (!this.width) return null;
+
+    // hide slider element but keep positioning during setup
+    this.container.style.visibility = 'hidden';
 
     // dynamic css
     this.element.style.width = (this.slides.length * this.width) + 'px';
@@ -106,7 +111,7 @@ Swipe.prototype = {
 
   prev: function(delay) {
 
-    // cancel slideshow
+    // cancel next scheduled automatic transition, if any
     this.delay = delay || 0;
     clearTimeout(this.interval);
 
@@ -117,7 +122,7 @@ Swipe.prototype = {
 
   next: function(delay) {
 
-    // cancel slideshow
+    // cancel next scheduled automatic transition, if any
     this.delay = delay || 0;
     clearTimeout(this.interval);
 
@@ -126,7 +131,7 @@ Swipe.prototype = {
 
   },
 
-  start: function() {
+  begin: function() {
 
     var _this = this;
 
@@ -136,6 +141,16 @@ Swipe.prototype = {
       }, this.delay)
       : 0;
   
+  },
+  
+  stop: function() {
+    this.delay = 0;
+    clearTimeout(this.interval);
+  },
+  
+  resume: function() {
+    this.delay = this.options.auto || 0;
+    this.begin();
   },
 
   handleEvent: function(e) {
@@ -153,16 +168,13 @@ Swipe.prototype = {
 
   transitionEnd: function(e) {
     
-    if (this.delay) this.start();
-    
+    if (this.delay) this.begin();
+
     this.callback(e, this.index, this.slides[this.index]);
 
   },
 
   onTouchStart: function(e) {
-
-    // cancel slideshow
-    clearTimeout(this.interval);
     
     this.start = {
 
@@ -187,9 +199,9 @@ Swipe.prototype = {
   },
 
   onTouchMove: function(e) {
-    
+
     // ensure swiping with one touch and not pinching
-    if(e.touches.length > 1 || e.scale !== 1) return;
+    if(e.touches.length > 1 || e.scale && e.scale !== 1) return;
 
     this.deltaX = e.touches[0].pageX - this.start.pageX;
 
@@ -203,6 +215,9 @@ Swipe.prototype = {
 
       // prevent native scrolling 
       e.preventDefault();
+
+      // cancel slideshow
+      clearTimeout(this.interval);
 
       // increase resistance if first or last slide
       this.deltaX = 
