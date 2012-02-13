@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8 />
+	<title>PDP - Best Buy</title>
+	<link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="css/modules.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="css/pdp.css" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+	<meta name = "format-detection" content = "telephone=no">
+</head>
+<body>
+    <header id="masthead">
+        <a href="/" id="branding"><img src="images/bby_logo.png" alt="Best Buy Logo" height="40px" width="59px"/></a>
+        
+        <ul class="menu">
+          <li class="icon-link" id="menu-link">
+            <a href="#header-nav">Menu</a>
+            <div id="header-nav" class="dropdown-menu">
+              <ul class="dropdown-primary-menu">
+                <li><a href="#products-menu">Products</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="#deals-menu">Deals</a></li>
+                <li><a href="">Gifts</a></li>
+                <li><a href="/store-locator.html">Store Locator</a></li>
+                <!-- less important links -->
+                <li class="secondary-links"><a href="">Feedback</a> <a href="">Legal</a> <a href="">Desktop Site</a></li>
+              </ul>
+              <ul id="products-menu" class="dropdown-secondary-menu">
+                <li><a href="#back" class="dropdown-back">Back</a></li>
+                <li><a href="#computers-tablets">Computers &amp; Tablets</a></li>
+                <li><a href="#computers-tablets">TV &amp; Video</a></li>
+                <li><a href="#computers-tablets">Music, Movies &amp; Instruments</a></li>
+                <li><a href="#computers-tablets">Video Games &amp; Gadgets</a></li>
+                <li><a href="#computers-tablets">Cameras &amp; Camcorders</a></li>
+                <li><a href="#computers-tablets">Mobile Phones</a></li>
+                <li><a href="#computers-tablets">Health &amp; Fitness</a></li>
+                <li><a href="#computers-tablets">GPS, Car &amp; Marine</a></li>
+                <li><a href="#computers-tablets">Audio &amp; MP3</a></li>
+                <li><a href="#computers-tablets">Office</a></li>
+                <li><a href="#computers-tablets">Home</a></li>
+                <li><a href="#computers-tablets">Appliances</a></li>
+                <li><a href="#computers-tablets">Gift Cards</a></li>
+              </ul>
+              <ul id="computers-tablets" class="dropdown-secondary-menu dropdown-tertiary-menu">
+                <li><a href="#back" class="dropdown-back">Back</a></li>
+                <li><a href="category.html">Laptops &amp; Netbook Computers</a></li>
+                <li><a href="category.html">Tablets &amp; iPad</a></li>
+                <li><a href="category.html">E-Readers</a></li>
+                <li><a href="category.html">Desktop &amp; All-in-One Computers</a></li>
+                <li><a href="category.html">Monitors</a></li>
+                <li><a href="category.html">Mice &amp; Keyboards</a></li>
+                <li><a href="category.html">Printers</a></li>
+                <li><a href="category.html">Hard Drives &amp; Storage</a></li>
+                <li><a href="category.html">Computer Memory</a></li>
+                <li><a href="category.html">Video Cards &amp; PC Components</a></li>
+                <li><a href="category.html">Networking &amp; Wireless</a></li>
+                <li><a href="category.html">Software</a></li>
+                <li><a href="category.html">Accessories</a></li>
+                <li><a href="category.html">Computer Setup &amp; Services</a></li>
+              </ul>
+              <ul id="deals-menu" class="dropdown-secondary-menu">
+                <li><a href="#back" class="dropdown-back">Back</a></li>
+                <li><a href="http://deals.bestbuy.com">Weekly Deals</a></li>
+                <li><a href="deal-of-the-day.html">Deal of the Day</a></li>
+                <li><a href="special-offers-listing.html">Featured Offers</a></li>
+              </ul>
+            </div>
+            
+          </li>
+          
+          <li class="search-form-wrapper">
+            <form class="search-form" action="/listing">
+              <input type="text" placeholder="Search BestBuy.com" role="search" class="search-field" name="search" /><input type="submit" class="search-submit" value="Search"/>
+            </form>
+          </li>
+        </ul>
+        
+        <ul class="menu" id="cart-menu">
+          <li class="icon-link" id="profile-link">
+            <a href="#profile-nav">Profile</a>
+            <ul id="profile-nav" class="dropdown-menu">
+              <!--<li class="secondary-links"><a href="#">Sign In</a> <a href="#">Create an Account</a></li>-->
+              <li class="secondary-links"><span class="truncated-text">Hi, Reallylongnamethatgoesonandon</span> <a href="#">Sign Out</a></li>
+              <li><a href="">My Account</a></li>
+              <li><a href="">Wish Lists</a></li>
+              <li><a href="">View Order Status</a></li>
+            </ul>
+          </li>
+          <li class="cart-link"><a href="">3 items</a></li>
+      	</ul>
+    </header>
+		
+		<!-- content inserted via javascript for prototyping purposes. markup found at end of this html -->
+    
+    <footer id="footer">
+        <div class="footer-meta">
+          <p>Prices on this site are the same as those on BestBuy.com. Prices may vary in store. All prices and offers are subject to change. In store availability subject to change. Orders placed for store pickup may take up to 45 minutes to process.</p> 
+          <p>&copy;2003-2011 BBY Solutions, Inc.</p>
+        </div><!--footer-meta-->
+        <div class="footer-links">
+          <a href="#">Terms</a>
+          <a href="#">Privacy</a>
+          <a href="#">Feedback</a>
+          <a href="#">Desktop Site</a>
+        </div><!-- footer-links -->
+    </footer>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+    <script src="js/jquery.jsonp-2.1.4.min.js"></script>
+    <script src="js/addclear.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/swipe.js"></script>
+    <script>
+    	var pdpNumber = getParameterByName('pdp') || 0;
+    	var pdps = ['appliance-pdp', 'bundle-pdp', 'dsku-pdp', 'in-store-only-pdp', 'marketplace-pdp', 'mobile-plan-pdp', 'mobile-w-contract-pdp', 'mobile-wo-contract-pdp', 'video-game-pdp']
+    	var url = "data/"+pdps[pdpNumber]+".json"
+    	$.jsonp({
+				url: url,
+				callback: 'pdpData',
+				success: function(data) {
+					console.log(data);
+					$('#productTemplate').tmpl(data).insertAfter('#masthead');
+					var slider = new Swipe($('.product-gallery')[0], {
+					callback: function(e, pos) {
+									var i = bullets.length;
+									while (i--) {
+											bullets[i].className = ' ';
+									}
+									bullets[pos].className = 'on';
+							}
+					}),
+					bullets = $('.gallery-position').children('li');
+					$('a', bullets).click(function(e){
+						slider.slide($(this).closest('li').index(),400);
+						e.preventDefault();
+					});
+					
+					var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    			po.src = 'https://apis.google.com/js/plusone.js';
+    			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    			(function(d, s, id) {
+						var js, fjs = d.getElementsByTagName(s)[0];
+						if (d.getElementById(id)) return;
+						js = d.createElement(s); js.id = id;
+						js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=201115493289816";
+						fjs.parentNode.insertBefore(js, fjs);
+					}(document, 'script', 'facebook-jssdk'));
+					//!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+					window.PinIt = window.PinIt || { loaded:false };
+					if (window.PinIt.loaded) return;
+					window.PinIt.loaded = true;
+					function async_load(){
+						var s = document.createElement("script");
+						s.type = "text/javascript";
+						s.async = true;
+						if (window.location.protocol == "https:")
+								s.src = "https://assets.pinterest.com/js/pinit.js";
+						else
+								s.src = "http://assets.pinterest.com/js/pinit.js";
+						var x = document.getElementsByTagName("script")[0];
+						x.parentNode.insertBefore(s, x);
+					}
+					//this is a hack to make this work with ajax loaded content. get real code from http://pinterest.com/about/goodies/
+					async_load();
+					
+					$('a','.toggle-visible').live('click', function(e){
+						e.preventDefault();
+						$('.toggle-visible').hide();
+						$('.toggle-hidden').show();
+					});
+					
+				}
+			});
+    </script>
+    
+	<script>
+		(function() {
+				
+		})();
+	</script>
+    
+  <script id="productTemplate" type="text/x-jquery-tmpl">
+    <header class="title-bar">
+			<a href="/category.html" class="back-btn">${categoryName}</a>
+			<div class="secondary-actions">
+				<a href="#">Add to Wishlist</a>
+				&nbsp;&#149;&nbsp;
+				<a href="#">Email</a>
+			</div>
+    	<h1>&nbsp;</h1>
+    </header>
+    <div class="module-group">
+    	<header class="module pdp-postcard">
+    			<div class="pdp-title">
+					<div class="item-image">
+						<a href="pdp-main.html">
+							<img src="${thumbnailImage}" alt="" />
+						</a>
+					</div>
+					<hgroup>
+						<h1 class="item-name"><a href="pdp-main.html">${shortLabel}</a></h1>
+						<p class="item-metadata">
+							{{each metaData}}
+								${key}: ${value} 
+								{{if $index < metaData.length - 1}} &#149; {{/if}}
+							{{/each}}
+						</p>
+						<div class="ratings">
+							<div class="rating-stars">
+									<div class="rating-filler" style="width:${(customerReviewAverage/5)*100}%;"></div>
+									<div class="rating-mask"></div>
+							</div>
+							<a href="#">${ratingsCount} Reviews</a>
+						</div><!-- ratings -->
+					</hgroup>
+				</div>
+				<div class="pdp-commerce">
+					<ul class="price-block">
+						{{if icrPricing}}
+								<li class="price-paid">$<strike>${regularPrice}</strike></li>
+								<li>See price at checkout</li>
+						{{else}}
+							{{if inStoreOnly}}<li class="primary-callout">In-Store Only</li>{{/if}}
+							{{if onSale}}<li class="primary-callout">On Sale</li>{{/if}}
+							<li class="price-paid">$${salePrice}{{if withContract}}*{{/if}}</li>
+							{{if monthlyPrice}}<li>per month</li>{{/if}}
+							{{if onSale || withContract}}<li>Reg. Price: $${regularPrice}</li>
+							<li class="you-save">You Save: $${youSave}</li>{{/if}}
+							{{if freeShipping}}<li class="secondary-callout">Free Shipping</li>{{/if}}
+							{{if withContract}}<li class="note">*With new 2-year contract</li>{{/if}}
+						{{/if}}
+					</ul>
+					{{if preorder }}
+						<a href="" class="button primary cart-button">Pre-order</a>
+					{{else withContract || monthlyPrice}}
+						<a href="" class="button primary call-button">Call 1-888-BESTBUY to Order</a>
+					{{else inStoreOnly}}
+						<a href="" class="button primary">Check Stores</a>
+					{{else}}
+						<a href="" class="button primary cart-button">Add to Cart</a>
+					{{/if}}
+				</div>
+    	</header>
+			
+			<nav class="tab-bar col-large">
+				<ul>
+					{{each tabs}}
+						<li {{if $index == 0 }} class="current" {{/if}}><a href="
+							{{if $value == 'Specifications'}}
+								pdp-specifications.html
+							{{else $value.indexOf('Reviews') == 0}}
+								pdp-reviews.html
+							{{else $value == 'Game Add-Ons'}}
+								pdp-addons.html
+							{{else $value == 'Plans'}}
+								pdp-plans.html
+							{{else}}
+								#
+							{{/if}}
+						">{{html $value}}{{if $value.indexOf('Reviews') == 0}} <span class='count'>(16)</span>{{/if}}</a></li>
+					{{/each}}
+				</ul>
+			</nav>
+			
+			{{if imageGallery }}
+			<div class="col-wrapper">
+				{{if imageGallery }}
+				<div class="col-medium">
+					<div class="product-gallery">
+						<ul>
+							{{each imageGallery}}
+							<li>
+								<img src="${url}" alt="" >
+							</li>
+							{{/each}}
+						</ul>
+					</div>
+					{{if imageGallery.length > 1 }}
+					<ul class="gallery-position">
+						{{each imageGallery}}
+							{{if $index == 0 }}
+								<li class="on"><a href="#"><span><img src="${url}" alt=""></span></a></li>
+							{{else}}
+								<li><a href="#"><span><img src="${url}" alt=""></span></a></li>
+							{{/if}}
+						{{/each}}
+					</ul>
+					{{/if}}
+				</div>
+				{{/if}}
+				
+				<div class="col-small">
+					{{if marketplace}}
+					<div class="sub-module">
+						<h2 class="sub-section-title">Marketplace Item</h2>
+						<p>Marketplace Sellers have been approved to participate in Best Buy Marketplace. Sellers offer hundreds of more product choices to meet your online shopping needs.</p>
+						<ul>
+							<li><strong>Sold & Shipped by:</strong> Beach Camera</li>
+							<li><strong>Seller Rating:</strong> 4.3 out of 5</li>
+						</ul>
+					</div><!-- end .sub-module -->
+					{{/if}}
+					
+					{{if availability}}
+					<div class="sub-module">
+						<h2 class="sub-section-title">Product Availability</h2>
+						<ul>
+							{{if inStoreOnly}}<li><strong>In-Store Only</strong></li>{{/if}}
+							{{each availability}}
+								<li>
+									{{if method == "Delivery" || method == "Shipping"}}
+									<img class="sub-module-icon" src="images/avail_shipping_yes.gif" alt="" />
+									{{else method == "Store Pickup"}}
+									<img class="sub-module-icon" src="images/avail_ispu_yes.gif" alt="" />
+									{{/if}}
+									<p class="availability-message">
+										<strong>${method}:</strong> ${description}<br/>
+										{{if linkText}} 
+										<a href="
+											{{if method == "Store Pickup"}}
+												pdp-stores.html
+											{{else method == "Delivery"}}
+												pdp-delivery.html
+											{{/if}}
+										">${linkText}</a>
+										{{/if}}
+									</p>
+								</li>
+							{{/each}}
+						</ul>
+					</div><!-- end .sub-module -->
+					{{/if}}
+					
+					{{if specialOffers}}
+					<div class="sub-module">
+						<h2 class="sub-section-title">Special Offers</h2>
+						<img class="sub-module-icon" src="images/icon-special-offers.gif" alt="" />
+						<ul class="with-icon">
+								<li>
+									<a href="#">${specialOffers[0].description}</a>
+								</li>
+								{{if specialOffers.length > 1}}
+								<li class="toggle-visible">
+									<a href="#">See All ${specialOffers.length} Special Offers</a>
+								</li>
+								<li class="toggle-hidden">
+									<a href="#">${specialOffers[1].description}</a>
+								</li>
+								<li class="toggle-hidden">
+									<a href="#">${specialOffers[2].description}</a>
+								</li>
+								<li class="toggle-hidden">
+									<a href="#">${specialOffers[3].description}</a>
+								</li>
+								{{/if}}
+						</ul>
+					</div><!-- end .sub-module -->
+					{{/if}}
+					
+					{{if energyGuide}}
+					<div class="sub-module">
+						<h2 class="sub-section-title">Energy Guide</h2>
+						<a href="#">
+						<img class="sub-module-icon" src="images/icon-energy-guide.png" alt="" />
+						</a>
+						<ul>
+							{{each specialOffers}}
+								<li style="line-height:2.5">
+									<a href="#">View Energy Guide</a>
+								</li>
+							{{/each}}
+						</ul>
+					</div><!-- end .sub-module -->
+					{{/if}}
+					
+					<div class="sub-module">
+						<h2 class="sub-section-title">Share</h2>
+						<!-- AddThis Button BEGIN -->
+						<div class="addthis_toolbox addthis_default_style">
+							<span style="float:left; margin-right:5px; position:relative; top:2px;"><a href="http://pinterest.com/pin/create/button/?url=http%3A%2F%2Fbestbuy.com&media=http%3A%2F%2Fimages.bestbuy.com%2FBestBuy_US%2Fimages%2Fproducts%2F9747%2F9747183_sa.jpg&description=Description%20of%20product" class="pin-it-button" count-layout="vertical">Pin It</a></span>
+							<a class="addthis_button_facebook_like" fb:like:layout="box_count"><div class="fb-like" style="width:61px; top:-3px;" data-send="false" data-layout="box_count" data-width="450" data-show-faces="true"></div></a>
+							<a class="addthis_button_google_plusone" g:plusone:size="tall"><g:plusone size="tall"></g:plusone></a>
+						</div>
+					</div>
+					
+				</div><!-- end .col-small -->
+			</div><!-- end col-wrapper -->
+			{{/if}}
+			
+			{{if bundle}}
+			<section class="module sku-list-module skus-x-5">
+				<h2>Items In This Package</h2>
+				<ul>
+					<li>
+						<a href="" class="item-image"><img src="http://images.bestbuy.com/BestBuy_US/images/products/9745/9745916_sc.jpg" alt="" /></a>
+						<a href="" class="item-name">Insignia&trade; - 50" Class / Plasma / 720p / 600Hz / HDTV</a>
+						<div class="ratings">
+								<div class="rating-stars">
+										<div class="rating-filler" style="width: 92%;"></div>
+										<div class="rating-mask"></div>
+								</div>
+								<a href="#">117 Reviews</a>
+						</div><!-- ratings -->
+					</li>
+					<li>
+						<a href="" class="item-image"><img src="http://images.bestbuy.com/BestBuy_US/images/products/2128/2128276_sc.jpg" alt="" /></a>
+						<a href="" class="item-name">Samsung - 46" Class/ LED / 1080p / 120Hz / HDTV</a>
+						<div class="ratings">
+								<div class="rating-stars">
+										<div class="rating-filler" style="width: 92%;"></div>
+										<div class="rating-mask"></div>
+								</div>
+								<a href="#">161 Reviews</a>
+						</div><!-- ratings -->
+					</li>
+					<li>
+						<a href="" class="item-image"><img src="http://images.bestbuy.com/BestBuy_US/images/products/3645/3645177_sc.jpg" alt="" /></a>
+						<a href="" class="item-name">LG - 42" Class / LED / 1080p / 120Hz / HDTV</a>
+						<div class="ratings">
+								<div class="rating-stars">
+										<div class="rating-filler" style="width: 52%;"></div>
+										<div class="rating-mask"></div>
+								</div>
+								<a href="#">31 Reviews</a>
+						</div><!-- ratings -->
+					</li>
+					<li>
+						<a href="" class="item-image"><img src="http://images.bestbuy.com/BestBuy_US/images/products/2343/2343157_sc.jpg" alt="" /></a>
+						<a href="" class="item-name">Westinghouse - 22" Class / 720p / 60Hz / LCD HDTV</a>
+						<div class="ratings">
+								<div class="rating-stars">
+										<div class="rating-filler" style="width: 80%;"></div>
+										<div class="rating-mask"></div>
+								</div>
+								<a href="#">41 Reviews</a>
+						</div><!-- ratings -->
+					</li>
+					<li>
+						<a href="" class="item-image"><img src="http://images.bestbuy.com/BestBuy_US/images/products/2343/2343157_sc.jpg" alt="" /></a>
+						<a href="" class="item-name">Westinghouse - 22" Class / 720p / 60Hz / LCD HDTV</a>
+						<div class="ratings">
+								<div class="rating-stars">
+										<div class="rating-filler" style="width: 80%;"></div>
+										<div class="rating-mask"></div>
+								</div>
+								<a href="#">41 Reviews</a>
+						</div><!-- ratings -->
+					</li>
+				</ul>
+			</section>
+			{{/if}}
+			
+			<div class="col-wrapper">
+				<div class="col-medium">
+					{{if synopsis }}
+						<h2 class="section-title">Synopsis</h2>
+						<p>{{html synopsis}}</p>
+					{{/if}}
+				
+					{{if features}}
+					<h2 class="section-title">Features</h2>
+					<ul>
+						{{each features}}
+							<li>{{html description}}</li>
+						{{/each}}
+					</ul>
+					<!--<a href="#" class="button secondary small-button">View Full Features</a>-->
+					{{/if}}
+				</div>
+				
+				{{if whatsIncluded }}
+				<div class="col-small">
+					<h2 class="section-title">What's Included</h2>
+					<ul class="bulleted">
+						{{each whatsIncluded}}
+							<li>${description}</li>
+						{{/each}}
+					</ul>
+				</div>
+				{{/if}}
+				
+				{{if specifications}}
+				<div class="col-small">
+					<h2 class="section-title">Specifications</h2>
+					<ul>
+						{{each specifications}}
+							<li><strong>${attribute}:</strong> ${value}</li>
+						{{/each}}
+					</ul>
+					<a href="#" class="button secondary small-button">See All Specs</a>
+				</div>
+				{{/if}}
+			</div><!-- end col-wrapper -->
+			
+			<section class="module">
+				<h2>Ratings &amp; Reviews</h2>
+				{{if ratingsCount > 0}}
+				<div class="col-small ratings-overview">
+					<h3>Ratings Overview:</h3>
+					<p class="star-rating-label">Overall Rating:</p>
+					<div class="ratings">
+							<div class="rating-stars">
+									<div class="rating-filler" style="width: 92%;"></div>
+									<div class="rating-mask"></div>
+							</div>
+							<strong>4.5</strong>
+					</div><!-- ratings -->
+					<div class="ratings-breakdown">
+						<div class="ratings-star-group">
+							<h5 class="star-summary-title">5 stars</h5>
+							<div class="ratings-star-count-wrapper">
+								<div class="ratings-star-count" style="width:62%"></div>
+							</div>
+							22 reviews
+						</div><!-- end .ratings-star-group -->
+						<div class="ratings-star-group">
+							<h5 class="star-summary-title">4 stars</h5>
+							<div class="ratings-star-count-wrapper">
+								<div class="ratings-star-count" style="width:11%"></div>
+							</div>
+							4 reviews
+						</div><!-- end .ratings-star-group -->
+						<div class="ratings-star-group">
+							<h5 class="star-summary-title">3 stars</h5>
+							<div class="ratings-star-count-wrapper">
+								<div class="ratings-star-count" style="width:8%"></div>
+							</div>
+							 3 reviews
+						</div><!-- end .ratings-star-group -->
+						<div class="ratings-star-group">
+							<h5 class="star-summary-title">2 stars</h5>
+							<div class="ratings-star-count-wrapper">
+								<div class="ratings-star-count" style="width:5%"></div>
+							</div>
+							2 reviews
+						</div><!-- end .ratings-star-group -->
+						<div class="ratings-star-group">
+							<h5 class="star-summary-title">1 stars</h5>
+							<div class="ratings-star-count-wrapper">
+								<div class="ratings-star-count" style="width:11%"></div>
+							</div>
+							4 reviews
+						</div><!-- end .ratings-star-group -->
+					</div>
+					<p>
+						<span class="emphasis">61%</span> (11 of 18) of customers would recommend this product to a friend.
+					</p>
+					<a href="#" class="button secondary small-button">Read All 16 Reviews</a>&nbsp; &nbsp;<a href="#">Write a Review</a>
+				</div>
+				<h3>Most Helpful Reviews:</h3>
+				<div class="col-small short-review">
+					<h4><a href="#">Great Fridge, stylish</a></h4>
+					<p class="item-metadata">
+						by TechSupportDad from Near Seattle, WA on 12/16/2010
+					</p>
+					<div class="ratings">
+							<div class="rating-stars">
+									<div class="rating-filler" style="width: 92%;"></div>
+									<div class="rating-mask"></div>
+							</div>
+					</div><!-- ratings -->
+					<p>
+						&#8220;We bought this fridge and after 2 weeks the ice maker broke. Luckily it was under 30 days and we still had the receipt, so BestBuy swapped it out for another one. We have had no problems at all with this one. My wife and I love this fridge! It's beautiful, the inner LED lighting We have had no problems at all with this one. My wife and I love this fridge! It's beautiful, the inner...&#8221;
+					</p>
+					
+					<a href="#">Read Full Review</a>
+				</div><!-- end .col-small -->
+				<div class="col-small short-review">
+					<h4><a href="#">Really wanted to like this</a></h4>
+					<p class="item-metadata">
+						by CriticalCarol from Minneapolis, MN on 6/4/2009
+					</p>
+					<div class="ratings">
+							<div class="rating-stars">
+									<div class="rating-filler" style="width: 10%;"></div>
+									<div class="rating-mask"></div>
+							</div>
+					</div><!-- ratings -->
+					<p>
+						&#8220;Chose this frig after a lot of online research and several trips to various outlets- Sears, Lowes etc. BB had the, well, 'best buy' so we got it here. Loved the LED lighting (the slow turn on, the clear white light and the fact that they don't heat up the food you're trying Loved the LED lighting (the slow turn on, the clear white light and the fact that they don't heat up the for...&#8221;
+					</p>
+					<a href="pdp-reviews.html">Read Full Review</a>
+				</div><!-- end .col-small -->
+				{{else}}
+				<a href="pdp-write-review.html">Be the first to write a review</a>
+				{{/if}}<!-- end customer reviews -->
+			</section>
+			{{if accessories}}
+			<section class="module sku-list-module skus-x-5">
+				<h2>Accessories</h2>
+				<ul>
+					<li>
+						<a href="" class="item-image"><img src="http://images.bestbuy.com/BestBuy_US/images/products/9745/9745916_sc.jpg" alt="" /></a>
+						<a href="" class="item-name">Insignia&trade; - 50" Class / Plasma / 720p / 600Hz / HDTV</a>
+						<div class="ratings">
+								<div class="rating-stars">
+										<div class="rating-filler" style="width: 92%;"></div>
+										<div class="rating-mask"></div>
+								</div>
+								<a href="#">117 Reviews</a>
+						</div><!-- ratings -->
+						<ul class="price-block">
+							<li class="price-paid">$499.99</li>
+							<li>Reg. Price: $699.99</li>
+							<li class="you-save">You Save: $200.00</li>
+						</ul>
+						<a href="" class="button primary cart-button">Add to Cart</a>
+					</li>
+					<li>
+						<a href="" class="item-image"><img src="http://images.bestbuy.com/BestBuy_US/images/products/2128/2128276_sc.jpg" alt="" /></a>
+						<a href="" class="item-name">Samsung - 46" Class/ LED / 1080p / 120Hz / HDTV</a>
+						<div class="ratings">
+								<div class="rating-stars">
+										<div class="rating-filler" style="width: 92%;"></div>
+										<div class="rating-mask"></div>
+								</div>
+								<a href="#">161 Reviews</a>
+						</div><!-- ratings -->
+						<ul class="price-block">
+							<li class="price-paid">$<strike>1,299.99</strike></li>
+							<li>See price at checkout</li>
+						</ul>
+						<a href="" class="button primary cart-button">Add to Cart</a>
+					</li>
+					<li>
+						<a href="" class="item-image"><img src="http://images.bestbuy.com/BestBuy_US/images/products/3645/3645177_sc.jpg" alt="" /></a>
+						<a href="" class="item-name">LG - 42" Class / LED / 1080p / 120Hz / HDTV</a>
+						<div class="ratings">
+								<div class="rating-stars">
+										<div class="rating-filler" style="width: 52%;"></div>
+										<div class="rating-mask"></div>
+								</div>
+								<a href="#">31 Reviews</a>
+						</div><!-- ratings -->
+						<ul class="price-block">
+							<li class="price-paid">$549.99</li>
+							<li>Reg. Price: $699.99</li>
+							<li class="you-save">You Save: $150.00</li>
+						</ul>
+						<a href="" class="button primary cart-button">Add to Cart</a>
+					</li>
+					<li>
+						<a href="" class="item-image"><img src="http://images.bestbuy.com/BestBuy_US/images/products/2343/2343157_sc.jpg" alt="" /></a>
+						<a href="" class="item-name">Westinghouse - 22" Class / 720p / 60Hz / LCD HDTV</a>
+						<div class="ratings">
+								<div class="rating-stars">
+										<div class="rating-filler" style="width: 80%;"></div>
+										<div class="rating-mask"></div>
+								</div>
+								<a href="#">41 Reviews</a>
+						</div><!-- ratings -->
+						<ul class="price-block">
+							<li class="price-paid">$149.99</li>
+							<li>Reg. Price: $199.99</li>
+							<li class="you-save">You Save: $50.00</li>
+						</ul>
+						<a href="" class="button primary cart-button">Add to Cart</a>
+					</li>
+					<li>
+						<a href="" class="item-image"><img src="http://images.bestbuy.com/BestBuy_US/images/products/2343/2343157_sc.jpg" alt="" /></a>
+						<a href="" class="item-name">Westinghouse - 22" Class / 720p / 60Hz / LCD HDTV</a>
+						<div class="ratings">
+								<div class="rating-stars">
+										<div class="rating-filler" style="width: 80%;"></div>
+										<div class="rating-mask"></div>
+								</div>
+								<a href="#">41 Reviews</a>
+						</div><!-- ratings -->
+						<ul class="price-block">
+							<li class="price-paid">$149.99</li>
+							<li>Reg. Price: $199.99</li>
+							<li class="you-save">You Save: $50.00</li>
+						</ul>
+						<a href="" class="button primary cart-button">Add to Cart</a>
+					</li>
+				</ul>
+			</section>
+			{{/if}}
+    </div><!-- end .module-group -->
+  </script>
+  <div id="fb-root"></div>
+</body>
+</html>

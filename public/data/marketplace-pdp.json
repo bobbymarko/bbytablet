@@ -1,0 +1,194 @@
+pdpData({
+	"categoryName":"All Mobile Phones with Plans",
+  "shortLabel": "Samsung - Infuse Mobile Phone - Black (Sprint)",
+  "metaData": [
+  	{
+  		"key":"Model",
+  		"value":"I997"
+  	},
+  	{
+  		"key":"SKU",
+  		"value":"2404316"
+  	}
+  ],
+  "ratingsCount":"118",
+  "customerReviewAverage":"4.2",
+  "reviews":"",
+  "regularPrice":"599.99",
+  "salePrice":"599.99",
+  "youSave":"0.00",
+  "listPrice":false,
+  "withContract":false,
+  "monthlyPrice":false,
+  "freeShipping":true,
+  "inStoreOnly":false,
+  "onSale":false,
+  "marketplace":true,
+  "tabs":[
+  	"Overview",
+  	"Specifications",
+  	"Reviews",
+  	"Plans"
+  ],
+  "moreBuyingOptions":"",
+  "compareAvailable":true,
+  "availability": [
+  	{
+  		"method":"Shipping",
+  		"description":"Usually leaves seller's warehouse in 2-5 business days",
+  		"linkText":""
+  	}
+  ],
+  "specialOffers":[
+  	{
+  		"description":"Free $50 Gift Card: Find Out How"
+  	},
+  	{
+  		"description":"Save $40-$60 on Select Printers: See How"
+  	},
+  	{
+  		"description":"$20 Off Networking Made Simple: See How"
+  	},
+  	{
+  		"description":"10% Off Speaker Dock: Find Out How"
+  	}
+  ],
+  "financingOffers":[
+  	{
+  		"title":"Best Buy Cardholder Discount",
+  		"description":"15% Off Game Guide: Find Out How"
+  	},
+  	{
+  		"title":"Financing Available",
+  		"description":"18 Month Financing"
+  	},
+  	{
+  		"title":"Reward Zone Offer",
+  		"description":"Get Reward Certificates Faster: See How"
+  	}
+  ],
+  "rebates":[
+  	{
+  		"description":"Click here to learn about how you could get up to $70.00 from 1 rebate(s) in Minneapolis, MN. Rebate info provided by EcoRebates. Terms"
+  	}
+  ],
+  "energyGuide":false,
+  "whatsIncluded":[
+  	{
+  		"description": "Samsung Infuse Mobile Phone",
+  	},
+  	{
+  		"description": "Battery"
+  	},
+  	{
+  		"description": "Charger"
+  	},
+  	{
+  		"description": "2GB microSD card"
+  	},
+  	{
+  		"description": "Owner's manual"
+  	}
+  ],
+  "features":[
+
+  	{
+  		"description":"<b>Android 2.2 operating system</b><br>Allows you to stay connected and productive on the go."
+  	},
+  	{
+  		"description":"<b>4G speed</b><br>Offers quick and easy connection speeds."
+  	},
+  	{
+  		"description":"<b>Wi-Fi 802.11b/g/n connectivity</b><br>For Internet capability on the go (additional fees may apply).",
+  	},
+  	{
+  		"description":"<b>Bluetooth compatibility</b><br>For wireless communication with a Bluetooth-enabled device.",
+  	},
+  	{
+  		"description":"<b>4.5\" Super AMOLED Plus touch-screen display</b><br>With 480 x 800 pixels for simple navigation of features and clear visibility."
+  	},
+  	{
+  		"description":"<b>Store phone numbers, photos and videos</b><br>With the built-in media card slot (2GB microSD card included)."
+  	},
+  	{
+  		"description":"<b>8.0MP camera</b><br>Plus a 1.3MP front-facing camera with autofocus and flash lets you take photos of friends and family. Camcorder with 720p capability ensures clear videos."
+  	},
+  	{
+  		"description":"<b>MP3 player</b><br>So you can listen to your favorite songs."
+  	},
+  	{
+  		"description":"<b>Hands-free speakerphone</b><br>Allows you to talk while driving."
+  	},
+  	{
+  		"description":"<b>Vibration alert</b><br>Lets you silence your phone but still be alerted when calls and messages come in."
+  	},
+  	{
+  		"description":"<b>MP3 ringtones</b><br>Allow you to personalize the sound of your phone."
+  	},
+  	{
+  		"description":"<b>1,000-entry phone book</b><br>So you can store your contact numbers."
+  	},
+  	{
+  		"description":"<b>Up to 8 hours, 50 minutes talk time and up to 16 days standby</b><br>With included battery."
+  	},
+  	{
+  		"description":"* Phone activation required before use."
+  	}
+  ],
+  "specifications":[
+  	{
+  		"attribute":"Warranty Terms",
+  		"value":"Parts: 1 year"
+  	},
+  	{
+  		"attribute":"Warranty Terms",
+  		"value":"Labor: 1 year"
+  	},
+  	{
+  		"attribute":"Product Height",
+  		"value":"5.2\""
+  	},
+  	{
+  		"attribute":"Product Width",
+  		"value":"2.8\""
+  	},
+  	{
+  		"attribute":"Product Weight",
+  		"value":"4.9 oz."
+  	},
+  	{
+  		"attribute":"Product Depth",
+  		"value":"0.4\""
+  	},
+  	{
+  		"attribute":"Phone Style",
+  		"value":"Bar phone\""
+  	},
+  	{
+  		"attribute":"Band and Mode",
+  		"value":"4G"
+  	}
+  ],
+  "thumbnailImage": "http://images.bestbuy.com/BestBuy_US/images/products/2404/2404316_sb.jpg",
+  "imageGallery": [
+    {
+    	"url":"http://images.bestbuy.com/BestBuy_US/images/products/2404/2404316_sa.jpg"
+    },
+    {
+    	"url":"http://images.bestbuy.com/BestBuy_US/images/products/2404/2404316_ra.jpg"
+    },
+    {
+    	"url":"http://images.bestbuy.com/BestBuy_US/images/products/2404/2404316le.jpg"
+    }
+    ,
+    {
+    	"url":"http://images.bestbuy.com/BestBuy_US/images/products/2404/2404316_ba.jpg"
+    }
+    ,
+    {
+    	"url":"http://images.bestbuy.com/BestBuy_US/images/products/2404/2404316cv1a.jpg"
+    }
+  ],
+  "customersAlsoViewed":"",
+  "accessories":true
+})

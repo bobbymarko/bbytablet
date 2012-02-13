@@ -2,10 +2,12 @@
 <html>
 <head>
 	<meta charset=utf-8 />
-	<title>My Account - BestBuy.com</title>
+	<title>Compare - BestBuy.com</title>
 	<link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
 	<link rel="stylesheet" type="text/css" media="screen" href="css/modules.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="css/compare.css" />
 	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+	<meta name="format-detection" content="telephone=no">
 </head>
 <body class="my-account">
     <header id="masthead">
@@ -20,7 +22,7 @@
                 <li><a href="">Services</a></li>
                 <li><a href="#deals-menu">Deals</a></li>
                 <li><a href="">Gifts</a></li>
-                <li><a href="">Store Locator</a></li>
+                <li><a href="/store-locator.html">Store Locator</a></li>
                 <!-- less important links -->
                 <li class="secondary-links"><a href="">Feedback</a> <a href="">Legal</a> <a href="">Desktop Site</a></li>
               </ul>
@@ -89,27 +91,505 @@
       	</ul>
     </header>
     
-    <div class="two-column">
-			<div class="sidebar-navigation sidebar">
-				<h2 class="side-menu-title">Account Information</h2>
-				<ul class="side-menu">
-					<li><a href="#">View Order Status</a></li>
-					<li><a href="#">Change Password</a></li>
-				</ul>
-				<h2 class="side-menu-title">Reward Zone Program</h2>
-				<ul class="side-menu">
-					<li class="current-item"><a href="#">View Order Status</a></li>
-					<li><a href="#">Change Password</a></li>
-				</ul>
-			</div>
+    <header class="title-bar">
+    	<a href="/category.html" class="back-btn">Continue Shopping</a>
+			<h1 class="page-title">Compare</h1>
+		</header>
 			
 			<div class="module-group">
 				<section class="module">
-					<h2>My Account</h2>
+					<table id="compare-table">
+					<thead>
+						<tr class="remove-row">
+							<th id="itemcolumn" scope="col"></th>
+							<th class="table-column" scope="col">
+								<a href="#" class="remove">&times;</a>
+							</th>
+							<th class="table-column" scope="col">
+								<a href="#" class="remove">&times;</a>
+							</th>
+							<th class="table-column" scope="col">
+								<a href="#" class="remove">&times;</a>
+							</th>
+							<th class="table-column" scope="col">
+								<a href="#" class="remove">&times;</a>
+							</th>
+						</tr>
+						<tr>
+							<th id="itemcolumn" scope="col"></th>
+							<th id="col1" class="table-column" scope="col">
+								<a href="#" class="item-image"><img src="http://images.bestbuy.com/BestBuy_US/images/products/2138/2138103_sc.jpg" alt="2138103 Front Detail" class="image-thumb"></a>
+								<a href="#" class="item-name">Toshiba  32" Class/ LCD / 720p / 60Hz / HDTV</a>
+								<p class="item-data"><strong>Model:</strong> 32C110U &#149; <strong>SKU:</strong> 2138103</p>
+							</th>
+							<th id="col2" class="table-column" scope="col">
+								<a href="#" class="item-image"><img src="http://images.bestbuy.com/BestBuy_US/images/products/1854/1854249_sc.jpg" alt="2138103 Front Detail" class="image-thumb"></a>
+								<a href="#" class="item-name">Insignia™  24" Class / LED / 1080p / 60Hz / HDTV</a>
+								<p class="item-data"><strong>Model:</strong> NS-24E730A12 &#149; <strong>SKU:</strong> 1854249</p>
+							</th>
+							<th id="col3" class="table-column" scope="col">
+								<a href="#" class="item-image"><img src="http://images.bestbuy.com/BestBuy_US/images/products/3669/3669089_sc.jpg" alt="2138103 Front Detail" class="image-thumb"></a>
+								<a href="#" class="item-name">Toshiba  40" Class / LCD / 1080p / 60Hz / HDTV</a>
+								<p class="item-data"><strong>Model:</strong> 40FT2U &#149; <strong>SKU:</strong> 3669089</p>
+							</th>
+							<th id="col4" class="table-column" scope="col">
+								<a href="#" class="item-image"><img src="http://images.bestbuy.com/BestBuy_US/images/products/2928/2928144_sc.jpg" alt="2138103 Front Detail" class="image-thumb"></a>
+								<a href="#" class="item-name">Dynex™  32" Class / LCD / 720p / 60Hz / HDTV</a>
+								<p class="item-data"><strong>Model:</strong> DX-32L200A12 &#149; <strong>SKU:</strong> 2928144</p>
+							</th>
+						</tr>
+						<tr>
+							<th id="itemcolumn" scope="col"></th>
+							<th id="col5" class="table-column" scope="col">
+								<a href="#" class="button primary cart-button">Add to Cart</a>
+							</th>
+							<th id="col6" class="table-column" scope="col">
+								<a href="#" class="button primary cart-button">Add to Cart</a>
+							</th>
+							<th id="col7" class="table-column" scope="col">
+								<a href="#" class="button primary cart-button">Add to Cart</a>
+							</th>
+							<th id="col8" class="table-column" scope="col">
+								<a href="#" class="button primary cart-button">Add to Cart</a>
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th id="row1" scope="rowgroup" colspan="5">Overview</th>
+						</tr>
+						<tr>
+							<th id="row1" scope="row">Rating</th>
+							<td headers="itemcolumn col1">
+								<div class="ratings">
+									<div class="rating-stars">
+											<div class="rating-filler" style="width: 60%;"></div>
+											<div class="rating-mask"></div>
+									</div>
+									<a href="#">124 Reviews</a>
+								</div><!-- ratings -->
+							</td>
+							<td headers="itemcolumn col2">
+								<div class="ratings">
+									<div class="rating-stars">
+											<div class="rating-filler" style="width: 80%;"></div>
+											<div class="rating-mask"></div>
+									</div>
+									<a href="#">179 Reviews</a>
+								</div><!-- ratings -->
+							</td>
+							<td headers="itemcolumn col3">
+								<div class="ratings">
+									<div class="rating-stars">
+											<div class="rating-filler" style="width: 70%;"></div>
+											<div class="rating-mask"></div>
+									</div>
+									<a href="#">54 Reviews</a>
+								</div><!-- ratings -->
+							</td>
+							<td headers="itemcolumn col4">
+								<div class="ratings">
+									<div class="rating-stars">
+											<div class="rating-filler" style="width: 90%;"></div>
+											<div class="rating-mask"></div>
+									</div>
+									<a href="#">101 Reviews</a>
+								</div><!-- ratings -->
+							</td>
+						</tr>
+						<tr>
+							<th id="row2" scope="row">Price</th>
+							<td headers="itemcolumn col1">
+								<ul class="price-block">
+									<li class="price-paid">$259.99</li>
+									<li>Reg. Price: $349.99</li>
+									<li class="you-save">You Save: $90.00</li>	
+								</ul>
+							</td>
+							<td headers="itemcolumn col2">
+								<ul class="price-block">
+									<li class="price-paid">$199.99</li>
+									<li>Reg. Price: $249.99</li>
+									<li class="you-save">You Save: $50.00</li>	
+								</ul>
+							</td>
+							<td headers="itemcolumn col3">
+								<ul class="price-block">
+									<li class="price-paid">$399.99</li>
+									<li>Reg. Price: $499.99</li>
+									<li class="you-save">You Save: $100.00</li>	
+								</ul>
+							</td>
+							<td headers="itemcolumn col4">
+								<ul class="price-block">
+									<li class="price-paid">$269.99</li>
+									<li>Reg. Price: $289.99</li>
+									<li class="you-save">You Save: $20.00</li>	
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<th id="row3" scope="row">Shipping</th>
+							<td headers="itemcolumn col1"><strong>Shipping:</strong> Usually leaves seller's warehouse in 1 business day.<br/>Sold &amp; Shipped by: Beach Camera</td>
+							<td headers="itemcolumn col2"><strong>Shipping:</strong> Usually leaves our warehouse in 1 business day</td>
+							<td headers="itemcolumn col3"><strong>Shipping:</strong> Usually leaves our warehouse in 1 business day</td>
+							<td headers="itemcolumn col4"><strong>Delivery:</strong> Most Areas</td>
+						</tr>
+						<tr>
+							<th id="row4" scope="row">Store Pickup</th>
+							<td headers="itemcolumn col1">Available at most stores</td>
+							<td headers="itemcolumn col2">Available at most stores</td>
+							<td headers="itemcolumn col3">Available at most stores</td>
+							<td headers="itemcolumn col4">Available at most stores</td>
+						</tr>
+					</tbody>
+					
+					<tbody>
+						<tr>
+							<th id="row5" scope="rowgroup" colspan="5">
+								Product Specifications
+									<span class="highlight-differences">
+										<input type="checkbox" id="highlight-differences" class="highlight-differences"/> 
+										<label for="highlight-differences">Highlight Differences</label>
+									</span>
+								</label>
+							</th>
+						</tr>
+						<tr class="highlighted">
+							<th id="row6" scope="row">TV Type</th>
+							<td headers="itemcolumn col1">LCD Flat Panel</td>
+							<td headers="itemcolumn col2">LED Flat-Panel </td>
+							<td headers="itemcolumn col3">LCD Flat-Panel </td>
+							<td headers="itemcolumn col4">LCD Flat-Panel </td>
+						</tr>
+						<tr class="highlighted">
+							<th id="row7" scope="row">Screen Size Class</th>
+							<td headers="itemcolumn col1">32"</td>
+							<td headers="itemcolumn col2">24"</td>
+							<td headers="itemcolumn col3">40"</td>
+							<td headers="itemcolumn col4">32"</td>
+						</tr>
+						<tr class="highlighted">
+							<th id="row8" scope="row">Screen Size (Measured Diagonally)</th>
+							<td headers="itemcolumn col1">31-1/2"</td>
+							<td headers="itemcolumn col2">23-5/8"</td>
+							<td headers="itemcolumn col3">40"</td>
+							<td headers="itemcolumn col4">31-1/2"</td>
+						</tr>
+						<tr class="highlighted">
+							<th id="row9" scope="row">Vertical Resolution</th>
+							<td headers="itemcolumn col1">720p</td>
+							<td headers="itemcolumn col2">1080p</td>
+							<td headers="itemcolumn col3">1080p</td>
+							<td headers="itemcolumn col4">720p</td>
+						</tr>
+						<tr>
+							<th id="row10" scope="row">Screen Refresh Rate</th>
+							<td headers="itemcolumn col1">60Hz</td>
+							<td headers="itemcolumn col2">60Hz</td>
+							<td headers="itemcolumn col3">60Hz</td>
+							<td headers="itemcolumn col4">60Hz</td>
+						</tr>
+						<tr class="highlighted">
+							<th id="row11" scope="row">Product Height (with stand)</th>
+							<td headers="itemcolumn col1">21-3/4"</td>
+							<td headers="itemcolumn col2">16-1/2"</td>
+							<td headers="itemcolumn col3">27-3/8"</td>
+							<td headers="itemcolumn col4">21-1/2"</td>
+						</tr>
+						<tr class="highlighted">
+							<th id="row12" scope="row">Product Height (without stand)</th>
+							<td headers="itemcolumn col1">19-7/8"</td>
+							<td headers="itemcolumn col2">15"</td>
+							<td headers="itemcolumn col3">25-3/8"</td>
+							<td headers="itemcolumn col4">20-1/8"</td>
+						</tr>
+						<tr class="highlighted">
+							<th id="row13" scope="row">Product Height (without stand)</th>
+							<td headers="itemcolumn col1">19-7/8"</td>
+							<td headers="itemcolumn col2">15"</td>
+							<td headers="itemcolumn col3">25-3/8"</td>
+							<td headers="itemcolumn col4">20-1/8"</td>
+						</tr>
+						<tr class="highlighted">
+							<th id="row14" scope="row">Product Depth (with stand)</th>
+							<td headers="itemcolumn col1">9-3/4"</td>
+							<td headers="itemcolumn col2">6-3/8"</td>
+							<td headers="itemcolumn col3">11-5/8"</td>
+							<td headers="itemcolumn col4">8-3/8"</td>
+						</tr>
+						<tr class="highlighted">
+							<th id="row15" scope="row">Product Depth (without stand)</th>
+							<td headers="itemcolumn col1">3-1/2"</td>
+							<td headers="itemcolumn col2">1-7/8"</td>
+							<td headers="itemcolumn col3">3-1/2"</td>
+							<td headers="itemcolumn col4">4-5/8"</td>
+						</tr>
+						<tr class="highlighted">
+							<th id="row16" scope="row">Box Dimensions</th>
+							<td headers="itemcolumn col1">34 2/5 x 7 2/7 x 22 4/5 inches</td>
+							<td headers="itemcolumn col2">26 1/7 x 4 4/5 x 18 2/9 inches</td>
+							<td headers="itemcolumn col3"></td>
+							<td headers="itemcolumn col4"></td>
+						</tr>
+						<tr>
+							<th id="row17" scope="row">HDMI Inputs</th>
+							<td headers="itemcolumn col1">2</td>
+							<td headers="itemcolumn col2">2</td>
+							<td headers="itemcolumn col3">2</td>
+							<td headers="itemcolumn col4">2</td>
+						</tr>
+						<tr class="highlighted">
+							<th id="row18" scope="row">USB Port</th>
+							<td headers="itemcolumn col1">Yes</td>
+							<td headers="itemcolumn col2">Yes</td>
+							<td headers="itemcolumn col3">Yes</td>
+							<td headers="itemcolumn col4">No</td>
+						</tr>
+						<tr class="highlighted">
+							<th id="row19" scope="row">USB Input</th>
+							<td headers="itemcolumn col1">Yes</td>
+							<td headers="itemcolumn col2">Yes</td>
+							<td headers="itemcolumn col3">Yes</td>
+							<td headers="itemcolumn col4">No</td>
+						</tr>
+						<tr class="highlighted">
+							<th id="row20" scope="row">DVI Inputs</th>
+							<td headers="itemcolumn col1">0</td>
+							<td headers="itemcolumn col2">2</td>
+							<td headers="itemcolumn col3">0</td>
+							<td headers="itemcolumn col4"></td>
+						</tr>
+						<tr class="highlighted">
+							<th id="row21" scope="row">Component Video Inputs</th>
+							<td headers="itemcolumn col1">0</td>
+							<td headers="itemcolumn col2">1</td>
+							<td headers="itemcolumn col3">1</td>
+							<td headers="itemcolumn col4">1</td>
+						</tr>
+						<tr>
+							<th id="row22" scope="row">Composite Inputs</th>
+							<td headers="itemcolumn col1">1</td>
+							<td headers="itemcolumn col2">1</td>
+							<td headers="itemcolumn col3">1</td>
+							<td headers="itemcolumn col4">1</td>
+						</tr>
+						<tr>
+							<th id="row23" scope="row">Media Card Slot</th>
+							<td headers="itemcolumn col1">No</td>
+							<td headers="itemcolumn col2">No</td>
+							<td headers="itemcolumn col3">No</td>
+							<td headers="itemcolumn col4">No</td>
+						</tr>
+						<tr class="highlighted">
+							<th id="row24" scope="row">iPod Dock</th>
+							<td headers="itemcolumn col1">No</td>
+							<td headers="itemcolumn col2">No</td>
+							<td headers="itemcolumn col3"></td>
+							<td headers="itemcolumn col4"></td>
+						</tr>
+						<tr>
+							<th id="row25" scope="row">Speakers</th>
+							<td headers="itemcolumn col1">2</td>
+							<td headers="itemcolumn col2">2</td>
+							<td headers="itemcolumn col3">2</td>
+							<td headers="itemcolumn col4">2</td>
+						</tr>
+						<tr class="highlighted">
+							<th id="row26" scope="row">Speaker Output Power</th>
+							<td headers="itemcolumn col1">14W</td>
+							<td headers="itemcolumn col2">6W</td>
+							<td headers="itemcolumn col3">14W</td>
+							<td headers="itemcolumn col4">6W</td>
+						</tr>
+						<tr>
+							<th id="row27" scope="row">V-Chip</th>
+							<td headers="itemcolumn col1">Yes</td>
+							<td headers="itemcolumn col2">Yes</td>
+							<td headers="itemcolumn col3">Yes</td>
+							<td headers="itemcolumn col4">Yes</td>
+						</tr>
+						<tr class="highlighted">
+							<th id="row28" scope="row">ENERGY STAR Qualified</th>
+							<td headers="itemcolumn col1">No</td>
+							<td headers="itemcolumn col2">Yes</td>
+							<td headers="itemcolumn col3">No</td>
+							<td headers="itemcolumn col4">No</td>
+						</tr>
+						<tr class="highlighted">
+							<th id="row29" scope="row">Mount Bracket/VESA Pattern</th>
+							<td headers="itemcolumn col1">200 x 200mm</td>
+							<td headers="itemcolumn col2">100mm x 100mm</td>
+							<td headers="itemcolumn col3">200mm x 200mm </td>
+							<td headers="itemcolumn col4">200mm x 200mm </td>
+						</tr>
+						<tr class="highlighted">
+							<th id="row30" scope="row">Internet Connectable</th>
+							<td headers="itemcolumn col1">No</td>
+							<td headers="itemcolumn col2">No</td>
+							<td headers="itemcolumn col3"></td>
+							<td headers="itemcolumn col4"></td>
+						</tr>
+						<tr class="highlighted">
+							<th id="row31" scope="row">PC Inputs</th>
+							<td headers="itemcolumn col1">1</td>
+							<td headers="itemcolumn col2">1</td>
+							<td headers="itemcolumn col3">1</td>
+							<td headers="itemcolumn col4"></td>
+						</tr>
+						<tr>
+							<th id="row32" scope="row">Sleep Timer</th>
+							<td headers="itemcolumn col1">Yes</td>
+							<td headers="itemcolumn col2">Yes</td>
+							<td headers="itemcolumn col3">Yes</td>
+							<td headers="itemcolumn col4">Yes</td>
+						</tr>
+						<tr class="highlighted">
+							<th id="row33" scope="row">Remote Control Type</th>
+							<td headers="itemcolumn col1">Standard</td>
+							<td headers="itemcolumn col2">Standard</td>
+							<td headers="itemcolumn col3"></td>
+							<td headers="itemcolumn col4"></td>
+						</tr>
+						<tr class="highlighted">
+							<th id="row34" scope="row">Ethernet Port</th>
+							<td headers="itemcolumn col1">No</td>
+							<td headers="itemcolumn col2">No</td>
+							<td headers="itemcolumn col3"></td>
+							<td headers="itemcolumn col4">No</td>
+						</tr>
+						<tr class="highlighted">
+							<th id="row35" scope="row">Watts/Channel</th>
+							<td headers="itemcolumn col1"></td>
+							<td headers="itemcolumn col2">3</td>
+							<td headers="itemcolumn col3">7</td>
+							<td headers="itemcolumn col4">3</td>
+						</tr>
+						<tr class="highlighted">
+							<th id="row36" scope="row">Power Consumption (watts) Stand-by</th>
+							<td headers="itemcolumn col1"></td>
+							<td headers="itemcolumn col2">Less than 1</td>
+							<td headers="itemcolumn col3">0.14</td>
+							<td headers="itemcolumn col4">&lt;1</td>
+						</tr>
+						<tr class="highlighted">
+							<th id="row37" scope="row">Aspect Ratio</th>
+							<td headers="itemcolumn col1"></td>
+							<td headers="itemcolumn col2">16:9</td>
+							<td headers="itemcolumn col3"></td>
+							<td headers="itemcolumn col4">16.9</td>
+						</tr>
+						<tr class="highlighted">
+							<th id="row38" scope="row">Maximum Resolution</th>
+							<td headers="itemcolumn col1"></td>
+							<td headers="itemcolumn col2">1920 x 1080</td>
+							<td headers="itemcolumn col3"></td>
+							<td headers="itemcolumn col4">1366 x 768</td>
+						</tr>
+						<tr class="highlighted">
+							<th id="row39" scope="row">Dynamic Contrast Ratio</th>
+							<td headers="itemcolumn col1"></td>
+							<td headers="itemcolumn col2">50,000:1</td>
+							<td headers="itemcolumn col3"></td>
+							<td headers="itemcolumn col4">4000:1</td>
+						</tr>
+						<tr class="highlighted">
+							<th id="row40" scope="row">RF Antenna Input</th>
+							<td headers="itemcolumn col1"></td>
+							<td headers="itemcolumn col2">1</td>
+							<td headers="itemcolumn col3"></td>
+							<td headers="itemcolumn col4">1</td>
+						</tr>
+						<tr class="highlighted">
+							<th id="row41" scope="row">Audio Outputs</th>
+							<td headers="itemcolumn col1"></td>
+							<td headers="itemcolumn col2">2</td>
+							<td headers="itemcolumn col3"></td>
+							<td headers="itemcolumn col4">1</td>
+						</tr>
+						<tr class="highlighted">
+							<th id="row42" scope="row">Language Options</th>
+							<td headers="itemcolumn col1"></td>
+							<td headers="itemcolumn col2">English, French, Spanish </td>
+							<td headers="itemcolumn col3"></td>
+							<td headers="itemcolumn col4">English, French, Spanish </td>
+						</tr>
+						<tr class="highlighted">
+							<th id="row43" scope="row">Channel Labeling</th>
+							<td headers="itemcolumn col1"></td>
+							<td headers="itemcolumn col2">Yes</td>
+							<td headers="itemcolumn col3"></td>
+							<td headers="itemcolumn col4">Yes</td>
+						</tr>
+						<tr class="highlighted">
+							<th id="row44" scope="row">Power Consumption (watts) Power On</th>
+							<td headers="itemcolumn col1"></td>
+							<td headers="itemcolumn col2">33</td>
+							<td headers="itemcolumn col3">133</td>
+							<td headers="itemcolumn col4">98</td>
+						</tr>
+						<tr class="highlighted">
+							<th id="row45" scope="row">Brightness</th>
+							<td headers="itemcolumn col1"></td>
+							<td headers="itemcolumn col2">280 cd/m²</td>
+							<td headers="itemcolumn col3"></td>
+							<td headers="itemcolumn col4">350 cd/m²</td>
+						</tr>
+						<tr class="highlighted">
+							<th id="row46" scope="row">Headphone Jacks</th>
+							<td headers="itemcolumn col1"></td>
+							<td headers="itemcolumn col2">Yes</td>
+							<td headers="itemcolumn col3"></td>
+							<td headers="itemcolumn col4"></td>
+						</tr>
+						<tr class="highlighted">
+							<th id="row47" scope="row">Simulated Surround</th>
+							<td headers="itemcolumn col1"></td>
+							<td headers="itemcolumn col2">Yes</td>
+							<td headers="itemcolumn col3"></td>
+							<td headers="itemcolumn col4"></td>
+						</tr>
+						<tr class="highlighted">
+							<th id="row48" scope="row">Sound Leveler</th>
+							<td headers="itemcolumn col1"></td>
+							<td headers="itemcolumn col2">Yes</td>
+							<td headers="itemcolumn col3"></td>
+							<td headers="itemcolumn col4">Yes</td>
+						</tr>
+						<tr class="highlighted">
+							<th id="row49" scope="row">Warranty Terms - Parts</th>
+							<td headers="itemcolumn col1">1 year limited </td>
+							<td headers="itemcolumn col2">2 years</td>
+							<td headers="itemcolumn col3">1 year limited </td>
+							<td headers="itemcolumn col4">1 year</td>
+						</tr>
+						<tr class="highlighted">
+							<th id="row50" scope="row">Warranty Terms - Parts</th>
+							<td headers="itemcolumn col1">1 year limited </td>
+							<td headers="itemcolumn col2">2 years</td>
+							<td headers="itemcolumn col3">1 year limited </td>
+							<td headers="itemcolumn col4">1 year</td>
+						</tr>
+						<tr class="highlighted">
+							<th id="row51" scope="row">Product Width</th>
+							<td headers="itemcolumn col1">31-1/4"</td>
+							<td headers="itemcolumn col2">23"</td>
+							<td headers="itemcolumn col3">39-1/8"</td>
+							<td headers="itemcolumn col4">30-1/2"</td>
+						</tr>
+						<tr class="highlighted">
+							<th id="row52" scope="row">Product Weight</th>
+							<td headers="itemcolumn col1">20.9 lbs. with stand (19.6 lbs. without)</td>
+							<td headers="itemcolumn col2">10.6 lbs. with stand (10 lbs. without)</td>
+							<td headers="itemcolumn col3">34.2 lbs. with stand (32.4 lbs. without)</td>
+							<td headers="itemcolumn col4">20.9 lbs. with stand (19.2 lbs. without)</td>
+						</tr>
+					</tbody>
+					
+				</table>
 				</section>
 			</div><!-- end .module-group -->
 			
-    </div><!-- end .two-column -->
     
     <footer id="footer">
         <div class="footer-meta">
@@ -123,28 +603,29 @@
           <a href="#">Desktop Site</a>
         </div><!-- footer-links -->
     </footer>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script src="js/modernizr.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
     <script src="js/addclear.js"></script>
     <script src="js/app.js"></script>
     
     <script type="text/javascript">  
-    
-    function getParameterByName(name)
-    {
-      name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
-      var regexS = "[\\?&]" + name + "=([^&#]*)";
-      var regex = new RegExp(regexS);
-      var results = regex.exec(window.location.href);
-      if(results == null)
-        return "";
-      else
-        return decodeURIComponent(results[1].replace(/\+/g, " "));
-    }
-        
-    
-        
-        
+    	if (Modernizr.appleios) {
+				$('label[for]').live('click',function(e) { //making clicking the label check the checkbox on ios.
+					e.stopPropagation();
+				});
+			}
+			
+			$('#highlight-differences').click(function(){
+				$(this).closest('tbody').toggleClass('highlights-on');
+			});
+			
+			$('.remove').click(function(e){
+				e.preventDefault();
+				$('tr td:nth-child(4n+1), thead th:nth-child(4n+1)','#compare-table').text('');
+				$('#col4').html('<a href="#">Tap to compare another item.</a>').addClass('empty-column');
+			});
+			
     </script>
 </body>
 </html>

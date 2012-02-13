@@ -229,9 +229,16 @@
     
     <script id="offerTemplate" type="text/x-jquery-tmpl">
 				<li>
-					<a href="${url}" class="item-image"><img src="${image_url}" alt="" /></a>
-					<a href="${url}" class="item-title">${name}</a>
-					<a href="${url}" class="item-description">${title}</a>
+					{{if url}}
+						<a href="${url}" class="item-image"><img src="${image_url}" alt="" /></a>
+						<a href="${url}" class="item-title">${name}</a>
+						<a href="${url}" class="item-description">${title}</a>
+					{{else}}
+						<p class="item-image"><img src="${image_url}" alt="" /></p>
+						<p class="item-title">${name}</p>
+						<p class="item-description">${title}</p>
+					{{/if}}
+					
 				</li>
     </script>
     

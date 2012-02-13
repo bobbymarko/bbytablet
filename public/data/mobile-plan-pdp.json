@@ -1,0 +1,55 @@
+pdpData({
+	"categoryName":"AT&T",
+  "shortLabel": "AT&T - Nation Talk Individual - Unlimited",
+  "metaData": [
+  	{
+  		"key":"SKU",
+  		"value":"9862409"
+  	}
+  ],
+  "ratingsCount":"0",
+  "customerReviewAverage":"0",
+  "regularPrice":"69.00",
+  "salePrice":"69.00",
+  "youSave":"0.00",
+  "listPrice":false,
+  "withContract":false,
+  "monthlyPrice":true,
+  "freeShipping":false,
+  "inStoreOnly":false,
+  "onSale":false,
+  "tabs":[
+  	"Overview",
+  	"Specifications",
+  	"Reviews"
+  ],
+  "moreBuyingOptions":"",
+  "compareAvailable":true,
+  "rebates":[
+  	{
+  		"description":"Click here to learn about how you could get up to $70.00 from 1 rebate(s) in Minneapolis, MN. Rebate info provided by EcoRebates. Terms"
+  	}
+  ],
+  "energyGuide":false,
+  "features":[
+
+  	{
+  		"description":"<b>Unlimited anytime minutes</b><br>No need to wait until the evening to make your long calls. Call whenever you like and it's included."
+  	},
+  	{
+  		"description":"<b>Unlimited AT&amp;T mobile to mobile minutes</b><br>Send and receive calls to your family or anyone else on the AT&amp;T network free of charge."
+  	},
+  	{
+  		"description":"<b>Nationwide long distance</b><br>Plan includes long distance calls within the U.S.",
+  	},
+  	{
+  		"description":"<b>Roaming included</b><br>Don't be afraid to leave the AT&amp;T network because you won't rack up roaming charges.",
+  	},
+  	{
+  		"description":"Listed price does not include taxes and surcharges; see plan Terms and Conditions for details."
+  	}
+  ],
+  "thumbnailImage": "http://images.bestbuy.com/BestBuy_US/images/logos/attLG.gif",
+  "customersAlsoViewed":"",
+  "accessories":false
+})

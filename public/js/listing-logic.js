@@ -3,7 +3,6 @@ var currentPage = 1;
 var loading = false;
 
 $(function(){
-		//$('#masthead, #footer').fixedPosition();
 		var searchTerm = getParameterByName('search');
 		loadProducts();
 		
@@ -25,12 +24,98 @@ $(function(){
 			}
 		});
 		
-		if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/iPad/i)) {
-			$('label[for]').live('click',function() {
+		if (Modernizr.appleios) {
+			$('label[for]').live('click',function(e) { //making clicking the label check the checkbox on ios.
 				e.stopPropagation();
 			});
 		}
+		
+		//fixed positioning needs to be implemented like this http://jquerymobile.com/demos/1.0.1/docs/toolbars/index.html#/demos/1.0.1/docs/toolbars/bars-fixed.html
+		if (!Modernizr.positionfixed){
+			$(window).scroll(function(){
+				$('#compare-bar').css({'top':$(window).scrollTop()+$(window).height()-$('#compare-bar').height()});
+			});	
+		}
+		
+		var inCompare = [];
+		$('input[type="checkbox"]','.product-meta').live('click',function(){
+			var $this = $(this);
+			var productTile = $this.closest('.product-tile');
+			if ($this.is(':checked')){
+				if (inCompare.length < 4){
+					inCompare.push(productTile);
+				}else{
+					alert('You can only compare 4 items at a time.');
+					$(this).prop('checked',false);
+				}
+			} else{ // remove from compare when unchecked
+				inCompare = removeFromCompare(inCompare, productTile.attr('data-sku'))
+			}
+			showCompare(inCompare);
+		});
+		
+		$('.remove','#compare-bar').live('click', function(e){
+			var sku = $(this).closest('li').attr('data-sku');
+			removeFromCompare(inCompare, sku);
+			//$(this).closest('li').children('.image-wrapper').children('img').remove();
+			//$(this).remove();
+			$(this).closest('li').remove();
+			$('ul','#compare-bar').append('<li><div class="image-wrapper"></div></li>');
+			// need to fix ordering of items
+			console.log('#compare-'+sku);
+			$('#compare-'+sku).prop('checked',false);
+			e.preventDefault();
+		});
+		
+		$('.compare-btn').live('click', function(e){
+			if (inCompare.length < 2){
+				alert('You need at least 2 items to compare. Please add another.');
+			}else{
+				var toCompare = [];
+				$.each(inCompare, function(index, item){
+					toCompare.push($(item).attr('data-sku'));
+				});
+				window.location = $(this).attr('href') + '?skus=' + toCompare.join(',');
+			}
+			e.preventDefault();
+		});
+		
 });
+
+function showCompare(products){
+	if ($('#compare-bar').length == 0 && products.length > 0){
+		$("<div id='compare-bar'><p class='compare-instructions'><strong>Compare up to 4 items in:</strong><br/><a href='/listing.html'>Boomboxes, CD Players & Radios</a></p><ul></ul><a href='/compare.html' class='button secondary compare-btn inactive'>Compare</a><a href='#' class='clear-compare'>Clear</a></div>").appendTo('body');
+		console.log(products.length);
+	}else{
+		$('ul','#compare-bar').empty();
+	}
+	if (products.length !== 1) {
+			$('.compare-btn').removeClass('inactive');
+	}
+	$.each(products, function(index, item){
+		$('ul','#compare-bar').append('<li data-sku="'+$(item).attr('data-sku')+'"><div class="image-wrapper"><img src="' + $('.product-gallery li:first-child img', item).attr('src') + '" alt=""/></div><a href="#" class="remove">&times;</a></li>');
+	});
+	var placeholderCount = 4-products.length;
+	while(placeholderCount > 0){
+		$('ul','#compare-bar').append('<li><div class="image-wrapper"></div></li>');
+		placeholderCount--;
+	};
+	
+}
+
+function removeFromCompare(inCompare, sku){
+	var removeMe = false;
+	$.each( inCompare, function(i, v) {
+		if( $(v).attr('data-sku') == sku ) {
+			removeMe = i;
+		}
+	});
+	inCompare.splice(removeMe,1);
+	console.log(inCompare.length);
+	if (inCompare.length == 0) $('#compare-bar').remove();
+	if (inCompare.length == 1) $('.compare-btn','#compare-bar').addClass('inactive');
+	return inCompare;
+}
 
 function loadProducts(){
 	if (!loading && currentPage){
@@ -46,33 +131,21 @@ function loadProducts(){
 			callbackParameter: "callback",
 			success: function(data) {
 			$('#total-search-results').text(data.total);
-			console.log(data);
+			console.log('search results', data);
 				loading = false;
 				$('#loading-tile').remove();
 				if (data.products.length == 0){
-					currentPage = false;
+					currentPage = 0;
 					return;
 				}
 				$.each(data.products, function(index, skus){
-						console.log(skus);
-						if (skus.shortDescription){
-							skus.shortDescription = skus.shortDescription.split(';');
-							skus.shortDescription = $.map(skus.shortDescription, function(n,i){
-									if (i<4){
-											return "<li>"+n.trim()+"</li>";
-									}else{
-											return false;
-									}
-							});
-						}
-						
 						if(!skus.customerReviewCount){
 							skus.customerReviewCount = 0;
 						}
 						
 						$('#productTemplate').tmpl(skus).appendTo('#products');
-						currentPage++;
 				});
+				currentPage++;
 				
 				$('.product-gallery').each(function(){
 					if (!$(this).attr('style')){ // ignore gallery if already swipified
@@ -105,16 +178,4 @@ function loadProducts(){
 			}
 		});
 	}
-}
-
-function getParameterByName(name)
-{
-	name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
-	var regexS = "[\\?&]" + name + "=([^&#]*)";
-	var regex = new RegExp(regexS);
-	var results = regex.exec(window.location.href);
-	if(results == null)
-		return "";
-	else
-		return decodeURIComponent(results[1].replace(/\+/g, " "));
 }

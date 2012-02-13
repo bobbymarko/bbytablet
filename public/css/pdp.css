@@ -1,0 +1,495 @@
+.col-wrapper{
+	margin-left:10px;
+	margin-right:10px;
+}
+
+.col-wrapper:last-child{ /* if a col-wrapper butts up against the footer we need to add this space */
+	margin-bottom:20px;
+}
+
+.module+.col-wrapper{margin-top:-40px;}
+
+.tab-bar+.col-wrapper .section-title{ /* if we don't have the image gallery then we need to adjust the spacing above features */
+	border-top:0;
+	padding-top:0;
+	margin-top:0;
+}
+
+.tab-bar+.module{
+	margin-top:0;
+	padding-top:0;
+	border-top:none;
+}
+
+/* clear fixing */
+.col-wrapper:before,
+.col-wrapper:after {
+    content:"";
+    display:table;
+}
+
+.col-wrapper:after {
+    clear:both;
+}
+/* end clear fixing */
+
+.section-title{
+	border-top:1px solid #c3c4c4;
+	padding-top:40px;
+	margin-top:40px;
+}
+
+.sub-section-title{
+	margin-bottom:10px;
+}
+
+.bulleted{
+	padding:0 0 0 20px;
+}
+
+.bulleted li{
+	list-style-type:disc;
+}
+
+.col-wrapper li{
+	padding:0 0 10px 0;
+}
+
+.col-small, .col-medium, .col-large{
+	/*margin:0 0 30px;*/
+	padding-left:10px;
+	padding-right:10px;
+}
+
+.module .col-small, .module .col-medium, .module .col-large{
+	padding-left:0;
+	padding-right:0;
+}
+
+.col-large{
+	clear:both;
+}
+
+.sub-module{
+	margin:0 3% 30px 0;
+	width:46%;
+	display:inline-block;
+	vertical-align:top;
+}
+
+.sub-module ul{
+	position:relative;
+	overflow:hidden;
+}
+
+.sub-module-icon{
+	float:left;
+	margin:0 10px 0 0;
+}
+
+.pdp-postcard{
+	position:relative;
+	overflow:hidden;
+}
+
+.pdp-title{
+	float:left;
+	width:70%;
+}
+
+.pdp-title hgroup{
+	margin-left:17%;
+}
+
+.pdp-title .item-name{
+	margin-bottom:5px;
+}
+
+.pdp-title .item-name a{
+	color:#49494a;
+}
+
+.pdp-title .item-image{
+	float:left;
+	width:15%;
+	max-width:140px;
+	text-align:center;
+	margin-right:2%;
+}
+
+.pdp-title .item-image img{
+	max-width:100%;
+	max-height:120px;
+}
+
+.item-metadata{
+	font-size:12px;
+}
+
+.pdp-commerce{
+	float:left;
+	width:28%;
+	padding-left:20px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.tab-bar{
+	font-weight:bold;
+	position:static; /* these disable clearfixing */
+	overflow:visible; /* these disable clearfixing */
+	border-bottom:3px solid #737474;
+	margin-bottom:40px;
+}
+
+.tab-bar ul{	
+	position:relative;
+	overflow:hidden;
+	z-index:0;
+	top:3px;
+	margin:0 10px;
+}
+
+.tab-bar li{
+	color:#49494a;
+	float:left;
+	position:relative;
+	border:1px solid #737474;
+	border-width:1px 1px 0 0;
+}
+
+.tab-bar li:first-child{
+	border-left-width:1px;
+}
+
+.tab-bar a{
+	display:block;
+	color:#003b64;
+	text-shadow:0 1px 0 #fff;
+	padding:15px;
+	border-bottom:3px solid #737474;
+	background: #dddede;
+	background: -moz-linear-gradient(top, #ffffff 0%, #dddede 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#dddede));
+	background: -webkit-linear-gradient(top, #ffffff 0%,#dddede 100%);
+	background: -o-linear-gradient(top, #ffffff 0%,#dddede 100%);
+	background: -ms-linear-gradient(top, #ffffff 0%,#dddede 100%);
+	background: linear-gradient(top, #ffffff 0%,#dddede 100%);
+}
+
+.tab-bar .current{
+	color:#fff;
+}
+
+.tab-bar .count{
+	font-weight:normal;
+}
+
+.tab-bar .current a{
+	background:#fff;
+	color:#49494a;
+	border-bottom:3px solid #fff;
+}
+
+.col-medium .gallery-position{
+	font-size:0;
+	line-height:0;
+	height:60px;
+	margin-bottom:20px;
+}
+
+.col-medium .gallery-position li{
+	display:inline-block;
+	border:1px solid #c3c4c4;
+	margin:0 5px;
+	padding:0;
+}
+
+.col-medium .gallery-position .on{
+	border:2px solid #003b64;
+}
+
+.col-medium .gallery-position .on a{
+	padding:4px;
+}
+
+.col-medium .gallery-position img{
+	max-width:100%;
+	max-height:100%;
+}
+
+.col-medium .gallery-position a{
+	display:block;
+	padding:5px;
+}
+
+.col-medium .gallery-position span{
+	width:50px;
+	height:50px;
+	display:table-cell;
+	vertical-align:middle;
+}
+
+.star-rating-label{
+	float: left;
+	font-weight: normal;
+	font-size: 12px;
+	margin-right: 5px;
+	line-height: 1.8;
+}
+
+.ratings-breakdown{
+	margin-bottom:20px;
+	clear:both;
+}
+
+.ratings-star-group{
+	font-size:12px;
+	line-height:1;
+	overflow:hidden;
+	position:relative;
+	margin-bottom:8px;
+}
+
+.ratings-star-count-wrapper{
+	width:60%;
+	background:#e7e7e7;
+	margin:0 10px 0 0;
+	height:10px;
+	position:relative;
+	overflow:hidden;
+	float:left;
+}
+
+.star-summary-title{
+	margin:0;
+	font-size:14px;
+}
+
+.ratings-star-count{
+	position:absolute;
+	height:100%;
+	background: #fff200;
+	background: -moz-linear-gradient(top, #fff200 0%, #ffd500 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fff200), color-stop(100%,#ffd500));
+	background: -webkit-linear-gradient(top, #fff200 0%,#ffd500 100%);
+	background: -o-linear-gradient(top, #fff200 0%,#ffd500 100%);
+	background: -ms-linear-gradient(top, #fff200 0%,#ffd500 100%);
+	background: linear-gradient(top, #fff200 0%,#ffd500 100%);
+	-webkit-box-shadow:0 0 5px rgba(0,0,0,0.2);
+	box-shadow:0 0 5px rgba(0,0,0,0.2);
+}
+
+.short-review .item-metadata{
+	margin-bottom:3px;
+}
+
+.short-review .ratings{
+	margin-bottom:10px;
+}
+
+.review-options{
+	text-align:right;
+	padding:0 0 10px 10px;
+	margin-top:-20px;
+}
+
+#rating-selector{ /* prevent stars from wrapping */
+	width:202px;
+}
+
+#rating-selector a{
+	font-size:36px;
+	color:#ffd500;
+	letter-spacing:1px;
+	line-height:1.1;
+}
+
+#itemcolumn{
+	width:40%;	
+}
+
+.table-column{
+	width:60%;
+}
+
+.highlighted-box{
+	background:#f4f5f5;
+	border:1px solid #c3c4c4;
+	padding:20px;
+	margin:0 0 20px;
+}
+
+.word-divider{
+	text-align:center;
+	border-bottom:1px solid #e7e7e7;
+	position:relative;
+	margin:20px 0 15px;
+	top:-10px;
+}	
+
+.word-divider span{
+	background:#fff;
+	position:relative;
+	padding:10px;
+	top:10px;
+}
+
+.highlighted-box .word-divider span{
+	background:#f4f5f5;
+}
+
+.state-available{
+	color:#82b800;
+	font-weight:bold;
+}
+
+.state-unavailable{
+	font-weight:bold;
+}
+
+.item-list li{
+	border:1px solid #c3c4c4;
+	border-width:0 0 1px;
+	padding:20px 0;
+	overflow:hidden;
+	position:relative;
+}
+
+.item-list li:first-child{
+	border-top-width:1px;
+}
+
+.item-list li:last-child{
+	border-bottom-width:0;
+}
+
+.item-list .item-description{
+	float:left;
+	margin-right:20px;
+}
+
+.item-list .button{
+	float:right;
+}
+
+.item-list .loading{
+	margin-top:20px;
+}
+
+.ratings-overview, .short-review{
+	margin-bottom:30px;
+}
+
+.short-review:last-child{
+	margin-bottom:0;
+}
+
+.with-icon{
+	margin-top:20px;
+}
+
+.show-lt-760px{
+	display:none;
+}
+
+.toggle-visible a{
+	position:relative;
+	padding-left:14px;
+}
+
+.toggle-visible a:before{
+	content:'';
+	border:2px solid #1646A8;
+	border-style:solid;
+	border-width: 5px;
+	border-color:#1646A8 transparent transparent transparent;
+	top:6px;
+	left:0;
+	position:absolute;
+}
+
+.toggle-hidden{
+	display:none;
+}
+
+@media (max-width:759px){
+	.show-lt-760px{
+		display:inline;
+	}
+	.hide-lt-760px{
+		display:none;
+	}
+}
+
+@media (min-width:760px){
+	.col-small, .col-medium, .col-large{
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-o-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	
+	.col-small, .col-medium{
+		width:50%;
+		float:left;
+	}
+	
+	.full-reviews-module .col-medium{ /* reviews look bad in default layout so we need to override them for portrait view a bit */
+		width:auto;
+		float:none;
+		clear:both;
+	}
+	
+	.module .col-small, .module .col-medium, .module .col-large{
+		padding-right:20px;
+	}
+	
+	.sub-module{
+		width:auto;
+		display:block;
+		margin-right:0;
+	}
+	
+	.review-options{
+		margin-top:-46px;
+	}
+	
+}
+
+@media (min-width:960px){
+	.col-small{
+		width:33.3333333%;
+	}
+	
+	.col-medium{
+		width:66.6666666%;
+	}
+	
+	.full-reviews-module .col-medium{ /* undoing the damage we did to the portrait view for landscape */
+		width:66.6666666%;
+		float:left;
+		clear:none;
+	}
+	
+	.review-summary{
+		float:right;
+		width:30%;
+		padding-left:20px;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-o-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	.review-summary .ratings-star-count-wrapper{
+		width:100%;
+	}
+	.ratings-overview, .short-review{
+		margin-bottom:0;
+	}
+}

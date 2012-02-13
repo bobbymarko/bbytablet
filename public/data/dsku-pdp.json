@@ -1,0 +1,77 @@
+pdpData({
+	"categoryName":"Movies &amp; TV Shows",
+  "shortLabel": "X-men: First Class [On-Demand Rental]",
+  "metaData": [
+  	{
+  		"key":"Vendor",
+  		"value":"Cinema Now"
+  	},
+  	{
+  		"key":"SKU",
+  		"value":"1200001894"
+  	},
+  	{
+  		"key":"Release Date",
+  		"value":"9/9/2011"
+  	},
+  	{
+  		"key":"Rating",
+  		"value":"PG13"
+  	}
+  ],
+  "ratingsCount":"0",
+  "customerReviewAverage":"0",
+  "reviews":"",
+  "regularPrice":"3.95",
+  "salePrice":"3.95",
+  "youSave":"0.00",
+  "listPrice":false,
+  "withContract":false,
+  "monthlyPrice":false,
+  "freeShipping":false,
+  "inStoreOnly":false,
+  "onSale":false,
+  "tabs":[
+  	"Overview",
+  	"Specifications",
+  	"Reviews"
+  ],
+  "moreBuyingOptions":"",
+  "compareAvailable":true,
+  "availability": [
+  	{
+  		"method":"On-Demand Rental",
+  		"description":"Available to watch after purchase on CinemaNow-ready playback devices.",
+  		"linkText":""
+  	}
+  ],
+  "financingOffers":[
+  	{
+  		"title":"Best Buy Cardholder Discount",
+  		"description":"15% Off Game Guide: Find Out How"
+  	},
+  	{
+  		"title":"Financing Available",
+  		"description":"18 Month Financing"
+  	},
+  	{
+  		"title":"Reward Zone Offer",
+  		"description":"Get Reward Certificates Faster: See How"
+  	}
+  ],
+  "rebates":[
+  	{
+  		"description":"Click here to learn about how you could get up to $70.00 from 1 rebate(s) in Minneapolis, MN. Rebate info provided by EcoRebates. Terms"
+  	}
+  ],
+  "energyGuide":false,
+  "synopsis":"Following the classic Marvel mythology, X-MEN: FIRST CLASS charts the epic beginning of the X-Men saga. Before Charles Xavier and Erik Lensherr took the names Professor X and Magneto, they were two young men discovering their powers for the first time. Before they were archenemies, they were closest of friends, working together with other mutants (some familiar, some new), to stop the greatest threat the world has ever known.",
+  "thumbnailImage": "http://images.bestbuy.com/BestBuy_US/images/products/00/001/1200001894_pr6.png",
+  "imageGallery": [
+    {
+    	"url":"http://images.bestbuy.com/BestBuy_US/images/products/00/001/1200001894_pr6.png"
+    }
+  ],
+  "customersAlsoViewed":"",
+  "accessories":true
+})

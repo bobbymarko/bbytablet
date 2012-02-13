@@ -1,0 +1,121 @@
+pdpData({
+	"categoryName":"E-Reader Devices",
+  "shortLabel": "Amazon - Kindle Fire",
+  "metaData": [
+  	{
+  		"key":"Model",
+  		"value":"B0051VVO5S"
+  	},
+  	{
+  		"key":"SKU",
+  		"value":"2506173"
+  	}
+  ],
+  "ratingsCount":"301",
+  "customerReviewAverage":"3",
+  "reviews":"",
+  "regularPrice":"199.99",
+  "salePrice":"199.99",
+  "youSave":"0.00",
+  "mapPricing":true,
+  "listPrice":false,
+  "withContract":false,
+  "monthlyPrice":false,
+  "freeShipping":false,
+  "inStoreOnly":true,
+  "onSale":false,
+  "tabs":[
+  	"Overview",
+  	"Specifications",
+  	"Reviews"
+  ],
+  "moreBuyingOptions":"",
+  "compareAvailable":true,
+  "availability": [
+  	{
+  		"method":"Store Pickup",
+  		"description":"",
+  		"linkText":"Check Stores"
+  	}
+  ],
+  "financingOffers":[
+  	{
+  		"title":"Best Buy Cardholder Discount",
+  		"description":"15% Off Game Guide: Find Out How"
+  	},
+  	{
+  		"title":"Financing Available",
+  		"description":"18 Month Financing"
+  	},
+  	{
+  		"title":"Reward Zone Offer",
+  		"description":"Get Reward Certificates Faster: See How"
+  	}
+  ],
+  "rebates":[
+  	{
+  		"description":"Click here to learn about how you could get up to $70.00 from 1 rebate(s) in Minneapolis, MN. Rebate info provided by EcoRebates. Terms"
+  	}
+  ],
+  "energyGuide":false,
+  "features":[
+
+  	{
+  		"description":"<b>7\" color multi-touch display</b><br>Great for viewing movies and TV shows. Brings colorful magazines and books to life."
+  	},
+  	{
+  		"description":"<b>8GB storage (6GB for user content)</b><br>Provides space for storing books, magazines, TV shows, movies and music."
+  	},
+  	{
+  		"description":"<b>Cloud storage</b><br>Access to Amazon's cloud storage with free storage of all Amazon digital content."
+  	},
+  	{
+  		"description":"<b>Amazon Silk browser</b><br>Cloud-accelerated Web browser is ideal for streaming video, music, games and more. Supports Adobe Flash."
+  	},
+  	{
+  		"description":"<b>Built-in Wi-Fi</b><br>Allows you to connect to Wi-Fi at home or to hotspots on the road."
+  	},
+  	{
+  		"description":"<b>Amazon.com Kindle Store</b><br>Offers more than 1 million books, magazines and newspapers plus over 18 million movies, TV shows, apps, songs, magazines and books."
+  	},
+  	{
+  		"description":"<b>Apps and games</b><br>Includes Facebook and thousands of apps and games to download."
+  	},
+  	{
+  		"description":"<b>Up to 8 hours of continuous reading or 7.5 hours of video playback with wireless off.</b><br>With the included lithium-ion battery."
+  	},
+  	{
+  		"description":"<b>Weighs 14.6 oz. and measures just 0.45\" thin</b><br>For easy portability."
+  	}
+  ],
+  "specifications":[
+  	{
+  		"attribute":"Display Type",
+  		"value":"Color touch screen"
+  	},
+  	{
+  		"attribute":"Screen Size (Measured Diagonally)",
+  		"value":"7\""
+  	},
+  	{
+  		"attribute":"System Memory (RAM)",
+  		"value":"512MB"
+  	},
+  	{
+  		"attribute":"ENERGY STAR Qualified",
+  		"value":"Unknown"
+  	},
+  	{
+  		"attribute":"UPC",
+  		"value":"814916014385"
+  	}
+  ],
+  "thumbnailImage": "http://images.bestbuy.com/BestBuy_US/images/products/2506/2506173_sb.jpg",
+  "imageGallery": [
+    {
+    	"url":"http://images.bestbuy.com/BestBuy_US/images/products/2506/2506173_sa.jpg"
+    }
+  ],
+  "customersAlsoViewed":"",
+  "accessories":true
+})
