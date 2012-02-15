@@ -294,10 +294,11 @@
 					{{if marketplace}}
 					<div class="sub-module">
 						<h2 class="sub-section-title">Marketplace Item</h2>
-						<p>Marketplace Sellers have been approved to participate in Best Buy Marketplace. Sellers offer hundreds of more product choices to meet your online shopping needs.</p>
+						<img class="sub-module-icon" src="images/icon-marketplace.png" alt="" />
 						<ul>
-							<li><strong>Sold & Shipped by:</strong> Beach Camera</li>
-							<li><strong>Seller Rating:</strong> 4.3 out of 5</li>
+							<li><small>Marketplace Sellers have been approved to participate in Best Buy Marketplace. Sellers offer hundreds of more product choices to meet your online shopping needs.</small></li>
+							<li><strong>Sold & Shipped by:</strong> Beach Camera<br/>
+								<strong>Seller Rating:</strong> 4.3 out of 5</li>
 						</ul>
 					</div><!-- end .sub-module -->
 					{{/if}}
@@ -310,9 +311,13 @@
 							{{each availability}}
 								<li>
 									{{if method == "Delivery" || method == "Shipping"}}
-									<img class="sub-module-icon" src="images/avail_shipping_yes.gif" alt="" />
+									<img class="sub-module-icon" src="images/avail_shipping_yes.png" alt="" />
 									{{else method == "Store Pickup"}}
-									<img class="sub-module-icon" src="images/avail_ispu_yes.gif" alt="" />
+										{{if description == "Not Available"}}
+											<img class="sub-module-icon" src="images/avail_ispu_no.png" alt="" />
+										{{else}}
+											<img class="sub-module-icon" src="images/avail_ispu_yes.png" alt="" />
+										{{/if}}
 									{{/if}}
 									<p class="availability-message">
 										<strong>${method}:</strong> ${description}<br/>

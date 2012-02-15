@@ -34,8 +34,8 @@ pdpData({
   "availability": [
   	{
   		"method":"Store Pickup",
-  		"description":"",
-  		"linkText":"Check Stores"
+  		"description":"Not Available",
+  		"linkText":"Find in store"
   	}
   ],
   "financingOffers":[
