@@ -871,8 +871,12 @@ input.search-field{
 	margin-top:-10px;
 }
 
+.secondary.cart-button:before{
+	background-image: url(../images/icon-cart-large-white.png);
+}
+
 .call-button:before{
-	background: url(../images/icon-call.png) no-repeat;
+	background-image: url(../images/icon-call.png);
 	left:9px;
 	margin-top:-9px;
 }

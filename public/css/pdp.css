@@ -9,6 +9,12 @@
 
 .module+.col-wrapper{margin-top:-40px;}
 
+.module h1 img{ /* for status messaging , example on cart interstitial */ 
+	padding:0 5px 0 0;
+	position:relative;
+	top:5px;
+}
+
 .tab-bar+.col-wrapper .section-title{ /* if we don't have the image gallery then we need to adjust the spacing above features */
 	border-top:0;
 	padding-top:0;
@@ -135,6 +141,10 @@
 	-o-box-sizing: border-box;
 	-ms-box-sizing: border-box;
 	box-sizing: border-box;
+}
+
+.pdp-postcard .cart-button{ /* go to cart button on cart interstitial */
+	margin-bottom:10px;
 }
 
 .tab-bar{

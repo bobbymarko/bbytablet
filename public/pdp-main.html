@@ -305,9 +305,9 @@
 					
 					{{if availability}}
 					<div class="sub-module">
-						<h2 class="sub-section-title">Product Availability</h2>
+						<h2 class="sub-section-title">Availability</h2>
 						<ul>
-							{{if inStoreOnly}}<li><strong>In-Store Only</strong></li>{{/if}}
+							{{if inStoreOnly}}<!--<li><strong>In-Store Only</strong></li>-->{{/if}}
 							{{each availability}}
 								<li>
 									{{if method == "Delivery" || method == "Shipping"}}
@@ -318,6 +318,8 @@
 										{{else}}
 											<img class="sub-module-icon" src="images/avail_ispu_yes.png" alt="" />
 										{{/if}}
+									{{else method == "In-Store Only"}}	
+										<img class="sub-module-icon" src="images/avail_ispu_yes.png" alt="" />
 									{{/if}}
 									<p class="availability-message">
 										<strong>${method}:</strong> ${description}<br/>
