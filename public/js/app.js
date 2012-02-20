@@ -33,6 +33,7 @@ $(document).ready(function(){
 	});
 	
   $('a[href^="#"]','.dropdown-menu').click(function(e){
+  	alert($(this).attr('class'));
     e.preventDefault();
     var parent = $(this).closest('.dropdown-menu');
     var primary = $(this).closest('.dropdown-primary-menu');
@@ -172,7 +173,7 @@ FastClick.prototype = {
 		if(!this.moved && this.target){
 			var evt = document.createEvent('MouseEvents');
 			this.target.className = this.target.className.replace(/ ?pressed/gi, '');
-			evt.initMouseEvent('click', false, true);
+			evt.initMouseEvent('click', true, true);
 			this.target.dispatchEvent(evt);
 		}
 		//reset
