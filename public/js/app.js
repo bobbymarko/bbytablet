@@ -21,7 +21,7 @@ $(document).ready(function(){
 	    
 	    if ($target.is(':visible')){
 	     // if the target menu is visible then hide it
-        //closeOpenDropdowns();
+        closeOpenDropdowns();
 	    }else{
 	     // if the target menu is not being shown then show it
         closeOpenDropdowns();
