@@ -195,7 +195,7 @@ FastClick.prototype = {
 		setTimeout(self.popArr, 2500);
 	},
 	popArr: function() {
-		if (this.coordinates) this.coordinates.splice(0, 2);
+		this.coordinates.splice(0, 2);
 	},
 	onMouseClick: function(e) {
 		for (var i = 0; i < this.coordinates.length; i += 2) {
