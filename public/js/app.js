@@ -204,7 +204,13 @@ var FastClick = (function() {
 			clickStart.x = event.targetTouches[0].clientX;
 			clickStart.y = event.targetTouches[0].clientY;
 			clickStart.scroll = window.pageYOffset;
-	
+			
+			theTarget = event.target;
+			if (event.target.nodeType == 3) theTarget = event.target.parentNode;
+
+			var className = theTarget.tagName.toLowerCase();
+			if (className == 'a' || className == 'input' || className == 'label' || className == 'select')
+				theTarget.className += ' pressed';
 			return true;
 		}
 	
@@ -213,6 +219,11 @@ var FastClick = (function() {
 			if (trackingClick) {
 				if (Math.abs(event.targetTouches[0].clientX - clickStart.x) > 10 || Math.abs(event.targetTouches[0].clientY - clickStart.y) > 10) {
 					trackingClick = false;
+					var cur_columns = document.getElementsByClassName('pressed');
+					for (var i = 0; i < cur_columns.length; i++) {
+						cur_columns[i].className = cur_columns[i].className.replace(/ ?pressed/gi, '');
+					}
+					//event.target.className = event.target.className.replace(/ ?pressed/gi, '');
 				}
 			}
 	
@@ -240,6 +251,11 @@ var FastClick = (function() {
 			// event, with an extra attribute so it can be tracked.
 			if (!(targetElement.className.indexOf('clickevent') !== -1 && targetElement.className.indexOf('touchandclickevent') === -1)) {
 				clickEvent = document.createEvent('MouseEvents');
+				//event.target.className = event.target.className.replace(/ ?pressed/gi, '');
+				var cur_columns = document.getElementsByClassName('pressed');
+				for (var i = 0; i < cur_columns.length; i++) {
+					cur_columns[i].className = cur_columns[i].className.replace(/ ?pressed/gi, '');
+				}
 				clickEvent.initMouseEvent('click', true, true, window, 1, 0, 0, clickStart.x, clickStart.y, false, false, false, false, 0, null);
 				clickEvent.forwardedTouchEvent = true;
 				targetElement.dispatchEvent(clickEvent);
