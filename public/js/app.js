@@ -33,7 +33,6 @@ $(document).ready(function(){
 	});
 	
   $('a[href^="#"]','.dropdown-menu').click(function(e){
-  	alert($(this).attr('class'));
     e.preventDefault();
     var parent = $(this).closest('.dropdown-menu');
     var primary = $(this).closest('.dropdown-primary-menu');
