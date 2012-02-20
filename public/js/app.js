@@ -172,7 +172,7 @@ FastClick.prototype = {
 		if(!this.moved && this.target){
 			var evt = document.createEvent('MouseEvents');
 			this.target.className = this.target.className.replace(/ ?pressed/gi, '');
-			evt.initMouseEvent('click', true, true);
+			evt.initMouseEvent('click', false, true);
 			this.target.dispatchEvent(evt);
 		}
 		//reset
