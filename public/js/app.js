@@ -233,7 +233,7 @@ var FastClick = (function() {
 		// On touch end, determine whether to send a click event at once.
 		function onTouchEnd(event) {
 			var targetElement, clickEvent;
-	
+			tapToClose(event); //close some dropdown menus if open
 			// If the touch was cancelled (eg due to movement), or if the page has scrolled in the meantime, return.
 			if (!trackingClick || Math.abs(window.pageYOffset - clickStart.scroll) > 5) {
 				return true;
