@@ -1,3 +1,24 @@
+@-webkit-keyframes reset {
+	0% {
+			opacity: 0;
+	}
+	100% {
+			opacity: 0;
+	}
+}
+ 
+@-webkit-keyframes fade-in {
+	0% {
+			opacity: 0;
+	}
+	60% {
+			opacity: 0;
+	}
+	100% {
+			opacity: 1;
+	}
+}
+
 @-webkit-keyframes from-right {
   0% {
       -webkit-transform: translate3d(250px,0,0);

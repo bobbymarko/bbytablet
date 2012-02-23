@@ -84,7 +84,24 @@
 	background:transparent;
 }
 
+.loader-container{
+	background-image:url(../images/loading_dark_48x48.gif);
+	background-repeat:no-repeat;
+	background-position:center 50px;
+}
+
 /**** Transitions ****/
+.tiled-modules .module{
+	-webkit-animation-name: reset;
+	-webkit-animation-duration: 400ms;
+	-webkit-animation-timing-function: ease-in;
+}
+
+.transitions-enabled .masonry {
+    -webkit-animation-name: fade-in;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in;
+}
 
 .transitions-enabled .masonry, .transitions-enabled .masonry .masonry-brick {
   -webkit-transition-duration: 0.7s;

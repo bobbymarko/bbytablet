@@ -101,7 +101,7 @@
     </header>
     
     <header class="title-bar">
-			<a href="/" class="back-btn">Bobby Marko's Wish Lists</a>
+			<a href="wishlists.html" class="back-btn">Bobby Marko's Wish Lists</a>
 			<ul class="sort-filter-container">
     		<li class="dropdown-link">
   	  		<a href="#sort-dropdown" class="button tertiary dropdown-button">List Options</a>
@@ -235,31 +235,31 @@
 					</li>
 					<li class="tile">
 						<a href="" class="remove">&times;</a>
-						<a href="" class="item-image"><img src="http://images.bestbuy.com/BestBuy_US/images/products/9745/9745916_sb.jpg" alt="" /></a>
+						<a href="" class="item-image"><img src="http://images.bestbuy.com/BestBuy_US/images/products/9919/9919064_sc.jpg" alt="" /></a>
 						<div class="item-description">
-							<a href="" class="item-name">Insignia&trade; - 50" Class / Plasma / 720p / 600Hz / HDTV</a>
-							<p class="item-metadata">Model: I997 &#149; SKU: 2404316</p>
+							<a href="" class="item-name">Samsung - 17.9 Cu. Ft. Bottom-Mount Refrigerator - White</a>
+							<p class="item-metadata">Model: RB195ACWP &#149; SKU: 9919064</p>
 							<div class="ratings">
 									<div class="rating-stars">
-											<div class="rating-filler" style="width: 92%;"></div>
+											<div class="rating-filler" style="width: 62%;"></div>
 											<div class="rating-mask"></div>
 									</div>
-									<a href="#">117 Reviews</a>
+									<a href="#">54 Reviews</a>
 							</div><!-- ratings -->
 							<ul class="price-block">
-								<li class="price-paid">$499.99</li>
-								<li>Reg. Price: $699.99</li>
-								<li class="you-save">You Save: $200.00</li>	
+								<li class="price-paid">$849.99</li>
+								<li>Reg. Price: $1,199.99</li>
+								<li class="you-save">You Save: $350.00</li>	
 							</ul>
 							<a href="" class="button primary cart-button">Add to Cart</a>
 						</div>
 					</li>
 					<li class="tile">
 						<a href="" class="remove">&times;</a>
-						<a href="" class="item-image"><img src="http://images.bestbuy.com/BestBuy_US/images/products/2506/2506173_sc.jpg" alt="" /></a>
+						<a href="" class="item-image"><img src="http://images.bestbuy.com/BestBuy_US/images/products/3814/3814088_sc.jpg" alt="" /></a>
 						<div class="item-description">
-							<a href="" class="item-name">Amazon - Kindle Fire</a>
-							<p class="item-metadata">Model: B0051VVO5S &#149; SKU: 2506173</p>
+							<a href="" class="item-name">Apple&reg; - iPhone&reg; 4S with 64GB Memory Mobile Phone - White (Sprint)</a>
+							<p class="item-metadata">Model: MD382LL/A &#149; SKU: 3814088</p>
 							<ul class="price-block">
 								<li class="primary-callout">In-Store Only</li>
 								<li class="price-paid">$199.99</li>
@@ -344,6 +344,7 @@
   		});
   	
 			var $container = $('#tile-container');
+			$container.parent().parent().addClass('loader-container');
 			$container.imagesLoaded(function(){
 				$container.masonry({
 					itemSelector : '.tile',
@@ -357,9 +358,9 @@
 					}
 				});
 				setTimeout(function(){
-					//give masonry a bit to sort itself out before adding animations
-					$container.parent().addClass('transitions-enabled');
-				},100);
+					$container.parent().parent().removeClass('loader-container');
+				},2000);
+				$container.parent().addClass('transitions-enabled');
 			});
 			
 			$('.remove').click(function(e){
