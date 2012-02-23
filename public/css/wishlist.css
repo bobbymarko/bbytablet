@@ -1,0 +1,114 @@
+.tiled-modules{
+	background:#737474;
+	padding:10px;
+	min-height:0;
+}
+
+.tiled-modules .module{
+	padding:0;
+	margin:0;
+	overflow:visible;
+}
+
+.tiled-modules .module>ul{
+	overflow:visible;
+	margin-left:-1%;
+}
+
+.tiled-modules .module>ul>li{
+	position:relative;
+	background:#fff;
+	width:49%;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;   
+	-webkit-box-shadow:0 0 10px rgba(0,0,0,.8);
+	box-shadow:0 0 10px rgba(0,0,0,.8);
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	padding:20px;
+	float:left;
+	margin:0 0 10px 1%;
+}
+
+.tiled-modules .remove{
+	position:absolute;
+	top:5px;
+	right:10px;
+}
+
+.tiled-modules .item-description{
+	margin-left:40%;
+}
+
+.tiled-modules .item-name{
+	font-size:14px;
+	font-weight:bold;
+	display:block;
+	margin-bottom:5px;
+}
+
+.tiled-modules .item-metadata{
+	font-size:12px;
+	display:none;
+}
+
+.tiled-modules .item-image{
+	float:left;
+	padding-right:20px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	width:40%;
+	text-align:center;
+}
+
+.tiled-modules .price-block{
+	font-size:12px;
+}
+
+.tiled-modules .price-block .price-paid{
+	font-size:24px;
+}
+
+.tiled-modules .item-image img{
+	max-width:100%;
+}
+
+.tiled-modules .module li.loading{
+	background:transparent;
+}
+
+/**** Transitions ****/
+
+.transitions-enabled .masonry, .transitions-enabled .masonry .masonry-brick {
+  -webkit-transition-duration: 0.7s;
+     -moz-transition-duration: 0.7s;
+       -o-transition-duration: 0.7s;
+          transition-duration: 0.7s;
+}
+
+.transitions-enabled.masonry {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.transitions-enabled .masonry .masonry-brick {
+  -webkit-transition-property: left, right, top;
+     -moz-transition-property: left, right, top;
+       -o-transition-property: left, right, top;
+          transition-property: left, right, top;
+}
+
+@media (min-width:960px){
+	.tiled-modules .module>ul>li{
+		width:32%;
+	}
+}

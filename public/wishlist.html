@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8 />
+	<title>Wish List - BestBuy.com</title>
+	<link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="css/modules.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="css/wishlist.css" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+	<meta name = "format-detection" content = "telephone=no">
+</head>
+<body>
+    <header id="masthead">
+        <a href="/" id="branding"><img src="images/bby_logo.png" alt="Best Buy Logo" height="40px" width="59px"/></a>
+        
+        <ul class="menu">
+          <li class="icon-link" id="menu-link">
+            <a href="#header-nav">Menu</a>
+            <div id="header-nav" class="dropdown-menu">
+              <ul class="dropdown-primary-menu">
+                <li><a href="#products-menu">Products</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="#deals-menu">Deals</a></li>
+                <li><a href="">Gifts</a></li>
+                <li><a href="/store-locator.html">Store Locator</a></li>
+                <!-- less important links -->
+                <li class="secondary-links"><a href="">Feedback</a> <a href="">Legal</a> <a href="">Desktop Site</a></li>
+              </ul>
+              <ul id="products-menu" class="dropdown-secondary-menu">
+                <li><a href="#back" class="dropdown-back">Back</a></li>
+                <li><a href="#computers-tablets">Computers &amp; Tablets</a></li>
+                <li><a href="#computers-tablets">TV &amp; Video</a></li>
+                <li><a href="#computers-tablets">Music, Movies &amp; Instruments</a></li>
+                <li><a href="#computers-tablets">Video Games &amp; Gadgets</a></li>
+                <li><a href="#computers-tablets">Cameras &amp; Camcorders</a></li>
+                <li><a href="#computers-tablets">Mobile Phones</a></li>
+                <li><a href="#computers-tablets">Health &amp; Fitness</a></li>
+                <li><a href="#computers-tablets">GPS, Car &amp; Marine</a></li>
+                <li><a href="#computers-tablets">Audio &amp; MP3</a></li>
+                <li><a href="#computers-tablets">Office</a></li>
+                <li><a href="#computers-tablets">Home</a></li>
+                <li><a href="#computers-tablets">Appliances</a></li>
+                <li><a href="#computers-tablets">Gift Cards</a></li>
+              </ul>
+              <ul id="computers-tablets" class="dropdown-secondary-menu dropdown-tertiary-menu">
+                <li><a href="#back" class="dropdown-back">Back</a></li>
+                <li><a href="category.html">Laptops &amp; Netbook Computers</a></li>
+                <li><a href="category.html">Tablets &amp; iPad</a></li>
+                <li><a href="category.html">E-Readers</a></li>
+                <li><a href="category.html">Desktop &amp; All-in-One Computers</a></li>
+                <li><a href="category.html">Monitors</a></li>
+                <li><a href="category.html">Mice &amp; Keyboards</a></li>
+                <li><a href="category.html">Printers</a></li>
+                <li><a href="category.html">Hard Drives &amp; Storage</a></li>
+                <li><a href="category.html">Computer Memory</a></li>
+                <li><a href="category.html">Video Cards &amp; PC Components</a></li>
+                <li><a href="category.html">Networking &amp; Wireless</a></li>
+                <li><a href="category.html">Software</a></li>
+                <li><a href="category.html">Accessories</a></li>
+                <li><a href="category.html">Computer Setup &amp; Services</a></li>
+              </ul>
+              <ul id="deals-menu" class="dropdown-secondary-menu">
+                <li><a href="#back" class="dropdown-back">Back</a></li>
+                <li><a href="http://deals.bestbuy.com">Weekly Deals</a></li>
+                <li><a href="deal-of-the-day.html">Deal of the Day</a></li>
+                <li><a href="special-offers-listing.html">Featured Offers</a></li>
+              </ul>
+            </div>
+            
+          </li>
+          
+          <li class="search-form-wrapper">
+            <form class="search-form" action="/listing">
+              <input type="text" placeholder="Search BestBuy.com" role="search" class="search-field" name="search" /><input type="submit" class="search-submit" value="Search"/>
+            </form>
+          </li>
+        </ul>
+        
+        <ul class="menu" id="cart-menu">
+          <li class="icon-link" id="profile-link">
+            <a href="#profile-nav">Profile</a>
+            <div id="profile-nav" class="dropdown-menu">
+            	<ul class="dropdown-primary-menu">
+								<!--<li class="secondary-links"><a href="#">Sign In</a> <a href="#">Create an Account</a></li>-->
+								<li class="secondary-links"><span class="truncated-text">Hi, Reallylongnamethatgoesonandon</span> <a href="#">Sign Out</a></li>
+								<li><a href="">My Account</a></li>
+								<li><a href="#wishlist-menu">Wish Lists</a></li>
+								<li><a href="">View Order Status</a></li>
+              </ul>
+              <ul id="wishlist-menu" class="dropdown-secondary-menu">
+                <li><a href="#back" class="dropdown-back">Back</a></li>
+                <li><a href="wishlist.html">Christmas 2011</a></li>
+                <li><a href="wishlist.html">My Baby Shower!!!</a></li>
+                <li><a href="wishlist.html">Stuff I Want</a></li>
+                <li class="secondary-links"><a href="wishlist.html" id="add-new-list">+ Add New Wish List</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="cart-link"><a href="">3 items</a></li>
+      	</ul>
+    </header>
+    
+    <header class="title-bar">
+			<a href="/" class="back-btn">Bobby Marko's Wish Lists</a>
+			<ul class="sort-filter-container">
+    		<li class="dropdown-link">
+  	  		<a href="#sort-dropdown" class="button tertiary dropdown-button">List Options</a>
+  	  		<div class="dropdown-menu" id="sort-dropdown">
+  	  			<ul class="dropdown-primary-menu">
+  	  				<li><a href="#" id="edit-link">Edit List</a></li>
+  	  				<li><a href="#" id="delete-link">Delete List</a></li>
+  	  				<li><a href="#">Email List</a></li>
+  	  			</ul>
+  	  		</div>
+    		</li>
+    	</ul>
+			<h1 class="page-title">Christmas 2011 Wish List &nbsp;&nbsp;<span style="font-weight:normal; color:#737474;">60 items</span></h1>
+		</header>
+    
+    <div class="module-group tiled-modules">
+			<section class="module">
+				<ul id="tile-container">
+					<li class="tile">
+						<a href="" class="remove">&times;</a>
+						<a href="" class="item-image"><img src="http://images.bestbuy.com/BestBuy_US/images/products/9745/9745916_sb.jpg" alt="" /></a>
+						<div class="item-description">
+							<a href="" class="item-name">Insignia&trade; - 50" Class / Plasma / 720p / 600Hz / HDTV</a>
+							<p class="item-metadata">Model: I997 &#149; SKU: 2404316</p>
+							<div class="ratings">
+									<div class="rating-stars">
+											<div class="rating-filler" style="width: 92%;"></div>
+											<div class="rating-mask"></div>
+									</div>
+									<a href="#">117 Reviews</a>
+							</div><!-- ratings -->
+							<ul class="price-block">
+								<li class="price-paid">$499.99</li>
+								<li>Reg. Price: $699.99</li>
+								<li class="you-save">You Save: $200.00</li>	
+							</ul>
+							<a href="" class="button primary cart-button">Add to Cart</a>
+						</div>
+					</li>
+					<li class="tile">
+						<a href="" class="remove">&times;</a>
+						<a href="" class="item-image"><img src="http://images.bestbuy.com/BestBuy_US/images/products/2506/2506173_sc.jpg" alt="" /></a>
+						<div class="item-description">
+							<a href="" class="item-name">Amazon - Kindle Fire</a>
+							<p class="item-metadata">Model: B0051VVO5S &#149; SKU: 2506173</p>
+							<ul class="price-block">
+								<li class="primary-callout">In-Store Only</li>
+								<li class="price-paid">$199.99</li>
+							</ul>
+							<a href="" class="button primary">Check Stores</a>
+						</div>
+					</li>
+					<li class="tile">
+						<a href="" class="remove">&times;</a>
+						<a href="" class="item-image"><img src="http://images.bestbuy.com/BestBuy_US/en_US/images/musicmoviegame/pdpimages/4769749.jpg" alt="" /></a>
+						<div class="item-description">
+							<a href="" class="item-name">Tower Heist (2 Disc) (W/Dvd) - Widescreen Dubbed Subtitle AC3</a>
+							<p class="item-metadata">SKU: 4769749</p>
+							<div class="ratings">
+									<div class="rating-stars">
+											<div class="rating-filler" style="width: 82%;"></div>
+											<div class="rating-mask"></div>
+									</div>
+									<a href="#">7 Reviews</a>
+							</div><!-- ratings -->
+							<ul class="price-block">
+								<li class="price-paid">$16.99</li>
+							</ul>
+							<a href="" class="button primary cart-button">Add to Cart</a>
+						</div>
+					</li>
+					<li class="tile">
+						<a href="" class="remove">&times;</a>
+						<a href="" class="item-image"><img src="http://images.bestbuy.com/BestBuy_US/images/products/9226/9226875_sc.jpg" alt="" /></a>
+						<div class="item-description">
+							<a href="" class="item-name">SanDisk - Cruzer 16GB USB 2.0 Flash Drive</a>
+							<p class="item-metadata">Model: SDCZ36-016G-A11 &#149; SKU: 9226875</p>
+							<div class="ratings">
+									<div class="rating-stars">
+											<div class="rating-filler" style="width: 82%;"></div>
+											<div class="rating-mask"></div>
+									</div>
+									<a href="#">7 Reviews</a>
+							</div><!-- ratings -->
+							<ul class="price-block">
+								<li class="price-paid">$12.99</li>
+								<li>Reg. Price: $39.99</li>
+								<li class="you-save">You Save: $27.00</li>	
+							</ul>
+							<a href="" class="button primary cart-button">Add to Cart</a>
+						</div>
+					</li>
+					<li class="tile">
+						<a href="" class="remove">&times;</a>
+						<a href="" class="item-image"><img src="http://images.bestbuy.com/BestBuy_US/images/products/3061/3061302_rc.jpg" alt="" /></a>
+						<div class="item-description">
+							<a href="" class="item-name">Sony - PlayStation 3 (160GB)</a>
+							<p class="item-metadata">Model: 98423 &#149; SKU: 3061302</p>
+							<div class="ratings">
+									<div class="rating-stars">
+											<div class="rating-filler" style="width: 82%;"></div>
+											<div class="rating-mask"></div>
+									</div>
+									<a href="#">7 Reviews</a>
+							</div><!-- ratings -->
+							<ul class="price-block">
+								<li class="price-paid">$249.99</li>
+							</ul>
+							<a href="" class="button primary cart-button">Add to Cart</a>
+						</div>
+					</li>
+					<li class="tile">
+						<a href="" class="remove">&times;</a>
+						<a href="" class="item-image"><img src="http://images.bestbuy.com/BestBuy_US/images/products/4770/4770038.jpg" alt="" /></a>
+						<div class="item-description">
+							<a href="" class="item-name">Corrosion of Conformity [Deluxe... [2/28]</a>
+							<p class="item-metadata">Artist: Corrosion of Conformity &#149; SKU: 4770038</p>
+							<div class="ratings">
+									<div class="rating-stars">
+											<div class="rating-filler" style="width: 82%;"></div>
+											<div class="rating-mask"></div>
+									</div>
+									<a href="#">7 Reviews</a>
+							</div><!-- ratings -->
+							<ul class="price-block">
+								<li class="price-paid">$14.99</li>
+								<li>List Price: $16.98</li>
+							</ul>
+							<a href="" class="button primary cart-button">Add to Cart</a>
+						</div>
+					</li>
+					<li class="tile">
+						<a href="" class="remove">&times;</a>
+						<a href="" class="item-image"><img src="http://images.bestbuy.com/BestBuy_US/images/products/9745/9745916_sb.jpg" alt="" /></a>
+						<div class="item-description">
+							<a href="" class="item-name">Insignia&trade; - 50" Class / Plasma / 720p / 600Hz / HDTV</a>
+							<p class="item-metadata">Model: I997 &#149; SKU: 2404316</p>
+							<div class="ratings">
+									<div class="rating-stars">
+											<div class="rating-filler" style="width: 92%;"></div>
+											<div class="rating-mask"></div>
+									</div>
+									<a href="#">117 Reviews</a>
+							</div><!-- ratings -->
+							<ul class="price-block">
+								<li class="price-paid">$499.99</li>
+								<li>Reg. Price: $699.99</li>
+								<li class="you-save">You Save: $200.00</li>	
+							</ul>
+							<a href="" class="button primary cart-button">Add to Cart</a>
+						</div>
+					</li>
+					<li class="tile">
+						<a href="" class="remove">&times;</a>
+						<a href="" class="item-image"><img src="http://images.bestbuy.com/BestBuy_US/images/products/2506/2506173_sc.jpg" alt="" /></a>
+						<div class="item-description">
+							<a href="" class="item-name">Amazon - Kindle Fire</a>
+							<p class="item-metadata">Model: B0051VVO5S &#149; SKU: 2506173</p>
+							<ul class="price-block">
+								<li class="primary-callout">In-Store Only</li>
+								<li class="price-paid">$199.99</li>
+							</ul>
+							<a href="" class="button primary">Check Stores</a>
+						</div>
+					</li>
+					<li class="tile">
+						<a href="" class="remove">&times;</a>
+						<a href="" class="item-image"><img src="http://images.bestbuy.com/BestBuy_US/en_US/images/musicmoviegame/pdpimages/4769749.jpg" alt="" /></a>
+						<div class="item-description">
+							<a href="" class="item-name">Tower Heist (2 Disc) (W/Dvd) - Widescreen Dubbed Subtitle AC3</a>
+							<p class="item-metadata">SKU: 4769749</p>
+							<div class="ratings">
+									<div class="rating-stars">
+											<div class="rating-filler" style="width: 82%;"></div>
+											<div class="rating-mask"></div>
+									</div>
+									<a href="#">7 Reviews</a>
+							</div><!-- ratings -->
+							<ul class="price-block">
+								<li class="price-paid">$16.99</li>
+							</ul>
+							<a href="" class="button primary cart-button">Add to Cart</a>
+						</div>
+					</li>
+					<li class="tile">
+						<a href="" class="remove">&times;</a>
+						<a href="" class="item-image"><img src="http://images.bestbuy.com/BestBuy_US/images/products/9226/9226875_sc.jpg" alt="" /></a>
+						<div class="item-description">
+							<a href="" class="item-name">SanDisk - Cruzer 16GB USB 2.0 Flash Drive</a>
+							<p class="item-metadata">Model: SDCZ36-016G-A11 &#149; SKU: 9226875</p>
+							<div class="ratings">
+									<div class="rating-stars">
+											<div class="rating-filler" style="width: 82%;"></div>
+											<div class="rating-mask"></div>
+									</div>
+									<a href="#">7 Reviews</a>
+							</div><!-- ratings -->
+							<ul class="price-block">
+								<li class="price-paid">$12.99</li>
+								<li>Reg. Price: $39.99</li>
+								<li class="you-save">You Save: $27.00</li>	
+							</ul>
+							<a href="" class="button primary cart-button">Add to Cart</a>
+						</div>
+					</li>
+					<li class="tile"><ul><li class="loading"><img src="/images/loading_24x24.gif"> Loading More Items</li></ul></li>
+				</ul>
+			</section>
+			
+    </div><!-- end .module-group -->
+    
+    <footer id="footer">
+        <div class="footer-meta">
+          <p>Prices on this site are the same as those on BestBuy.com. Prices may vary in store. All prices and offers are subject to change. In store availability subject to change. Orders placed for store pickup may take up to 45 minutes to process.</p> 
+          <p>&copy;2003-2011 BBY Solutions, Inc.</p>
+        </div><!--footer-meta-->
+        <div class="footer-links">
+          <a href="#">Terms</a>
+          <a href="#">Privacy</a>
+          <a href="#">Feedback</a>
+          <a href="#">Desktop Site</a>
+        </div><!-- footer-links -->
+    </footer>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+    <script src="js/jquery.jsonp-2.1.4.min.js"></script>
+    <!--<script src="js/fixed.position.js"></script>-->
+    <script src="js/addclear.js"></script>
+    <script src="js/jquery.masonry.min.js"></script>
+    <script src="js/app.js"></script>
+  	<script>
+  		$('#delete-link').click(function(e){
+  			confirm("Do you want to delete the list 'Christmas 2011?'");
+  			e.preventDefault();
+  		});
+  		
+  		$('#edit-link').click(function(e){
+  			prompt("Edit List Name","Christmas 2011");
+  			e.preventDefault();
+  		});
+  	
+			var $container = $('#tile-container');
+			$container.imagesLoaded(function(){
+				$container.masonry({
+					itemSelector : '.tile',
+					columnWidth: function( containerWidth ) {
+						console.log(containerWidth);
+						if (containerWidth > 948){ //matches the 960 media query
+							return containerWidth / 3;
+						}else{
+							return containerWidth/2;
+						}
+					}
+				});
+				setTimeout(function(){
+					//give masonry a bit to sort itself out before adding animations
+					$container.parent().addClass('transitions-enabled');
+				},100);
+			});
+			
+			$('.remove').click(function(e){
+  			var del = confirm("Do you want to remove this item from your list?");
+  			if (del) {
+  				$(this).closest('li').remove();
+  				$container.masonry( 'reload' );
+  			}
+  			e.preventDefault();
+  		});
+  	</script>
+</body>
+</html>

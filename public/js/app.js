@@ -5,6 +5,14 @@ $(document).ready(function(){
 	var bdy = document.getElementsByTagName('body');
 	//new FastClick(bdy[0]);
 	new FastClick(document.body);
+	
+	$("#add-new-list").click(function(e){
+		setTimeout(function(){
+			var list = prompt("Wish List Name","Bobby's Wish List");
+			if (list) $(this).closest('li').before('<li><a href="wishlist.html">'+list+'</a></li>');
+		}, 1000);
+		e.preventDefault();
+	});
 
 	
 	$('#masthead .icon-link>a, .dropdown-link>a').click(function(e){
