@@ -127,10 +127,10 @@
 					</li>
 					<li class="simple-block">
 						<a href="wishlist.html" class="image-collage collage-4up">
-							<span><img src="http://images.bestbuy.com/BestBuy_US/images/products/9226/9226875_sc.jpg" alt="" /></span>
-							<span><img src="http://images.bestbuy.com/BestBuy_US/images/products/9919/9919064_sc.jpg" alt="" /></span>
-							<span><img src="http://images.bestbuy.com/BestBuy_US/en_US/images/musicmoviegame/pdpimages/4769749.jpg" alt="" /></span>
-							<span><img src="http://images.bestbuy.com/BestBuy_US/images/products/3814/3814088_sc.jpg" alt="" /></span>
+							<span><img src="http://images.bestbuy.com/BestBuy_US/images/products/4775/4775634.jpg" alt="" /></span>
+							<span><img src="http://images.bestbuy.com/BestBuy_US/en_US/images/musicmoviegame/pdpimages/4712263.jpg" alt="" /></span>
+							<span><img src="http://images.bestbuy.com/BestBuy_US/images/products/6974/6974447.jpg" alt="" /></span>
+							<span><img src="http://images.bestbuy.com/BestBuy_US/images/products/4551/4551166.jpg" alt="" /></span>
 						</a>
 						<a href="wishlist.html" class="item-name">My Baby Shower!!!</a>
 						<p>5 items</p>
@@ -170,17 +170,9 @@
     <script type="text/javascript">
     $(function(){
 			$('#add-new-link').click(function(e){
-  			if (prompt("New List Name","Bobby's Wish List")){
-  				$('#tile-container').
-  				
-  				<li class="simple-block">
-						<a href="wishlist.html" class="image-collage collage-1up">
-							<span><img src="http://images.bestbuy.com/BestBuy_US/images/products/3061/3061302_ra.jpg" alt=""></span>
-						</a>
-						<a href="wishlist.html" class="item-name">Stuff I Want</a>
-						<p>1 item</p>
-					</li>
-  				
+				var list = prompt("New List Name","Bobby's Wish List");
+  			if (list){
+  				$('#tile-container').prepend('<li class="simple-block"><a href="wishlist.html" class="image-collage collage-1up"><span></span></a><a href="wishlist.html" class="item-name">'+list+'</a><p>0 items</p></li>');
   			}
   			e.preventDefault();
   		});

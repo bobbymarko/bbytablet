@@ -347,7 +347,7 @@
   		});
   	
 			var $container = $('#tile-container');
-			$container.parent().parent().addClass('loader-container');
+			/*$container.parent().parent().addClass('loader-container');*/
 			$container.imagesLoaded(function(){
 				$container.masonry({
 					itemSelector : '.tile',
@@ -360,9 +360,9 @@
 						}
 					}
 				});
-				setTimeout(function(){
+				/*setTimeout(function(){
 					$container.parent().parent().removeClass('loader-container');
-				},2000);
+				},2000);*/
 				$container.parent().addClass('transitions-enabled');
 			});
 			
@@ -374,7 +374,7 @@
   				if (count > 2){ //if we're just left with the loading indicator then mention that we're empty
   					$container.masonry( 'reload' );
   				}else{
-  					$('#tile-container').html('<h2 class="empty-message">This wish list is empty.</h2>');
+  					$('#tile-container').html('<h2 class="empty-message">Your wish list is empty.</h2>');
   				}
   			}
   			e.preventDefault();

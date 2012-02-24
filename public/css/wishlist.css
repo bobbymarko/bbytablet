@@ -36,8 +36,13 @@
 
 .tiled-modules .remove{
 	position:absolute;
-	top:5px;
-	right:10px;
+	top:0;
+	right:0;
+	padding:5px 10px;
+}
+
+.tiled-modules .remove.pressed{
+	color:#231F20;
 }
 
 .tiled-modules .item-description{
@@ -84,15 +89,16 @@
 	background:transparent;
 }
 
+/*
 .loader-container{
 	background-image:url(../images/loading_dark_48x48.gif);
 	background-repeat:no-repeat;
 	background-position:center 50px;
-}
+}*/
 
 .module .empty-message{
-	color:#c3c4c4;
-	text-shadow:0 1px 0 rgba(0,0,0,0.4);
+	color:#e7e7e7;
+	text-shadow:0 1px 0 rgba(0,0,0,0.6);
 	text-align:center;
 	font-weight:bold;
 	margin:20px 0;
@@ -129,6 +135,7 @@
 	margin:2px;
 	position:relative;
 	overflow:hidden;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
 	/*border:1px solid #c3c4c4;*/
 }
 
@@ -153,7 +160,7 @@
 }
 
 /**** Transitions ****/
-.tiled-modules .module{
+/*.tiled-modules .module{
 	-webkit-animation-name: reset;
 	-webkit-animation-duration: 400ms;
 	-webkit-animation-timing-function: ease-in;
@@ -163,7 +170,7 @@
     -webkit-animation-name: fade-in;
     -webkit-animation-duration: 1s;
     -webkit-animation-timing-function: ease-in;
-}
+}*/
 
 .transitions-enabled .masonry, .transitions-enabled .masonry .masonry-brick {
   -webkit-transition-duration: 0.7s;
