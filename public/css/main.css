@@ -195,6 +195,13 @@ input.error-input{
 	list-style-position:outside;
 }
 
+.inline-confirm{
+	background:url(../images/icon-confirm-inline.png) no-repeat;
+	width:23px;
+	display:inline-block;
+	text-indent:-9999px;
+}
+
 .emphasis{
 	font-size: 150%;
 	font-weight: bold;
@@ -533,7 +540,7 @@ input.error-input{
   border-bottom:none;
 }
 
-.dropdown-menu a, .side-menu a{
+.dropdown-menu a, .side-menu a, .dropdown-menu label{
 	display:block;
   padding:10px 25px 10px 10px;
   position: relative;
@@ -584,21 +591,21 @@ input.error-input{
   border-top:none;
 }
 
-.menu .secondary-links a:before, .menu .secondary-links a:after{
+.menu .secondary-links a:before, .menu .secondary-links a:after, .sort-filter-container .secondary-links a:before, .sort-filter-container .secondary-links a:after{
   display:none;
 }
 
-.menu .secondary-links a{
+.menu .secondary-links a, .sort-filter-container .secondary-links a{
   display:inline;
   padding:10px;
   font-weight:normal;
 }
 
-.menu .secondary-links a:first-child{
+.menu .secondary-links a:first-child, .sort-filter-container .secondary-links a:first-child{
   padding-left:0;
 }
 
-.menu .secondary-links a:last-child{
+.menu .secondary-links a:last-child, .sort-filter-container .secondary-links a:last-child{
   padding-right:0;
 }
 
@@ -822,6 +829,18 @@ input.search-field{
   box-shadow:0 0 10px rgba(0,0,0,0.15);
 }
 
+/* clear fixing */
+.title-bar:before,
+.title-bar:after {
+    content:"";
+    display:table;
+}
+
+.title-bar:after {
+    clear:both;
+}
+/* end clear fixing */
+
 .title-bar h1{
 	text-align:center;
 	margin:0;
@@ -876,6 +895,7 @@ input.search-field{
 	float:right;
 	position:relative;
 	top:-8px;
+	height:1px; /*hack for floated right element with no defined width containing left floated elements */
 }
 
 .sort-filter-container .button{

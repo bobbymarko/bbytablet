@@ -79,13 +79,22 @@
         <ul class="menu" id="cart-menu">
           <li class="icon-link" id="profile-link">
             <a href="#profile-nav">Profile</a>
-            <ul id="profile-nav" class="dropdown-menu">
-              <!--<li class="secondary-links"><a href="#">Sign In</a> <a href="#">Create an Account</a></li>-->
-              <li class="secondary-links"><span class="truncated-text">Hi, Reallylongnamethatgoesonandon</span> <a href="#">Sign Out</a></li>
-              <li><a href="">My Account</a></li>
-              <li><a href="">Wish Lists</a></li>
-              <li><a href="">View Order Status</a></li>
-            </ul>
+            <div id="profile-nav" class="dropdown-menu">
+            	<ul class="dropdown-primary-menu">
+								<!--<li class="secondary-links"><a href="#">Sign In</a> <a href="#">Create an Account</a></li>-->
+								<li class="secondary-links"><span class="truncated-text">Hi, Reallylongnamethatgoesonandon</span> <a href="#">Sign Out</a></li>
+								<li><a href="">My Account</a></li>
+								<li><a href="#wishlist-menu">Wish Lists</a></li>
+								<li><a href="">View Order Status</a></li>
+              </ul>
+              <ul id="wishlist-menu" class="dropdown-secondary-menu">
+                <li><a href="#back" class="dropdown-back">Back</a></li>
+                <li><a href="wishlist.html">Christmas 2011</a></li>
+                <li><a href="wishlist.html">My Baby Shower!!!</a></li>
+                <li><a href="wishlist.html">Stuff I Want</a></li>
+                <li class="secondary-links"><a href="wishlist.html" id="add-new-list">+ Add New Wish List</a></li>
+              </ul>
+            </div>
           </li>
           <li class="cart-link"><a href="">3 items</a></li>
       	</ul>
@@ -170,24 +179,35 @@
 						$('.toggle-hidden').show();
 					});
 					
+					$('#add-new-list-link').live('click', function(e){
+						var list = prompt("New Wish List Name","Bobby's Wish List");
+						if (list) $(this).closest('li').before('<li><label><input type="checkbox" checked="checked" /> '+list+'</label></li>');
+						e.preventDefault();
+					});
+					
 				}
 			});
     </script>
     
-	<script>
-		(function() {
-				
-		})();
-	</script>
-    
   <script id="productTemplate" type="text/x-jquery-tmpl">
     <header class="title-bar">
 			<a href="/category.html" class="back-btn">${categoryName}</a>
-			<div class="secondary-actions">
-				<a href="#">Add to Wishlist</a>
-				&nbsp;&#149;&nbsp;
-				<a href="#">Email</a>
-			</div>
+			<ul class="sort-filter-container">
+				<li class="dropdown-link">
+					<a href="#sort-dropdown" class="button tertiary">Email</a>
+				</li>
+    		<li class="dropdown-link">
+  	  		<a href="#add-wishlist-dropdown" class="button tertiary dropdown-button">Add To Wish List</a>
+  	  		<div class="dropdown-menu" id="add-wishlist-dropdown">
+  	  			<ul class="dropdown-primary-menu">
+  	  				<li><label for="list1"><input type="checkbox" id="list1" /> Christmas 2011</label></li>
+  	  				<li><label for="list2"><input type="checkbox" id="list2" /> My Baby Shower!!!</label></li>
+  	  				<li><label for="list3"><input type="checkbox" id="list3" /> Stuff I Want</label></li>
+  	  				<li class="secondary-links"><a href="wishlist.html" id="add-new-list-link">+ Add To A New Wish List</a></li>
+  	  			</ul>
+  	  		</div>
+    		</li>
+    	</ul>
     	<h1>&nbsp;</h1>
     </header>
     <div class="module-group">

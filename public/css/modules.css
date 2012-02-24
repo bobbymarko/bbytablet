@@ -385,6 +385,8 @@
 	height:100px;
 	overflow:hidden;
 	vertical-align:bottom;
+	line-height:0;
+	padding-bottom:5px;
 }
 
 .skus-x-1 .item-postcard{

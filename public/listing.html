@@ -71,13 +71,22 @@
         <ul class="menu" id="cart-menu">
           <li class="icon-link" id="profile-link">
             <a href="#profile-nav">Profile</a>
-            <ul id="profile-nav" class="dropdown-menu">
-              <!--<li class="secondary-links"><a href="#">Sign In</a> <a href="#">Create an Account</a></li>-->
-              <li class="secondary-links"><span class="truncated-text">Hi, Reallylongnamethatgoesonandon</span> <a href="#">Sign Out</a></li>
-              <li><a href="">My Account</a></li>
-              <li><a href="">Wish Lists</a></li>
-              <li><a href="">View Order Status</a></li>
-            </ul>
+            <div id="profile-nav" class="dropdown-menu">
+            	<ul class="dropdown-primary-menu">
+								<!--<li class="secondary-links"><a href="#">Sign In</a> <a href="#">Create an Account</a></li>-->
+								<li class="secondary-links"><span class="truncated-text">Hi, Reallylongnamethatgoesonandon</span> <a href="#">Sign Out</a></li>
+								<li><a href="">My Account</a></li>
+								<li><a href="#wishlist-menu">Wish Lists</a></li>
+								<li><a href="">View Order Status</a></li>
+              </ul>
+              <ul id="wishlist-menu" class="dropdown-secondary-menu">
+                <li><a href="#back" class="dropdown-back">Back</a></li>
+                <li><a href="wishlist.html">Christmas 2011</a></li>
+                <li><a href="wishlist.html">My Baby Shower!!!</a></li>
+                <li><a href="wishlist.html">Stuff I Want</a></li>
+                <li class="secondary-links"><a href="wishlist.html" id="add-new-list">+ Add New Wish List</a></li>
+              </ul>
+            </div>
           </li>
           <li class="cart-link"><a href="">3 items</a></li>
       	</ul>

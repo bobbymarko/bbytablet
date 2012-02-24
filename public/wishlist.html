@@ -107,9 +107,9 @@
   	  		<a href="#sort-dropdown" class="button tertiary dropdown-button">List Options</a>
   	  		<div class="dropdown-menu" id="sort-dropdown">
   	  			<ul class="dropdown-primary-menu">
-  	  				<li><a href="#" id="edit-link">Edit List</a></li>
-  	  				<li><a href="#" id="delete-link">Delete List</a></li>
-  	  				<li><a href="#">Email List</a></li>
+  	  				<li><a href="" id="edit-link">Edit List</a></li>
+  	  				<li><a href="" id="delete-link">Delete List</a></li>
+  	  				<li><a href="">Email List</a></li>
   	  			</ul>
   	  		</div>
     		</li>
@@ -333,8 +333,11 @@
     <script src="js/jquery.masonry.min.js"></script>
     <script src="js/app.js"></script>
   	<script>
+  	$(document).ready(function(){
   		$('#delete-link').click(function(e){
-  			confirm("Do you want to delete the list 'Christmas 2011?'");
+  			if (confirm("Do you want to delete the list 'Christmas 2011?'")){
+  				window.location = 'wishlists.html';
+  			}
   			e.preventDefault();
   		});
   		
@@ -366,11 +369,17 @@
 			$('.remove').click(function(e){
   			var del = confirm("Do you want to remove this item from your list?");
   			if (del) {
-  				$(this).closest('li').remove();
-  				$container.masonry( 'reload' );
+  				$container.masonry( 'remove', $(this).closest('li') )
+  				var count = $('#tile-container li').length;
+  				if (count > 2){ //if we're just left with the loading indicator then mention that we're empty
+  					$container.masonry( 'reload' );
+  				}else{
+  					$('#tile-container').html('<h2 class="empty-message">This wish list is empty.</h2>');
+  				}
   			}
   			e.preventDefault();
   		});
+  	});
   	</script>
 </body>
 </html>
