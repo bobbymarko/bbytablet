@@ -436,7 +436,7 @@
 }
 
 @media (max-width:800px){
-	.skus-x-5>ul>li {
+	.skus-x-5>ul>li, .skus-x-4>ul>li {
 		float:none;
 		width:auto;
 		position:relative;
@@ -446,47 +446,51 @@
 		border-bottom:1px solid #e7e7e7;
 	}
 	
-	.skus-x-5>ul>li:last-child{
+	.skus-x-5>ul>li:last-child, .skus-x-4>ul>li:last-child{
 		border-bottom:none;
 	}	
 	
-	.sku-list-module.skus-x-5 .item-image{
+	.sku-list-module.skus-x-5 .item-image, .sku-list-module.skus-x-4 .item-image{
 		width:120px;
 		max-height:250px;
 		float:left;
 		margin:0 20px 0 0;
 	}
 	
-	.skus-x-5 .item-name, .skus-x-5 .ratings, .skus-x-5 .price-block, .skus-x-5 .button{
+	.skus-x-5 .item-name, .skus-x-5 .ratings, .skus-x-5 .price-block, .skus-x-5 .button, .skus-x-4 .item-name, .skus-x-4 .ratings, .skus-x-4 .price-block, .skus-x-4 .button{
 		margin-left:140px;
 
 	}
 	
-	.skus-x-5 .button{
+	.skus-x-5 .button, .skus-x-4 .button{
 		display:block;
 		width:85px; /* this shouldn't be a hardcoded width */
+	}
+	
+	.skus-x-5 .simple-block{
+		text-align:left;
 	}
 	
 }
 
 @media (min-width:760px) and (max-width:800px){
-	.skus-x-5>ul>li {
+	.skus-x-5>ul>li, .skus-x-4>ul>li {
 		display:inline-block;
 		width:46%;
 		vertical-align:top;
 		border-bottom:none;
 	}
 	
-	.skus-x-5>ul>li:nth-child(even){
+	.skus-x-5>ul>li:nth-child(even), .skus-x-4>ul>li:nth-child(even){
 		margin-left:2%;
 	}
 	
-	.skus-x-5>ul>li:nth-child(odd){
+	.skus-x-5>ul>li:nth-child(odd), .skus-x-4>ul>li:nth-child(odd){
 		margin-right:2%;
 	}
 	
 	/* elements with overflow:hidden inside of a inline-block element get a weird width in webkit */
-	.skus-x-5 .ratings{
+	.skus-x-5 .ratings, .skus-x-4 .ratings{
 		overflow:visible;
 		min-height:18px;
 	}
