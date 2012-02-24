@@ -202,6 +202,12 @@ input.error-input{
 	text-indent:-9999px;
 }
 
+.confirm-inline-img{
+	margin:0 0 -15px -4px;
+	position:relative;
+	top:-10px;
+}
+
 .emphasis{
 	font-size: 150%;
 	font-weight: bold;

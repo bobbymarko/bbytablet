@@ -182,8 +182,21 @@
 					
 					$('#add-new-list-link').live('click', function(e){
 						var list = prompt("New Wish List Name","Bobby's Wish List");
-						if (list) $(this).closest('li').before('<li><label><input type="checkbox" checked="checked" /> '+list+'</label></li>');
+						if (list) $(this).closest('li').before('<li><a href=""> '+list+'</a></li>');
 						e.preventDefault();
+					});
+					
+					$('li a','#add-wishlist-dropdown').live('click', function(){
+						var target = $(this).closest('div').prev('a');
+						$(this).closest('div').remove();
+						target.removeClass('dropdown-button').addClass('loading').html('Adding');
+						setTimeout(function(){
+							target.removeClass('loading').html('<img class="confirm-inline-img" src="images/icon-confirm-inline.png" /> Added');	
+						},1000);
+						
+						//$('.pdp-postcard').prepend('<h1><img src="images/icon-confirm.png" alt="">Added to \"Bobby\'s Wish List\"</h1>');
+						closeOpenDropdowns();
+						return false;
 					});
 					
 					if (Modernizr.appleios) {
@@ -211,12 +224,12 @@
 					<a href="#sort-dropdown" class="button tertiary">Email</a>
 				</li>
     		<li class="dropdown-link">
-  	  		<a href="#add-wishlist-dropdown" class="button tertiary dropdown-button">Add To Wish List</a>
+  	  		<a href="#add-wishlist-dropdown" class="button tertiary dropdown-button">Add to Wish List</a>
   	  		<div class="dropdown-menu" id="add-wishlist-dropdown">
   	  			<ul class="dropdown-primary-menu">
-  	  				<li><label for="list1"><input type="checkbox" id="list1" /> Christmas 2011</label></li>
-  	  				<li><label for="list2"><input type="checkbox" id="list2" /> My Baby Shower!!!</label></li>
-  	  				<li><label for="list3"><input type="checkbox" id="list3" /> Stuff I Want</label></li>
+  	  				<li><a href="">Christmas 2011</a></li>
+  	  				<li><a href=""> My Baby Shower!!!</a></li>
+  	  				<li><a href=""> Stuff I Want</a></li>
   	  				<li class="secondary-links"><a href="wishlist.html" id="add-new-list-link">+ New Wish List</a></li>
   	  			</ul>
   	  		</div>
