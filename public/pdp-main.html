@@ -114,6 +114,7 @@
           <a href="#">Desktop Site</a>
         </div><!-- footer-links -->
     </footer>
+    <script src="js/modernizr.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
     <script src="js/jquery.jsonp-2.1.4.min.js"></script>
@@ -184,6 +185,19 @@
 						if (list) $(this).closest('li').before('<li><label><input type="checkbox" checked="checked" /> '+list+'</label></li>');
 						e.preventDefault();
 					});
+					
+					if (Modernizr.appleios) {
+						$('label[for]').live('click',function(e) { //making clicking the label check the checkbox on ios.
+							if ($(e.target).is('input')) return; // input in this example is wrapped inside of form so we need to disable behavior
+							var checkbox = $('#'+$(this).attr('for'));
+							if (checkbox.prop('checked')){
+								checkbox.prop('checked',false);
+							}else{
+								checkbox.prop('checked',true);
+							}
+							e.stopPropagation();
+						});
+					}
 					
 				}
 			});

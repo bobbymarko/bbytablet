@@ -26,6 +26,12 @@ $(function(){
 		
 		if (Modernizr.appleios) {
 			$('label[for]').live('click',function(e) { //making clicking the label check the checkbox on ios.
+				var checkbox = $('#'+$(this).attr('for'));
+				if (checkbox.prop('checked')){
+					checkbox.prop('checked',false);
+				}else{
+					checkbox.prop('checked',true);
+				}
 				e.stopPropagation();
 			});
 		}

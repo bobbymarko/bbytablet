@@ -318,12 +318,22 @@
     <script src="js/swipe.js"></script>
     <script>
     	$('.selector').live('click',function(e) { //making clicking the label check the checkbox on ios.
-				if ($(this).closest('li').hasClass('selected')){
-					$(this).closest('li').removeClass('selected');
-					$('input[type=checkbox]',this).prop('checked',false);
-				}else{
-					$(this).closest('li').addClass('selected');
-					$('input[type=checkbox]',this).prop('checked',true);
+    		if ($(e.target).is('input')){ //allow for clicking on checkbox
+    			if ($(this).closest('li').hasClass('selected')){
+						$(this).closest('li').removeClass('selected');
+						return;
+					}else{
+						$(this).closest('li').addClass('selected');
+						return;
+					}
+    		}else{
+					if ($(this).closest('li').hasClass('selected')){
+						$(this).closest('li').removeClass('selected');
+						$('input[type=checkbox]',this).prop('checked',false);
+					}else{
+						$(this).closest('li').addClass('selected');
+						$('input[type=checkbox]',this).prop('checked',true);
+					}
 				}
 				e.preventDefault();
 			});
