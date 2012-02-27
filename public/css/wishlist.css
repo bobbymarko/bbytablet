@@ -160,19 +160,8 @@
 }
 
 /**** Transitions ****/
-/*.tiled-modules .module{
-	-webkit-animation-name: reset;
-	-webkit-animation-duration: 400ms;
-	-webkit-animation-timing-function: ease-in;
-}
-
-.transitions-enabled .masonry {
-    -webkit-animation-name: fade-in;
-    -webkit-animation-duration: 1s;
-    -webkit-animation-timing-function: ease-in;
-}*/
-
 .transitions-enabled .masonry, .transitions-enabled .masonry .masonry-brick {
+	-webkit-transform: translateZ(0); /* enable gpu acceleration */
   -webkit-transition-duration: 0.7s;
      -moz-transition-duration: 0.7s;
        -o-transition-duration: 0.7s;
