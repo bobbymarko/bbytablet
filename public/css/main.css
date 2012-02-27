@@ -574,12 +574,14 @@ input.error-input{
   position: absolute;
   top:50%;
   right:13px;
+  -moz-transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
   margin-top:-1px;
 }
 
 .dropdown-menu a:after, .side-menu a:after{
+  -moz-transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
   margin-top:-6px;
@@ -587,6 +589,20 @@ input.error-input{
 
 .dropdown-menu .pressed:before, .dropdown-menu .pressed:after, .side-menu .pressed:before, .side-menu .pressed:after{
 	background:#fff;
+}
+
+.dropdown-menu .appending-link a:before{
+	-moz-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  margin-top:-5px;
+}
+
+.dropdown-menu .appending-link a:after{
+	-moz-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  margin-top:-5px;
 }
 
 .dropdown-menu .secondary-links, .side-menu .secondary-links{
@@ -607,11 +623,11 @@ input.error-input{
   font-weight:normal;
 }
 
-.menu .secondary-links a:first-child, .sort-filter-container .secondary-links a:first-child{
+.menu .secondary-links a:first-child, .sort-filter-container .secondary-links>a:first-child{
   padding-left:0;
 }
 
-.menu .secondary-links a:last-child, .sort-filter-container .secondary-links a:last-child{
+.menu .secondary-links a:last-child, .sort-filter-container .secondary-links>a:last-child{
   padding-right:0;
 }
 
@@ -656,34 +672,35 @@ input.error-input{
 }
 
 /* filter selection dropdown elements */
-.dropdown-menu .clear-all{
+.dropdown-menu .applied-filters .clear-all{
 	position:absolute;
 	top:0;	
 	right:0;
 	padding:10px 10px;
+	font-weight:bold;
 }
 .dropdown-menu .clear-all:before, .dropdown-menu .clear-all:after{
 	display:none;
 }
 
-.applied-filters li{
+.dropdown-menu .applied-filters li{
 	display:inline-block;
 	border:none;
 	margin:5px 3px 0 0;
 }
 
-.applied-filters li a{
+.dropdown-menu .applied-filters li a{
 	display:inline-block;
 	padding:5px;
 	background:#f4f5f5;
 	color:#49494a;
 }
 
-.applied-filters a:after, .applied-filters a:before{
+.dropdown-menu .applied-filters a:after, .applied-filters a:before{
 	display:none;
 }
 
-.applied-filters .remove{
+.dropdown-menu .applied-filters .remove{
 	color:#BB0628;
 	font-size:14px;
 	line-height:0;
