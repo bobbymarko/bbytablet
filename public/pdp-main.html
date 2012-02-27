@@ -99,8 +99,18 @@
           <li class="cart-link"><a href="">3 items</a></li>
       	</ul>
     </header>
-		
+    
 		<!-- content inserted via javascript for prototyping purposes. markup found at end of this html -->
+    
+    <!-- AddThis Button BEGIN (appended to container in pdp via javascript) -->
+    <div id="social-button-container">
+			<div class="addthis_toolbox addthis_default_style">
+				<a class="addthis_button_pinterest" pi:pinit:url="http://www.bestbuy.com/site/Apple%26%23174%3B+-+iPad%26%23174%3B+2+with+Wi-Fi+-+16GB+-+Black/1945531.p?id=1218303031896&skuId=1945531" pi:pinit:media="http://images.bestbuy.com/BestBuy_US/images/products/1945/1945531_sb.jpg" pi:pinit:description="short description for product" pi:pinit:layout="vertical"></a>
+				<a class="addthis_button_facebook_like" fb:like:layout="box_count"></a>
+				<a class="addthis_button_google_plusone" g:plusone:size="tall"></a>
+			</div>
+		</div>
+		<!-- AddThis Button END -->
     
     <footer id="footer">
         <div class="footer-meta">
@@ -121,6 +131,7 @@
     <script src="js/addclear.js"></script>
     <script src="js/app.js"></script>
     <script src="js/swipe.js"></script>
+    <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4e8e27955052ca11"></script>
     <script>
     	var pdpNumber = getParameterByName('pdp') || 0;
     	var pdps = ['appliance-pdp', 'bundle-pdp', 'dsku-pdp', 'in-store-only-pdp', 'marketplace-pdp', 'mobile-plan-pdp', 'mobile-w-contract-pdp', 'mobile-wo-contract-pdp', 'video-game-pdp']
@@ -146,33 +157,7 @@
 						e.preventDefault();
 					});
 					
-					var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-    			po.src = 'https://apis.google.com/js/plusone.js';
-    			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-    			(function(d, s, id) {
-						var js, fjs = d.getElementsByTagName(s)[0];
-						if (d.getElementById(id)) return;
-						js = d.createElement(s); js.id = id;
-						js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=201115493289816";
-						fjs.parentNode.insertBefore(js, fjs);
-					}(document, 'script', 'facebook-jssdk'));
-					//!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-					window.PinIt = window.PinIt || { loaded:false };
-					if (window.PinIt.loaded) return;
-					window.PinIt.loaded = true;
-					function async_load(){
-						var s = document.createElement("script");
-						s.type = "text/javascript";
-						s.async = true;
-						if (window.location.protocol == "https:")
-								s.src = "https://assets.pinterest.com/js/pinit.js";
-						else
-								s.src = "http://assets.pinterest.com/js/pinit.js";
-						var x = document.getElementsByTagName("script")[0];
-						x.parentNode.insertBefore(s, x);
-					}
-					//this is a hack to make this work with ajax loaded content. get real code from http://pinterest.com/about/goodies/
-					async_load();
+					$('#social-button-container').appendTo('#social-button-placeholder');
 					
 					$('a','.toggle-visible').live('click', function(e){
 						e.preventDefault();
@@ -430,12 +415,7 @@
 					
 					<div class="sub-module">
 						<h2 class="sub-section-title">Share</h2>
-						<!-- AddThis Button BEGIN -->
-						<div class="addthis_toolbox addthis_default_style">
-							<span style="float:left; margin-right:5px; position:relative; top:2px;"><a href="http://pinterest.com/pin/create/button/?url=http%3A%2F%2Fbestbuy.com&media=http%3A%2F%2Fimages.bestbuy.com%2FBestBuy_US%2Fimages%2Fproducts%2F9747%2F9747183_sa.jpg&description=Description%20of%20product" class="pin-it-button" count-layout="vertical">Pin It</a></span>
-							<a class="addthis_button_facebook_like" fb:like:layout="box_count"><div class="fb-like" style="width:61px; top:-3px;" data-send="false" data-layout="box_count" data-width="450" data-show-faces="true"></div></a>
-							<a class="addthis_button_google_plusone" g:plusone:size="tall"><g:plusone size="tall"></g:plusone></a>
-						</div>
+						<div id="social-button-placeholder"><!-- buttons are placed here via javascript --></div>
 					</div>
 					
 				</div><!-- end .col-small -->

@@ -872,6 +872,12 @@ input.search-field{
 	font-weight:bold;
 }
 
+.title-bar h1 span{
+	font-weight:normal;
+	color:#737474;
+	padding-left:5px;
+}
+
 .back-btn{
 	float:left;
 	padding-left:12px;

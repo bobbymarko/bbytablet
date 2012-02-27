@@ -248,9 +248,14 @@
 .vb-secondary-image{
 	float:left;
 	width:30%;
-	margin:0 10px 0 0;
+	padding:0 10px 0 0;
 	height:100%;
 	text-align:center;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .vb-secondary-image img{
