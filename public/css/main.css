@@ -872,7 +872,7 @@ input.search-field{
 	font-weight:bold;
 }
 
-.title-bar h1 span{
+.title-bar h1 .count{
 	font-weight:normal;
 	color:#737474;
 	padding-left:5px;

@@ -29,8 +29,10 @@ $(function(){
 				var checkbox = $('#'+$(this).attr('for'));
 				if (checkbox.prop('checked')){
 					checkbox.prop('checked',false);
+					checkbox.trigger('click');
 				}else{
 					checkbox.prop('checked',true);
+					checkbox.trigger('click');
 				}
 				e.stopPropagation();
 			});
@@ -38,8 +40,14 @@ $(function(){
 		
 		//fixed positioning needs to be implemented like this http://jquerymobile.com/demos/1.0.1/docs/toolbars/index.html#/demos/1.0.1/docs/toolbars/bars-fixed.html
 		if (!Modernizr.positionfixed){
+			document.body.addEventListener('touchmove', function(e) {
+				$('#compare-bar').css('opacity',0);
+			}, false);
+			document.body.addEventListener('touchend', function(e) {
+				$('#compare-bar').css('opacity',1);
+			}, false);
 			$(window).scroll(function(){
-				$('#compare-bar').css({'top':$(window).scrollTop()+$(window).height()-$('#compare-bar').height()});
+				fixToBottom($('#compare-bar'));
 			});	
 		}
 		
@@ -88,10 +96,16 @@ $(function(){
 		
 });
 
+function  fixToBottom(element){
+	element.css({'top':$(window).scrollTop()+$(window).height()-element.outerHeight()});
+}
+
 function showCompare(products){
 	if ($('#compare-bar').length == 0 && products.length > 0){
 		$("<div id='compare-bar'><p class='compare-instructions'><strong>Compare up to 4 items in:</strong><br/><a href='/listing.html'>Boomboxes, CD Players & Radios</a></p><ul></ul><a href='/compare.html' class='button secondary compare-btn inactive'>Compare</a><a href='#' class='clear-compare'>Clear</a></div>").appendTo('body');
-		console.log(products.length);
+		if (!Modernizr.positionfixed){
+			fixToBottom($('#compare-bar'));
+		}
 	}else{
 		$('ul','#compare-bar').empty();
 	}
