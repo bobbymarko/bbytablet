@@ -19,7 +19,7 @@ $(function(){
 		});
 		
 		$(window).scroll(function(){
-			if ($(window).scrollTop() > $(document).height() - $(window).height() - 200){
+			if ($(window).scrollTop() > $(document).height() - $(window).height() - 500){
 				loadProducts();
 			}
 		});
@@ -128,7 +128,7 @@ function loadProducts(){
 		loading = true;
 		$('#products').append('<article class="product-tile" id="loading-tile"><div><a class="product-mask"></a><a class="product-gallery"><ul><li><img src="images/loading_48x48.gif" /></li></ul></a></div></div>');
 		var query = getParameterByName('search') || "hdtv";
-		var url = "http://api.remix.bestbuy.com/v1/products(search="+query+")?page="+currentPage+"&apiKey=amfnpjxnz6c9wzfu4h663z6w&format=json";
+		var url = "http://api.remix.bestbuy.com/v1/products(search="+query+")?page="+currentPage+"&apiKey=amfnpjxnz6c9wzfu4h663z6w&format=json&sort=salesRankMediumTerm.asc";
 		$.jsonp({
 			url: url,
 			cache: true,
