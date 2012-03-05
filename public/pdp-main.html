@@ -9,7 +9,7 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
 	<meta name = "format-detection" content = "telephone=no">
 </head>
-<body>
+<body class="pdp">
     <header id="masthead">
         <a href="/" id="branding"><img src="images/bby_logo.png" alt="Best Buy Logo" height="40px" width="59px"/></a>
         
@@ -302,9 +302,11 @@
 					<div class="product-gallery">
 						<ul>
 							{{each imageGallery}}
-							<li>
-								<img src="${url}" alt="" >
-							</li>
+								{{if $index == 0 }}
+									<li><img src="${url}" alt="" /></li>
+								{{else}}
+									<li><span src="${url}" alt=""></span></li>
+								{{/if}}
 							{{/each}}
 						</ul>
 					</div>
