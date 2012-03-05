@@ -171,6 +171,7 @@ function loadProducts(){
 					if (!$(this).attr('style')){ // ignore gallery if already swipified
 						// TODO: need to handle orientation change
 						var width = $(this).width();
+						
 						//var slider = new Swipe(this);
 						var images = $('img',this);
 						if (images.length > 1){
@@ -195,6 +196,14 @@ function loadProducts(){
 						}
 					}
 				});
+				
+				/* reconfigure slider width on window size change */
+				$(window).bind('resize',function(e){
+					$('.product-gallery').each(function(){
+						$(this).css('width', $(this).closest('.product-tile').width());
+					});
+				});
+				
 			}
 		});
 	}
