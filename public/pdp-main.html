@@ -143,15 +143,22 @@
 					console.log(data);
 					$('#productTemplate').tmpl(data).insertAfter('#masthead');
 					var slider = new Swipe($('.product-gallery')[0], {
-					callback: function(e, pos) {
-									var i = bullets.length;
-									while (i--) {
-											bullets[i].className = ' ';
-									}
-									bullets[pos].className = 'on';
+					callback: function(e, pos, el) {
+								var i = bullets.length;
+								while (i--) {
+										bullets[i].className = ' ';
+								}
+								bullets[pos].className = 'on';
+
+								$('span', $(el).closest('div')).each(function(){
+									$(this).after('<img src="' + $(this).attr('data-image') + '" alt="" />');
+									$(this).remove();
+								});
+									
 							}
 					}),
 					bullets = $('.gallery-position').children('li');
+					
 					$('a', bullets).click(function(e){
 						slider.slide($(this).closest('li').index(),400);
 						e.preventDefault();
@@ -305,7 +312,7 @@
 								{{if $index == 0 }}
 									<li><img src="${url}" alt="" /></li>
 								{{else}}
-									<li><span src="${url}" alt=""></span></li>
+									<li><span data-image="${url}" alt=""></span></li>
 								{{/if}}
 							{{/each}}
 						</ul>

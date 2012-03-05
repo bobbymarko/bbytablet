@@ -1314,6 +1314,12 @@ ul.price-block li{ /* need to refactor sku-list-module to fix specificity issue 
     max-height:100%;
 }
 
+.product-gallery li span{
+	background:url(../images/loading_24x24.gif) no-repeat center center;
+	display:block;
+	height:50px;
+}
+
 .gallery-position {
 	text-align:center;
 	margin: 0 auto;

@@ -180,23 +180,23 @@ function loadProducts(){
 							$(this).next('.gallery-position').html(positionMarker);
 							$(this).next('.gallery-position').children('em').first().addClass('on');
 							var slider = new Swipe(this, {
-								callback: function(e, pos) {
+								callback: function(e, pos, el) {
 												var i = bullets.length;
 												while (i--) {
 														bullets[i].className = ' ';
 												}
 												bullets[pos].className = 'on';
+												
+												$('span', $(el).closest('div')).each(function(){
+													$(this).after('<img src="' + $(this).attr('data-image') + '" alt="" />');
+													$(this).remove();
+												});
 										}
 								}),
 								bullets = $(this).next('.gallery-position').children('em');
 							
 							$(this).css('width',width + 'px');
-							$(this).on('sliding', function(){
-								$('span', this).each(function(){
-									$(this).after('<img src="' + $(this).attr('data-image') + '" alt="" />');
-									$(this).remove();
-								});
-							});
+							
 						}
 					}
 				});
