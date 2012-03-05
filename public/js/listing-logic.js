@@ -151,7 +151,7 @@ function loadProducts(){
 			callbackParameter: "callback",
 			success: function(data) {
 			$('#total-search-results').text(data.total);
-			console.log('search results', data);
+  			//console.log('search results', data);
 				loading = false;
 				$('#loading-tile').remove();
 				if (data.products.length == 0){
@@ -169,11 +169,9 @@ function loadProducts(){
 				
 				$('.product-gallery').each(function(){
 					if (!$(this).attr('style')){ // ignore gallery if already swipified
-						// TODO: need to handle orientation change
 						var width = $(this).width();
 						
-						//var slider = new Swipe(this);
-						var images = $('img',this);
+						var images = $('ul',this).children();
 						if (images.length > 1){
 							var positionMarker = "";
 							$.each(images, function(){
@@ -193,6 +191,12 @@ function loadProducts(){
 								bullets = $(this).next('.gallery-position').children('em');
 							
 							$(this).css('width',width + 'px');
+							$(this).on('sliding', function(){
+								$('span', this).each(function(){
+									$(this).after('<img src="' + $(this).attr('data-image') + '" alt="" />');
+									$(this).remove();
+								});
+							});
 						}
 					}
 				});

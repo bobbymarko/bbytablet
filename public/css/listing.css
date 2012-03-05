@@ -156,6 +156,12 @@
   height:150px;
 }
 
+.product-tile .product-gallery li span{
+	background:url(../images/loading_24x24.gif) no-repeat center center;
+	display:block;
+	height:50px;
+}
+
 .product-tile .product-rating{
 	position:absolute;
 	bottom:20px;

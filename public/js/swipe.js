@@ -54,6 +54,7 @@ Swipe.prototype = {
 
     // get and measure amt of slides
     this.slides = this.element.children;
+
     this.length = this.slides.length;
 
     // return immediately if their are less than two slides
@@ -218,6 +219,9 @@ Swipe.prototype = {
 
       // cancel slideshow
       clearTimeout(this.interval);
+      
+      // trigger sliding event - added by Bobby Marko (introduces jquery dependency to swipe.js
+			$(e.target).closest('div').trigger('sliding');
 
       // increase resistance if first or last slide
       this.deltaX = 
@@ -251,10 +255,10 @@ Swipe.prototype = {
 
     // if not scrolling vertically
     if (!this.isScrolling) {
-
+			// trigger slide event - added by Bobby Marko (introduces jquery dependency to swipe.js
+			$(e.target).closest('div').trigger('slid');
       // call slide function with slide end value based on isValidSlide and isPastBounds tests
       this.slide( this.index + ( isValidSlide && !isPastBounds ? (this.deltaX < 0 ? 1 : -1) : 0 ), this.speed );
-
     }
 
   }
