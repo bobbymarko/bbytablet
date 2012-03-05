@@ -159,6 +159,13 @@
 					}),
 					bullets = $('.gallery-position').children('li');
 					
+					/* reconfigure slider width on window size change */
+					$(window).bind('resize',function(e){
+						$('.product-gallery').each(function(){
+							$(this).css('width', $(this).closest('.product-tile').width());
+						});
+					});
+					
 					$('a', bullets).click(function(e){
 						slider.slide($(this).closest('li').index(),400);
 						e.preventDefault();
