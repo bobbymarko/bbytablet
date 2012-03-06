@@ -867,9 +867,12 @@ input.search-field{
 .title-bar h1{
 	text-align:center;
 	margin:0;
-	padding:0;
+	padding:0 10px;
 	font-size:14px;
 	font-weight:bold;
+	text-overflow:ellipsis;
+	white-space: nowrap; 
+	overflow:hidden;
 }
 
 .title-bar h1 .count{

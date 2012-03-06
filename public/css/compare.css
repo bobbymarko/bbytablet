@@ -60,6 +60,10 @@ td .price-block{
 	font-size:12px;
 }
 
+td .price-block .price-paid{
+	font-size:24px;
+}
+
 th[scope="rowgroup"]{
 	border-bottom:2px solid #c3c4c4;
 	background:#fff;
