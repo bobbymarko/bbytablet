@@ -200,8 +200,7 @@
 
 .vb-primary-area{
 	height:305px;
-	background:url(../images/content/home-promo.jpg) left center no-repeat;
-	background-size: 60%;
+	margin-bottom:20px;
 }
 
 .two-column .vb-primary-area{
@@ -215,27 +214,50 @@
 	margin-right:auto;
 }
 
-.vb-primary-message{
+.vb-primary-image{
+	float:left;
+	width:50%;
+	text-align:center;
+}
+
+.vb-primary-image img{
+	max-width:100%;
+	max-height:100%;
+}
+
+.vb-primary-message-wrapper{
 	float:right;
-	padding:20px 40px 20px 20px;
-	margin:60px 0 0;
-	width:35%;
+	padding:20px 25px 20px 20px;
+	width:50%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.vb-primary-message{
+	display:table-cell;
+	vertical-align:middle;
+	height: 260px; /* height is set so we can vertically align, height is equal to parent's height minus padding */
 }
 
 .vb-primary-headline{
-	font-size:30px;
-	margin:0 0 8px;
+	font-size:24px;
+	margin:0 0 6px;
 }
 
-.vb-primary-headline strong{
-	display:block;
+.vb-primary-description{
+	font-size:14px;
+	margin:0 0 8px;
 }
 
 .vb-secondary-area{
 	position:relative;
 	overflow:hidden;
 	border-top:1px solid #c3c4c4;
-	padding:20px 0;
+	padding:20px 0 0;
+	clear:both;
 }
 
 .vb-secondary-module{
@@ -636,7 +658,7 @@
 	left:-5px;
 }
 
-/* ---------- Media Queries ----------------*/
+/* ---------- Text Styles ----------------*/
 .text-module{
 }
 
@@ -697,7 +719,7 @@
 	.vb-primary-area{
 		width:66%;
 		float:left;
-		background-size: 55%;
+		margin-bottom:0;
 	}
 	
 	.vb-secondary-area{
@@ -708,6 +730,7 @@
 		border-top:none;
 		margin-left:-21px;
 		padding:0 0 0 20px;
+		clear:none;
 	}
 	
 	.vb-secondary-module{
@@ -809,7 +832,7 @@
 }
 
 @media (min-width:1200px){
-	.vb-primary-message {
+	.vb-primary-message-wrapper {
 		margin-right:10%;
 	}
 }
