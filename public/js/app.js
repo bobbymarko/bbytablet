@@ -1,9 +1,7 @@
 var touchMove = false;
 $(document).ready(function(){
 	$("input[type=text], input[type=search], input[type=tel], input[type=number], input[type=email]").addClear({top:1,right:10});
-	
-	var bdy = document.getElementsByTagName('body');
-	//new FastClick(bdy[0]);
+
 	new FastClick(document.body);
 	
 	$("#add-new-list").click(function(e){ // adding a list via the account menu
@@ -312,7 +310,7 @@ var FastClick = (function() {
 	
 			// Otherwise cancel the event
 			event.stopPropagation();
-			event.preventDefault();
+			//event.preventDefault(); // this is causing issues with form submissions getting cancelled.
 
 			// Prevent any user-added listeners declared on FastClick element from being fired.
 			event.stopImmediatePropagation();

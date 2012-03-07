@@ -621,11 +621,12 @@
     <script type="text/javascript">  
     	if (Modernizr.appleios) {
 				$('label[for]').live('click',function(e) { //making clicking the label check the checkbox on ios.
+					//this should be abstracted and included globally
 					e.stopPropagation();
 				});
 			}
 			
-			$('#highlight-differences').click(function(){
+			$('#highlight-differences').change(function(){
 				$(this).closest('tbody').toggleClass('highlights-on');
 			});
 			
