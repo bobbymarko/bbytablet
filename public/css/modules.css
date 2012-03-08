@@ -214,10 +214,17 @@
 	margin-right:auto;
 }
 
-.vb-primary-image{
+.vb-primary-image-wrapper{
 	float:left;
 	width:50%;
 	text-align:center;
+}
+
+.vb-primary-image{
+	height:300px;
+	width:2000px; /* needs a width to center image horizontally within it */
+	display:table-cell;
+	vertical-align:middle;
 }
 
 .vb-primary-image img{
@@ -833,7 +840,5 @@
 }
 
 @media (min-width:1200px){
-	.vb-primary-message-wrapper {
-		margin-right:10%;
-	}
+
 }
