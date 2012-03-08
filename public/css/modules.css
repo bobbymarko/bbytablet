@@ -212,6 +212,7 @@
 	float:none;
 	margin-left:auto;
 	margin-right:auto;
+	margin-bottom:0;
 }
 
 .vb-primary-image-wrapper{
@@ -700,9 +701,6 @@
 	-ms-box-sizing: border-box;
 	box-sizing: border-box;
 	padding-right:20px;
-}
-
-.text-module .item-image{
 }
 
 .text-module img {

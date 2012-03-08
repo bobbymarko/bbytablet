@@ -310,7 +310,7 @@ var FastClick = (function() {
 	
 			// Otherwise cancel the event
 			event.stopPropagation();
-			//event.preventDefault(); // this is causing issues with form submissions getting cancelled.
+			event.preventDefault(); // this is causing issues with form submissions getting cancelled :(.
 
 			// Prevent any user-added listeners declared on FastClick element from being fired.
 			event.stopImmediatePropagation();
