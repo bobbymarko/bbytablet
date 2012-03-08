@@ -688,6 +688,29 @@
 	margin:13px 0 10px;
 }
 
+.text-module .item-description, .text-module .item-image{
+	float:left;
+	width:50%;
+}
+
+.text-module .item-description{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	padding-right:20px;
+}
+
+.text-module .item-image{
+}
+
+.text-module img {
+	max-width:100%;
+	max-height:100%;
+	height:auto;
+}
+
 /* ---------- Media Queries ----------------*/
 @media (max-width:769px){
 	.selectable-items.skus-x-4 li{
