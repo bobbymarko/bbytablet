@@ -213,6 +213,7 @@
 	margin-left:auto;
 	margin-right:auto;
 	margin-bottom:0;
+	width:100%;
 }
 
 .vb-primary-image-wrapper{
@@ -724,6 +725,18 @@
 		margin-bottom:0;
 	}
 	
+	.vb-primary-area.solo{
+		height:240px;
+	}
+	
+	.vb-primary-area.solo .vb-primary-image{
+		height:240px;
+	}
+	
+	.vb-primary-area.solo .vb-primary-message{
+		height:200px;
+	}
+	
 }
 
 @media (min-width:740px){
@@ -749,6 +762,14 @@
 		width:66%;
 		float:left;
 		margin-bottom:0;
+	}
+	
+	.vb-primary-area.solo{
+		width:80%;
+	}
+	
+	.two-column .vb-primary-area.solo{
+		width:100%;
 	}
 	
 	.vb-secondary-area{
