@@ -287,7 +287,6 @@ var FastClick = (function() {
 			if (!window.event) {
 				return true;
 			}
-	
 			var allowClick = true;
 			var targetElement;
 			var forwardedTouchEvent = window.event.forwardedTouchEvent;
@@ -310,8 +309,10 @@ var FastClick = (function() {
 	
 			// Otherwise cancel the event
 			event.stopPropagation();
-			event.preventDefault(); // this is causing issues with form submissions getting cancelled :(.
-
+			
+			if (event.target.getAttribute('type') !== "submit"){ // for some reason in iOS, touch events are being triggered when submitting the form via the the submit key on the keyboard. this works around that.
+				event.preventDefault();
+			}
 			// Prevent any user-added listeners declared on FastClick element from being fired.
 			event.stopImmediatePropagation();
 

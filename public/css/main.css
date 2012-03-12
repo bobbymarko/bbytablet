@@ -221,6 +221,8 @@ input.error-input{
     z-index:3;
     -webkit-box-shadow:0 0 10px rgba(0,0,0,0.3);
     box-shadow:0 0 10px rgba(0,0,0,0.3);
+    -webkit-transform: translate3d(0,0,0); /* gets rid of flickr from hardware accelarated dropdowns http://viget.com/inspire/webkit-transform-kill-the-flash/ */
+    -webkit-backface-visibility: hidden;   /* gets rid of flickr from hardware accelarated dropdowns http://viget.com/inspire/webkit-transform-kill-the-flash/ */
 }
 
 /* clear fixing */
@@ -850,6 +852,8 @@ input.search-field{
 	z-index:1;
 	-webkit-box-shadow:0 0 10px rgba(0,0,0,0.15);
   box-shadow:0 0 10px rgba(0,0,0,0.15);
+      -webkit-transform: translate3d(0,0,0); /* gets rid of flickr from hardware accelarated dropdowns http://viget.com/inspire/webkit-transform-kill-the-flash/ */
+    -webkit-backface-visibility: hidden;   /* gets rid of flickr from hardware accelarated dropdowns http://viget.com/inspire/webkit-transform-kill-the-flash/ */
 }
 
 /* clear fixing */
