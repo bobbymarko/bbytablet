@@ -1420,20 +1420,12 @@ ul.price-block li{ /* need to refactor sku-list-module to fix specificity issue 
 	}
 	
 	#branding {
-		background-position:12px 10px;
+		background-position:10px 12px;
 	}
 	
 	#branding img {
 		opacity:0;;
 	}
-	
-	/* these changes should be incorporated into the normal #menu-link a rule to fix the tap highlight */
-	#menu-link a, #search-link a, .cart-link a {
-		width:100%;
-		height:100%
-		padding:0;
-	}
-	/* end changes that need to be made to the normal rule */
 	
 	#menu-link>a {
 		background-position: -67px 0;
@@ -1460,7 +1452,11 @@ ul.price-block li{ /* need to refactor sku-list-module to fix specificity issue 
 		background-image: url("../images/css_sprite_retina.png"), -ms-linear-gradient(top, #FFF200 0%,#FFD500 100%);
 		background-image: url("../images/css_sprite_retina.png"), linear-gradient(top, #FFF200 0%,#FFD500 100%);
 		background-repeat:repeat;
-		background-position: -169px -1px;
+		background-position: -169px 0;
+		-moz-background-size:    255px 65px, 100% 100%; /* these have to be declared again so the gradient is sized correctly */
+		-o-background-size:      255px 65px, 100% 100%;
+		-webkit-background-size: 255px 65px, 100% 100%;
+		background-size:         255px 65px, 100% 100%;
 	}
 }
 /* end retina display support */
