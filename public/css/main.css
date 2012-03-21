@@ -1409,7 +1409,7 @@ ul.price-block li{ /* need to refactor sku-list-module to fix specificity issue 
 }
 
 /* retina display support */
-@media only screen and (-webkit-min-device-pixel-ratio : 2), only screen and (min-device-pixel-ratio : 2) {
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
 	#branding, #menu-link>a, #search-link>a, #profile-link>a, .cart-link a, .search-submit {
 		background-image:url("../images/css_sprite_retina.png");
 		-moz-background-size:    255px 65px;
