@@ -678,6 +678,10 @@
 .text-module{
 }
 
+.text-module-simple{
+	display:table;
+}	
+
 .text-module ul{
 	padding-left:20px;
 }
@@ -699,6 +703,12 @@
 .text-module .item-description, .text-module .item-image{
 	float:left;
 	width:50%;
+}
+
+.text-module-simple .item-description, .text-module-simple .item-image{
+	float:none;
+	display:table-cell;
+	vertical-align:middle;
 }
 
 .text-module .item-description{
