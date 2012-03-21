@@ -448,7 +448,7 @@
 
 @media (max-width:800px){
 	.pdp .skus-x-5>ul>li, .pdp .skus-x-4>ul>li {
-		float:none;
+		display:block;
 		width:auto;
 		position:relative;
 		overflow:hidden;
@@ -470,7 +470,6 @@
 	
 	.pdp .skus-x-5 .item-name, .pdp .skus-x-5 .ratings, .pdp .skus-x-5 .price-block, .pdp .skus-x-5 .button, .pdp .skus-x-4 .item-name, .pdp .skus-x-4 .ratings, .pdp .skus-x-4 .price-block, .pdp .skus-x-4 .button{
 		margin-left:140px;
-
 	}
 	
 	.pdp .skus-x-5 .button, .pdp .skus-x-4 .button{

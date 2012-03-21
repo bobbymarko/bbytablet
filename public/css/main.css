@@ -1348,6 +1348,16 @@ ul.price-block li{ /* need to refactor sku-list-module to fix specificity issue 
 	color: #3a67ad;
 }
 
+/* autocomplete */
+
+.ui-autocomplete{
+	-webkit-box-shadow: 0 10px 10px rgba(0,0,0,0.3);
+	box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+	border: 3px solid #2E5493;
+	background: #F4F4F5;
+	width:300px;
+}
+
 /* ---------- Media Queries ----------------*/
 
 @media (min-width:620px){
@@ -1397,3 +1407,60 @@ ul.price-block li{ /* need to refactor sku-list-module to fix specificity issue 
 		box-sizing: border-box;
 	}
 }
+
+/* retina display support */
+@media only screen and (-webkit-min-device-pixel-ratio : 2), only screen and (min-device-pixel-ratio : 2) {
+	#branding, #menu-link>a, #search-link>a, #profile-link>a, .cart-link a, .search-submit {
+		background-image:url("../images/css_sprite_retina.png");
+		-moz-background-size:    255px 65px;
+		-o-background-size:      255px 65px;
+		-webkit-background-size: 255px 65px;
+		background-size:         255px 65px;
+		background-repeat: no-repeat;
+	}
+	
+	#branding {
+		background-position:12px 10px;
+	}
+	
+	#branding img {
+		opacity:0;;
+	}
+	
+	/* these changes should be incorporated into the normal #menu-link a rule to fix the tap highlight */
+	#menu-link a, #search-link a, .cart-link a {
+		width:100%;
+		height:100%
+		padding:0;
+	}
+	/* end changes that need to be made to the normal rule */
+	
+	#menu-link>a {
+		background-position: -67px 0;
+	}
+	
+	#search-link>a {
+		background-position: -116px -1px;
+	}
+	
+	#profile-link>a {
+		background-position: -67px -33px;
+	}
+	
+	.cart-link a {
+		background-position: -210px -1px;
+	}
+	
+	.search-submit {
+		background-image: #FFF200 url("../images/css_sprite_retina.png");
+		background-image: url("../images/css_sprite_retina.png"), -moz-linear-gradient(top, #FFF200 0%, #FFD500 100%);
+		background-image: url("../images/css_sprite_retina.png"), -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FFF200), color-stop(100%,#FFD500));
+		background-image: url("../images/css_sprite_retina.png"), -webkit-linear-gradient(top, #FFF200 0%,#FFD500 100%);
+		background-image: url("../images/css_sprite_retina.png"), -o-linear-gradient(top, #FFF200 0%,#FFD500 100%);
+		background-image: url("../images/css_sprite_retina.png"), -ms-linear-gradient(top, #FFF200 0%,#FFD500 100%);
+		background-image: url("../images/css_sprite_retina.png"), linear-gradient(top, #FFF200 0%,#FFD500 100%);
+		background-repeat:repeat;
+		background-position: -169px -1px;
+	}
+}
+/* end retina display support */

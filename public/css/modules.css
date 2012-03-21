@@ -347,10 +347,12 @@
 /* ---------- SKU Modules ----------------*/
 
 .sku-list-module ul{
+	font-size:0;
 }
 
-.sku-list-module li{
-	float:left;
+.sku-list-module>ul>li{
+	display:inline-block;
+	vertical-align:top;
 	font-size:12px;
 	position:relative;
 }
@@ -407,7 +409,11 @@
 	font-size:14px;
 }
 
-.skus-x-5 ul+ul, .skus-x-4 ul+ul, .skus-x-3 ul+ul, .skus-x-2 ul+ul{
+.skus-x-5 ul+ul, .skus-x-4 ul+ul, .skus-x-3 ul+ul, .skus-x-2 ul+ul{ /* add a margin-top to all items after the first row if each row is contained in its own UL */
+	margin-top:30px;
+}
+
+.skus-x-5 li:nth-child(n+6), .skus-x-4 li:nth-child(n+5), .skus-x-3 li:nth-child(n+4), .skus-x-2 li:nth-child(n+3){ /* add a margin-top to all items after the first row */
 	margin-top:30px;
 }
 
