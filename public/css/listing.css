@@ -237,8 +237,7 @@
 
 #compare-bar .compare-instructions{
 	float:left;
-	margin:15px 10px 0 0;
-	width:150px;
+	margin:20px 10px 0 0;
 	font-size:12px;
 	position:relative;
 	overflow:hidden;

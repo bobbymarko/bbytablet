@@ -59,7 +59,7 @@ $(function(){
 				if (inCompare.length < 4){
 					inCompare.push(productTile);
 				}else{
-					alert('You can only compare 4 items at a time.');
+					alert('You may compare up to four items at a time.');
 					$(this).prop('checked',false);
 				}
 			} else{ // remove from compare when unchecked
@@ -102,7 +102,7 @@ function  fixToBottom(element){
 
 function showCompare(products){
 	if ($('#compare-bar').length == 0 && products.length > 0){
-		$("<div id='compare-bar'><p class='compare-instructions'><strong>Compare up to 4 items in:</strong><br/><a href='/listing.html'>Boomboxes, CD Players & Radios</a></p><ul></ul><a href='/compare.html' class='button secondary compare-btn inactive'>Compare</a><a href='#' class='clear-compare'>Clear</a></div>").appendTo('body');
+		$("<div id='compare-bar'><p class='compare-instructions'><strong>Compare up to 4 items</p><ul></ul><a href='/compare.html' class='button secondary compare-btn inactive'>Compare</a><a href='#' class='clear-compare'>Clear</a></div>").appendTo('body');
 		if (!Modernizr.positionfixed){
 			fixToBottom($('#compare-bar'));
 		}
