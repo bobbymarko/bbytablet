@@ -1355,7 +1355,15 @@ ul.price-block li{ /* need to refactor sku-list-module to fix specificity issue 
 	box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 	border: 3px solid #2E5493;
 	background: #F4F4F5;
-	width:300px;
+	width:210px;
+}
+
+.ui-autocomplete.dropdown-menu li a {
+	font-weight:normal;
+}
+
+.ui-autocomplete.dropdown-menu li strong {
+	font-size: 110%;
 }
 
 /* ---------- Media Queries ----------------*/

@@ -105,24 +105,25 @@ $(document).ready(function(){
 				success: function( data ) {
 					response( $.map( data.suggestions, function( item ) {
 						return {
-							label: item.name,
-							value: item.name,
-							icon: item.thumbnailImage,
-							value: item.tradeInValue
+							value:item
 						}
 					}));
 				}
 			});
 		},
+		select: function(event, ui){
+			$(event.target).val(ui.item.label).closest('form').submit();
+		},
 		minLength: 1,
-		position:{offset:"0 5"}
+		position:{offset:"0 0"}
 	}).data( "autocomplete" )._renderItem = function( ul, item ) {
-		if (item.value)
-			console.log(item.value);
-		return $( "<li></li>" )
-			.data( "item.autocomplete", item )
-			.append( "<a href='/pdp-main.html' style='position:relative; overflow:hidden; display:block;'><span class='thumbnail' style='float:left; margin-right:10px;'><img src='" + item.icon + "'/></span>" + item.label + "</a>" )
-			.appendTo( ul );
+		if (item.value) {
+			var highlighted = item.value.split(this.term).join('<strong>' + this.term +  '</strong>');
+			return $( "<li></li>" )
+				.data( "item.autocomplete", item )
+				.append( "<a href='/listing?search=" + item.value + "'>" + highlighted + "</a>" )
+				.appendTo( ul );	
+		}
 	};
 	
 	autocompleteField.autocomplete( "widget" ).addClass('dropdown-menu');
