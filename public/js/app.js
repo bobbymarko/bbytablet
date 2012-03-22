@@ -62,7 +62,7 @@ $(document).ready(function(){
   });
 
 	/* Search Autocomplete */
-	var autocompleteField = $(".search-field", "#masthead" );
+	/*var autocompleteField = $(".search-field", "#masthead" );
 	autocompleteField.autocomplete({
 		source: function( request, response ) {
 			$.jsonp({
@@ -84,6 +84,37 @@ $(document).ready(function(){
 			});
 		},
 		minLength: 2,
+		position:{offset:"0 5"}
+	}).data( "autocomplete" )._renderItem = function( ul, item ) {
+		if (item.value)
+			console.log(item.value);
+		return $( "<li></li>" )
+			.data( "item.autocomplete", item )
+			.append( "<a href='/pdp-main.html' style='position:relative; overflow:hidden; display:block;'><span class='thumbnail' style='float:left; margin-right:10px;'><img src='" + item.icon + "'/></span>" + item.label + "</a>" )
+			.appendTo( ul );
+	};
+	
+	autocompleteField.autocomplete( "widget" ).addClass('dropdown-menu');*/
+	
+	var autocompleteField = $(".search-field", "#masthead" );
+	autocompleteField.autocomplete({
+		source: function( request, response ) {
+			$.ajax({
+				url: "http://dev-query.bestbuy.com/search/suggest?client=defaultBeginsWithQuery&query=" + request.term,
+				dataType: 'json',
+				success: function( data ) {
+					response( $.map( data.suggestions, function( item ) {
+						return {
+							label: item.name,
+							value: item.name,
+							icon: item.thumbnailImage,
+							value: item.tradeInValue
+						}
+					}));
+				}
+			});
+		},
+		minLength: 1,
 		position:{offset:"0 5"}
 	}).data( "autocomplete" )._renderItem = function( ul, item ) {
 		if (item.value)

@@ -2,6 +2,10 @@ require "rubygems"
 require 'rack/contrib'
 require 'rack-rewrite'
 
+use Rack::Auth::Basic, "Restricted Area" do |username, password|
+  [username, password] == ['test123', 'test123']
+end
+
 use Rack::Static, :urls => ['/images'], :root => "public"
 use Rack::Static, :urls => ['/css'], :root => "public"
 use Rack::Static, :urls => ['/js'], :root => "public"
