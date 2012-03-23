@@ -373,8 +373,9 @@
 }
 
 .skus-x-4 li{
-	width:20.98%;
+	width:21%;
 	margin:0 2%;
+	overflow:hidden;
 }
 
 .skus-x-5 li{
