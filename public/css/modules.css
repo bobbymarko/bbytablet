@@ -348,6 +348,7 @@
 
 .sku-list-module > ul{ /* font size needs to be zero for inline-block to not add extra spacing  */
 	font-size:0;
+	white-space:pre;
 }
 
 .sku-list-module > ul > li{
@@ -375,7 +376,6 @@
 .skus-x-4 li{
 	width:21%;
 	margin:0 2%;
-	overflow:hidden;
 }
 
 .skus-x-5 li{
