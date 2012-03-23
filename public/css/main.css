@@ -272,7 +272,7 @@ input.error-input{
     background-clip:padding-box;
     width: 50px;
     height:35px;
-    text-indent:-9999px;
+    text-indent:0;
     margin-left:15px;
     position: relative;
     overflow:hidden;
