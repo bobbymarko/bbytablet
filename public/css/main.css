@@ -284,7 +284,10 @@ input.error-input{
 .menu > li a{
   display: block;
   height:100%;
-  font-size:0; /* hide menu text, text-indent set to a large number outside the canvas causes the page to break in android */
+}
+
+.menu > li > a{
+	font-size:0; /* hide menu text, text-indent set to a large number outside the canvas causes the page to break in android */
 }
 
 .menu .search-form-wrapper{
