@@ -364,22 +364,22 @@
 	overflow:hidden;
 }
 	
-.skus-x-2 > li{
+.skus-x-2 > ul > li{
 	width:46%;
 	margin:0 2%;
 }
 
-.skus-x-3 >li{
+.skus-x-3 > ul >li{
 	width:29.3333333%;
 	margin:0 2%;
 }
 
-.skus-x-4 > li{
+.skus-x-4 > ul > li{
 	width:21%;
 	margin:0 2%;
 }
 
-.skus-x-5 > li{
+.skus-x-5 > ul > li{
 	width:17%;
 	margin:0 1.5%;
 	font-size:12px;
