@@ -286,10 +286,6 @@ input.error-input{
   height:100%;
 }
 
-.menu > li > a{
-	font-size:0; /* hide menu text, text-indent set to a large number outside the canvas causes the page to break in android */
-}
-
 .menu .search-form-wrapper{
     text-indent:0;
     width:auto;
@@ -364,6 +360,13 @@ input.error-input{
 
 #profile-link>a{
   background: url(../images/icon-profile-invert.png) no-repeat center 6px;
+}
+
+/* hide menu text, text-indent set to a large number outside the canvas causes the page to break in android */
+.icon-link > a{
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
 }
 
 .menu .active-link{
