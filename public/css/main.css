@@ -280,9 +280,8 @@ input.error-input{
     box-shadow:0 1px 0 #234d6b, inset 0 1px 0 #547a96;
 }
 
-.menu > li a{
+.menu>li a{
   display: block;
-  width:100%;
   height:100%;
 }
 
