@@ -346,7 +346,7 @@
 
 /* ---------- SKU Modules ----------------*/
 
-.sku-list-module ul{
+.sku-list-module > ul{ /* font size needs to be zero for inline-block to not add extra spacing  */
 	font-size:0;
 }
 
@@ -361,7 +361,7 @@
 	position:relative;
 	overflow:hidden;
 }
-
+	
 .skus-x-2 li{
 	width:46%;
 	margin:0 2%;
@@ -413,7 +413,7 @@
 	margin-top:30px;
 }
 
-.skus-x-5 li:nth-child(n+6), .skus-x-4 li:nth-child(n+5), .skus-x-3 li:nth-child(n+4), .skus-x-2 li:nth-child(n+3){ /* add a margin-top to all items after the first row */
+.skus-x-5 > ul > li:nth-child(n+6), .skus-x-4 > ul > li:nth-child(n+5), .skus-x-3 > ul > li:nth-child(n+4), .skus-x-2 > ul > li:nth-child(n+3){ /* add a margin-top to all items after the first row */
 	margin-top:30px;
 }
 
