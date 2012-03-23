@@ -275,7 +275,7 @@ input.error-input{
     text-indent:0;
     margin-left:15px;
     position: relative;
-    overflow:hidden;
+
     border:1px solid #002c4a;
     -webkit-box-shadow:0 1px 0 #234d6b, inset 0 1px 0 #547a96;
     box-shadow:0 1px 0 #234d6b, inset 0 1px 0 #547a96;
