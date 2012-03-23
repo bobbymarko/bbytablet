@@ -281,9 +281,8 @@ input.error-input{
 }
 
 .menu > li a{
-  display: block;
+  display: none;
   height:100%;
-  width:10px;
 }
 
 .menu .search-form-wrapper{
