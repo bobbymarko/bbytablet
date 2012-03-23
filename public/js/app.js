@@ -65,40 +65,6 @@ $(document).ready(function(){
 	/*var autocompleteField = $(".search-field", "#masthead" );
 	autocompleteField.autocomplete({
 		source: function( request, response ) {
-			$.jsonp({
-				url: "http://api.remix.bestbuy.com/v1/products(search=" + request.term + ")?format=json&apiKey=amfnpjxnz6c9wzfu4h663z6w&sort=salesRankMediumTerm.asc",
-				cache: true,
-				pageCache: true,
-				callback: "work",
-				callbackParameter: "callback",
-				success: function( data ) {
-					response( $.map( data.products, function( item ) {
-						return {
-							label: item.name,
-							value: item.name,
-							icon: item.thumbnailImage,
-							value: item.tradeInValue
-						}
-					}));
-				}
-			});
-		},
-		minLength: 2,
-		position:{offset:"0 5"}
-	}).data( "autocomplete" )._renderItem = function( ul, item ) {
-		if (item.value)
-			console.log(item.value);
-		return $( "<li></li>" )
-			.data( "item.autocomplete", item )
-			.append( "<a href='/pdp-main.html' style='position:relative; overflow:hidden; display:block;'><span class='thumbnail' style='float:left; margin-right:10px;'><img src='" + item.icon + "'/></span>" + item.label + "</a>" )
-			.appendTo( ul );
-	};
-	
-	autocompleteField.autocomplete( "widget" ).addClass('dropdown-menu');*/
-	
-	var autocompleteField = $(".search-field", "#masthead" );
-	autocompleteField.autocomplete({
-		source: function( request, response ) {
 			$.ajax({
 				url: "http://dev-query.bestbuy.com/search/suggest?client=defaultBeginsWithQuery&query=" + request.term,
 				dataType: 'json',
@@ -127,7 +93,7 @@ $(document).ready(function(){
 	};
 	
 	autocompleteField.autocomplete( "widget" ).addClass('dropdown-menu');
-
+	*/
 
 });
 
