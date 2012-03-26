@@ -43,17 +43,19 @@ thead .item-name{
 }
 
 thead .item-image{
-	display:block;
+	display:table-cell;
+	vertical-align:bottom;
 	text-align:center;
 	height:80px;
 	width:400px;
-	display:table-cell;
-	vertical-align:bottom;
 	margin:0 10px 10px;
 }
 
 thead .item-image img	{
 	max-width:100%;
+	max-height:100%;
+	height:auto;
+	width:auto;
 }
 
 thead .item-data{
