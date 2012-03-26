@@ -45,6 +45,10 @@ thead .item-name{
 thead .item-image{
 	display:block;
 	text-align:center;
+	height:80px;
+	width:400px;
+	display:table-cell;
+	vertical-align:bottom;
 	margin:0 10px 10px;
 }
 
