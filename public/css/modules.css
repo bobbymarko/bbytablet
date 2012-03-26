@@ -348,7 +348,6 @@
 
 .sku-list-module > ul{ /* font size needs to be zero for inline-block to not add extra spacing  */
 	font-size:0;
-	white-space:nowrap;
 }
 
 .sku-list-module > ul > li{
@@ -356,7 +355,6 @@
 	vertical-align:top;
 	font-size:12px;
 	position:relative;
-	white-space:normal;
 }
 
 .skus-x-1{
