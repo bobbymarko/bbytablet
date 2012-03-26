@@ -368,12 +368,12 @@
 }
 
 .skus-x-3 > ul >li{
-	width:29.3333333%;
+	width:29.333333333333%;
 	margin:0 2%;
 }
 
 .skus-x-4 > ul > li{
-	width:18%;
+	width:21%;
 	margin:0 2%;
 }
 
@@ -725,6 +725,20 @@
 }
 
 /* ---------- Media Queries ----------------*/
+@media (max-width:620px){
+	.skus-x-3 > ul >li {
+		width:29.28%; /* if this is any closer to 29.3333333333% the last item will wrap in android 2.3.3 (Kindle Fire) */
+	}
+	
+	.skus-x-4 > ul > li{
+		width:20.89%; /* if this is any closer to 21% the last item will wrap in android 2.3.3 (Kindle Fire) */
+	}
+	
+	.skus-x-5 > ul > li{
+		width:16.89%; /* if this is any closer to 17% the last item will wrap in android 2.3.3 (Kindle Fire) */
+	}
+}
+
 @media (max-width:769px){
 	.selectable-items.skus-x-4 li{
 		width: 45%;
