@@ -1395,21 +1395,6 @@ ul.price-block li{ /* need to refactor sku-list-module to fix specificity issue 
   
 }
 
-@media (min-width:760px){
-	.back-btn, .secondary-actions{ /* center title horizontally when room permits */
-		position:absolute;
-	}
-	.secondary-actions{
-		right:10px;
-	}
-	
-	.sort-filter-container{ /* center title horizontally when room permits */
-		position:absolute;
-		right:10px;
-		top:4px;
-	}
-}
-
 @media (min-width:960px){
 	.col-medium .half-row{
 		clear:none;
