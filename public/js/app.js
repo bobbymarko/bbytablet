@@ -60,6 +60,13 @@ $(document).ready(function(){
     	transitionMenu($($(this).attr('href')), secondary, parent, 'forward')
     }
   });
+	
+	$('a', '.tab-bar').on('click',function(e){
+		var target = $(this).attr('href');
+		$(this).closest('li').addClass('current').siblings().removeClass('current');
+		$(target).addClass('current-tab-pane').siblings().removeClass('current-tab-pane');
+		e.preventDefault();
+	});
 
 	/* Search Autocomplete */
 	/*var autocompleteField = $(".search-field", "#masthead" );

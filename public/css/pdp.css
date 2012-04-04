@@ -206,17 +206,18 @@
 
 .tab-stacked{
 	border:none;
-	margin:0;
+	margin:0 20px 0 0;
+	display:none; /* don't show on kindle */
 }
 
 .tab-stacked ul{
 	margin:0;
+	overflow:visible;
 }
 
 .tab-stacked li{
 	float:none;
-	border:none;
-	border-right:1px solid #c3c4c4;
+	border:1px solid #fff;
 }
 
 .tab-stacked .current{
@@ -228,6 +229,42 @@
 	-moz-border-radius-bottomleft: 4px;
 	border-top-left-radius: 4px;
 	border-bottom-left-radius: 4px;
+}
+
+.tab-stacked .current:before, .tab-stacked .current:after{
+	content:'';
+	display:block;
+	height:70px;
+	width:1px;
+	position:absolute;
+	right:0;
+	z-index:1;
+}
+
+.tab-stacked .current:before{
+	top:-70px;
+	background: #c3c4c4;
+	background: -moz-linear-gradient(top, #ffffff 0%, #c3c4c4 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#c3c4c4));
+	background: -webkit-linear-gradient(top, #ffffff 0%, #c3c4c4 100%);
+	background: -o-linear-gradient(top, #ffffff 0%, #c3c4c4 100%);
+	background: -ms-linear-gradient(top, #ffffff 0%, #c3c4c4 100%);
+	background: linear-gradient(top, #ffffff 0%, #c3c4c4 100%);
+}
+
+.tab-stacked li:first-child.current:before{
+	display:none;
+}
+
+.tab-stacked .current:after{
+	bottom:-70px;
+	background: #c3c4c4;
+	background: -moz-linear-gradient(top, #c3c4c4 0%, #ffffff 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c3c4c4), color-stop(100%,#ffffff));
+	background: -webkit-linear-gradient(top, #c3c4c4 0%, #ffffff 100%);
+	background: -o-linear-gradient(top, #c3c4c4 0%, #ffffff 100%);
+	background: -ms-linear-gradient(top, #c3c4c4 0%, #ffffff 100%);
+	background: linear-gradient(top, #c3c4c4 0%, #ffffff 100%);
 }
 
 .tab-stacked .current a{
@@ -576,6 +613,23 @@
 	
 	.review-options{
 		margin-top:-46px;
+	}
+	
+	/* show tabs in wider screens */
+	.tab-stacked{
+		display:block;
+	}
+	
+	.with-tabs > ul:nth-of-type(n+2), .with-tabs h3 {
+		display:none;
+	}
+	
+	.with-tabs > ul{
+		display:none;
+	}
+	
+	.with-tabs ul.current-tab-pane{
+		display:block;
 	}
 	
 }

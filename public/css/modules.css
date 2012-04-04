@@ -396,19 +396,12 @@
 
 }
 
-.sku-list-module .item-name{
-	font-size:16px;
-	font-weight:bold;
-	display:block;
-	margin:5px 0;
-}
-
 .sku-list-module .item-title{
 	border-bottom:1px solid #dcdbdb;
 	color:#737474;
 	font-size:12px;
 	font-weight:bold;
-	margin:-8px 0 16px;
+	margin:-10px 0 16px;
 	text-align:center;
 	text-transform:uppercase;
 }
@@ -418,6 +411,17 @@
 	padding:0 5px;
 	position:relative;
 	top:8px;
+}
+
+.sku-list-module .item-description{
+	font-size:14px;
+}
+
+.sku-list-module .item-name{
+	font-size:16px;
+	font-weight:bold;
+	display:block;
+	margin:5px 0;
 }
 
 .skus-x-1 .item-name{
