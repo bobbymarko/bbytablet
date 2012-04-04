@@ -747,16 +747,17 @@
 
 /* ---------- Media Queries ----------------*/
 @media (max-width:769px){
-	.selectable-items.skus-x-4 li{
-		width: 45%;
-		margin: 0 2%;
-		display: inline-block;
-		vertical-align: top;
+	.selectable-items.skus-x-4 > ul > li{
+		width:48.83617020799999%;
+		margin-left:2.127659574%;
 		margin-bottom: 20px;
-		float: none;
 	}
 	
-	.selectable-items.skus-x-4 li:last-child, .selectable-items.skus-x-4 li:nth-last-child(2){
+	.selectable-items.skus-x-4 > ul > li:nth-child(2n+1){
+		margin-left:0;
+	}
+	
+	.selectable-items.skus-x-4 > ul > li:last-child, .selectable-items.skus-x-4 > li:nth-last-child(2){
 		margin-bottom:0;
 	}
 	
