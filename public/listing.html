@@ -250,12 +250,12 @@
             </div>
             <h3 class="product-title"><a href="/pdp-main.html">${name}</a></h3>
             <ul class="price-block">
-								<li class="price-paid">$${salePrice}</li>
+								<li class="price-paid">$${formatNumber(salePrice)}</li>
             </ul>
             {{if onSale}}
             	<ul class="price-block price-block-savings">
-                <li>Reg. Price: $${regularPrice}</li>
-								<li class="you-save">You Save: $${parseFloat(Math.round((regularPrice-salePrice) * 100) / 100).toFixed(2)}</li>
+                <li>Reg. Price: $${formatNumber(regularPrice)}</li>
+								<li class="you-save">You Save: $${formatNumber(parseFloat(Math.round((regularPrice-salePrice) * 100) / 100).toFixed(2))}</li>
 							</ul>
 						{{/if}}
             <div class="ratings">
