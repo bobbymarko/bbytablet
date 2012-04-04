@@ -211,7 +211,7 @@
 }
 
 .tab-stacked ul{
-	margin:0;
+	margin:3px 0 0; /* extra margin top so top border of first tab lines up with line in "best selling, premium, etc" */
 	overflow:visible;
 }
 
