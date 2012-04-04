@@ -249,9 +249,18 @@
               <!--Compare-->
             </div>
             <h3 class="product-title"><a href="/pdp-main.html">${name}</a></h3>
+            {{if planPrice}}
+            <ul class="price-block">
+								<li class="price-paid price-with-footnote">
+									$${formatNumber(planPrice)}*
+									<small>*With new 2-year contract</small>
+								</li>
+            </ul>
+            {{else}}
             <ul class="price-block">
 								<li class="price-paid">$${formatNumber(salePrice)}</li>
             </ul>
+            {{/if}}
             {{if onSale}}
             	<ul class="price-block price-block-savings">
                 <li>Reg. Price: $${formatNumber(regularPrice)}</li>

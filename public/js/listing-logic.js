@@ -151,7 +151,7 @@ function loadProducts(){
 			callbackParameter: "callback",
 			success: function(data) {
 			$('#total-search-results').text(data.total);
-  			//console.log('search results', data);
+  			console.log('search results', data);
 				loading = false;
 				$('#loading-tile').remove();
 				if (data.products.length == 0){
