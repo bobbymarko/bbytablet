@@ -14,8 +14,8 @@
 	-moz-border-radius:4px;
 	-webkit-border-radius:4px;
 	border-radius:4px;   
-	-webkit-box-shadow:0 0 10px rgba(0,0,0,.8);
-	box-shadow:0 0 10px rgba(0,0,0,.8);
+	/*-webkit-box-shadow:0 0 10px rgba(0,0,0,.8); Dropshadow kills performance :(
+	box-shadow:0 0 10px rgba(0,0,0,.8); */
 }
 
 #wrapper{
@@ -30,18 +30,15 @@
 }
 
 .product-mask{
-	background:    -moz-linear-gradient(top, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0) 100%);
-	background:        -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.08)), color-stop(100%,rgba(0,0,0,0)));
-	background: -webkit-linear-gradient(top, rgba(0,0,0,0.08) 0%,rgba(0,0,0,0) 100%);
-	background:      -o-linear-gradient(top, rgba(0,0,0,0.08) 0%,rgba(0,0,0,0) 100%);
-	background:     -ms-linear-gradient(top, rgba(0,0,0,0.08) 0%,rgba(0,0,0,0) 100%);
-	background: 	   		linear-gradient(top, rgba(0,0,0,0.08) 0%,rgba(0,0,0,0) 100%);
+	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAABkCAYAAABHLFpgAAAAL0lEQVR42pXExwEAIAzEMHqo+68LE5yJHgrP4ba7xc3PhqzLjGuyKitc5hIXfUkXaqkCk17i4l4AAAAASUVORK5CYII=);
+	background-size: 100% 100%;
 	position:absolute;
 	top:0;
 	left:0;
 	right:1px;
 	height:100%;
 	display: block;
+	z-index:1;
 	pointer-events:none;
 }
 
