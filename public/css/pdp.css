@@ -159,7 +159,6 @@
 	position:relative;
 	overflow:hidden;
 	z-index:0;
-	top:3px;
 	margin:0 10px;
 }
 
@@ -211,7 +210,7 @@
 }
 
 .tab-stacked ul{
-	margin:3px 0 0; /* extra margin top so top border of first tab lines up with line in "best selling, premium, etc" */
+	margin:0;
 	overflow:visible;
 }
 

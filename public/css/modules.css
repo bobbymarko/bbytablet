@@ -397,20 +397,12 @@
 }
 
 .sku-list-module .item-title{
-	border-bottom:1px solid #dcdbdb;
 	color:#737474;
 	font-size:12px;
 	font-weight:bold;
-	margin:-8px 0 16px;
+	margin-bottom:10px;
 	text-align:center;
 	text-transform:uppercase;
-}
-
-.sku-list-module .item-title span{
-	background:#fff;
-	padding:0 5px;
-	position:relative;
-	top:8px;
 }
 
 .sku-list-module .well{
