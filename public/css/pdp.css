@@ -159,6 +159,7 @@
 	position:relative;
 	overflow:hidden;
 	z-index:0;
+	top:3px;
 	margin:0 10px;
 }
 
@@ -212,6 +213,7 @@
 .tab-stacked ul{
 	margin:0;
 	overflow:visible;
+	top:0;
 }
 
 .tab-stacked li{
