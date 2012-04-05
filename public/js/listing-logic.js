@@ -102,7 +102,7 @@ function  fixToBottom(element){
 
 function showCompare(products){
 	if ($('#compare-bar').length == 0 && products.length > 0){
-		$("<div id='compare-bar'><p class='compare-instructions'><strong>Compare up to 4 items</p><ul></ul><a href='/compare.html' class='button secondary compare-btn inactive'>Compare</a><a href='#' class='clear-compare'>Clear</a></div>").appendTo('body');
+		$("<div id='compare-bar'><p class='compare-instructions'><strong>Compare up to 4 items</strong></p><ul></ul><a href='/compare.html' class='button secondary compare-btn inactive'>Compare</a><a href='#' class='clear-compare'>Clear</a></div>").appendTo('body');
 		if (!Modernizr.positionfixed){
 			fixToBottom($('#compare-bar'));
 		}
