@@ -214,12 +214,13 @@
 	margin:0;
 	overflow:visible;
 	top:0;
-	background: -moz-linear-gradient(left, #ffffff 95%, #E7E7E7 100%);
-	background: -webkit-gradient(linear, left top, right top, color-stop(95%,#ffffff), color-stop(100%,#E7E7E7));
-	background: -webkit-linear-gradient(left, #ffffff 95%, #E7E7E7 100%);
-	background: -o-linear-gradient(left, #ffffff 95%, #E7E7E7 100%);
-	background: -ms-linear-gradient(left, #ffffff 95%, #E7E7E7 100%);
-	background: linear-gradient(left, #ffffff 95%, #E7E7E7 100%);
+	border-right:1px solid #c3c4c4;
+	background: -moz-linear-gradient(left, #ffffff 95%, #f4f5f5 100%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(95%,#ffffff), color-stop(100%,#f4f5f5));
+	background: -webkit-linear-gradient(left, #ffffff 95%, #f4f5f5 100%);
+	background: -o-linear-gradient(left, #ffffff 95%, #f4f5f5 100%);
+	background: -ms-linear-gradient(left, #ffffff 95%, #f4f5f5 100%);
+	background: linear-gradient(left, #ffffff 95%, #f4f5f5 100%);
 }
 
 .tab-stacked ul:before, .tab-stacked ul:after{
@@ -228,7 +229,7 @@
 	height:100px;
 	width:1px;
 	position:absolute;
-	right:0;
+	right:-1px;
 	z-index:1;
 }
 
@@ -247,20 +248,20 @@
 	width:5%;
 	height:5%;
 	bottom:0;
-	background:red;
-	background: -moz-linear-gradient(-135deg, #e7e7e7 0%, #ffffff 50%);
-	background: -webkit-gradient(linear, right top, left bottom, color-stop(0%,#e7e7e7), color-stop(50%,#ffffff));
-	background: -webkit-linear-gradient(-135deg, #e7e7e7 0%,#ffffff 50%);
-	background: -o-linear-gradient(-135deg, #e7e7e7 0%,#ffffff 50%);
-	background: -ms-linear-gradient(-135deg, #e7e7e7 0%,#ffffff 50%);
-	background: linear-gradient(-135deg, #e7e7e7 0%,#ffffff 50%);
+	right:0;
+	background: -moz-linear-gradient(-135deg, #f4f5f5 0%, #ffffff 50%);
+	background: -webkit-gradient(linear, right top, left bottom, color-stop(0%,#f4f5f5), color-stop(50%,#ffffff));
+	background: -webkit-linear-gradient(-135deg, #f4f5f5 0%,#ffffff 50%);
+	background: -o-linear-gradient(-135deg, #f4f5f5 0%,#ffffff 50%);
+	background: -ms-linear-gradient(-135deg, #f4f5f5 0%,#ffffff 50%);
+	background: linear-gradient(-135deg, #f4f5f5 0%,#ffffff 50%);
 	z-index:-1;
 }
 
 .tab-stacked li{
 	float:none;
 	border-top:1px solid #e7e7e7;
-	border-right:1px solid #c3c4c4;
+	border-right:none;
 }
 
 .tab-stacked li:first-child{
@@ -288,9 +289,10 @@
 }
 
 .tab-stacked li.current{
+	right:-1px;
 	border:1px solid #c3c4c4;
-	z-index:1;
 	border-right:none;
+	z-index:1;
 	background:#fff;
 	-webkit-border-top-left-radius: 4px;
 	-webkit-border-bottom-left-radius: 4px;
