@@ -171,7 +171,11 @@
 						e.preventDefault();
 					});
 					
-					$('#social-button-container').appendTo('#social-button-placeholder');
+					if ($('#social-button-placeholder').length > 0){
+						$('#social-button-container').appendTo('#social-button-placeholder');
+					} else {
+						$('#social-button-container').remove();
+					}
 					
 					$('a','.toggle-visible').live('click', function(e){
 						e.preventDefault();

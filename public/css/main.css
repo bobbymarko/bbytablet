@@ -1410,13 +1410,13 @@ ul.price-block li{ /* need to refactor sku-list-module to fix specificity issue 
 }
 
 /* retina display support */
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
-	#branding, #menu-link>a, #search-link>a, #profile-link>a, .cart-link a, .search-submit {
+/*@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {*/
+	#branding, #menu-link>a, #search-link>a, #profile-link>a, .cart-link a, .search-submit, .secondary.cart-button::before, .cart-button::before, .call-button::before {
 		background-image:url("../images/css_sprite_retina.png");
-		-moz-background-size:    255px 65px;
-		-o-background-size:      255px 65px;
-		-webkit-background-size: 255px 65px;
-		background-size:         255px 65px;
+		-moz-background-size:    255px 113px;
+		-o-background-size:      255px 113px;
+		-webkit-background-size: 255px 113px;
+		background-size:         255px 113px;
 		background-repeat: no-repeat;
 	}
 	
@@ -1444,6 +1444,14 @@ ul.price-block li{ /* need to refactor sku-list-module to fix specificity issue 
 		background-position: -210px -1px;
 	}
 	
+	.cart-button::before {
+		background-position: -220px -8px;
+	}
+	
+	.call-button::before {
+		background-position: -236px -83px;
+	}
+	
 	.search-submit {
 		background-image: #FFF200 url("../images/css_sprite_retina.png");
 		background-image: url("../images/css_sprite_retina.png"), -moz-linear-gradient(top, #FFF200 0%, #FFD500 100%);
@@ -1454,10 +1462,15 @@ ul.price-block li{ /* need to refactor sku-list-module to fix specificity issue 
 		background-image: url("../images/css_sprite_retina.png"), linear-gradient(top, #FFF200 0%,#FFD500 100%);
 		background-repeat:repeat;
 		background-position: -169px 0;
-		-moz-background-size:    255px 65px, 100% 100%; /* these have to be declared again so the gradient is sized correctly */
-		-o-background-size:      255px 65px, 100% 100%;
-		-webkit-background-size: 255px 65px, 100% 100%;
-		background-size:         255px 65px, 100% 100%;
+		-moz-background-size:    255px 113px, 100% 100%; /* these have to be declared again so the gradient is sized correctly */
+		-o-background-size:      255px 113px, 100% 100%;
+		-webkit-background-size: 255px 113px, 100% 100%;
+		background-size:         255px 113px, 100% 100%;
 	}
-}
+	
+	.secondary.cart-button::before {
+		background-position: -220px -40px;
+	}
+	
+/*}*/
 /* end retina display support */
