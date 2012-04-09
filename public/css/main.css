@@ -1410,7 +1410,7 @@ ul.price-block li{ /* need to refactor sku-list-module to fix specificity issue 
 }
 
 /* retina display support */
-/*@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {*/
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
 	#branding, #menu-link>a, #search-link>a, #profile-link>a, .cart-link a, .search-submit, .secondary.cart-button::before, .cart-button::before, .call-button::before {
 		background-image:url("../images/css_sprite_retina.png");
 		-moz-background-size:    255px 113px;
@@ -1472,5 +1472,5 @@ ul.price-block li{ /* need to refactor sku-list-module to fix specificity issue 
 		background-position: -220px -40px;
 	}
 	
-/*}*/
+}
 /* end retina display support */
