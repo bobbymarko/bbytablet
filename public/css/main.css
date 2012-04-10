@@ -295,6 +295,10 @@ input.error-input{
     box-shadow: none;
 }
 
+.add-clear-span {
+	display:inline-block;
+}
+
 .icon-link, .cart-link, .side-menu{
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
