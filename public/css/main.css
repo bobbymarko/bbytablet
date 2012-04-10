@@ -299,6 +299,11 @@ input.error-input{
 	display:inline-block;
 }
 
+.add-clear-span a{
+	top:50% !important; /* important overriding styles provided by addclear.js */
+	margin-top:-8px;
+}
+
 .icon-link, .cart-link, .side-menu{
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
