@@ -61,7 +61,7 @@ $(document).ready(function(){
     }
   });
 	
-	$('a', '.tab-bar').on('click',function(e){
+	$('a', '.tab-stacked').on('click',function(e){
 		var target = $(this).attr('href');
 		$(this).closest('li').addClass('current').siblings().removeClass('current');
 		$(target).addClass('current-tab-pane').siblings().removeClass('current-tab-pane');

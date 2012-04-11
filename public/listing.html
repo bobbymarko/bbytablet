@@ -261,6 +261,11 @@
 								<li class="price-paid">$${formatNumber(salePrice)}</li>
             </ul>
             {{/if}}
+            {{if planPrice}}
+            	<ul class="price-block price-block-savings">
+                <li>Reg. Price: $${formatNumber(regularPrice)}</li>
+              </ul>
+            {{/if}}
             {{if onSale}}
             	<ul class="price-block price-block-savings">
                 <li>Reg. Price: $${formatNumber(regularPrice)}</li>
