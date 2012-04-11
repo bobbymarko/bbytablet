@@ -295,7 +295,7 @@ input.error-input{
     box-shadow: none;
 }
 
-.add-clear-span {
+.search-form .add-clear-span {
 	display:inline-block;
 }
 
