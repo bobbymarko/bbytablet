@@ -102,7 +102,7 @@
     
     <header class="title-bar">
     	<a href="/compare.html" class="back-btn">Compare</a>
-			<h1 class="page-title">Share These Products</h1>
+			<h1 class="page-title">Email These Products</h1>
 		</header>
 		
 		<div class="module-group">
@@ -194,6 +194,7 @@
 							$(this).unwrap().prev().attr('for', newId); // update label
 							this.name = this.id = newId; // update id and name (assume the same)
 							this.value = '';
+							$(this).prop('autofocus','autofocus');
 					}).end() // back to recipeint wrapper
 					.insertAfter(row); // add to container
 					rowClone.find('input').addClear().focus(); //addclear.js to new element
