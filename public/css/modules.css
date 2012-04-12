@@ -39,7 +39,7 @@
 .module h2{
 	font-size:24px;
 	font-weight:normal;
-	margin:0 0 20px;
+	margin-bottom:20px;
 }
 
 .module>h3:first-child{ /* lower in heirarchy module title example on conditional page */

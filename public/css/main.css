@@ -109,6 +109,13 @@ p{
   line-height:1.4;
 }
 
+img{
+	max-width:100%;
+	max-height:100%;
+	width:auto;
+	height:auto;
+}
+
 ul,li{list-style:none; padding:0; margin:0;}
 ol li{list-style:decimal;}
 
@@ -153,7 +160,7 @@ select{
 	clear:both;
 }
 
-.field-row input[type=text], .field-row input[type=number], .field-row select, .field-row textarea{
+.field-row input[type=text], .field-row input[type=number],  .field-row input[type=email], .field-row select, .field-row textarea{
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-o-box-sizing: border-box;
@@ -301,6 +308,7 @@ input.error-input{
 
 .add-clear-span a{
 	top:50% !important; /* important overriding styles provided by addclear.js */
+	right:10px;
 	margin-top:-8px;
 }
 

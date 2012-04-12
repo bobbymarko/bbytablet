@@ -550,13 +550,36 @@
 	top:1px;
 }
 
+.sku-cluster > ul > li{
+	width:23.304255317%;
+	margin-left:2.127659574%
+}
+
+.sku-cluster > ul > li:nth-child(4n+1){
+	margin-left:0;
+}
+
+.sku-cluster .item-name{
+	font-size:14px;
+}
+
+.sku-cluster .item-image{
+	height:80px;
+}
+
 @media (max-width:759px){
 	.show-lt-760px{
 		display:inline;
 	}
 	.hide-lt-760px{
 		display:none;
-	}	
+	}
+	
+	.sectioned-lt-760px{
+		border-top: 1px solid #C3C4C4;
+		padding-top: 40px;
+		margin-top: 40px;
+	}
 }
 
 @media (max-width:800px){
@@ -634,6 +657,16 @@
 		float:left;
 	}
 	
+	.push-small, .push-medium{
+		position:relative;
+		left:50%;
+	}
+	
+	.pull-small, .pull-medium{
+		position:relative;
+		left:-50%;
+	}
+	
 	.full-reviews-module .col-medium{ /* reviews look bad in default layout so we need to override them for portrait view a bit */
 		width:auto;
 		float:none;
@@ -652,6 +685,15 @@
 	
 	.review-options{
 		margin-top:-46px;
+	}
+	
+	.sku-cluster > ul > li{
+		width:48.83617020799999%;
+		margin-left:2.127659574%;
+	}
+	
+	.sku-cluster > ul > li:nth-child(2n+1){
+		margin-left:0;
 	}
 	
 	/* show tabs in wider screens */
@@ -680,6 +722,22 @@
 	
 	.col-medium{
 		width:66.6666666%;
+	}
+	
+	.push-small{
+		left:33.3333333%;
+	}
+	
+	.push-medium{
+		left:66.6666666%;
+	}
+	
+	.pull-small{
+		left:-33.3333333%;
+	}
+	
+	.pull-medium{
+		left:-66.6666666%;
 	}
 	
 	.full-reviews-module .col-medium{ /* undoing the damage we did to the portrait view for landscape */
