@@ -36,6 +36,12 @@
 	position:relative;
 }
 
+.module h1 img{ /* for status messaging , example on cart interstitial */ 
+	padding:0 5px 0 0;
+	position:relative;
+	top:5px;
+}
+
 .module h2{
 	font-size:24px;
 	font-weight:normal;

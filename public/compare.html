@@ -103,13 +103,14 @@
     <header class="title-bar">
     	<a href="/category.html" class="back-btn">Continue Shopping</a>
     	<div class="sort-filter-container">
-				<a href="/compare-share.html" id="share-link" class="button tertiary">Share Products</a>
+				<a href="/compare-share.html" id="share-link" class="button tertiary">Share These Products</a>
 			</div>
 			<h1 class="page-title">Compare</h1>
 		</header>
 			
 			<div class="module-group">
 				<section class="module">
+					<h1 style="display:none"><img src="images/icon-confirm.png" alt="" />Your email has been sent</h1>
 					<table id="compare-table">
 					<thead>
 						<tr class="remove-row">
@@ -638,6 +639,21 @@
 				$('tr td:nth-child(4n+1), thead th:nth-child(4n+1)','#compare-table').text('');
 				$('#col4').html('<a href="#">Tap to compare another item.</a>').addClass('empty-column');
 			});
+			
+			if (getParameterByName('sent') == "true"){
+    		$('h1').show();
+    	}
+    	
+    	function getParameterByName(name){
+				name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+				var regexS = "[\\?&]" + name + "=([^&#]*)";
+				var regex = new RegExp(regexS);
+				var results = regex.exec(window.location.href);
+				if(results == null)
+					return "";
+				else
+					return decodeURIComponent(results[1].replace(/\+/g, " "));
+			}
 			
     </script>
 </body>

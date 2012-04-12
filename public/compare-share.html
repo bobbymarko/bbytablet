@@ -106,7 +106,7 @@
 		</header>
 		
 		<div class="module-group">
-			<form class="module">
+			<form class="module" action="/compare.html">
 				<div class="col-small push-medium">
 					<h2>Products Being Shared</h2>
 					<section class="sku-list-module sku-cluster">
@@ -132,7 +132,10 @@
 				</div><!-- end .col-small -->
 				<div class="col-medium pull-small">
 					<h2 class="sectioned-lt-760px">Your Info</h2>
-					<p>Share the products your considering with your friends and family.</p>
+					<p>Share the products you're considering with your friends and family.</p>
+					<!--<ul class="error-messages">
+						<li>Please enter your name.</li>
+					</ul>-->
 					<div class="field-row">
 						<label for="your-name">Your Name</label>
 						<input id="your-name" type="text" autocorrect="off" />
@@ -141,17 +144,17 @@
 						<label for="your-email">Your Email Address</label>
 						<input id="your-email" type="email" autocorrect="off" autocapitalize="off" />
 					</div>
-					<h2>Recipient's Info</h2>
+					<h2>Send to</h2>
 					<div class="field-row">
 						<label for="recipient-email-1">Recipient's Email Address</label>
 						<input id="recipient-email-1" type="email" autocorrect="off" autocapitalize="off" />
 						<a href="#" id="add-another-recipient">+ Add Another Recipient</a>
 					</div>
-					<h2>Your Message</h2>
 					<div class="field-row">
 						<label for="your-message">Message</label>
 						<textarea id="your-message" rows="5">Check out these products from Best Buy: Toshiba  32" Class/ LCD / 720p / 60Hz / HDTV, Insignia™  24" Class / LED / 1080p / 60Hz / HDTV, Toshiba  40" Class / LCD / 1080p / 60Hz / HDTV, and Dynex™  32" Class / LCD / 720p / 60Hz / HDTV</textarea>
 					</div>
+					<input type="hidden" name="sent" value="true" />
 					<input type="submit" value="Share Products" class="secondary button" />
 				</div><!-- end .col-medium -->
 			</form>
@@ -193,7 +196,7 @@
 							this.value = '';
 					}).end() // back to recipeint wrapper
 					.insertAfter(row); // add to container
-					rowClone.find('input').addClear(); //addclear.js to new element
+					rowClone.find('input').addClear().focus(); //addclear.js to new element
 					if (recipientCount >= 5)
 						$('#'+$(this).attr('id')).remove();
     			e.preventDefault();
