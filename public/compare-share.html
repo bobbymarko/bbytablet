@@ -195,14 +195,17 @@
 						addAnotherLink.appendTo($(this).closest('.field-row'));
 					});
 					
-					if (recipientCount >= 5)
-						$('#'+$(this).attr('id')).remove();
+					if (recipientCount >= 5){
+						$(addAnotherLink).hide();
+					}
+					
     			e.preventDefault();
     		});
     		
     		$('.remove-prior').live('click', function(e){
 	    		recipientCount--;
     			$(this).prev().remove().end().remove();
+    			$('#add-another-recipient').show();
     			e.preventDefault();
     		});
     	});
