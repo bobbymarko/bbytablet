@@ -116,6 +116,10 @@ img{
 	height:auto;
 }
 
+.block{
+	display:block;
+}
+
 ul,li{list-style:none; padding:0; margin:0;}
 ol li{list-style:decimal;}
 
@@ -183,6 +187,14 @@ select{
 .field-row .note{
 	font-size:12px;
 	color:#737474;
+}
+
+.field-row  input.with-note{ /* shrinks width of input to allow a short note to the right of it */
+	width:80%
+}
+
+.input-note{ /* short note to put to the right of a input .with-note */
+	margin-left:10px;
 }
 
 .error-messages{
