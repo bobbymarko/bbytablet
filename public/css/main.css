@@ -1113,6 +1113,12 @@ input.search-field{
 	font-size:20px;
 }
 
+.unavailable{
+	background:#e7e7e7;
+	color:#49494a;
+	border:1px solid #c3c4c4;
+}
+
 /* ---------- Footer ----------------*/
 
 #footer{
