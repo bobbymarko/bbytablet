@@ -134,7 +134,7 @@
     <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4e8e27955052ca11"></script>
     <script>
     	var pdpNumber = getParameterByName('pdp') || 0;
-    	var pdps = ['appliance-pdp', 'bundle-pdp', 'dsku-pdp', 'in-store-only-pdp', 'marketplace-pdp', 'mobile-plan-pdp', 'mobile-w-contract-pdp', 'mobile-wo-contract-pdp', 'video-game-pdp']
+    	var pdps = ['appliance-pdp', 'bundle-pdp', 'dsku-pdp', 'in-store-only-pdp', 'marketplace-pdp', 'mobile-plan-pdp', 'mobile-w-contract-pdp', 'mobile-wo-contract-pdp', 'video-game-pdp', 'preferred-store']
     	var url = "data/"+pdps[pdpNumber]+".json"
     	$.jsonp({
 				url: url,
@@ -374,7 +374,7 @@
 										<img class="sub-module-icon" src="images/avail_ispu_yes.png" alt="" />
 									{{/if}}
 									<p class="availability-message">
-										<strong>${method}:</strong> ${description}<br/>
+										<strong>${method}:</strong> {{html description}}<br/>
 										{{if linkText}} 
 										<a href="
 											{{if method == "Store Pickup"}}

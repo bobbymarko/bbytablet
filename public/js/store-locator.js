@@ -114,7 +114,7 @@ function get_stores(){
 				storeDescription += '<div class="column"><p><strong>Phone:</strong> ' + store.phone + '<br/>';
 				storeDescription += '<a href="http://deals.bestbuy.com">View Store\'s Weekly Ad</a></p></div>';
 				storeDescription += '<div class="store-hours"><strong>Store Hours</strong><table><thead><tr><td>Mon</td><td>Tue</td><td>Wed</td><td>Thurs</td><td>Fri</td><td>Sat</td><td>Sun</td></tr></thead><tbody><tr><td>10-9</td><td>10-9</td><td>10-9</td><td>10-9</td><td>10-10</td><td>10-10</td><td>10-8</td></tr></tbody></table></div>';
-				pinInfobox.setOptions({showCloseButton: true, visible:true, zIndex:100, title:store.name + ', ' + store.region, description: storeDescription, offset: new Microsoft.Maps.Point(0,28), width:310, height:180 });
+				pinInfobox.setOptions({showCloseButton: true, visible:true, zIndex:100, title: '&#9734; ' + store.name + ', ' + store.region, description: storeDescription, offset: new Microsoft.Maps.Point(0,28), width:310, height:180 });
 				pinInfobox.setLocation(pins[i].getLocation());
 				map.setView({center:pins[i].getLocation()});
 			});
