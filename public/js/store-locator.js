@@ -23,6 +23,10 @@ $(document).ready(function(){
 		e.preventDefault();
 	});
 	
+	$('.preferred-store-toggle').live('click', function(e){
+		e.preventDefault();
+	});
+	
 });
 
 function CallRestService(request) 
@@ -93,7 +97,7 @@ function get_stores(){
 		options.zoom = 11;
 		options.center = new Microsoft.Maps.Location(lat, lng);
 		map.setView(options);
-
+		
 		map.entities.push( currentLocation );
 		pins = [];
 		$('#stores ul').empty();
@@ -107,14 +111,34 @@ function get_stores(){
 			pinInfobox = new Microsoft.Maps.Infobox(pins[i].getLocation(), {title: 'My Pushpin', visible: false, zIndex:1});
 			map.entities.push(pins[i]);
 			map.entities.push(pinInfobox);
+			
+			Microsoft.Maps.Events.addHandler(pinInfobox, 'click', function(e){
+				if (e.originalEvent.target.className.indexOf('preferred-store-toggle') >= 0){
+					var target = $(e.originalEvent.target);
+					var content = '<span class="preferred-star">&#9733;</span> ';
+					if (target.closest('div').find('.preferred-star').length > 0){
+						target.closest('div').find('.preferred-star').remove();
+						target.text('Add to Preferred Stores');
+						$('.sidebar a:contains(' + target.closest('div').html().match(/(.*)<br/)[1] + ')').find('.preferred-star').remove();
+					}else{
+						$('.sidebar a:contains(' + target.closest('div').html().match(/(.*)<br/)[1] + ')').prepend(content);
+						target.closest('div').prepend(content);
+						target.text('Remove from Preferred Stores');
+					}
+					target.css('text-decoration','none');
+					return false;
+				}
+			});
+			
 			Microsoft.Maps.Events.addHandler(pins[i], 'mouseup', function(e){
 				$('#stores li').eq(i).addClass('current-item').siblings().removeClass('current-item');
-				var storeDescription = '<div class="column"><p>' + store.address + '<br/>' + store.city + ', ' + store.region + ' ' + store.fullPostalCode + '<br/>';
+				var storeDescription = '';	
+				storeDescription += '<div class="column"><p>' + store.address + '<br/>' + store.city + ', ' + store.region + ' ' + store.fullPostalCode + '<br/>';
 				storeDescription += '<a href="http://maps.google.com/maps?saddr='+lat+','+lng+'&daddr='+store_lat+','+store_lng+'">Get Directions</a></p></div>';
 				storeDescription += '<div class="column"><p><strong>Phone:</strong> ' + store.phone + '<br/>';
 				storeDescription += '<a href="http://deals.bestbuy.com">View Store\'s Weekly Ad</a></p></div>';
 				storeDescription += '<div class="store-hours"><strong>Store Hours</strong><table><thead><tr><td>Mon</td><td>Tue</td><td>Wed</td><td>Thurs</td><td>Fri</td><td>Sat</td><td>Sun</td></tr></thead><tbody><tr><td>10-9</td><td>10-9</td><td>10-9</td><td>10-9</td><td>10-10</td><td>10-10</td><td>10-8</td></tr></tbody></table></div>';
-				pinInfobox.setOptions({showCloseButton: true, visible:true, zIndex:100, title: '&#9734; ' + store.name + ', ' + store.region, description: storeDescription, offset: new Microsoft.Maps.Point(0,28), width:310, height:180 });
+				pinInfobox.setOptions({showCloseButton: true, visible:true, zIndex:100, title: store.name + ', ' + store.region + '<br/><a href="#" class="preferred-store-toggle note">Add to Preferred Stores</a>', description: storeDescription, offset: new Microsoft.Maps.Point(0,28), width:310, height:180 });
 				pinInfobox.setLocation(pins[i].getLocation());
 				map.setView({center:pins[i].getLocation()});
 			});

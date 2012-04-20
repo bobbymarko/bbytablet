@@ -43,6 +43,12 @@
 	border-right:none;
 }
 
+.Infobox .note{
+	white-space:nowrap;
+	font-size:12px;
+	font-weight:normal;
+}
+
 .Infobox .column{float:left; width:50%; margin-right:2%;}
 .Infobox .column:nth-child(2n+2){float:left; margin-right:0; width:47%;}
 .Infobox .store-hours{clear:both;}
@@ -66,4 +72,12 @@
 
 #map-wrapper .MicrosoftMap .Infobox .infobox-close{
 	color:#737474;
+}
+
+.preferred-star{
+	color:#ffd500;
+	text-shadow:0 1px 0 #EBC400;
+	line-height:0;
+	position:relative;
+	top:-1px;
 }

@@ -87,6 +87,22 @@
 	margin:0 10px 0 0;
 }
 
+.availability-message{
+	position:relative;
+	overflow:hidden;
+}
+
+.fake-list{ /* please don't use this in production! this should be an actual <ul> */
+	display:block;
+	padding-left:8px;
+}
+
+.fake-list:before{
+	content:"\2022";
+	position:absolute;
+	left:0;
+}
+
 .pdp-postcard{
 	position:relative;
 	overflow:hidden;
