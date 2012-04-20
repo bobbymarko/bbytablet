@@ -63,7 +63,7 @@ function initialize_map() {
 		}else{
 			var geoLocationProvider = new Microsoft.Maps.GeoLocationProvider(map);
 			// Get the user's current location
-			var location = geoLocationProvider.getCurrentPosition({successCallback:get_coords});
+			var location = geoLocationProvider.getCurrentPosition({successCallback:get_coords,errorCallback:no_location});
 		}
 	} else {
 		get_stores();
@@ -74,6 +74,10 @@ function get_coords(args){
 	lat = args.position.coords.latitude;
 	lng = args.position.coords.longitude;
 	get_stores();
+}
+
+function no_location(args){
+	$('.side-menu li').remove();
 }
 
 function get_stores(){
