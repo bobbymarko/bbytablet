@@ -172,6 +172,6 @@ pdpData({
     	"url":"http://images.bestbuy.com/BestBuy_US/images/products/9747/9747183cv2a.jpg"
     }
   ],
-  "customersAlsoViewed":"",
+  "customersAlsoViewed":true,
   "accessories":true
 })
