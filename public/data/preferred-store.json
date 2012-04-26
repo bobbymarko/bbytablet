@@ -1,0 +1,135 @@
+pdpData({
+	"categoryName":"Xbox 360 Games",
+  "shortLabel": "Battlefield 3 Limited Edition - Xbox 360",
+  "metaData": [
+  	{
+  		"key": "Publisher",
+  		"value": "Electronic Arts"
+  	},
+  	{
+  		"key":"SKU",
+  		"value":"3668336"
+  	},
+  	{
+  		"key":"Release Date",
+  		"value":"10/25/2011"
+  	},
+  	{
+  		"key":"ESRB Rating",
+  		"value":"M=Mature"
+  	}
+  ],
+  "ratingsCount":"46",
+  "customerReviewAverage":"4.1",
+  "reviews":"",
+  "regularPrice":"59.99",
+  "salePrice":"59.99",
+  "youSave":"00.00",
+  "listPrice":true,
+  "withContract":false,
+  "monthlyPrice":false,
+  "freeShipping":true,
+  "inStoreOnly":false,
+  "preorder":true,
+  "onSale":false,
+  "tabs":[
+  	"Overview",
+  	"Specifications",
+  	"Reviews",
+  	"Game Add-Ons"
+  ],
+  "moreBuyingOptions":"",
+  "compareAvailable":true,
+  "availability": [
+  	{
+  		"method":"Shipping",
+  		"description":"Usually leaves our warehouse in 1 business day",
+  		"linkText":""
+  	},
+  	{
+  		"method":"Store Pickup",
+  		"description":"Order today, pick up on:<span class='fake-list'>NORTHTOWN MN - Pick up 04/17/2012</span><span class='fake-list'>BLAINE MN - Pick up 04/17/2012</span><span class='fake-list'>COON RAPIDS MN - Pick up 04/17/2012</span><a href=''>Check More Stores</a>",
+  		"linkText":""
+  	}
+  ],
+  "specialOffers":[
+  	{
+  		"description":"15% Off Game Guide: Find Out How"
+  	}
+  ],
+  "financingOffers":[
+  	{
+  		"title":"Best Buy Cardholder Discount",
+  		"description":"15% Off Game Guide: Find Out How"
+  	},
+  	{
+  		"title":"Financing Available",
+  		"description":"18 Month Financing"
+  	},
+  	{
+  		"title":"Reward Zone Offer",
+  		"description":"Get Reward Certificates Faster: See How"
+  	}
+  ],
+  "rebates":[
+  	{
+  		"description":"Click here to learn about how you could get up to $70.00 from 1 rebate(s) in Minneapolis, MN. Rebate info provided by EcoRebates. Terms"
+  	}
+  ],
+  "energyGuide":false,
+  "synopsis":"The ground shakes with rumbles from an explosion down the street. You hear disembodied shouts from your teammates. Bullets whiz by your helmet and explode on the wall behind you, sending chunks of concrete and rubble flying through the air. You're focused on your mission, but time seems to stop for a moment as you feel your weapon in your hand. Another bullet bursts against the wall, this time closer — and louder. That got your attention. There's no time for zoning out in the red zone. Meet back up with your team and make it off the <b>Battlefield</b> alive.<br><br>Featuring the powerful Frostbite 2 engine, <b>Battlefield 3</b> utilizes every ounce of power to provide the most immersive shooter experience you've ever known. Get ready to hold your ground on the front lines of a global conflict, and keep your finger on the trigger as the missions take you from city streets in New York and Paris to the relentless desert sands of Tehran. Take on the enemy by yourself in single player, or team up with a friend for intense co-op missions. Featuring the all-new Battlelog system, you can track every hard-earned kill and achievement. When your skills are battle-tested, load up for a 24-player online multiplayer mode, where you'll bring the fight right to your enemy in 20 battle-ready vehicles. Strap on your boots and fall in, Soldier. You're being deployed to the <b>Battlefield</b>.",
+  "features":[
+
+  	{
+  		"description":"Take destruction to new heights and bring the action of the <strong>Battlefield</strong> to life thanks to incredible Frostbite 2 technology and advancements in five key areas: audio, rendering, destruction, scale and animation"
+  	},
+  	{
+  		"description":"Complete suspenseful missions on the front lines of a global conflict, from the streets of Paris and New York to the desert sands of Tehran and beyond"
+  	},
+  	{
+  		"description":"Boot up for a courageous single-player campaign, or take on the enemy with a friend in co-op mode",
+  	},
+  	{
+  		"description":"Track every kill, achievement and victory you accomplish with the all-new Battlelog system",
+  	},
+  	{
+  		"description":"Suit up and join the fight as a soldiers from the U.S. Marines, Russian Spetsnaz and other fighting forces to avert a global catastrophe"
+  	},
+  	{
+  		"description":"Load up with an arsenal of powerful weapons and take the fight to your enemy in more than 20 drivable vehicles in 24-player matches over Xbox LIVE (Xbox LIVE subscription required, not included)"
+  	},
+  	{
+  		"description":"For 1 player locally, 2 to 24 players online (broadband connection required)"
+  	}
+  ],
+  "specifications":[
+  	{
+  		"attribute":"Publisher",
+  		"value":"Electronic Arts"
+  	},
+  	{
+  		"attribute":"Platform",
+  		"value":"Xbox 360"
+  	},
+  	{
+  		"attribute":"Genre",
+  		"value":"Shooters"
+  	},
+  	{
+  		"attribute":"Release Date",
+  		"value":"10/25/2011"
+  	},
+  	{
+  		"attribute":"Number of Players",
+  		"value":"1"
+  	}
+  ],
+  "thumbnailImage": "http://images.bestbuy.com/BestBuy_US/images/products/3668/3668336.jpg",
+  "imageGallery": [
+    {
+    	"url":"http://images.bestbuy.com/BestBuy_US/images/products/3668/3668336.jpg"
+    }
+  ],
+  "customersAlsoViewed":"",
+  "accessories":true
+})
