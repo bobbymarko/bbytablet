@@ -170,6 +170,18 @@
 	right:20px;
 }
 
+.product-listing{
+	border-bottom:1px solid #dbdcdc;
+	padding:15px;
+	overflow:hidden;
+	position:relative;
+}
+
+.product-gallery-wrapper{
+	width:200px;
+	float:left;
+}
+
 #compare-bar{
 	position:fixed;
 	bottom:0;

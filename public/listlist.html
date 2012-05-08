@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8 />
+	<title>Tablet Search - List View</title>
+	<link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="css/listing.css" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+</head>
+<body>
+      <header id="masthead">
+        <a href="/" id="branding"><img src="images/bby_logo.png" alt="Best Buy Logo" height="40px" width="59px"/></a>
+        
+        <ul class="menu">
+          <li class="icon-link" id="menu-link">
+            <a href="#header-nav">Menu</a>
+            <div id="header-nav" class="dropdown-menu">
+              <ul class="dropdown-primary-menu">
+                <li><a href="#products-menu">Products</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="http://bestbuy.shoplocal.com">Weekly Ad</a></li>
+                <li><a href="">Gifts</a></li>
+                <li><a href="/store-locator.html">Store Locator</a></li>
+                <!-- less important links -->
+                <li class="secondary-links"><a href="">Feedback</a> <a href="">Legal</a> <a href="">Desktop Site</a></li>
+              </ul>
+              <ul id="products-menu" class="dropdown-secondary-menu">
+                <li><a href="#back" class="dropdown-back">Back</a></li>
+                <li><a href="#computers-tablets">Computers &amp; Tablets</a></li>
+                <li><a href="#computers-tablets">TV &amp; Video</a></li>
+                <li><a href="#computers-tablets">Music, Movies &amp; Instruments</a></li>
+                <li><a href="#computers-tablets">Video Games &amp; Gadgets</a></li>
+                <li><a href="#computers-tablets">Cameras &amp; Camcorders</a></li>
+                <li><a href="#computers-tablets">Mobile Phones</a></li>
+                <li><a href="#computers-tablets">Health &amp; Fitness</a></li>
+                <li><a href="#computers-tablets">GPS, Car &amp; Marine</a></li>
+                <li><a href="#computers-tablets">Audio &amp; MP3</a></li>
+                <li><a href="#computers-tablets">Office</a></li>
+                <li><a href="#computers-tablets">Home</a></li>
+                <li><a href="#computers-tablets">Appliances</a></li>
+                <li><a href="#computers-tablets">Gift Cards</a></li>
+              </ul>
+              <ul id="computers-tablets" class="dropdown-secondary-menu dropdown-tertiary-menu">
+                <li><a href="#back" class="dropdown-back">Back</a></li>
+                <li><a href="category.html">Laptops &amp; Netbook Computers</a></li>
+                <li><a href="category.html">Tablets &amp; iPad</a></li>
+                <li><a href="category.html">E-Readers</a></li>
+                <li><a href="category.html">Desktop &amp; All-in-One Computers</a></li>
+                <li><a href="category.html">Monitors</a></li>
+                <li><a href="category.html">Mice &amp; Keyboards</a></li>
+                <li><a href="category.html">Printers</a></li>
+                <li><a href="category.html">Hard Drives &amp; Storage</a></li>
+                <li><a href="category.html">Computer Memory</a></li>
+                <li><a href="category.html">Video Cards &amp; PC Components</a></li>
+                <li><a href="category.html">Networking &amp; Wireless</a></li>
+                <li><a href="category.html">Software</a></li>
+                <li><a href="category.html">Accessories</a></li>
+                <li><a href="category.html">Computer Setup &amp; Services</a></li>
+              </ul>
+            </div>
+            
+          </li>
+          
+          <li class="search-form-wrapper">
+            <form class="search-form" action="/listing">
+              <input type="text" placeholder="Search BestBuy.com" role="search" class="search-field" name="search" /><input type="submit" class="search-submit" value="Search"/>
+            </form>
+          </li>
+        </ul>
+        
+        <ul class="menu" id="cart-menu">
+          <li class="icon-link" id="profile-link">
+            <a href="#profile-nav">Profile</a>
+            <div id="profile-nav" class="dropdown-menu">
+            	<ul class="dropdown-primary-menu">
+								<!--<li class="secondary-links"><a href="#">Sign In</a> <a href="#">Create an Account</a></li>-->
+								<li class="secondary-links"><span class="truncated-text">Hi, Reallylongnamethatgoesonandon</span> <a href="#">Sign Out</a></li>
+								<li><a href="">My Account</a></li>
+								<li><a href="#wishlist-menu">Wish Lists</a></li>
+								<li><a href="">View Order Status</a></li>
+              </ul>
+              <ul id="wishlist-menu" class="dropdown-secondary-menu">
+                <li><a href="#back" class="dropdown-back">Back</a></li>
+                <li><a href="wishlist.html">Christmas 2011</a></li>
+                <li><a href="wishlist.html">My Baby Shower!!!</a></li>
+                <li><a href="wishlist.html">Stuff I Want</a></li>
+                <li class="secondary-links"><a href="wishlist.html" id="add-new-list">+ Add New Wish List</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="cart-link"><a href="">3 items</a></li>
+      	</ul>
+    </header>
+    
+    <header class="title-bar">
+			<a href="/category.html" class="back-btn">TV &amp; Video</a>
+    	<ul class="sort-filter-container">
+    		<li class="dropdown-link">
+  	  		<a href="#sort-dropdown" class="button tertiary dropdown-button">Best Match</a>
+  	  		<div class="dropdown-menu" id="sort-dropdown">
+  	  			<ul class="dropdown-primary-menu">
+  	  				<li class="current"><a href="#">Best Match</a></li>
+  	  				<li><a href="#">Price Low to High</a></li>
+  	  				<li><a href="#">Price High to Low</a></li>
+  	  				<li><a href="#">Best Selling</a></li>
+  	  			</ul>
+  	  		</div>
+    		</li>
+    		<li class="dropdown-link">
+	    		<a href="#filter-dropdown" class="button tertiary dropdown-button">Narrow Results</a>
+	    		<div class="dropdown-menu" id="filter-dropdown">
+  	  			<ul class="dropdown-primary-menu">
+  	  				<li class="secondary-links applied-filters">
+  	  					<span>You've Selected</span>
+  	  					<a href="#" class="clear-all">Clear All</a>
+  	  					<ul>
+  	  						<li>
+  	  							<a href="#">
+  	  								Category: TV &amp; Video <span class="remove">&times;</span>
+  	  							</a>
+  	  						</li>
+  	  						<li>
+  	  							<a href="#">
+  	  								Price: $50 - $99.99 <span class="remove">&times;</span>
+  	  							</a>
+  	  						</li>
+  	  						<li>
+  	  							<a href="#">
+  	  								Brand: JVC <span class="remove">&times;</span>
+  	  							</a>
+  	  						</li>
+  	  					</ul>
+  	  				</li>
+  	  				<li class="accordian accordian-open">
+  	  					<a href="#">Category</a>
+  	  					<ul>
+  	  						<li><a href="#">TV &amp; Video <span class="count">1122 products</span></a></li>
+  	  						<li><a href="#">Magnolia Home Theater <span class="count">176 products</span></a></li>
+  	  						<li><a href="#">Computers &amp; Tablets <span class="count">25 products</span></a></li>
+  	  						<li><a href="#">Audio &amp; MP3 <span class="count">23 products</span></a></li>
+  	  						<li><a href="#">Outlet Center <span class="count">9 products</span></a></li>
+  	  						<li><a href="#">Mobile Phones <span class="count">1 product</span></a></li>
+  	  					</ul>
+  	  				</li>
+  	  				<li class="accordian"><a href="#">Customer Reviews</a></li>
+  	  				<li class="accordian"><a href="#">Current Offers</a></li>
+  	  				<li class="accordian"><a href="#">Brand</a></li>
+  	  				<li class="accordian"><a href="#">Price</a></li>
+  	  				<li class="accordian"><a href="#">Platform</a></li>
+  	  				<li class="accordian"><a href="#">Collection</a></li>
+  	  			</ul>
+  	  		</div>
+    		</li>
+    	</ul>
+    	<h1>All Flat-Panel TVs</h1>
+    </header>
+    
+    <div id="product-wrapper">
+			<section id="products">
+			</section>
+		</div>
+    
+    <footer id="footer">
+        <div class="footer-meta">
+          <p>Prices on this site are the same as those on BestBuy.com. Prices may vary in store. All prices and offers are subject to change. In store availability subject to change. Orders placed for store pickup may take up to 45 minutes to process.</p> 
+          <p>&copy;2003-2011 BBY Solutions, Inc.</p>
+        </div><!--footer-meta-->
+        <div class="footer-links">
+          <a href="#">Terms</a>
+          <a href="#">Privacy</a>
+          <a href="#">Feedback</a>
+          <a href="#">Desktop Site</a>
+        </div><!-- footer-links -->
+    </footer>
+    <script src="js/modernizr.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+    <script src="js/jquery.jsonp-2.1.4.min.js"></script>
+    <!--<script src="js/fixed.position.js"></script>-->
+    <script src="js/addclear.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/swipe.js"></script>
+		<script src="js/listing-logic.js"></script>
+		
+    <script id="productTemplate" type="text/x-jquery-tmpl">
+        <article class="product-listing" data-sku="${sku}">
+          <div class="product-gallery-wrapper"> 
+            <div class="product-gallery">
+              <ul>
+                {{if largeFrontImage}}
+                  <li>
+                    <a href="/pdp-main.html"><img src="${largeFrontImage}" alt="large front image" /></a>
+                  </li>
+                {{else}}
+                  <li>
+                    <a href="/pdp-main.html"><img src="${image}" alt="image" /></a>
+                  </li>
+                {{/if}}
+                {{if angleImage}}
+                  <li>
+                    <a href="/pdp-main.html"><span data-image="${angleImage}"></span></a>
+                  </li>
+                {{/if}}
+                {{if alternateViewsImage}}
+                  <li>
+                    <a href="/pdp-main.html"><span data-image="${alternateViewsImage}"></span></a>
+                  </li>
+                {{/if}}
+                {{if leftViewImage}}
+                  <li>
+                    <a href="/pdp-main.html"><span data-image="${leftViewImage}"></span></a>
+                  </li>
+                {{/if}}
+                {{if rightViewImage}}
+                  <li>
+                    <a href="/pdp-main.html"><span data-image="${rightViewImage}"></span></a>
+                  </li>
+                {{/if}}
+                {{if backViewImage}}
+                  <li>
+                    <a href="/pdp-main.html"><span data-image="${backViewImage}"></span></a>
+                  </li>
+                {{/if}}
+                {{if remoteControlImage}}
+                  <li>
+                    <a href="/pdp-main.html"><span data-image="${remoteControlImage}"></span></a>
+                  </li>
+                {{/if}}
+                {{if topViewImage}}
+                  <li>
+                    <a href="/pdp-main.html"><span data-image="${topViewImage}"></span></a>
+                  </li>
+                {{/if}}
+                {{if accessoriesImage}}
+                  <li>
+                    <a href="/pdp-main.html"><span data-image="${accessoriesImage}"></span></a>
+                  </li>
+                {{/if}}
+              </ul>
+            </div><!-- end .product-gallery -->
+            <div class='gallery-position'></div>
+          </div><!-- end .product-gallery-wrapper -->
+					<div class="product-meta">
+						<input type="checkbox" value="${sku}" name="compare-${sku}" id="compare-${sku}" />
+						<label for="compare-${sku}">Compare</label>
+						{{if freeShipping}}
+						<p class="product-message">Free Shipping</p>
+						{{/if}}
+						<!--Compare-->
+					</div>
+					<h3 class="product-title"><a href="/pdp-main.html">${name}</a></h3>
+					<p>${shortDescription}</p>
+					<div class="ratings">
+						<div class="rating-stars">
+								<div class="rating-filler" style="width: ${(customerReviewAverage/5)*100}%;"></div>
+								<div class="rating-mask"></div>
+						</div>
+						<a href="#">${customerReviewCount} Reviews</a>
+					</div><!-- ratings -->
+					{{if planPrice}}
+					<ul class="price-block">
+							<li class="price-paid price-with-footnote">
+								$${formatNumber(planPrice)}*
+								<small>*With new 2-year contract</small>
+							</li>
+					</ul>
+					{{else}}
+					<ul class="price-block">
+							<li class="price-paid">$${formatNumber(salePrice)}</li>
+					</ul>
+					{{/if}}
+					{{if planPrice}}
+						<ul class="price-block price-block-savings">
+							<li>Reg. Price: $${formatNumber(regularPrice)}</li>
+						</ul>
+					{{/if}}
+					{{if onSale}}
+						<ul class="price-block price-block-savings">
+							<li>Reg. Price: $${formatNumber(regularPrice)}</li>
+							<li class="you-save">You Save: $${formatNumber(parseFloat(Math.round((regularPrice-salePrice) * 100) / 100).toFixed(2))}</li>
+						</ul>
+					{{/if}}
+        </article>
+    </script>
+</body>
+</html>
