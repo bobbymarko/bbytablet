@@ -398,11 +398,6 @@
 	  width:200px;
 	  margin-left: 20px;
 	}
-	
-	.product-listing .product-availability li {
-		float: left;
-		margin-right: 20px;
-	}
 }
 
 @media (min-width:960px){
@@ -414,5 +409,10 @@
 	}
   .product-tile:nth-child(4n+4)>div{
 		border-right:none;
+	}
+	
+	.product-listing .product-availability li {
+		float: left;
+		margin-right: 20px;
 	}
 }
