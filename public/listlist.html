@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset=utf-8 />
-	<title>Tablet Search</title>
+	<title>Tablet Search - List View</title>
 	<link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
 	<link rel="stylesheet" type="text/css" media="screen" href="css/listing.css" />
 	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
@@ -96,8 +96,8 @@
 			<a href="/category.html" class="back-btn">TV &amp; Video</a>
     	<ul class="sort-filter-container">
     		<li>
-    			<a href="/listlist.html" class="button tertiary split-toggle"><div class="list-icon"><span></span><span></span><span></span></div></a>
-    			<a href="/listing.html" class="button tertiary split-toggle current"><div class="grid-icon"><span></span><span></span><span></span><span></span></div></a>
+    			<a href="/listlist.html" class="button tertiary split-toggle current"><div class="list-icon"><span></span><span></span><span></span></div></a>
+    			<a href="/listing.html" class="button tertiary split-toggle"><div class="grid-icon"><span></span><span></span><span></span><span></span></div></a>
     		</li>
     		<li class="dropdown-link">
   	  		<a href="#sort-dropdown" class="button tertiary dropdown-button">Best Match</a>
@@ -160,7 +160,7 @@
     </header>
     
     <div id="product-wrapper">
-			<section id="products">
+			<section id="products" class="listing-format">
 			</section>
 		</div>
     
@@ -187,8 +187,40 @@
 		<script src="js/listing-logic.js"></script>
 		
     <script id="productTemplate" type="text/x-jquery-tmpl">
-        <article class="product-tile" data-sku="${sku}">
-          <div>
+        <article class="product-listing" data-sku="${sku}">
+        	<div class="item-sidebar">
+						{{if planPrice}}
+						<ul class="price-block">
+								<li class="price-paid price-with-footnote">
+									$${formatNumber(planPrice)}*
+									<small>*With new 2-year contract</small>
+								</li>
+						</ul>
+						{{else}}
+						<ul class="price-block">
+								<li class="price-paid">$${formatNumber(salePrice)}</li>
+						</ul>
+						{{/if}}
+						{{if planPrice}}
+							<ul class="price-block price-block-savings">
+								<li>Reg. Price: $${formatNumber(regularPrice)}</li>
+							</ul>
+						{{/if}}
+						{{if onSale}}
+							<ul class="price-block price-block-savings">
+								<li>Reg. Price: $${formatNumber(regularPrice)}</li>
+								<li class="you-save">You Save: $${formatNumber(parseFloat(Math.round((regularPrice-salePrice) * 100) / 100).toFixed(2))}</li>
+							</ul>
+						{{/if}}
+						<div class="special-offers">
+							<ul>
+								<li><a href="">$69.99 Home Networking Service: See How</a></li>
+								<li><a href="">$269.98-$344.98 Mount & Service: See How</a></li>
+								<li><a href="">Free Shipping</a></li>
+							</ul>
+						</div><!-- end .special-offers -->
+					</div><!-- end .item-sidebar -->
+          <div class="product-gallery-wrapper"> 
             <div class="product-gallery">
               <ul>
                 {{if largeFrontImage}}
@@ -243,47 +275,20 @@
               </ul>
             </div><!-- end .product-gallery -->
             <div class='gallery-position'></div>
-            <a href="#productmask" class="product-mask"></a>
             <div class="product-meta">
-              <input type="checkbox" value="${sku}" name="compare-${sku}" id="compare-${sku}" />
-              <label for="compare-${sku}">Compare</label>
-              {{if freeShipping}}
-              <p class="product-message">Free Shipping</p>
-              {{/if}}
-              <!--Compare-->
-            </div>
-            <h3 class="product-title"><a href="/pdp-main.html">${name}</a></h3>
-            {{if planPrice}}
-            <ul class="price-block">
-								<li class="price-paid price-with-footnote">
-									$${formatNumber(planPrice)}*
-									<small>*With new 2-year contract</small>
-								</li>
-            </ul>
-            {{else}}
-            <ul class="price-block">
-								<li class="price-paid">$${formatNumber(salePrice)}</li>
-            </ul>
-            {{/if}}
-            {{if planPrice}}
-            	<ul class="price-block price-block-savings">
-                <li>Reg. Price: $${formatNumber(regularPrice)}</li>
-              </ul>
-            {{/if}}
-            {{if onSale}}
-            	<ul class="price-block price-block-savings">
-                <li>Reg. Price: $${formatNumber(regularPrice)}</li>
-								<li class="you-save">You Save: $${formatNumber(parseFloat(Math.round((regularPrice-salePrice) * 100) / 100).toFixed(2))}</li>
-							</ul>
-						{{/if}}
-            <div class="ratings">
-							<div class="rating-stars">
-									<div class="rating-filler" style="width: ${(customerReviewAverage/5)*100}%;"></div>
-									<div class="rating-mask"></div>
-							</div>
-							<a href="#">${customerReviewCount} Reviews</a>
-						</div><!-- ratings -->
-          </div>
+  	          <input type="checkbox" value="${sku}" name="compare-${sku}" id="compare-${sku}" />
+							<label for="compare-${sku}">Compare</label>
+						</div>
+          </div><!-- end .product-gallery-wrapper -->
+					<h3 class="product-title"><a href="/pdp-main.html">${name}</a></h3>
+					<div class="ratings">
+						<div class="rating-stars">
+								<div class="rating-filler" style="width: ${(customerReviewAverage/5)*100}%;"></div>
+								<div class="rating-mask"></div>
+						</div>
+						<a href="#">${customerReviewCount} Reviews</a>
+					</div><!-- ratings -->
+					<p>${shortDescription}</p>
         </article>
     </script>
 </body>
