@@ -1,0 +1,186 @@
+.skus-x-5 li p {
+	position: relative;
+	overflow: hidden;
+}
+
+.text-module .note {
+	font-weight: 100;
+}
+
+.text-module .text-items {
+	padding: 0;
+}
+
+.text-module .text-items li {
+	list-style: none;
+	position: relative;
+	overflow: hidden;
+	border-bottom: 1px solid #dbdcdc;
+	padding: 0 0 15px;
+}
+
+.text-module .text-items li:last-child {
+	border-bottom: none;
+}
+
+.text-module .text-items li img {
+	float: left;
+	width: 90px;
+	height: 90px;
+	border: 1px solid #dbdcdc;
+	margin: 15px 10px 15px 0;
+}
+
+.text-module .text-items li p {
+	overflow: hidden;
+	position: relative;
+}
+
+.store-information {
+	clear: left;
+	position: relative;
+	overflow: hidden;
+}
+
+.store-information .hours, .store-information .store-services {
+	float: left;
+}
+
+.store-title {
+	float:left;
+	min-width:600px;
+}
+
+.store-title h1	{
+	margin-bottom: 5px;
+}
+
+.store-title .item-image {
+	float:left;
+	position:relative;
+	margin: 0 20px 20px 0;
+}
+
+.store-title .item-image img {
+	max-width: 100%;
+	padding: 10px;
+	border: 1px solid #e7e7e7;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	position: relative;
+	background: #fff;
+}
+
+.store-title .item-image::after,
+.store-title .item-image::before {
+	z-index: -1;
+	position: absolute;
+	background: transparent;
+	width: 70%;
+	height: 25%;
+	content: '';
+	-moz-box-shadow: -8px 12px 10px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: -8px 12px 10px rgba(0, 0, 0, 0.3);
+	box-shadow: -8px 12px 10px rgba(0, 0, 0, 0.3);
+}
+
+.store-title .item-image::after {
+	right: 10px;
+	bottom: 20px;
+	-webkit-transform: skew(15deg) rotate(5deg);
+	-moz-transform: skew(15deg) rotate(5deg);
+	-o-transform: skew(15deg) rotate(5deg);
+	-ms-transform: skew(15deg) rotate(5deg);
+	transform: skew(15deg) rotate(5deg);
+}
+
+.store-title .item-image::before {
+	left: 25px;
+	bottom: 20px;
+	-webkit-transform: skew(-15deg) rotate(-5deg);
+	-moz-transform: skew(-15deg) rotate(-5deg);
+	-o-transform: skew(-15deg) rotate(-5deg);
+	-ms-transform: skew(-15deg) rotate(-5deg);
+	transform: skew(-15deg) rotate(-5deg);
+}
+
+.store-information .hours {
+	margin: 0 20px 20px 0;
+}
+
+.hours ul li {
+	width: 47px;
+	height: 60px;
+	background: #F7F7F7;
+	border: 1px solid #EEEFF0;
+	float: left;
+	margin: 0 2px 5px 0;
+	text-align: center;
+	line-height: 15px;
+}
+
+.hours ul li .day {
+	text-transform: uppercase;
+	font-size: 10px;
+	margin-top: 5px;
+	font-weight: normal;
+}
+
+.hours ul li span {
+	display: block;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+.hours ul li .separator {
+	font-weight: normal;
+	font-size: 11px;
+	line-height: 0.5em;
+}
+
+.hours ul li span {
+	display: block;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+.hours ul li span ins {
+	font-weight: normal;
+	text-decoration: none;
+	font-size: 11px;
+}
+
+.store-information .store-services {
+	width: 355px;
+}
+
+.store-information .store-services ul {
+	font-size: 0;
+}
+
+.store-information .store-services li {
+  font-size: 12px;
+	list-style: disc;
+	width: 165px;
+	padding: 5px 20px 5px 0;
+	display: inline-block;
+	vertical-align: top;
+	border-top: 1px solid #e7e7e7;
+}
+
+.store-information .store-services li:nth-child(even) {
+	padding-right: 0;
+}
+
+@media (min-width: 1000px) {
+	.store-information {
+		float: right;
+		clear: none;
+	}
+	
+	.store-information .hours, .store-information .store-services {
+		float: none;
+		margin-right: 0;
+	}
+}
