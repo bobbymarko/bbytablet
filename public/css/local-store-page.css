@@ -151,8 +151,12 @@
 	font-size: 11px;
 }
 
+.hours ul li.selected {
+	background-color: #FCF460;
+}
+
 .store-information .store-services {
-	width: 355px;
+	width: 350px;
 }
 
 .store-information .store-services ul {
@@ -167,6 +171,10 @@
 	display: inline-block;
 	vertical-align: top;
 	border-top: 1px solid #e7e7e7;
+}
+
+.store-information .store-services li:nth-child(1), .store-information .store-services li:nth-child(2) {
+	border-top: none;
 }
 
 .store-information .store-services li:nth-child(even) {
